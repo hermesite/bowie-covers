@@ -1,0 +1,141 @@
+.ratio-phi {
+  position: relative; }
+  .ratio-phi:before {
+    display: block;
+    content: " ";
+    width: 100%;
+    padding-top: 168%; }
+  .ratio-phi > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+
+.ratio-square {
+  position: relative; }
+  .ratio-square:before {
+    display: block;
+    content: " ";
+    width: 100%;
+    padding-top: 100%; }
+  .ratio-square > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+
+/**
+ * Function defining the difference between 2 colors
+ *
+ * @param {Color} $a - first color
+ * @param {Color} $b - second color
+ *
+ * @return {Map}  The color operations to do in order to find $b from $a where keys are the color functions to apply and values are the values to pass to these functions
+ */
+/**
+ * Compute the diff for each color from the initial palette
+ *
+ * @param {Map} $palette - palette
+ *
+ * @requires {function} color-diff
+ * 
+ * @return {List} list of diffs
+ */
+/**
+ * Initial palette used to define the diff between the base color and each color from the palette. There can be as many colors as one wants.
+ * 
+ * @Link https://ton.twitter.com/i/ton/data/dm/487926326314418176/487926326322823168/8M2k8xOp.png Initial color palette
+ *
+ * @type Map
+ */
+/**
+ * Palette diffs
+ * Same length as colors key from map-palette
+ *
+ * @type List
+ */
+/**
+ * Apply differences returned from `color-diff` function to a color in order to retrieve the second color
+ *
+ * @param {Color} $color - color to transform
+ * @param {Map} $diff - diff map
+ * 
+ * @return {Color} transformed color
+ */
+/**
+ * Create a palette from a base color
+ *
+ * @param {Color} $base-color - base color for the palette
+ *
+ * @requires {function} palette-diff
+ * @requires {function} apply-diff
+ * @requires {variable} $base-palette
+ *
+ * @return {List} list of colors
+ */
+/**
+ * Create a list of colors from the base color
+ * then turn in into a map with explicit keys
+ *
+ * @param {Color} $base-color - base color for the palette
+ *
+ * @requires {function} create-palette
+ *
+ * @return {Map}
+ */
+/**
+ * Create and apply a palette
+ * 
+ * @param {Color} $base-color - base color
+ * 
+ * @requires {function} create-palette
+ */
+.hermesite-palette {
+  background: deepskyblue;
+  background: linear-gradient(to right, #ceb398, #ceb398 14.28571%, #919e8d 14.28571%, #919e8d 28.57143%, #59aab6 28.57143%, #59aab6 42.85714%, deepskyblue 42.85714%, deepskyblue 57.14286%, #296b81 57.14286%, #296b81 71.42857%, #153641 71.42857%, #153641 85.71429%, #112c35 85.71429%, #112c35 100%); }
+
+.color-lightest {
+  color: #ceb398; }
+
+.bg-lightest {
+  background-color: #ceb398; }
+
+.color-lighter {
+  color: #919e8d; }
+
+.bg-lighter {
+  background-color: #919e8d; }
+
+.color-light {
+  color: #59aab6; }
+
+.bg-light {
+  background-color: #59aab6; }
+
+.color-base {
+  color: deepskyblue; }
+
+.bg-base {
+  background-color: deepskyblue; }
+
+.color-dark {
+  color: #296b81; }
+
+.bg-dark {
+  background-color: #296b81; }
+
+.color-darker {
+  color: #153641; }
+
+.bg-darker {
+  background-color: #153641; }
+
+.color-darkest {
+  color: #112c35; }
+
+.bg-darkest {
+  background-color: #112c35; }
+
+/*# sourceMappingURL=variables.css.map */

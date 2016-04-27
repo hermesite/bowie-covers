@@ -1,0 +1,89 @@
+/* Welcome Page */
+
+#results {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    a {}
+    .h1-wrapper {
+        order: 1
+    }
+    .e1-wrapper {
+        order: 2
+    }
+    .r1-wrapper {
+        order: 3
+    }
+    .m1-wrapper {
+        order: 4
+    }
+    .e2-wrapper {
+        order: 5
+    }
+    .s1-wrapper {
+        order: 6
+    }
+    .i1-wrapper {
+        order: 7
+    }
+    .t1-wrapper {
+        order: 8
+    }
+    .e3-wrapper {
+        order: 9
+    }
+}
+
+
+/* Widgets */
+
+.widget-header,
+.widget-body,
+.widget-footer {
+    padding: 1rem;
+    width: 100%;
+}
+
+.widget-body {}
+
+
+/**
+ *
+ * Ratio device
+ *
+ */
+
+.device-ratio {
+    position: relative;
+    background-color: #f00;
+    &:before {
+        display: block;
+        content: " ";
+        width: 100%;
+    }
+    >.content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+
+/**
+ *
+ * Map
+ *
+ */
+
+#map {
+    width: 500px;
+    height: 400px;
+    background-color: #CCC;
+}
+
+.angular-google-map-container { height: 400px; }

@@ -1,0 +1,29 @@
+.ratio-phi {
+  position: relative; }
+  .ratio-phi:before {
+    display: block;
+    content: " ";
+    width: 100%;
+    padding-top: 168%; }
+  .ratio-phi > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+
+.ratio-square {
+  position: relative; }
+  .ratio-square:before {
+    display: block;
+    content: " ";
+    width: 100%;
+    padding-top: 100%; }
+  .ratio-square > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+
+/*# sourceMappingURL=ratios.css.map */
