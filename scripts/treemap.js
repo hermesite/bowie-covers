@@ -98,10 +98,10 @@
 
                         if (jQuery.inArray(track.title, countCovers) === -1) {
                             isCover = false;
-                            colorCover = '#C00';
+                            colorCover = '#FFF';
                         } else {
                             isCover = true;
-                            colorCover = '#00C';
+                            colorCover = '#f7ff9b';
                         }
 
                         var myTrackSun = {};
@@ -202,7 +202,8 @@
                     })
                     .call(position)
                     .append('div')
-                    .attr('class', 'col-xs-12')
+                    .attr('class', 'col-xs-12 row middle-xs node-content')
+                    .append('h4')
                     .text(function(d) {
                         return d.children ? null : d.size;
                     });
