@@ -190,7 +190,7 @@
                         $('.section-radial').css('z-index', 20);
                         $('.section-radial').show();
 
-                        createRadial(bowieSongsSun.children[d.positionInArray], '#covers-bowie', d.image);
+                        createRadial(bowieSongsSun.children[d.positionInArray], '#covers-bowie', d.image, d.size);
 
                         $('#covers').empty();
 
@@ -202,10 +202,12 @@
                     })
                     .call(position)
                     .append('div')
-                    .attr('class', 'col-xs-12 row middle-xs node-content')
-                    .append('h4')
-                    .text(function(d) {
-                        return d.children ? null : d.size;
+                    .attr('class', function(d) {
+                        var textSize = Math.round(d.area / 1000);
+                        return 'col-xs row middle-xs node-content area-' + textSize;
+                    })
+                    .html(function(d) {
+                        return d.children ? null : '<h4 class="col-xs text-center"><strong>' + d.size + '</strong><br>COVERS<br><span class="col-xs">' + d.name + '</span></h4>';
                     });
 
             }
@@ -227,7 +229,7 @@
             }
 
 
-            function createRadial(data, container, image) {
+            function createRadial(data, container, image, size) {
 
                 $(container).empty();
 
@@ -236,6 +238,14 @@
 
 
                 $('<div class="record"></div>').appendTo(container);
+                $('<div class="record-info"></div>').appendTo(container);
+
+                var recordInfo = $('.record-info');
+                recordInfo.html(function() {
+                    console.log(size);
+                    return '<h2><span><strong>' + size + '</strong>covers</span><em>' + data.name + '</em></h2>';
+                })
+
 
                 var
                     widthFactor = 1.67,
