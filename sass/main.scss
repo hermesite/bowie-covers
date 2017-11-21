@@ -5,10 +5,10 @@
 @import "mixins",
 "variables";
 // bower:scss
-@import "../../components/bootstrap-sass/assets/stylesheets/bootstrap",
-"../../components/flexboxgrid-sass/flexboxgrid",
-"../../components/modular-scale/stylesheets/modular-scale",
-"../../components/font-awesome/scss/font-awesome.scss";
+@import 
+"../bower_components/flexboxgrid-sass/flexboxgrid";
+// "../../components/modular-scale/stylesheets/modular-scale",
+// "../../components/font-awesome/scss/font-awesome.scss";
 // endbower
 @import "helpers";
 $min_width: 400;
@@ -93,6 +93,9 @@ $max_font: 24;
 body {
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 300;
+    .navbar {
+        background-color: transparent;
+    }
     // color: light($hermesite-palette);
     // background-color: base($hermesite-palette);
 }
@@ -110,6 +113,10 @@ body {
     bottom: 0px;
     padding: 0px;
     margin: 0px;
+    &.section-treemap{
+        
+        top: 80px;
+    }
     &.section-treemap {}
     &.section-radial {
         background-color: rgba(0, 0, 0, .75);
@@ -264,6 +271,10 @@ $inside-circle-factor: 1.18;
             background-color: #fff;
             color: #000;
             text-shadow: none;
+            strong {
+                color: #000;
+
+            }
         }
     }
 }
@@ -339,7 +350,7 @@ $inside-circle-factor: 1.18;
     }
 }
 
-@for $i from 1 through 100 {
+@for $i from 1 through 400 {
     //$size: $i;
     .node-content {
         &.area-#{$i} {
@@ -348,7 +359,7 @@ $inside-circle-factor: 1.18;
                     @if ($i <= 10) {
                         font-size: 10px;
                     } @else {
-                        font-size: $i + px;
+                        font-size: ($i/2) + px;
                     }
                 }
             }
@@ -359,11 +370,14 @@ $inside-circle-factor: 1.18;
 .node-content {
     padding: 0px;
     h4,
-    p {}
+    p {
+    }
     h4 {
         padding: 0px;
         font-size: 0.8vw;
         strong {
+            letter-spacing: -1px;
+            color: #FFF;
             // font-size: 5vw;
         }
         span {
@@ -409,30 +423,4 @@ $inside-circle-factor: 1.18;
 
 #back {
     margin: 10px 40px;
-}
-
-.button {
-    display: inline-block;
-    outline: none;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    font: 14px / 100% Arial, Helvetica, sans-serif;
-    padding: 0.5em 1em 0.55em;
-    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
-    -webkit-border-radius: 0.5em;
-    -moz-border-radius: 0.5em;
-    border-radius: 0.5em;
-    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-.button:hover {
-    text-decoration: none;
-}
-
-.button:active {
-    position: relative;
-    top: 1px;
 }
