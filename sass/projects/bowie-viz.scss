@@ -1,7 +1,6 @@
 // @import "../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
-@import
-  "../mixins",
-  "../variables";
+@import "../mixins",
+"../variables";
 
 .section {
     position: absolute;
@@ -15,7 +14,7 @@
     margin: 0px;
     &.section-treemap {}
     &.section-radial {
-        background-color: rgba(200,200,200,.75);
+        background-color: rgba(200, 200, 200, .75);
     }
 }
 
@@ -36,9 +35,9 @@
     top: 50%;
     margin-top: -15px;
     font-size: 30px;
-    color: rgba(0,0,0,.75);
+    color: rgba(0, 0, 0, .75);
     &:hover {
-        color: rgba(0,0,0,1);
+        color: rgba(0, 0, 0, 1);
     }
 }
 
@@ -101,11 +100,11 @@ $inside-circle-factor: 1.18;
         background-size: cover;
         background-position: 50% 50%;
         background-repeat: no-repeat;
-        border: 2px solid rgba(0,0,0,.50);
+        border: 2px solid rgba(0, 0, 0, .50);
         &:before {
             content: "";
             position: absolute;
-            background-color: rgba(255,255,255,.75);
+            background-color: rgba(255, 255, 255, .75);
             top: (100% - $inside-circle / $inside-circle-factor) / 2;
             left: (100% - $inside-circle / $inside-circle-factor) / 2;
             width: $inside-circle / $inside-circle-factor;
@@ -113,7 +112,7 @@ $inside-circle-factor: 1.18;
             -webkit-border-radius: 50%;
             -moz-border-radius: 50%;
             border-radius: 50%;
-            border: 2px solid rgba(0,0,0,.50);
+            border: 2px solid rgba(0, 0, 0, .50);
         }
     }
 }
@@ -125,11 +124,11 @@ $inside-circle-factor: 1.18;
     background-position: 50% 50%;
 }
 
-#covers > div {
+#covers>div {
     position: relative;
 }
 
-#covers > div svg {
+#covers>div svg {
     position: relative;
     z-index: 1;
 }
@@ -145,6 +144,7 @@ $inside-circle-factor: 1.18;
     margin-top: -25%;
     z-index: 0;
 }
+
 #covers-treemap {
     .node {
         border: solid 1px white;
@@ -216,6 +216,7 @@ $inside-circle-factor: 1.18;
 }
 
 
+
 /*TOOLTIPS*/
 
 .tip {
@@ -276,6 +277,3 @@ $inside-circle-factor: 1.18;
     position: relative;
     top: 1px;
 }
-
-
-

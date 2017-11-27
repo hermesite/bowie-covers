@@ -15,6 +15,25 @@ $min_width: 400;
 $max_width: 800;
 $min_font: 12;
 $max_font: 24;
+
+@import "timeline";
+@import "typo";
+
+
+path { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
 :root {
     font-size: #{$min_font}px;
 }
@@ -32,6 +51,10 @@ $max_font: 24;
 }
 
 
+#covers-treemap {
+    position: relative;
+}
+
 /**
  *
  * Components
@@ -39,7 +62,13 @@ $max_font: 24;
  */
 
 
+.sun-svg {
+    display: inline-block;
+}
+
 /*=====  End of Imports  ======*/
+
+
 
 // Flexboxgrid correction
 .row {
@@ -90,10 +119,25 @@ $max_font: 24;
 
 /* Space out content a bit */
 
+html,
 body {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: 300;
+    height: 100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+    position: relative;
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Merriweather', serif;
+    }
+}
+
+body {
     .navbar {
+        .navbar-brand {
+            margin: auto;
+        }
         background-color: transparent;
     }
     // color: light($hermesite-palette);
@@ -104,22 +148,16 @@ body {
 @import "mixins",
 "variables";
 .section {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    padding: 0px;
-    margin: 0px;
+    position: relative;
     &.section-treemap{
         
-        top: 80px;
     }
     &.section-treemap {}
     &.section-radial {
         background-color: rgba(0, 0, 0, .75);
+    }
+    &.is-white {
+        background-color: #FFF;
     }
 }
 
@@ -143,17 +181,31 @@ body {
     }
 }
 
-html,
-body {
-    height: 100%;
+.article-cover {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-color: #C00;
+    background-size: cover;
 }
 
-body {
-    font-family: 'Arima', sans-serif;
-    margin: auto;
-    position: relative;
-    overflow: hidden;
+.hero {
+    height: calc(100vh - 80px);
+    .title, .subtitle {
+        display: inline-block;
+        text-align: center;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        span {
+            background-color: rgba(255,255,255,.5);
+        }
+    }
 }
+
 
 
 /*====================================
@@ -351,6 +403,18 @@ $inside-circle-factor: 1.18;
 }
 
 @for $i from 1 through 400 {
+    
+    .color-#{$i} {
+        @if ($i <= 10) {
+            background: #C00;
+        } @else if ($i >= 20) {
+            background: #00C;
+        } @else {
+            background: #0C0;
+
+        }
+    }
+
     //$size: $i;
     .node-content {
         &.area-#{$i} {
@@ -423,4 +487,34 @@ $inside-circle-factor: 1.18;
 
 #back {
     margin: 10px 40px;
+}
+
+
+#chart {
+    width: 90%;
+    background: rgb(218,218,218);
+    opacity: 0.9;
+    border-radius: 5px;
+    border: 1px solid #2b2b2b;
+}
+
+.timeline-chart .axis path {
+    fill: none;
+    stroke: none;
+}
+
+.timeline-chart line {
+    stroke: black;
+}
+
+.timeline-chart rect,
+.timeline-chart rect.chart-bounds {
+    fill: transparent;
+}
+
+.timeline-chart rect.interval {
+    ry: 5;
+    rx: 5;
+    fill: black;
+    stroke: #2b2b2b;
 }

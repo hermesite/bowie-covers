@@ -2519,6 +2519,112 @@ h5 {
 .border-rm-left {
   border-left: none !important; }
 
+#timeline {
+  font-family: 'Roboto Condensed', sans-serif; }
+  #timeline .vis-time-axis .vis-text {
+    font-weight: 300; }
+
+.tick text {
+  font-family: 'Roboto Condensed', sans-serif; }
+
+.bar-chart-label {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 11px;
+  fill: #FFF;
+  font-weight: 700; }
+
+.vis-timeline {
+  border: none; }
+
+.vis-item {
+  border-color: #CCC; }
+  .vis-item.vis-box {
+    border: none;
+    border-radius: 0px; }
+  .vis-item.vis-background {
+    background-color: rgba(200, 0, 0, 0.1); }
+    .vis-item.vis-background.negative {
+      background-color: rgba(200, 0, 0, 0.2); }
+  .vis-item .vis-item-content {
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 10px; }
+
+.album-thumbnail {
+  width: 60px;
+  height: 60px; }
+
+div.vis-tooltip {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  border-radius: 0px;
+  background-color: #FFF; }
+
+.button,
+.axis text {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 9px;
+  fill: rgba(255, 255, 255, 0.5); }
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.5);
+  shape-rendering: crispEdges; }
+
+.timeline-chart {
+  padding-top: 0px; }
+
+.bar-chart {
+  height: calc(100vh - 50px);
+  padding-bottom: 0px; }
+
+html {
+  font-size: 1.25em; }
+
+body {
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333; }
+
+p {
+  margin-bottom: 1.3em; }
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2; }
+
+h1 {
+  margin-top: 0;
+  font-size: 2.441em; }
+
+h2 {
+  font-size: 1.953em; }
+
+h3 {
+  font-size: 1.563em; }
+
+h4 {
+  font-size: 1.25em; }
+
+small, .font_small {
+  font-size: 0.8em; }
+
+path {
+  stroke: steelblue;
+  stroke-width: 2;
+  fill: none; }
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: grey;
+  stroke-width: 1;
+  shape-rendering: crispEdges; }
+
 :root {
   font-size: 12px; }
 
@@ -2528,11 +2634,17 @@ h5 {
 @media (min-width: 800px) {
   :root {
     font-size: 24px; } }
+#covers-treemap {
+  position: relative; }
+
 /**
  *
  * Components
  *
  */
+.sun-svg {
+  display: inline-block; }
+
 /*=====  End of Imports  ======*/
 .row {
   margin-left: 0px;
@@ -2548,11 +2660,21 @@ h5 {
   padding: 0.2em 0; }
 
 /* Space out content a bit */
+html,
 body {
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-weight: 300; }
-  body .navbar {
-    background-color: transparent; }
+  height: 100%; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: auto;
+  position: relative; }
+  body h1, body h2, body h3, body h4, body h5, body h6 {
+    font-family: 'Merriweather', serif; }
+
+body .navbar {
+  background-color: transparent; }
+  body .navbar .navbar-brand {
+    margin: auto; }
 
 .ratio-phi {
   position: relative; }
@@ -2835,19 +2957,11 @@ body {
   background-color: #112c35; }
 
 .section {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  padding: 0px;
-  margin: 0px; }
-  .section.section-treemap {
-    top: 80px; }
+  position: relative; }
   .section.section-radial {
     background-color: rgba(0, 0, 0, 0.75); }
+  .section.is-white {
+    background-color: #FFF; }
 
 #covers-treemap {
   padding: 0px;
@@ -2866,15 +2980,26 @@ body {
   .close-radial:hover {
     color: white; }
 
-html,
-body {
-  height: 100%; }
+.article-cover {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  background-color: #C00;
+  background-size: cover; }
 
-body {
-  font-family: 'Arima', sans-serif;
-  margin: auto;
-  position: relative;
-  overflow: hidden; }
+.hero {
+  height: calc(100vh - 80px); }
+  .hero .title, .hero .subtitle {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem; }
+    .hero .title span, .hero .subtitle span {
+      background-color: rgba(255, 255, 255, 0.5); }
 
 /*====================================
 =            SVG elements            =
@@ -3026,1202 +3151,2402 @@ form {
       width: 100%;
       display: block; }
 
+.color-1 {
+  background: #C00; }
+
 .node-content.area-1 h4 strong {
   font-size: 10px; }
+
+.color-2 {
+  background: #C00; }
 
 .node-content.area-2 h4 strong {
   font-size: 10px; }
 
+.color-3 {
+  background: #C00; }
+
 .node-content.area-3 h4 strong {
   font-size: 10px; }
+
+.color-4 {
+  background: #C00; }
 
 .node-content.area-4 h4 strong {
   font-size: 10px; }
 
+.color-5 {
+  background: #C00; }
+
 .node-content.area-5 h4 strong {
   font-size: 10px; }
+
+.color-6 {
+  background: #C00; }
 
 .node-content.area-6 h4 strong {
   font-size: 10px; }
 
+.color-7 {
+  background: #C00; }
+
 .node-content.area-7 h4 strong {
   font-size: 10px; }
+
+.color-8 {
+  background: #C00; }
 
 .node-content.area-8 h4 strong {
   font-size: 10px; }
 
+.color-9 {
+  background: #C00; }
+
 .node-content.area-9 h4 strong {
   font-size: 10px; }
+
+.color-10 {
+  background: #C00; }
 
 .node-content.area-10 h4 strong {
   font-size: 10px; }
 
+.color-11 {
+  background: #0C0; }
+
 .node-content.area-11 h4 strong {
   font-size: 5.5px; }
+
+.color-12 {
+  background: #0C0; }
 
 .node-content.area-12 h4 strong {
   font-size: 6px; }
 
+.color-13 {
+  background: #0C0; }
+
 .node-content.area-13 h4 strong {
   font-size: 6.5px; }
+
+.color-14 {
+  background: #0C0; }
 
 .node-content.area-14 h4 strong {
   font-size: 7px; }
 
+.color-15 {
+  background: #0C0; }
+
 .node-content.area-15 h4 strong {
   font-size: 7.5px; }
+
+.color-16 {
+  background: #0C0; }
 
 .node-content.area-16 h4 strong {
   font-size: 8px; }
 
+.color-17 {
+  background: #0C0; }
+
 .node-content.area-17 h4 strong {
   font-size: 8.5px; }
+
+.color-18 {
+  background: #0C0; }
 
 .node-content.area-18 h4 strong {
   font-size: 9px; }
 
+.color-19 {
+  background: #0C0; }
+
 .node-content.area-19 h4 strong {
   font-size: 9.5px; }
+
+.color-20 {
+  background: #00C; }
 
 .node-content.area-20 h4 strong {
   font-size: 10px; }
 
+.color-21 {
+  background: #00C; }
+
 .node-content.area-21 h4 strong {
   font-size: 10.5px; }
+
+.color-22 {
+  background: #00C; }
 
 .node-content.area-22 h4 strong {
   font-size: 11px; }
 
+.color-23 {
+  background: #00C; }
+
 .node-content.area-23 h4 strong {
   font-size: 11.5px; }
+
+.color-24 {
+  background: #00C; }
 
 .node-content.area-24 h4 strong {
   font-size: 12px; }
 
+.color-25 {
+  background: #00C; }
+
 .node-content.area-25 h4 strong {
   font-size: 12.5px; }
+
+.color-26 {
+  background: #00C; }
 
 .node-content.area-26 h4 strong {
   font-size: 13px; }
 
+.color-27 {
+  background: #00C; }
+
 .node-content.area-27 h4 strong {
   font-size: 13.5px; }
+
+.color-28 {
+  background: #00C; }
 
 .node-content.area-28 h4 strong {
   font-size: 14px; }
 
+.color-29 {
+  background: #00C; }
+
 .node-content.area-29 h4 strong {
   font-size: 14.5px; }
+
+.color-30 {
+  background: #00C; }
 
 .node-content.area-30 h4 strong {
   font-size: 15px; }
 
+.color-31 {
+  background: #00C; }
+
 .node-content.area-31 h4 strong {
   font-size: 15.5px; }
+
+.color-32 {
+  background: #00C; }
 
 .node-content.area-32 h4 strong {
   font-size: 16px; }
 
+.color-33 {
+  background: #00C; }
+
 .node-content.area-33 h4 strong {
   font-size: 16.5px; }
+
+.color-34 {
+  background: #00C; }
 
 .node-content.area-34 h4 strong {
   font-size: 17px; }
 
+.color-35 {
+  background: #00C; }
+
 .node-content.area-35 h4 strong {
   font-size: 17.5px; }
+
+.color-36 {
+  background: #00C; }
 
 .node-content.area-36 h4 strong {
   font-size: 18px; }
 
+.color-37 {
+  background: #00C; }
+
 .node-content.area-37 h4 strong {
   font-size: 18.5px; }
+
+.color-38 {
+  background: #00C; }
 
 .node-content.area-38 h4 strong {
   font-size: 19px; }
 
+.color-39 {
+  background: #00C; }
+
 .node-content.area-39 h4 strong {
   font-size: 19.5px; }
+
+.color-40 {
+  background: #00C; }
 
 .node-content.area-40 h4 strong {
   font-size: 20px; }
 
+.color-41 {
+  background: #00C; }
+
 .node-content.area-41 h4 strong {
   font-size: 20.5px; }
+
+.color-42 {
+  background: #00C; }
 
 .node-content.area-42 h4 strong {
   font-size: 21px; }
 
+.color-43 {
+  background: #00C; }
+
 .node-content.area-43 h4 strong {
   font-size: 21.5px; }
+
+.color-44 {
+  background: #00C; }
 
 .node-content.area-44 h4 strong {
   font-size: 22px; }
 
+.color-45 {
+  background: #00C; }
+
 .node-content.area-45 h4 strong {
   font-size: 22.5px; }
+
+.color-46 {
+  background: #00C; }
 
 .node-content.area-46 h4 strong {
   font-size: 23px; }
 
+.color-47 {
+  background: #00C; }
+
 .node-content.area-47 h4 strong {
   font-size: 23.5px; }
+
+.color-48 {
+  background: #00C; }
 
 .node-content.area-48 h4 strong {
   font-size: 24px; }
 
+.color-49 {
+  background: #00C; }
+
 .node-content.area-49 h4 strong {
   font-size: 24.5px; }
+
+.color-50 {
+  background: #00C; }
 
 .node-content.area-50 h4 strong {
   font-size: 25px; }
 
+.color-51 {
+  background: #00C; }
+
 .node-content.area-51 h4 strong {
   font-size: 25.5px; }
+
+.color-52 {
+  background: #00C; }
 
 .node-content.area-52 h4 strong {
   font-size: 26px; }
 
+.color-53 {
+  background: #00C; }
+
 .node-content.area-53 h4 strong {
   font-size: 26.5px; }
+
+.color-54 {
+  background: #00C; }
 
 .node-content.area-54 h4 strong {
   font-size: 27px; }
 
+.color-55 {
+  background: #00C; }
+
 .node-content.area-55 h4 strong {
   font-size: 27.5px; }
+
+.color-56 {
+  background: #00C; }
 
 .node-content.area-56 h4 strong {
   font-size: 28px; }
 
+.color-57 {
+  background: #00C; }
+
 .node-content.area-57 h4 strong {
   font-size: 28.5px; }
+
+.color-58 {
+  background: #00C; }
 
 .node-content.area-58 h4 strong {
   font-size: 29px; }
 
+.color-59 {
+  background: #00C; }
+
 .node-content.area-59 h4 strong {
   font-size: 29.5px; }
+
+.color-60 {
+  background: #00C; }
 
 .node-content.area-60 h4 strong {
   font-size: 30px; }
 
+.color-61 {
+  background: #00C; }
+
 .node-content.area-61 h4 strong {
   font-size: 30.5px; }
+
+.color-62 {
+  background: #00C; }
 
 .node-content.area-62 h4 strong {
   font-size: 31px; }
 
+.color-63 {
+  background: #00C; }
+
 .node-content.area-63 h4 strong {
   font-size: 31.5px; }
+
+.color-64 {
+  background: #00C; }
 
 .node-content.area-64 h4 strong {
   font-size: 32px; }
 
+.color-65 {
+  background: #00C; }
+
 .node-content.area-65 h4 strong {
   font-size: 32.5px; }
+
+.color-66 {
+  background: #00C; }
 
 .node-content.area-66 h4 strong {
   font-size: 33px; }
 
+.color-67 {
+  background: #00C; }
+
 .node-content.area-67 h4 strong {
   font-size: 33.5px; }
+
+.color-68 {
+  background: #00C; }
 
 .node-content.area-68 h4 strong {
   font-size: 34px; }
 
+.color-69 {
+  background: #00C; }
+
 .node-content.area-69 h4 strong {
   font-size: 34.5px; }
+
+.color-70 {
+  background: #00C; }
 
 .node-content.area-70 h4 strong {
   font-size: 35px; }
 
+.color-71 {
+  background: #00C; }
+
 .node-content.area-71 h4 strong {
   font-size: 35.5px; }
+
+.color-72 {
+  background: #00C; }
 
 .node-content.area-72 h4 strong {
   font-size: 36px; }
 
+.color-73 {
+  background: #00C; }
+
 .node-content.area-73 h4 strong {
   font-size: 36.5px; }
+
+.color-74 {
+  background: #00C; }
 
 .node-content.area-74 h4 strong {
   font-size: 37px; }
 
+.color-75 {
+  background: #00C; }
+
 .node-content.area-75 h4 strong {
   font-size: 37.5px; }
+
+.color-76 {
+  background: #00C; }
 
 .node-content.area-76 h4 strong {
   font-size: 38px; }
 
+.color-77 {
+  background: #00C; }
+
 .node-content.area-77 h4 strong {
   font-size: 38.5px; }
+
+.color-78 {
+  background: #00C; }
 
 .node-content.area-78 h4 strong {
   font-size: 39px; }
 
+.color-79 {
+  background: #00C; }
+
 .node-content.area-79 h4 strong {
   font-size: 39.5px; }
+
+.color-80 {
+  background: #00C; }
 
 .node-content.area-80 h4 strong {
   font-size: 40px; }
 
+.color-81 {
+  background: #00C; }
+
 .node-content.area-81 h4 strong {
   font-size: 40.5px; }
+
+.color-82 {
+  background: #00C; }
 
 .node-content.area-82 h4 strong {
   font-size: 41px; }
 
+.color-83 {
+  background: #00C; }
+
 .node-content.area-83 h4 strong {
   font-size: 41.5px; }
+
+.color-84 {
+  background: #00C; }
 
 .node-content.area-84 h4 strong {
   font-size: 42px; }
 
+.color-85 {
+  background: #00C; }
+
 .node-content.area-85 h4 strong {
   font-size: 42.5px; }
+
+.color-86 {
+  background: #00C; }
 
 .node-content.area-86 h4 strong {
   font-size: 43px; }
 
+.color-87 {
+  background: #00C; }
+
 .node-content.area-87 h4 strong {
   font-size: 43.5px; }
+
+.color-88 {
+  background: #00C; }
 
 .node-content.area-88 h4 strong {
   font-size: 44px; }
 
+.color-89 {
+  background: #00C; }
+
 .node-content.area-89 h4 strong {
   font-size: 44.5px; }
+
+.color-90 {
+  background: #00C; }
 
 .node-content.area-90 h4 strong {
   font-size: 45px; }
 
+.color-91 {
+  background: #00C; }
+
 .node-content.area-91 h4 strong {
   font-size: 45.5px; }
+
+.color-92 {
+  background: #00C; }
 
 .node-content.area-92 h4 strong {
   font-size: 46px; }
 
+.color-93 {
+  background: #00C; }
+
 .node-content.area-93 h4 strong {
   font-size: 46.5px; }
+
+.color-94 {
+  background: #00C; }
 
 .node-content.area-94 h4 strong {
   font-size: 47px; }
 
+.color-95 {
+  background: #00C; }
+
 .node-content.area-95 h4 strong {
   font-size: 47.5px; }
+
+.color-96 {
+  background: #00C; }
 
 .node-content.area-96 h4 strong {
   font-size: 48px; }
 
+.color-97 {
+  background: #00C; }
+
 .node-content.area-97 h4 strong {
   font-size: 48.5px; }
+
+.color-98 {
+  background: #00C; }
 
 .node-content.area-98 h4 strong {
   font-size: 49px; }
 
+.color-99 {
+  background: #00C; }
+
 .node-content.area-99 h4 strong {
   font-size: 49.5px; }
+
+.color-100 {
+  background: #00C; }
 
 .node-content.area-100 h4 strong {
   font-size: 50px; }
 
+.color-101 {
+  background: #00C; }
+
 .node-content.area-101 h4 strong {
   font-size: 50.5px; }
+
+.color-102 {
+  background: #00C; }
 
 .node-content.area-102 h4 strong {
   font-size: 51px; }
 
+.color-103 {
+  background: #00C; }
+
 .node-content.area-103 h4 strong {
   font-size: 51.5px; }
+
+.color-104 {
+  background: #00C; }
 
 .node-content.area-104 h4 strong {
   font-size: 52px; }
 
+.color-105 {
+  background: #00C; }
+
 .node-content.area-105 h4 strong {
   font-size: 52.5px; }
+
+.color-106 {
+  background: #00C; }
 
 .node-content.area-106 h4 strong {
   font-size: 53px; }
 
+.color-107 {
+  background: #00C; }
+
 .node-content.area-107 h4 strong {
   font-size: 53.5px; }
+
+.color-108 {
+  background: #00C; }
 
 .node-content.area-108 h4 strong {
   font-size: 54px; }
 
+.color-109 {
+  background: #00C; }
+
 .node-content.area-109 h4 strong {
   font-size: 54.5px; }
+
+.color-110 {
+  background: #00C; }
 
 .node-content.area-110 h4 strong {
   font-size: 55px; }
 
+.color-111 {
+  background: #00C; }
+
 .node-content.area-111 h4 strong {
   font-size: 55.5px; }
+
+.color-112 {
+  background: #00C; }
 
 .node-content.area-112 h4 strong {
   font-size: 56px; }
 
+.color-113 {
+  background: #00C; }
+
 .node-content.area-113 h4 strong {
   font-size: 56.5px; }
+
+.color-114 {
+  background: #00C; }
 
 .node-content.area-114 h4 strong {
   font-size: 57px; }
 
+.color-115 {
+  background: #00C; }
+
 .node-content.area-115 h4 strong {
   font-size: 57.5px; }
+
+.color-116 {
+  background: #00C; }
 
 .node-content.area-116 h4 strong {
   font-size: 58px; }
 
+.color-117 {
+  background: #00C; }
+
 .node-content.area-117 h4 strong {
   font-size: 58.5px; }
+
+.color-118 {
+  background: #00C; }
 
 .node-content.area-118 h4 strong {
   font-size: 59px; }
 
+.color-119 {
+  background: #00C; }
+
 .node-content.area-119 h4 strong {
   font-size: 59.5px; }
+
+.color-120 {
+  background: #00C; }
 
 .node-content.area-120 h4 strong {
   font-size: 60px; }
 
+.color-121 {
+  background: #00C; }
+
 .node-content.area-121 h4 strong {
   font-size: 60.5px; }
+
+.color-122 {
+  background: #00C; }
 
 .node-content.area-122 h4 strong {
   font-size: 61px; }
 
+.color-123 {
+  background: #00C; }
+
 .node-content.area-123 h4 strong {
   font-size: 61.5px; }
+
+.color-124 {
+  background: #00C; }
 
 .node-content.area-124 h4 strong {
   font-size: 62px; }
 
+.color-125 {
+  background: #00C; }
+
 .node-content.area-125 h4 strong {
   font-size: 62.5px; }
+
+.color-126 {
+  background: #00C; }
 
 .node-content.area-126 h4 strong {
   font-size: 63px; }
 
+.color-127 {
+  background: #00C; }
+
 .node-content.area-127 h4 strong {
   font-size: 63.5px; }
+
+.color-128 {
+  background: #00C; }
 
 .node-content.area-128 h4 strong {
   font-size: 64px; }
 
+.color-129 {
+  background: #00C; }
+
 .node-content.area-129 h4 strong {
   font-size: 64.5px; }
+
+.color-130 {
+  background: #00C; }
 
 .node-content.area-130 h4 strong {
   font-size: 65px; }
 
+.color-131 {
+  background: #00C; }
+
 .node-content.area-131 h4 strong {
   font-size: 65.5px; }
+
+.color-132 {
+  background: #00C; }
 
 .node-content.area-132 h4 strong {
   font-size: 66px; }
 
+.color-133 {
+  background: #00C; }
+
 .node-content.area-133 h4 strong {
   font-size: 66.5px; }
+
+.color-134 {
+  background: #00C; }
 
 .node-content.area-134 h4 strong {
   font-size: 67px; }
 
+.color-135 {
+  background: #00C; }
+
 .node-content.area-135 h4 strong {
   font-size: 67.5px; }
+
+.color-136 {
+  background: #00C; }
 
 .node-content.area-136 h4 strong {
   font-size: 68px; }
 
+.color-137 {
+  background: #00C; }
+
 .node-content.area-137 h4 strong {
   font-size: 68.5px; }
+
+.color-138 {
+  background: #00C; }
 
 .node-content.area-138 h4 strong {
   font-size: 69px; }
 
+.color-139 {
+  background: #00C; }
+
 .node-content.area-139 h4 strong {
   font-size: 69.5px; }
+
+.color-140 {
+  background: #00C; }
 
 .node-content.area-140 h4 strong {
   font-size: 70px; }
 
+.color-141 {
+  background: #00C; }
+
 .node-content.area-141 h4 strong {
   font-size: 70.5px; }
+
+.color-142 {
+  background: #00C; }
 
 .node-content.area-142 h4 strong {
   font-size: 71px; }
 
+.color-143 {
+  background: #00C; }
+
 .node-content.area-143 h4 strong {
   font-size: 71.5px; }
+
+.color-144 {
+  background: #00C; }
 
 .node-content.area-144 h4 strong {
   font-size: 72px; }
 
+.color-145 {
+  background: #00C; }
+
 .node-content.area-145 h4 strong {
   font-size: 72.5px; }
+
+.color-146 {
+  background: #00C; }
 
 .node-content.area-146 h4 strong {
   font-size: 73px; }
 
+.color-147 {
+  background: #00C; }
+
 .node-content.area-147 h4 strong {
   font-size: 73.5px; }
+
+.color-148 {
+  background: #00C; }
 
 .node-content.area-148 h4 strong {
   font-size: 74px; }
 
+.color-149 {
+  background: #00C; }
+
 .node-content.area-149 h4 strong {
   font-size: 74.5px; }
+
+.color-150 {
+  background: #00C; }
 
 .node-content.area-150 h4 strong {
   font-size: 75px; }
 
+.color-151 {
+  background: #00C; }
+
 .node-content.area-151 h4 strong {
   font-size: 75.5px; }
+
+.color-152 {
+  background: #00C; }
 
 .node-content.area-152 h4 strong {
   font-size: 76px; }
 
+.color-153 {
+  background: #00C; }
+
 .node-content.area-153 h4 strong {
   font-size: 76.5px; }
+
+.color-154 {
+  background: #00C; }
 
 .node-content.area-154 h4 strong {
   font-size: 77px; }
 
+.color-155 {
+  background: #00C; }
+
 .node-content.area-155 h4 strong {
   font-size: 77.5px; }
+
+.color-156 {
+  background: #00C; }
 
 .node-content.area-156 h4 strong {
   font-size: 78px; }
 
+.color-157 {
+  background: #00C; }
+
 .node-content.area-157 h4 strong {
   font-size: 78.5px; }
+
+.color-158 {
+  background: #00C; }
 
 .node-content.area-158 h4 strong {
   font-size: 79px; }
 
+.color-159 {
+  background: #00C; }
+
 .node-content.area-159 h4 strong {
   font-size: 79.5px; }
+
+.color-160 {
+  background: #00C; }
 
 .node-content.area-160 h4 strong {
   font-size: 80px; }
 
+.color-161 {
+  background: #00C; }
+
 .node-content.area-161 h4 strong {
   font-size: 80.5px; }
+
+.color-162 {
+  background: #00C; }
 
 .node-content.area-162 h4 strong {
   font-size: 81px; }
 
+.color-163 {
+  background: #00C; }
+
 .node-content.area-163 h4 strong {
   font-size: 81.5px; }
+
+.color-164 {
+  background: #00C; }
 
 .node-content.area-164 h4 strong {
   font-size: 82px; }
 
+.color-165 {
+  background: #00C; }
+
 .node-content.area-165 h4 strong {
   font-size: 82.5px; }
+
+.color-166 {
+  background: #00C; }
 
 .node-content.area-166 h4 strong {
   font-size: 83px; }
 
+.color-167 {
+  background: #00C; }
+
 .node-content.area-167 h4 strong {
   font-size: 83.5px; }
+
+.color-168 {
+  background: #00C; }
 
 .node-content.area-168 h4 strong {
   font-size: 84px; }
 
+.color-169 {
+  background: #00C; }
+
 .node-content.area-169 h4 strong {
   font-size: 84.5px; }
+
+.color-170 {
+  background: #00C; }
 
 .node-content.area-170 h4 strong {
   font-size: 85px; }
 
+.color-171 {
+  background: #00C; }
+
 .node-content.area-171 h4 strong {
   font-size: 85.5px; }
+
+.color-172 {
+  background: #00C; }
 
 .node-content.area-172 h4 strong {
   font-size: 86px; }
 
+.color-173 {
+  background: #00C; }
+
 .node-content.area-173 h4 strong {
   font-size: 86.5px; }
+
+.color-174 {
+  background: #00C; }
 
 .node-content.area-174 h4 strong {
   font-size: 87px; }
 
+.color-175 {
+  background: #00C; }
+
 .node-content.area-175 h4 strong {
   font-size: 87.5px; }
+
+.color-176 {
+  background: #00C; }
 
 .node-content.area-176 h4 strong {
   font-size: 88px; }
 
+.color-177 {
+  background: #00C; }
+
 .node-content.area-177 h4 strong {
   font-size: 88.5px; }
+
+.color-178 {
+  background: #00C; }
 
 .node-content.area-178 h4 strong {
   font-size: 89px; }
 
+.color-179 {
+  background: #00C; }
+
 .node-content.area-179 h4 strong {
   font-size: 89.5px; }
+
+.color-180 {
+  background: #00C; }
 
 .node-content.area-180 h4 strong {
   font-size: 90px; }
 
+.color-181 {
+  background: #00C; }
+
 .node-content.area-181 h4 strong {
   font-size: 90.5px; }
+
+.color-182 {
+  background: #00C; }
 
 .node-content.area-182 h4 strong {
   font-size: 91px; }
 
+.color-183 {
+  background: #00C; }
+
 .node-content.area-183 h4 strong {
   font-size: 91.5px; }
+
+.color-184 {
+  background: #00C; }
 
 .node-content.area-184 h4 strong {
   font-size: 92px; }
 
+.color-185 {
+  background: #00C; }
+
 .node-content.area-185 h4 strong {
   font-size: 92.5px; }
+
+.color-186 {
+  background: #00C; }
 
 .node-content.area-186 h4 strong {
   font-size: 93px; }
 
+.color-187 {
+  background: #00C; }
+
 .node-content.area-187 h4 strong {
   font-size: 93.5px; }
+
+.color-188 {
+  background: #00C; }
 
 .node-content.area-188 h4 strong {
   font-size: 94px; }
 
+.color-189 {
+  background: #00C; }
+
 .node-content.area-189 h4 strong {
   font-size: 94.5px; }
+
+.color-190 {
+  background: #00C; }
 
 .node-content.area-190 h4 strong {
   font-size: 95px; }
 
+.color-191 {
+  background: #00C; }
+
 .node-content.area-191 h4 strong {
   font-size: 95.5px; }
+
+.color-192 {
+  background: #00C; }
 
 .node-content.area-192 h4 strong {
   font-size: 96px; }
 
+.color-193 {
+  background: #00C; }
+
 .node-content.area-193 h4 strong {
   font-size: 96.5px; }
+
+.color-194 {
+  background: #00C; }
 
 .node-content.area-194 h4 strong {
   font-size: 97px; }
 
+.color-195 {
+  background: #00C; }
+
 .node-content.area-195 h4 strong {
   font-size: 97.5px; }
+
+.color-196 {
+  background: #00C; }
 
 .node-content.area-196 h4 strong {
   font-size: 98px; }
 
+.color-197 {
+  background: #00C; }
+
 .node-content.area-197 h4 strong {
   font-size: 98.5px; }
+
+.color-198 {
+  background: #00C; }
 
 .node-content.area-198 h4 strong {
   font-size: 99px; }
 
+.color-199 {
+  background: #00C; }
+
 .node-content.area-199 h4 strong {
   font-size: 99.5px; }
+
+.color-200 {
+  background: #00C; }
 
 .node-content.area-200 h4 strong {
   font-size: 100px; }
 
+.color-201 {
+  background: #00C; }
+
 .node-content.area-201 h4 strong {
   font-size: 100.5px; }
+
+.color-202 {
+  background: #00C; }
 
 .node-content.area-202 h4 strong {
   font-size: 101px; }
 
+.color-203 {
+  background: #00C; }
+
 .node-content.area-203 h4 strong {
   font-size: 101.5px; }
+
+.color-204 {
+  background: #00C; }
 
 .node-content.area-204 h4 strong {
   font-size: 102px; }
 
+.color-205 {
+  background: #00C; }
+
 .node-content.area-205 h4 strong {
   font-size: 102.5px; }
+
+.color-206 {
+  background: #00C; }
 
 .node-content.area-206 h4 strong {
   font-size: 103px; }
 
+.color-207 {
+  background: #00C; }
+
 .node-content.area-207 h4 strong {
   font-size: 103.5px; }
+
+.color-208 {
+  background: #00C; }
 
 .node-content.area-208 h4 strong {
   font-size: 104px; }
 
+.color-209 {
+  background: #00C; }
+
 .node-content.area-209 h4 strong {
   font-size: 104.5px; }
+
+.color-210 {
+  background: #00C; }
 
 .node-content.area-210 h4 strong {
   font-size: 105px; }
 
+.color-211 {
+  background: #00C; }
+
 .node-content.area-211 h4 strong {
   font-size: 105.5px; }
+
+.color-212 {
+  background: #00C; }
 
 .node-content.area-212 h4 strong {
   font-size: 106px; }
 
+.color-213 {
+  background: #00C; }
+
 .node-content.area-213 h4 strong {
   font-size: 106.5px; }
+
+.color-214 {
+  background: #00C; }
 
 .node-content.area-214 h4 strong {
   font-size: 107px; }
 
+.color-215 {
+  background: #00C; }
+
 .node-content.area-215 h4 strong {
   font-size: 107.5px; }
+
+.color-216 {
+  background: #00C; }
 
 .node-content.area-216 h4 strong {
   font-size: 108px; }
 
+.color-217 {
+  background: #00C; }
+
 .node-content.area-217 h4 strong {
   font-size: 108.5px; }
+
+.color-218 {
+  background: #00C; }
 
 .node-content.area-218 h4 strong {
   font-size: 109px; }
 
+.color-219 {
+  background: #00C; }
+
 .node-content.area-219 h4 strong {
   font-size: 109.5px; }
+
+.color-220 {
+  background: #00C; }
 
 .node-content.area-220 h4 strong {
   font-size: 110px; }
 
+.color-221 {
+  background: #00C; }
+
 .node-content.area-221 h4 strong {
   font-size: 110.5px; }
+
+.color-222 {
+  background: #00C; }
 
 .node-content.area-222 h4 strong {
   font-size: 111px; }
 
+.color-223 {
+  background: #00C; }
+
 .node-content.area-223 h4 strong {
   font-size: 111.5px; }
+
+.color-224 {
+  background: #00C; }
 
 .node-content.area-224 h4 strong {
   font-size: 112px; }
 
+.color-225 {
+  background: #00C; }
+
 .node-content.area-225 h4 strong {
   font-size: 112.5px; }
+
+.color-226 {
+  background: #00C; }
 
 .node-content.area-226 h4 strong {
   font-size: 113px; }
 
+.color-227 {
+  background: #00C; }
+
 .node-content.area-227 h4 strong {
   font-size: 113.5px; }
+
+.color-228 {
+  background: #00C; }
 
 .node-content.area-228 h4 strong {
   font-size: 114px; }
 
+.color-229 {
+  background: #00C; }
+
 .node-content.area-229 h4 strong {
   font-size: 114.5px; }
+
+.color-230 {
+  background: #00C; }
 
 .node-content.area-230 h4 strong {
   font-size: 115px; }
 
+.color-231 {
+  background: #00C; }
+
 .node-content.area-231 h4 strong {
   font-size: 115.5px; }
+
+.color-232 {
+  background: #00C; }
 
 .node-content.area-232 h4 strong {
   font-size: 116px; }
 
+.color-233 {
+  background: #00C; }
+
 .node-content.area-233 h4 strong {
   font-size: 116.5px; }
+
+.color-234 {
+  background: #00C; }
 
 .node-content.area-234 h4 strong {
   font-size: 117px; }
 
+.color-235 {
+  background: #00C; }
+
 .node-content.area-235 h4 strong {
   font-size: 117.5px; }
+
+.color-236 {
+  background: #00C; }
 
 .node-content.area-236 h4 strong {
   font-size: 118px; }
 
+.color-237 {
+  background: #00C; }
+
 .node-content.area-237 h4 strong {
   font-size: 118.5px; }
+
+.color-238 {
+  background: #00C; }
 
 .node-content.area-238 h4 strong {
   font-size: 119px; }
 
+.color-239 {
+  background: #00C; }
+
 .node-content.area-239 h4 strong {
   font-size: 119.5px; }
+
+.color-240 {
+  background: #00C; }
 
 .node-content.area-240 h4 strong {
   font-size: 120px; }
 
+.color-241 {
+  background: #00C; }
+
 .node-content.area-241 h4 strong {
   font-size: 120.5px; }
+
+.color-242 {
+  background: #00C; }
 
 .node-content.area-242 h4 strong {
   font-size: 121px; }
 
+.color-243 {
+  background: #00C; }
+
 .node-content.area-243 h4 strong {
   font-size: 121.5px; }
+
+.color-244 {
+  background: #00C; }
 
 .node-content.area-244 h4 strong {
   font-size: 122px; }
 
+.color-245 {
+  background: #00C; }
+
 .node-content.area-245 h4 strong {
   font-size: 122.5px; }
+
+.color-246 {
+  background: #00C; }
 
 .node-content.area-246 h4 strong {
   font-size: 123px; }
 
+.color-247 {
+  background: #00C; }
+
 .node-content.area-247 h4 strong {
   font-size: 123.5px; }
+
+.color-248 {
+  background: #00C; }
 
 .node-content.area-248 h4 strong {
   font-size: 124px; }
 
+.color-249 {
+  background: #00C; }
+
 .node-content.area-249 h4 strong {
   font-size: 124.5px; }
+
+.color-250 {
+  background: #00C; }
 
 .node-content.area-250 h4 strong {
   font-size: 125px; }
 
+.color-251 {
+  background: #00C; }
+
 .node-content.area-251 h4 strong {
   font-size: 125.5px; }
+
+.color-252 {
+  background: #00C; }
 
 .node-content.area-252 h4 strong {
   font-size: 126px; }
 
+.color-253 {
+  background: #00C; }
+
 .node-content.area-253 h4 strong {
   font-size: 126.5px; }
+
+.color-254 {
+  background: #00C; }
 
 .node-content.area-254 h4 strong {
   font-size: 127px; }
 
+.color-255 {
+  background: #00C; }
+
 .node-content.area-255 h4 strong {
   font-size: 127.5px; }
+
+.color-256 {
+  background: #00C; }
 
 .node-content.area-256 h4 strong {
   font-size: 128px; }
 
+.color-257 {
+  background: #00C; }
+
 .node-content.area-257 h4 strong {
   font-size: 128.5px; }
+
+.color-258 {
+  background: #00C; }
 
 .node-content.area-258 h4 strong {
   font-size: 129px; }
 
+.color-259 {
+  background: #00C; }
+
 .node-content.area-259 h4 strong {
   font-size: 129.5px; }
+
+.color-260 {
+  background: #00C; }
 
 .node-content.area-260 h4 strong {
   font-size: 130px; }
 
+.color-261 {
+  background: #00C; }
+
 .node-content.area-261 h4 strong {
   font-size: 130.5px; }
+
+.color-262 {
+  background: #00C; }
 
 .node-content.area-262 h4 strong {
   font-size: 131px; }
 
+.color-263 {
+  background: #00C; }
+
 .node-content.area-263 h4 strong {
   font-size: 131.5px; }
+
+.color-264 {
+  background: #00C; }
 
 .node-content.area-264 h4 strong {
   font-size: 132px; }
 
+.color-265 {
+  background: #00C; }
+
 .node-content.area-265 h4 strong {
   font-size: 132.5px; }
+
+.color-266 {
+  background: #00C; }
 
 .node-content.area-266 h4 strong {
   font-size: 133px; }
 
+.color-267 {
+  background: #00C; }
+
 .node-content.area-267 h4 strong {
   font-size: 133.5px; }
+
+.color-268 {
+  background: #00C; }
 
 .node-content.area-268 h4 strong {
   font-size: 134px; }
 
+.color-269 {
+  background: #00C; }
+
 .node-content.area-269 h4 strong {
   font-size: 134.5px; }
+
+.color-270 {
+  background: #00C; }
 
 .node-content.area-270 h4 strong {
   font-size: 135px; }
 
+.color-271 {
+  background: #00C; }
+
 .node-content.area-271 h4 strong {
   font-size: 135.5px; }
+
+.color-272 {
+  background: #00C; }
 
 .node-content.area-272 h4 strong {
   font-size: 136px; }
 
+.color-273 {
+  background: #00C; }
+
 .node-content.area-273 h4 strong {
   font-size: 136.5px; }
+
+.color-274 {
+  background: #00C; }
 
 .node-content.area-274 h4 strong {
   font-size: 137px; }
 
+.color-275 {
+  background: #00C; }
+
 .node-content.area-275 h4 strong {
   font-size: 137.5px; }
+
+.color-276 {
+  background: #00C; }
 
 .node-content.area-276 h4 strong {
   font-size: 138px; }
 
+.color-277 {
+  background: #00C; }
+
 .node-content.area-277 h4 strong {
   font-size: 138.5px; }
+
+.color-278 {
+  background: #00C; }
 
 .node-content.area-278 h4 strong {
   font-size: 139px; }
 
+.color-279 {
+  background: #00C; }
+
 .node-content.area-279 h4 strong {
   font-size: 139.5px; }
+
+.color-280 {
+  background: #00C; }
 
 .node-content.area-280 h4 strong {
   font-size: 140px; }
 
+.color-281 {
+  background: #00C; }
+
 .node-content.area-281 h4 strong {
   font-size: 140.5px; }
+
+.color-282 {
+  background: #00C; }
 
 .node-content.area-282 h4 strong {
   font-size: 141px; }
 
+.color-283 {
+  background: #00C; }
+
 .node-content.area-283 h4 strong {
   font-size: 141.5px; }
+
+.color-284 {
+  background: #00C; }
 
 .node-content.area-284 h4 strong {
   font-size: 142px; }
 
+.color-285 {
+  background: #00C; }
+
 .node-content.area-285 h4 strong {
   font-size: 142.5px; }
+
+.color-286 {
+  background: #00C; }
 
 .node-content.area-286 h4 strong {
   font-size: 143px; }
 
+.color-287 {
+  background: #00C; }
+
 .node-content.area-287 h4 strong {
   font-size: 143.5px; }
+
+.color-288 {
+  background: #00C; }
 
 .node-content.area-288 h4 strong {
   font-size: 144px; }
 
+.color-289 {
+  background: #00C; }
+
 .node-content.area-289 h4 strong {
   font-size: 144.5px; }
+
+.color-290 {
+  background: #00C; }
 
 .node-content.area-290 h4 strong {
   font-size: 145px; }
 
+.color-291 {
+  background: #00C; }
+
 .node-content.area-291 h4 strong {
   font-size: 145.5px; }
+
+.color-292 {
+  background: #00C; }
 
 .node-content.area-292 h4 strong {
   font-size: 146px; }
 
+.color-293 {
+  background: #00C; }
+
 .node-content.area-293 h4 strong {
   font-size: 146.5px; }
+
+.color-294 {
+  background: #00C; }
 
 .node-content.area-294 h4 strong {
   font-size: 147px; }
 
+.color-295 {
+  background: #00C; }
+
 .node-content.area-295 h4 strong {
   font-size: 147.5px; }
+
+.color-296 {
+  background: #00C; }
 
 .node-content.area-296 h4 strong {
   font-size: 148px; }
 
+.color-297 {
+  background: #00C; }
+
 .node-content.area-297 h4 strong {
   font-size: 148.5px; }
+
+.color-298 {
+  background: #00C; }
 
 .node-content.area-298 h4 strong {
   font-size: 149px; }
 
+.color-299 {
+  background: #00C; }
+
 .node-content.area-299 h4 strong {
   font-size: 149.5px; }
+
+.color-300 {
+  background: #00C; }
 
 .node-content.area-300 h4 strong {
   font-size: 150px; }
 
+.color-301 {
+  background: #00C; }
+
 .node-content.area-301 h4 strong {
   font-size: 150.5px; }
+
+.color-302 {
+  background: #00C; }
 
 .node-content.area-302 h4 strong {
   font-size: 151px; }
 
+.color-303 {
+  background: #00C; }
+
 .node-content.area-303 h4 strong {
   font-size: 151.5px; }
+
+.color-304 {
+  background: #00C; }
 
 .node-content.area-304 h4 strong {
   font-size: 152px; }
 
+.color-305 {
+  background: #00C; }
+
 .node-content.area-305 h4 strong {
   font-size: 152.5px; }
+
+.color-306 {
+  background: #00C; }
 
 .node-content.area-306 h4 strong {
   font-size: 153px; }
 
+.color-307 {
+  background: #00C; }
+
 .node-content.area-307 h4 strong {
   font-size: 153.5px; }
+
+.color-308 {
+  background: #00C; }
 
 .node-content.area-308 h4 strong {
   font-size: 154px; }
 
+.color-309 {
+  background: #00C; }
+
 .node-content.area-309 h4 strong {
   font-size: 154.5px; }
+
+.color-310 {
+  background: #00C; }
 
 .node-content.area-310 h4 strong {
   font-size: 155px; }
 
+.color-311 {
+  background: #00C; }
+
 .node-content.area-311 h4 strong {
   font-size: 155.5px; }
+
+.color-312 {
+  background: #00C; }
 
 .node-content.area-312 h4 strong {
   font-size: 156px; }
 
+.color-313 {
+  background: #00C; }
+
 .node-content.area-313 h4 strong {
   font-size: 156.5px; }
+
+.color-314 {
+  background: #00C; }
 
 .node-content.area-314 h4 strong {
   font-size: 157px; }
 
+.color-315 {
+  background: #00C; }
+
 .node-content.area-315 h4 strong {
   font-size: 157.5px; }
+
+.color-316 {
+  background: #00C; }
 
 .node-content.area-316 h4 strong {
   font-size: 158px; }
 
+.color-317 {
+  background: #00C; }
+
 .node-content.area-317 h4 strong {
   font-size: 158.5px; }
+
+.color-318 {
+  background: #00C; }
 
 .node-content.area-318 h4 strong {
   font-size: 159px; }
 
+.color-319 {
+  background: #00C; }
+
 .node-content.area-319 h4 strong {
   font-size: 159.5px; }
+
+.color-320 {
+  background: #00C; }
 
 .node-content.area-320 h4 strong {
   font-size: 160px; }
 
+.color-321 {
+  background: #00C; }
+
 .node-content.area-321 h4 strong {
   font-size: 160.5px; }
+
+.color-322 {
+  background: #00C; }
 
 .node-content.area-322 h4 strong {
   font-size: 161px; }
 
+.color-323 {
+  background: #00C; }
+
 .node-content.area-323 h4 strong {
   font-size: 161.5px; }
+
+.color-324 {
+  background: #00C; }
 
 .node-content.area-324 h4 strong {
   font-size: 162px; }
 
+.color-325 {
+  background: #00C; }
+
 .node-content.area-325 h4 strong {
   font-size: 162.5px; }
+
+.color-326 {
+  background: #00C; }
 
 .node-content.area-326 h4 strong {
   font-size: 163px; }
 
+.color-327 {
+  background: #00C; }
+
 .node-content.area-327 h4 strong {
   font-size: 163.5px; }
+
+.color-328 {
+  background: #00C; }
 
 .node-content.area-328 h4 strong {
   font-size: 164px; }
 
+.color-329 {
+  background: #00C; }
+
 .node-content.area-329 h4 strong {
   font-size: 164.5px; }
+
+.color-330 {
+  background: #00C; }
 
 .node-content.area-330 h4 strong {
   font-size: 165px; }
 
+.color-331 {
+  background: #00C; }
+
 .node-content.area-331 h4 strong {
   font-size: 165.5px; }
+
+.color-332 {
+  background: #00C; }
 
 .node-content.area-332 h4 strong {
   font-size: 166px; }
 
+.color-333 {
+  background: #00C; }
+
 .node-content.area-333 h4 strong {
   font-size: 166.5px; }
+
+.color-334 {
+  background: #00C; }
 
 .node-content.area-334 h4 strong {
   font-size: 167px; }
 
+.color-335 {
+  background: #00C; }
+
 .node-content.area-335 h4 strong {
   font-size: 167.5px; }
+
+.color-336 {
+  background: #00C; }
 
 .node-content.area-336 h4 strong {
   font-size: 168px; }
 
+.color-337 {
+  background: #00C; }
+
 .node-content.area-337 h4 strong {
   font-size: 168.5px; }
+
+.color-338 {
+  background: #00C; }
 
 .node-content.area-338 h4 strong {
   font-size: 169px; }
 
+.color-339 {
+  background: #00C; }
+
 .node-content.area-339 h4 strong {
   font-size: 169.5px; }
+
+.color-340 {
+  background: #00C; }
 
 .node-content.area-340 h4 strong {
   font-size: 170px; }
 
+.color-341 {
+  background: #00C; }
+
 .node-content.area-341 h4 strong {
   font-size: 170.5px; }
+
+.color-342 {
+  background: #00C; }
 
 .node-content.area-342 h4 strong {
   font-size: 171px; }
 
+.color-343 {
+  background: #00C; }
+
 .node-content.area-343 h4 strong {
   font-size: 171.5px; }
+
+.color-344 {
+  background: #00C; }
 
 .node-content.area-344 h4 strong {
   font-size: 172px; }
 
+.color-345 {
+  background: #00C; }
+
 .node-content.area-345 h4 strong {
   font-size: 172.5px; }
+
+.color-346 {
+  background: #00C; }
 
 .node-content.area-346 h4 strong {
   font-size: 173px; }
 
+.color-347 {
+  background: #00C; }
+
 .node-content.area-347 h4 strong {
   font-size: 173.5px; }
+
+.color-348 {
+  background: #00C; }
 
 .node-content.area-348 h4 strong {
   font-size: 174px; }
 
+.color-349 {
+  background: #00C; }
+
 .node-content.area-349 h4 strong {
   font-size: 174.5px; }
+
+.color-350 {
+  background: #00C; }
 
 .node-content.area-350 h4 strong {
   font-size: 175px; }
 
+.color-351 {
+  background: #00C; }
+
 .node-content.area-351 h4 strong {
   font-size: 175.5px; }
+
+.color-352 {
+  background: #00C; }
 
 .node-content.area-352 h4 strong {
   font-size: 176px; }
 
+.color-353 {
+  background: #00C; }
+
 .node-content.area-353 h4 strong {
   font-size: 176.5px; }
+
+.color-354 {
+  background: #00C; }
 
 .node-content.area-354 h4 strong {
   font-size: 177px; }
 
+.color-355 {
+  background: #00C; }
+
 .node-content.area-355 h4 strong {
   font-size: 177.5px; }
+
+.color-356 {
+  background: #00C; }
 
 .node-content.area-356 h4 strong {
   font-size: 178px; }
 
+.color-357 {
+  background: #00C; }
+
 .node-content.area-357 h4 strong {
   font-size: 178.5px; }
+
+.color-358 {
+  background: #00C; }
 
 .node-content.area-358 h4 strong {
   font-size: 179px; }
 
+.color-359 {
+  background: #00C; }
+
 .node-content.area-359 h4 strong {
   font-size: 179.5px; }
+
+.color-360 {
+  background: #00C; }
 
 .node-content.area-360 h4 strong {
   font-size: 180px; }
 
+.color-361 {
+  background: #00C; }
+
 .node-content.area-361 h4 strong {
   font-size: 180.5px; }
+
+.color-362 {
+  background: #00C; }
 
 .node-content.area-362 h4 strong {
   font-size: 181px; }
 
+.color-363 {
+  background: #00C; }
+
 .node-content.area-363 h4 strong {
   font-size: 181.5px; }
+
+.color-364 {
+  background: #00C; }
 
 .node-content.area-364 h4 strong {
   font-size: 182px; }
 
+.color-365 {
+  background: #00C; }
+
 .node-content.area-365 h4 strong {
   font-size: 182.5px; }
+
+.color-366 {
+  background: #00C; }
 
 .node-content.area-366 h4 strong {
   font-size: 183px; }
 
+.color-367 {
+  background: #00C; }
+
 .node-content.area-367 h4 strong {
   font-size: 183.5px; }
+
+.color-368 {
+  background: #00C; }
 
 .node-content.area-368 h4 strong {
   font-size: 184px; }
 
+.color-369 {
+  background: #00C; }
+
 .node-content.area-369 h4 strong {
   font-size: 184.5px; }
+
+.color-370 {
+  background: #00C; }
 
 .node-content.area-370 h4 strong {
   font-size: 185px; }
 
+.color-371 {
+  background: #00C; }
+
 .node-content.area-371 h4 strong {
   font-size: 185.5px; }
+
+.color-372 {
+  background: #00C; }
 
 .node-content.area-372 h4 strong {
   font-size: 186px; }
 
+.color-373 {
+  background: #00C; }
+
 .node-content.area-373 h4 strong {
   font-size: 186.5px; }
+
+.color-374 {
+  background: #00C; }
 
 .node-content.area-374 h4 strong {
   font-size: 187px; }
 
+.color-375 {
+  background: #00C; }
+
 .node-content.area-375 h4 strong {
   font-size: 187.5px; }
+
+.color-376 {
+  background: #00C; }
 
 .node-content.area-376 h4 strong {
   font-size: 188px; }
 
+.color-377 {
+  background: #00C; }
+
 .node-content.area-377 h4 strong {
   font-size: 188.5px; }
+
+.color-378 {
+  background: #00C; }
 
 .node-content.area-378 h4 strong {
   font-size: 189px; }
 
+.color-379 {
+  background: #00C; }
+
 .node-content.area-379 h4 strong {
   font-size: 189.5px; }
+
+.color-380 {
+  background: #00C; }
 
 .node-content.area-380 h4 strong {
   font-size: 190px; }
 
+.color-381 {
+  background: #00C; }
+
 .node-content.area-381 h4 strong {
   font-size: 190.5px; }
+
+.color-382 {
+  background: #00C; }
 
 .node-content.area-382 h4 strong {
   font-size: 191px; }
 
+.color-383 {
+  background: #00C; }
+
 .node-content.area-383 h4 strong {
   font-size: 191.5px; }
+
+.color-384 {
+  background: #00C; }
 
 .node-content.area-384 h4 strong {
   font-size: 192px; }
 
+.color-385 {
+  background: #00C; }
+
 .node-content.area-385 h4 strong {
   font-size: 192.5px; }
+
+.color-386 {
+  background: #00C; }
 
 .node-content.area-386 h4 strong {
   font-size: 193px; }
 
+.color-387 {
+  background: #00C; }
+
 .node-content.area-387 h4 strong {
   font-size: 193.5px; }
+
+.color-388 {
+  background: #00C; }
 
 .node-content.area-388 h4 strong {
   font-size: 194px; }
 
+.color-389 {
+  background: #00C; }
+
 .node-content.area-389 h4 strong {
   font-size: 194.5px; }
+
+.color-390 {
+  background: #00C; }
 
 .node-content.area-390 h4 strong {
   font-size: 195px; }
 
+.color-391 {
+  background: #00C; }
+
 .node-content.area-391 h4 strong {
   font-size: 195.5px; }
+
+.color-392 {
+  background: #00C; }
 
 .node-content.area-392 h4 strong {
   font-size: 196px; }
 
+.color-393 {
+  background: #00C; }
+
 .node-content.area-393 h4 strong {
   font-size: 196.5px; }
+
+.color-394 {
+  background: #00C; }
 
 .node-content.area-394 h4 strong {
   font-size: 197px; }
 
+.color-395 {
+  background: #00C; }
+
 .node-content.area-395 h4 strong {
   font-size: 197.5px; }
+
+.color-396 {
+  background: #00C; }
 
 .node-content.area-396 h4 strong {
   font-size: 198px; }
 
+.color-397 {
+  background: #00C; }
+
 .node-content.area-397 h4 strong {
   font-size: 198.5px; }
+
+.color-398 {
+  background: #00C; }
 
 .node-content.area-398 h4 strong {
   font-size: 199px; }
 
+.color-399 {
+  background: #00C; }
+
 .node-content.area-399 h4 strong {
   font-size: 199.5px; }
+
+.color-400 {
+  background: #00C; }
 
 .node-content.area-400 h4 strong {
   font-size: 200px; }
@@ -4268,5 +5593,29 @@ form {
 
 #back {
   margin: 10px 40px; }
+
+#chart {
+  width: 90%;
+  background: #dadada;
+  opacity: 0.9;
+  border-radius: 5px;
+  border: 1px solid #2b2b2b; }
+
+.timeline-chart .axis path {
+  fill: none;
+  stroke: none; }
+
+.timeline-chart line {
+  stroke: black; }
+
+.timeline-chart rect,
+.timeline-chart rect.chart-bounds {
+  fill: transparent; }
+
+.timeline-chart rect.interval {
+  ry: 5;
+  rx: 5;
+  fill: black;
+  stroke: #2b2b2b; }
 
 /*# sourceMappingURL=main.css.map */

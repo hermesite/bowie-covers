@@ -1,0 +1,81 @@
+#timeline {
+    font-family: 'Roboto Condensed', sans-serif;
+    .vis-time-axis {
+      .vis-text {
+        font-weight: 300;
+      }
+    }
+}
+.tick {
+  text {
+    font-family: 'Roboto Condensed', sans-serif;
+    
+  }
+}
+.bar-chart-label {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 11px;
+    fill: #FFF;
+    font-weight: 700;
+}
+
+.vis-timeline {
+  border: none;
+}
+
+.vis-item {
+  border-color: #CCC;
+  &.vis-box {
+    border: none;
+    border-radius: 0px;
+  }
+  &.vis-background {
+    background-color: rgba(200,0,0,.1);
+    &.negative {
+      background-color: rgba(200,0,0,.2);
+    }
+  }
+  .vis-item-content {
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 10px;
+  }
+}
+
+
+
+.album-thumbnail {
+    width: 60px;
+    height: 60px;
+}
+
+div.vis-tooltip {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  border-radius: 0px;
+  background-color: #FFF;
+}
+.button,
+.axis text {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 9px;
+  fill: rgba(255,255,255,.5);
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: rgba(255,255,255,.5);
+  shape-rendering: crispEdges;
+}
+
+.timeline-chart {
+
+  padding-top: 0px;
+}
+.bar-chart {
+  height: calc(100vh - 50px);
+  padding-bottom: 0px;
+}
