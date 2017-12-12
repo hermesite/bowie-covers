@@ -94,7 +94,7 @@ items.add({ id: 'H', content: 'Electronic period', start: '1992-01-1', end: '199
 items.add({ id: 'I', content: 'Neoclassicist Bowie', start: '1999-01-1', end: '2012-06-31', type: 'background', size: 110 })
 items.add({ id: 'J', content: 'Final years', start: '2012-07-1', end: '2016-12-31', type: 'background', className: 'negative', size: 2 })
 
-function customOrder (a, b) {
+function customOrder(a, b) {
     // order by id
     console.log(a.size);
     return a.size - b.size;
@@ -226,7 +226,7 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
                 if (track.covers.length > 0) {
 
                     if (jQuery.inArray(track.title, countCovers) === -1 && jQuery.inArray(track.title.substr(0, 8), countRepeated) === -1) {
-                        
+
                         trackCoversCount.push({
                             id: track.recording_id,
                             title: track.title,
@@ -276,28 +276,28 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
 
                                 myAlbum.size++;
 
-                                    myTrackSun.children.push({
-                                        'name': cover.credits,
-                                        'size': 0,
-                                        'cover': isCover,
-                                        'color': colorCover
-                                    });
+                                myTrackSun.children.push({
+                                    'name': cover.credits,
+                                    'size': 0,
+                                    'cover': isCover,
+                                    'color': colorCover
+                                });
 
-                                    myTrackRadial.children.push({
-                                        'name': cover.credits,
-                                        'size': 0,
-                                        'cover': isCover,
-                                        'color': colorCover
-                                    });
+                                myTrackRadial.children.push({
+                                    'name': cover.credits,
+                                    'size': 0,
+                                    'cover': isCover,
+                                    'color': colorCover
+                                });
 
-                                    myAlbumRadial.cover = isCover;
-                                    myAlbumSongsSun.size++;
+                                myAlbumRadial.cover = isCover;
+                                myAlbumSongsSun.size++;
 
                             }
 
                         }
                     });
-                    
+
 
                     d3.select('#allOthers').text(function() {
                         return coversByArtist.length;
@@ -312,14 +312,14 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
 
 
             });
-            
+
 
 
             /*----------  Create the radialtree graph  ----------*/
-            
+
             createRadial(myAlbumRadial, '.radial-container', myAlbum.image, myAlbum.size);
 
-            if (myAlbum.size >=4) {
+            if (myAlbum.size >= 4) {
 
                 items.add({
                     'id': i,
@@ -358,7 +358,7 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
             var barWidth = 1;
 
 
-            if (myAlbum.size > 0 ) {
+            if (myAlbum.size > 0)  {
                 chart.append("rect")
                     .attr("x", function() {
                         return x(new Date(myAlbum.year.substr(0, 4), 0, 1));
@@ -480,6 +480,20 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
     // Create a Timeline
     var timeline = new vis.Timeline(container, items, options);
 
+    timeline.on('click', function(properties) {
+
+        var anchorLink = '#' + properties.item
+        // scrollTo($(this).attr('data-anchor'));
+        $(document).scrollTop($(anchorLink).offset().top);
+
+        // logEvent('click', properties);
+        // console.log(properties.item);
+        // scrollTo(properties.item);
+        // var anchorLink = '#' + properties.item
+        // scrollTo($(this).attr('data-anchor'));
+        // $(document).scrollTop(properties.item);
+    });
+
     d3.select('.buttons').append('span').attr('class', 'button is-small is-danger').text('All').on('click', function() {
         timeline.setOptions({ start: '1960', end: '2020' });
         $('.buttons .button').removeClass('is-danger');
@@ -537,12 +551,12 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
                 }
             })
             .attr('class', 'node row middle-xs')
-            
+
             .on('click', function() {
 
                 var anchorLink = '#' + $(this).attr('data-anchor')
                 // scrollTo($(this).attr('data-anchor'));
-                $(document).scrollTop( $(anchorLink).offset().top );
+                $(document).scrollTop($(anchorLink).offset().top);
 
                 // createRadial(bowieSongsSun.children[d.positionInArray], '#covers-bowie', d.image, d.size);
 
@@ -556,17 +570,17 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
             })
             .call(position)
             .append('div')
-                .attr('class', function(d) {
-                    var textSize = Math.round(d.area / 1000);
-                    return 'col-xs row middle-xs node-content area-' + textSize;
-                    // return 'col-xs row middle-xs node-content tooltip';
-                })
-                .attr('title', function(d) {
-                    return d.name;
-                })
-                .html(function(d) {
-                    return d.children ? null : '<p class="col-xs text-center"><strong>' + d.size + '</strong><em>COVERS</em><span>' + d.name + '</span></p>';
-                });
+            .attr('class', function(d) {
+                var textSize = Math.round(d.area / 1000);
+                return 'col-xs row middle-xs node-content area-' + textSize;
+                // return 'col-xs row middle-xs node-content tooltip';
+            })
+            .attr('title', function(d) {
+                return d.name;
+            })
+            .html(function(d) {
+                return d.children ? null : '<p class="col-xs text-center"><strong>' + d.size + '</strong><em>COVERS</em><span>' + d.name + '</span></p>';
+            });
 
     }
 
@@ -598,7 +612,7 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
             .attr('class', 'radial-item row')
 
         var box = radialItem.append('div')
-            .attr('id', data.id.substr(0,5))
+            .attr('id', data.id.substr(0, 5))
             .attr('class', 'radial-album');
 
         var aside = radialItem.append('div')
@@ -623,11 +637,11 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
             .attr('src', 'https://www.youtube.com/embed/pMIOqxC7j68')
             .attr('width', '100%')
             .attr('height', '200px')
-            .attr('allowfullscreen','allowfullscreen')
-            .attr('mozallowfullscreen','mozallowfullscreen') 
-            .attr('msallowfullscreen','msallowfullscreen') 
-            .attr('oallowfullscreen','oallowfullscreen') 
-            .attr('webkitallowfullscreen','webkitallowfullscreen')
+            .attr('allowfullscreen', 'allowfullscreen')
+            .attr('mozallowfullscreen', 'mozallowfullscreen')
+            .attr('msallowfullscreen', 'msallowfullscreen')
+            .attr('oallowfullscreen', 'oallowfullscreen')
+            .attr('webkitallowfullscreen', 'webkitallowfullscreen')
 
 
         var
@@ -640,7 +654,7 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
         $('.record').css('margin-top', -(recordSize / 2) + 'px');
         $('.record').css('margin-left', -(recordSize / 2) + 'px');
 
-        $('#' + data.id.substr(0,5) + ' .record')
+        $('#' + data.id.substr(0, 5) + ' .record')
             .css({
                 'background-image': 'url(' + image + ')'
             });
