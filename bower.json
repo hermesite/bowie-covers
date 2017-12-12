@@ -22,6 +22,12 @@
     "flexboxgrid-sass": "^8.0.5",
     "d3-timeline": "^0.0.5",
     "vis": "^4.21.0",
-    "colorbrewer": "^1.0.0"
+    "colorbrewer": "^1.0.0",
+    "tooltipster": "^4.2.5",
+    "typeplate-starter-kit": "^3.0.1",
+    "d3-tip": "^0.7.1"
+  },
+  "resolutions": {
+    "d3": "^3.5.17"
   }
 }

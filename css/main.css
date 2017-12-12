@@ -281,6 +281,15 @@
 .bg-darkest {
   background-color: #112c35; }
 
+/*==============================
+=            Colors            =
+==============================*/
+/*----------  Custom by project  ----------*/
+/*=====  End of Colors  ======*/
+/*==================================
+=            Font sizes            =
+==================================*/
+/*=====  End of Font sizes  ======*/
 .wrapper {
   box-sizing: border-box;
   max-width: 1200px;
@@ -2351,187 +2360,173 @@
 
   .last-lg {
     order: 1; } }
-body {
-  font-size: 1vw; }
-  body h1, body h2, body h3, body h4, body h5, body h6, body strong {
-    font-weight: 700; }
-    body h1.thin, body h2.thin, body h3.thin, body h4.thin, body h5.thin, body h6.thin, body strong.thin {
-      font-weight: 300; }
+.radial-container {
+  position: relative; }
+  .radial-container .radial-item {
+    box-shadow: 0px 2px 0px 0px #CCC;
+    padding: 5vh 0px; }
+  .radial-container .radial-album,
+  .radial-container .radial-aside {
+    display: inline-block; }
+  .radial-container .radial-album {
+    font-size: 1.25vh;
+    width: 61.8vh;
+    height: 61.8vh;
+    padding: 0px;
+    position: relative;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #F2F2F2; }
+    .radial-container .radial-album svg {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 1;
+      overflow: visible; }
+      .radial-container .radial-album svg .node {
+        font-family: 'Roboto Condensed', sans-serif; }
+        .radial-container .radial-album svg .node text.record {
+          font-weight: 700;
+          cursor: default; }
+        .radial-container .radial-album svg .node text.artist {
+          cursor: pointer;
+          opacity: .75;
+          fill: #600; }
+          .radial-container .radial-album svg .node text.artist:hover {
+            opacity: 1; }
+      .radial-container .radial-album svg .no-link {
+        fill: none; }
+      .radial-container .radial-album svg .link {
+        fill: none;
+        stroke-width: 2px; }
+    .radial-container .radial-album .record {
+      border: 1px dotted #600;
+      position: absolute;
+      z-index: 0;
+      top: 50%;
+      left: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat; }
+      .radial-container .radial-album .record:before {
+        content: "";
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.75);
+        top: 24.57627%;
+        left: 24.57627%;
+        width: 50.84746%;
+        height: 50.84746%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        border: 2px solid rgba(0, 0, 0, 0.5); }
+  .radial-container .radial-aside {
+    max-width: calc(100% - 61.8vh);
+    min-width: calc(100% - 61.8vh); }
+    .radial-container .radial-aside .record-info {
+      text-align: left;
+      padding: 16px; }
+      .radial-container .radial-aside .record-info h2 {
+        margin: 0px; }
+      .radial-container .radial-aside .record-info em {
+        max-width: 60%;
+        font-size: 24px; }
+      .radial-container .radial-aside .record-info span,
+      .radial-container .radial-aside .record-info em {
+        padding: 8px;
+        display: inline-block;
+        vertical-align: middle; }
+      .radial-container .radial-aside .record-info span {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1vw;
+        box-shadow: 2px 0px 0px 0px #000;
+        padding-top: 0px;
+        padding-bottom: 0px; }
+        .radial-container .radial-aside .record-info span strong {
+          font-size: 3.5vw;
+          width: 100%;
+          display: block; }
+    .radial-container .radial-aside .video {
+      padding: 0px 20px; }
 
-.text-center {
-  text-align: center; }
+/*===============================
+=            TREEMAP            =
+===============================*/
+.section-treemap {
+  height: 90vh; }
+  .section-treemap .node {
+    position: absolute;
+    overflow: hidden;
+    background-size: cover;
+    background-position: 50% 50%;
+    cursor: pointer; }
+    .section-treemap .node .node-content {
+      height: 100%;
+      padding: 0px; }
+      .section-treemap .node .node-content p {
+        display: inline-block;
+        position: relative;
+        margin: 0px auto;
+        padding: 18px 20px; }
+        .section-treemap .node .node-content p strong, .section-treemap .node .node-content p em {
+          opacity: 0;
+          -webkit-transform: translateY(-10px);
+          -moz-transform: translateY(-10px);
+          transform: translateY(-10px); }
+        .section-treemap .node .node-content p em {
+          display: block;
+          font-style: normal;
+          font-size: 14px; }
+        .section-treemap .node .node-content p span {
+          font-style: italic;
+          z-index: 1;
+          display: block;
+          padding: 8px 0 0 0;
+          color: rgba(0, 0, 0, 0.4);
+          text-shadow: none;
+          text-transform: none;
+          font-size: 0.75em;
+          opacity: 0;
+          -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+          -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+          transition: transform 0.3s, opacity 0.3s;
+          -webkit-transform: translateY(-100%);
+          -moz-transform: translateY(-100%);
+          transform: translateY(-100%); }
+      .section-treemap .node .node-content:hover {
+        background-color: #fff; }
+        .section-treemap .node .node-content:hover p strong, .section-treemap .node .node-content:hover p em {
+          opacity: 1;
+          -webkit-transform: translateY(0px);
+          -moz-transform: translateY(0px);
+          transform: translateY(0px); }
+        .section-treemap .node .node-content:hover p span {
+          opacity: 1;
+          -webkit-transform: translateY(0%);
+          -moz-transform: translateY(0%);
+          transform: translateY(0%); }
 
-.thin {
-  font-weight: 300; }
-
-.uppercase {
-  text-transform: uppercase; }
-
-.img-as-bg {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 50% 50%; }
-  .img-as-bg.cover {
-    background-size: cover !important; }
-  .img-as-bg.top {
-    background-position: 50% 0%; }
-  .img-as-bg.bottom {
-    background-position: 50% 100%; }
-
-.flexbox-container {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  align-items: center;
-  flex-wrap: wrap; }
-
-body h1, body h2, body h3, body h4, body h5, body h6, body strong {
-  font-weight: 700; }
-  body h1.thin, body h2.thin, body h3.thin, body h4.thin, body h5.thin, body h6.thin, body strong.thin {
-    font-weight: 300; }
-body h5, body h6 {
-  text-transform: uppercase; }
-
-@media (min-width: 20em) and (max-width: 40em) {
-  body {
-    line-height: calc( 1.1em + 0.3 * ( ( 100vw - 20em) / 20 ) ); } }
-@media (min-width: 40em) {
-  body {
-    line-height: 1.4em; } }
-h1, h2, h3, h4, h5 {
-  line-height: 1;
-  margin: 0; }
-
-h1 {
-  font-size: 1.4641em; }
-
-@media (min-width: 20em) and (max-width: 60em) {
-  h1 {
-    font-size: calc( 1.4641em + 1.69323 * ( ( 100vw - 20em) / 40 ) ); } }
-@media (min-width: 60em) {
-  h1 {
-    font-size: 3.15733em; } }
-h2 {
-  font-size: 1.331em; }
-
-@media (min-width: 20em) and (max-width: 60em) {
-  h2 {
-    font-size: calc( 1.331em + 1.03759 * ( ( 100vw - 20em) / 40 ) ); } }
-@media (min-width: 60em) {
-  h2 {
-    font-size: 2.36859em; } }
-h3 {
-  font-size: 1.21em; }
-
-@media (min-width: 20em) and (max-width: 60em) {
-  h3 {
-    font-size: calc( 1.21em + 0.56689 * ( ( 100vw - 20em) / 40 ) ); } }
-@media (min-width: 60em) {
-  h3 {
-    font-size: 1.77689em; } }
-h4 {
-  font-size: 1.1em; }
-
-@media (min-width: 20em) and (max-width: 60em) {
-  h4 {
-    font-size: calc( 1.1em + 0.233 * ( ( 100vw - 20em) / 40 ) ); } }
-@media (min-width: 60em) {
-  h4 {
-    font-size: 1.333em; } }
-h5 {
-  font-size: 1em; }
-
-@media (min-width: 20em) and (max-width: 60em) {
-  h5 {
-    font-size: calc( 1em + 0 * ( ( 100vw - 20em) / 40 ) ); } }
-@media (min-width: 60em) {
-  h5 {
-    font-size: 1em; } }
-.text-center {
-  text-align: center; }
-
-.thin {
-  font-weight: 300; }
-
-.uppercase {
-  text-transform: uppercase; }
-
-.margin-rm-all,
-.margin-rm-vertical,
-.margin-rm-top {
-  margin-top: 0 !important; }
-
-.margin-rm-all,
-.margin-rm-vertical,
-.margin-rm-bottom {
-  margin-bottom: 0 !important; }
-
-.margin-rm-all,
-.margin-rm-horizontal,
-.margin-rm-right {
-  margin-right: 0 !important; }
-
-.margin-rm-all,
-.margin-rm-vertical,
-.margin-rm-left {
-  margin-left: 0 !important; }
-
-.padding-rm-all,
-.padding-rm-vertical,
-.padding-rm-top {
-  padding-top: 0 !important; }
-
-.padding-rm-all,
-.padding-rm-vertical,
-.padding-rm-bottom {
-  padding-bottom: 0 !important; }
-
-.padding-rm-all,
-.padding-rm-horizontal,
-.padding-rm-right {
-  padding-right: 0 !important; }
-
-.padding-rm-all,
-.padding-rm-vertical,
-.padding-rm-left {
-  padding-left: 0 !important; }
-
-.border-rm-all,
-.border-rm-vertical,
-.border-rm-top {
-  border-top: none !important; }
-
-.border-rm-all,
-.border-rm-horizontal,
-.border-rm-right {
-  border-right: none !important; }
-
-.border-rm-all,
-.border-rm-vertical,
-.border-rm-bottom {
-  border-bottom: none !important; }
-
-.border-rm-all,
-.border-rm-horizontal,
-.border-rm-left {
-  border-left: none !important; }
-
+/*=====  End of TREEMAP  ======*/
 #timeline {
   font-family: 'Roboto Condensed', sans-serif; }
   #timeline .vis-time-axis .vis-text {
+    font-size: 10px;
     font-weight: 300; }
+  #timeline .vis-item-content {
+    font-size: 10px; }
 
 .tick text {
   font-family: 'Roboto Condensed', sans-serif; }
 
-.bar-chart-label {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 11px;
-  fill: #FFF;
-  font-weight: 700; }
+.vis-time-axis .vis-grid.vis-minor {
+  border: none; }
+
+.vis-dot {
+  display: none; }
 
 .vis-timeline {
   border: none; }
@@ -2540,20 +2535,22 @@ h5 {
   border-color: #CCC; }
   .vis-item.vis-box {
     border: none;
-    border-radius: 0px; }
+    border-radius: 0px;
+    background: transparent !important; }
   .vis-item.vis-background {
-    background-color: rgba(200, 0, 0, 0.1); }
-    .vis-item.vis-background.negative {
-      background-color: rgba(200, 0, 0, 0.2); }
+    background: transparent; }
+    .vis-item.vis-background .vis-item-content {
+      padding-top: 5px; }
   .vis-item .vis-item-content {
     padding-top: 0px;
     padding-right: 0px;
     padding-left: 0px;
-    padding-bottom: 10px; }
+    padding-bottom: 0px; }
 
 .album-thumbnail {
   width: 60px;
-  height: 60px; }
+  height: 60px;
+  margin-top: 20px; }
 
 div.vis-tooltip {
   font-family: 'Roboto Condensed', sans-serif;
@@ -2577,45 +2574,85 @@ div.vis-tooltip {
 .timeline-chart {
   padding-top: 0px; }
 
-.bar-chart {
-  height: calc(100vh - 50px);
-  padding-bottom: 0px; }
-
-html {
-  font-size: 1.25em; }
-
+/*----------  Based on http://type-scale.com/ Perfect 5  ----------*/
 body {
-  font-weight: 400;
-  line-height: 1.45;
-  color: #333; }
+  color: #070707;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
-p {
-  margin-bottom: 1.3em; }
-
-h1, h2, h3, h4 {
-  margin: 1.414em 0 0.5em;
-  font-weight: inherit;
-  line-height: 1.2; }
-
-h1 {
-  margin-top: 0;
-  font-size: 2.441em; }
-
-h2 {
-  font-size: 1.953em; }
-
-h3 {
-  font-size: 1.563em; }
-
+h1,
+h2,
+h3,
 h4 {
-  font-size: 1.25em; }
+  font-family: 'Merriweather', serif; }
 
-small, .font_small {
-  font-size: 0.8em; }
+.viz h1, .viz h2, .viz h3, .viz h4, .viz h5, .viz h6 {
+  font-family: 'Roboto Condensed', sans-serif; }
+.viz p {
+  font-family: 'Roboto Condensed', sans-serif; }
+
+small,
+.font_small {
+  font-size: 0.667rem; }
+
+/*==============================
+=            Charts            =
+==============================*/
+.bar-chart-label {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 12px;
+  cursor: hand;
+  cursor: pointer;
+  opacity: .8;
+  font-style: italic; }
+  .bar-chart-label.link {
+    fill: #600; }
+    .bar-chart-label.link:hover {
+      opacity: 1; }
+
+/*=====  End of Charts  ======*/
+/*----------  Article cover text  ----------*/
+.bar-chart {
+  position: relative;
+  height: 61.8vh;
+  padding-bottom: 0px;
+  width: 100%;
+  padding: 0px; }
+
+.section {
+  position: relative; }
+  .section.section-radial {
+    background-color: rgba(0, 0, 0, 0.75); }
+  .section.is-white {
+    background-color: #FFF; }
+  .section.is-black {
+    background-color: #070707; }
+
+.article-cover {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  background-color: #600;
+  background-size: cover;
+  opacity: .5; }
+
+.mosca {
+  position: fixed;
+  z-index: 999;
+  right: 0px;
+  top: 0px; }
+  .mosca img {
+    width: 200px;
+    display: block; }
 
 path {
-  stroke: steelblue;
-  stroke-width: 2;
   fill: none; }
 
 .axis path,
@@ -2659,23 +2696,6 @@ path {
   color: #000;
   padding: 0.2em 0; }
 
-/* Space out content a bit */
-html,
-body {
-  height: 100%; }
-
-body {
-  font-family: 'Open Sans', sans-serif;
-  margin: auto;
-  position: relative; }
-  body h1, body h2, body h3, body h4, body h5, body h6 {
-    font-family: 'Merriweather', serif; }
-
-body .navbar {
-  background-color: transparent; }
-  body .navbar .navbar-brand {
-    margin: auto; }
-
 .ratio-phi {
   position: relative; }
   .ratio-phi:before {
@@ -2956,51 +2976,15 @@ body .navbar {
 .bg-darkest {
   background-color: #112c35; }
 
-.section {
-  position: relative; }
-  .section.section-radial {
-    background-color: rgba(0, 0, 0, 0.75); }
-  .section.is-white {
-    background-color: #FFF; }
-
-#covers-treemap {
-  padding: 0px;
-  width: 100%; }
-
-.close-radial {
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  line-height: 30px;
-  position: absolute;
-  z-index: 200;
-  right: 10px;
-  top: 10px;
-  color: rgba(255, 255, 255, 0.75); }
-  .close-radial:hover {
-    color: white; }
-
-.article-cover {
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
-  right: 0px;
-  background-color: #C00;
-  background-size: cover; }
-
-.hero {
-  height: calc(100vh - 80px); }
-  .hero .title, .hero .subtitle {
-    display: inline-block;
-    text-align: center;
-    margin-bottom: 2rem;
-    padding: 1rem; }
-    .hero .title span, .hero .subtitle span {
-      background-color: rgba(255, 255, 255, 0.5); }
-
+/*==============================
+=            Colors            =
+==============================*/
+/*----------  Custom by project  ----------*/
+/*=====  End of Colors  ======*/
+/*==================================
+=            Font sizes            =
+==================================*/
+/*=====  End of Font sizes  ======*/
 /*====================================
 =            SVG elements            =
 ====================================*/
@@ -3029,35 +3013,6 @@ form {
   position: relative;
   z-index: 1; }
 
-#covers-bowie {
-  text-align: center; }
-  #covers-bowie svg {
-    display: inline-block; }
-  #covers-bowie .record {
-    position: absolute;
-    z-index: 0;
-    top: 50%;
-    left: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    border: 2px solid rgba(0, 0, 0, 0.5); }
-    #covers-bowie .record:before {
-      content: "";
-      position: absolute;
-      background-color: rgba(0, 0, 0, 0.75);
-      top: 24.57627%;
-      left: 24.57627%;
-      width: 50.84746%;
-      height: 50.84746%;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      border-radius: 50%;
-      border: 2px solid rgba(0, 0, 0, 0.5); }
-
 #covers {
   background-size: cover;
   background-position: 50% 50%; }
@@ -3080,41 +3035,6 @@ form {
   margin-top: -25%;
   z-index: 0; }
 
-#covers-treemap .node {
-  border: solid 1px white;
-  overflow: hidden;
-  position: absolute;
-  background-size: cover;
-  background-position: 50% 50%;
-  cursor: pointer; }
-  #covers-treemap .node div {
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.85);
-    text-shadow: 1px 0px 0px rgba(0, 0, 0, 0.25), -1px 0px 0px rgba(0, 0, 0, 0.25), 0px 1px 0px rgba(0, 0, 0, 0.25), 0px -1px 0px rgba(0, 0, 0, 0.25);
-    height: 100%; }
-  #covers-treemap .node:hover div {
-    background-color: #fff;
-    color: #000;
-    text-shadow: none; }
-    #covers-treemap .node:hover div strong {
-      color: #000; }
-
-.node text.record {
-  font-weight: 400;
-  cursor: default; }
-.node text.artist {
-  cursor: pointer;
-  opacity: .75; }
-  .node text.artist:hover {
-    opacity: 1; }
-
-.no-link {
-  fill: none; }
-
-.link {
-  fill: none;
-  stroke-width: 1px; }
-
 #right-container {
   display: none; }
 
@@ -3124,2457 +3044,2405 @@ form {
 #infovis {
   width: 800px; }
 
-.node {
-  color: #fff;
-  overflow: hidden; }
-
-.record-info {
-  text-align: left;
-  color: #FFF;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  line-height: 50px;
-  padding: 16px; }
-  .record-info em {
-    max-width: 50%; }
-  .record-info span, .record-info em {
-    padding: 8px;
-    display: inline-block;
-    vertical-align: middle; }
-  .record-info span {
-    text-align: center;
-    font-size: 1vw;
-    box-shadow: 2px 0px 0px 0px #C00; }
-    .record-info span strong {
-      font-size: 5vw;
-      width: 100%;
-      display: block; }
-
 .color-1 {
   background: #C00; }
 
-.node-content.area-1 h4 strong {
-  font-size: 10px; }
+.node-content.area-1 p {
+  font-size: 14px; }
 
 .color-2 {
   background: #C00; }
 
-.node-content.area-2 h4 strong {
-  font-size: 10px; }
+.node-content.area-2 p {
+  font-size: 14px; }
 
 .color-3 {
   background: #C00; }
 
-.node-content.area-3 h4 strong {
-  font-size: 10px; }
+.node-content.area-3 p {
+  font-size: 14px; }
 
 .color-4 {
   background: #C00; }
 
-.node-content.area-4 h4 strong {
-  font-size: 10px; }
+.node-content.area-4 p {
+  font-size: 14px; }
 
 .color-5 {
   background: #C00; }
 
-.node-content.area-5 h4 strong {
-  font-size: 10px; }
+.node-content.area-5 p {
+  font-size: 14px; }
 
 .color-6 {
   background: #C00; }
 
-.node-content.area-6 h4 strong {
-  font-size: 10px; }
+.node-content.area-6 p {
+  font-size: 14px; }
 
 .color-7 {
   background: #C00; }
 
-.node-content.area-7 h4 strong {
-  font-size: 10px; }
+.node-content.area-7 p {
+  font-size: 14px; }
 
 .color-8 {
   background: #C00; }
 
-.node-content.area-8 h4 strong {
-  font-size: 10px; }
+.node-content.area-8 p {
+  font-size: 14px; }
 
 .color-9 {
   background: #C00; }
 
-.node-content.area-9 h4 strong {
-  font-size: 10px; }
+.node-content.area-9 p {
+  font-size: 14px; }
 
 .color-10 {
   background: #C00; }
 
-.node-content.area-10 h4 strong {
-  font-size: 10px; }
+.node-content.area-10 p {
+  font-size: 14px; }
 
 .color-11 {
   background: #0C0; }
 
-.node-content.area-11 h4 strong {
-  font-size: 5.5px; }
+.node-content.area-11 p {
+  font-size: 14px; }
 
 .color-12 {
   background: #0C0; }
 
-.node-content.area-12 h4 strong {
-  font-size: 6px; }
+.node-content.area-12 p {
+  font-size: 14px; }
 
 .color-13 {
   background: #0C0; }
 
-.node-content.area-13 h4 strong {
-  font-size: 6.5px; }
+.node-content.area-13 p {
+  font-size: 14px; }
 
 .color-14 {
   background: #0C0; }
 
-.node-content.area-14 h4 strong {
-  font-size: 7px; }
+.node-content.area-14 p {
+  font-size: 14px; }
 
 .color-15 {
   background: #0C0; }
 
-.node-content.area-15 h4 strong {
-  font-size: 7.5px; }
+.node-content.area-15 p {
+  font-size: 14px; }
 
 .color-16 {
   background: #0C0; }
 
-.node-content.area-16 h4 strong {
-  font-size: 8px; }
+.node-content.area-16 p {
+  font-size: 14px; }
 
 .color-17 {
   background: #0C0; }
 
-.node-content.area-17 h4 strong {
-  font-size: 8.5px; }
+.node-content.area-17 p {
+  font-size: 14px; }
 
 .color-18 {
   background: #0C0; }
 
-.node-content.area-18 h4 strong {
-  font-size: 9px; }
+.node-content.area-18 p {
+  font-size: 14px; }
 
 .color-19 {
   background: #0C0; }
 
-.node-content.area-19 h4 strong {
-  font-size: 9.5px; }
+.node-content.area-19 p {
+  font-size: 14px; }
 
 .color-20 {
   background: #00C; }
 
-.node-content.area-20 h4 strong {
-  font-size: 10px; }
+.node-content.area-20 p {
+  font-size: 14px; }
 
 .color-21 {
   background: #00C; }
 
-.node-content.area-21 h4 strong {
-  font-size: 10.5px; }
+.node-content.area-21 p {
+  font-size: 14px; }
 
 .color-22 {
   background: #00C; }
 
-.node-content.area-22 h4 strong {
-  font-size: 11px; }
+.node-content.area-22 p {
+  font-size: 14px; }
 
 .color-23 {
   background: #00C; }
 
-.node-content.area-23 h4 strong {
-  font-size: 11.5px; }
+.node-content.area-23 p {
+  font-size: 14px; }
 
 .color-24 {
   background: #00C; }
 
-.node-content.area-24 h4 strong {
-  font-size: 12px; }
+.node-content.area-24 p {
+  font-size: 14px; }
 
 .color-25 {
   background: #00C; }
 
-.node-content.area-25 h4 strong {
-  font-size: 12.5px; }
+.node-content.area-25 p {
+  font-size: 14px; }
 
 .color-26 {
   background: #00C; }
 
-.node-content.area-26 h4 strong {
-  font-size: 13px; }
+.node-content.area-26 p {
+  font-size: 14px; }
 
 .color-27 {
   background: #00C; }
 
-.node-content.area-27 h4 strong {
-  font-size: 13.5px; }
+.node-content.area-27 p {
+  font-size: 14px; }
 
 .color-28 {
   background: #00C; }
 
-.node-content.area-28 h4 strong {
+.node-content.area-28 p {
   font-size: 14px; }
 
 .color-29 {
   background: #00C; }
 
-.node-content.area-29 h4 strong {
-  font-size: 14.5px; }
+.node-content.area-29 p {
+  font-size: 14px; }
 
 .color-30 {
   background: #00C; }
 
-.node-content.area-30 h4 strong {
-  font-size: 15px; }
+.node-content.area-30 p {
+  font-size: 14px; }
 
 .color-31 {
   background: #00C; }
 
-.node-content.area-31 h4 strong {
-  font-size: 15.5px; }
+.node-content.area-31 p {
+  font-size: 14px; }
 
 .color-32 {
   background: #00C; }
 
-.node-content.area-32 h4 strong {
-  font-size: 16px; }
+.node-content.area-32 p {
+  font-size: 14px; }
 
 .color-33 {
   background: #00C; }
 
-.node-content.area-33 h4 strong {
-  font-size: 16.5px; }
+.node-content.area-33 p {
+  font-size: 14px; }
 
 .color-34 {
   background: #00C; }
 
-.node-content.area-34 h4 strong {
-  font-size: 17px; }
+.node-content.area-34 p {
+  font-size: 14px; }
 
 .color-35 {
   background: #00C; }
 
-.node-content.area-35 h4 strong {
-  font-size: 17.5px; }
+.node-content.area-35 p {
+  font-size: 14px; }
 
 .color-36 {
   background: #00C; }
 
-.node-content.area-36 h4 strong {
-  font-size: 18px; }
+.node-content.area-36 p {
+  font-size: 14px; }
 
 .color-37 {
   background: #00C; }
 
-.node-content.area-37 h4 strong {
-  font-size: 18.5px; }
+.node-content.area-37 p {
+  font-size: 14px; }
 
 .color-38 {
   background: #00C; }
 
-.node-content.area-38 h4 strong {
-  font-size: 19px; }
+.node-content.area-38 p {
+  font-size: 14px; }
 
 .color-39 {
   background: #00C; }
 
-.node-content.area-39 h4 strong {
-  font-size: 19.5px; }
+.node-content.area-39 p {
+  font-size: 14px; }
 
 .color-40 {
   background: #00C; }
 
-.node-content.area-40 h4 strong {
-  font-size: 20px; }
+.node-content.area-40 p {
+  font-size: 14px; }
 
 .color-41 {
   background: #00C; }
 
-.node-content.area-41 h4 strong {
-  font-size: 20.5px; }
+.node-content.area-41 p {
+  font-size: 14px; }
 
 .color-42 {
   background: #00C; }
 
-.node-content.area-42 h4 strong {
-  font-size: 21px; }
+.node-content.area-42 p {
+  font-size: 14px; }
 
 .color-43 {
   background: #00C; }
 
-.node-content.area-43 h4 strong {
-  font-size: 21.5px; }
+.node-content.area-43 p {
+  font-size: 14px; }
 
 .color-44 {
   background: #00C; }
 
-.node-content.area-44 h4 strong {
-  font-size: 22px; }
+.node-content.area-44 p {
+  font-size: 14px; }
 
 .color-45 {
   background: #00C; }
 
-.node-content.area-45 h4 strong {
-  font-size: 22.5px; }
+.node-content.area-45 p {
+  font-size: 14px; }
 
 .color-46 {
   background: #00C; }
 
-.node-content.area-46 h4 strong {
-  font-size: 23px; }
+.node-content.area-46 p {
+  font-size: 14px; }
 
 .color-47 {
   background: #00C; }
 
-.node-content.area-47 h4 strong {
-  font-size: 23.5px; }
+.node-content.area-47 p {
+  font-size: 14px; }
 
 .color-48 {
   background: #00C; }
 
-.node-content.area-48 h4 strong {
-  font-size: 24px; }
+.node-content.area-48 p {
+  font-size: 14px; }
 
 .color-49 {
   background: #00C; }
 
-.node-content.area-49 h4 strong {
-  font-size: 24.5px; }
+.node-content.area-49 p {
+  font-size: 14px; }
 
 .color-50 {
   background: #00C; }
 
-.node-content.area-50 h4 strong {
-  font-size: 25px; }
+.node-content.area-50 p {
+  font-size: 14px; }
 
 .color-51 {
   background: #00C; }
 
-.node-content.area-51 h4 strong {
-  font-size: 25.5px; }
+.node-content.area-51 p {
+  font-size: 17px; }
 
 .color-52 {
   background: #00C; }
 
-.node-content.area-52 h4 strong {
-  font-size: 26px; }
+.node-content.area-52 p {
+  font-size: 17.33333px; }
 
 .color-53 {
   background: #00C; }
 
-.node-content.area-53 h4 strong {
-  font-size: 26.5px; }
+.node-content.area-53 p {
+  font-size: 17.66667px; }
 
 .color-54 {
   background: #00C; }
 
-.node-content.area-54 h4 strong {
-  font-size: 27px; }
+.node-content.area-54 p {
+  font-size: 18px; }
 
 .color-55 {
   background: #00C; }
 
-.node-content.area-55 h4 strong {
-  font-size: 27.5px; }
+.node-content.area-55 p {
+  font-size: 18.33333px; }
 
 .color-56 {
   background: #00C; }
 
-.node-content.area-56 h4 strong {
-  font-size: 28px; }
+.node-content.area-56 p {
+  font-size: 18.66667px; }
 
 .color-57 {
   background: #00C; }
 
-.node-content.area-57 h4 strong {
-  font-size: 28.5px; }
+.node-content.area-57 p {
+  font-size: 19px; }
 
 .color-58 {
   background: #00C; }
 
-.node-content.area-58 h4 strong {
-  font-size: 29px; }
+.node-content.area-58 p {
+  font-size: 19.33333px; }
 
 .color-59 {
   background: #00C; }
 
-.node-content.area-59 h4 strong {
-  font-size: 29.5px; }
+.node-content.area-59 p {
+  font-size: 19.66667px; }
 
 .color-60 {
   background: #00C; }
 
-.node-content.area-60 h4 strong {
-  font-size: 30px; }
+.node-content.area-60 p {
+  font-size: 20px; }
 
 .color-61 {
   background: #00C; }
 
-.node-content.area-61 h4 strong {
-  font-size: 30.5px; }
+.node-content.area-61 p {
+  font-size: 20.33333px; }
 
 .color-62 {
   background: #00C; }
 
-.node-content.area-62 h4 strong {
-  font-size: 31px; }
+.node-content.area-62 p {
+  font-size: 20.66667px; }
 
 .color-63 {
   background: #00C; }
 
-.node-content.area-63 h4 strong {
-  font-size: 31.5px; }
+.node-content.area-63 p {
+  font-size: 21px; }
 
 .color-64 {
   background: #00C; }
 
-.node-content.area-64 h4 strong {
-  font-size: 32px; }
+.node-content.area-64 p {
+  font-size: 21.33333px; }
 
 .color-65 {
   background: #00C; }
 
-.node-content.area-65 h4 strong {
-  font-size: 32.5px; }
+.node-content.area-65 p {
+  font-size: 21.66667px; }
 
 .color-66 {
   background: #00C; }
 
-.node-content.area-66 h4 strong {
-  font-size: 33px; }
+.node-content.area-66 p {
+  font-size: 22px; }
 
 .color-67 {
   background: #00C; }
 
-.node-content.area-67 h4 strong {
-  font-size: 33.5px; }
+.node-content.area-67 p {
+  font-size: 22.33333px; }
 
 .color-68 {
   background: #00C; }
 
-.node-content.area-68 h4 strong {
-  font-size: 34px; }
+.node-content.area-68 p {
+  font-size: 22.66667px; }
 
 .color-69 {
   background: #00C; }
 
-.node-content.area-69 h4 strong {
-  font-size: 34.5px; }
+.node-content.area-69 p {
+  font-size: 23px; }
 
 .color-70 {
   background: #00C; }
 
-.node-content.area-70 h4 strong {
-  font-size: 35px; }
+.node-content.area-70 p {
+  font-size: 23.33333px; }
 
 .color-71 {
   background: #00C; }
 
-.node-content.area-71 h4 strong {
-  font-size: 35.5px; }
+.node-content.area-71 p {
+  font-size: 23.66667px; }
 
 .color-72 {
   background: #00C; }
 
-.node-content.area-72 h4 strong {
-  font-size: 36px; }
+.node-content.area-72 p {
+  font-size: 24px; }
 
 .color-73 {
   background: #00C; }
 
-.node-content.area-73 h4 strong {
-  font-size: 36.5px; }
+.node-content.area-73 p {
+  font-size: 24.33333px; }
 
 .color-74 {
   background: #00C; }
 
-.node-content.area-74 h4 strong {
-  font-size: 37px; }
+.node-content.area-74 p {
+  font-size: 24.66667px; }
 
 .color-75 {
   background: #00C; }
 
-.node-content.area-75 h4 strong {
-  font-size: 37.5px; }
+.node-content.area-75 p {
+  font-size: 25px; }
 
 .color-76 {
   background: #00C; }
 
-.node-content.area-76 h4 strong {
-  font-size: 38px; }
+.node-content.area-76 p {
+  font-size: 25.33333px; }
 
 .color-77 {
   background: #00C; }
 
-.node-content.area-77 h4 strong {
-  font-size: 38.5px; }
+.node-content.area-77 p {
+  font-size: 25.66667px; }
 
 .color-78 {
   background: #00C; }
 
-.node-content.area-78 h4 strong {
-  font-size: 39px; }
+.node-content.area-78 p {
+  font-size: 26px; }
 
 .color-79 {
   background: #00C; }
 
-.node-content.area-79 h4 strong {
-  font-size: 39.5px; }
+.node-content.area-79 p {
+  font-size: 26.33333px; }
 
 .color-80 {
   background: #00C; }
 
-.node-content.area-80 h4 strong {
-  font-size: 40px; }
+.node-content.area-80 p {
+  font-size: 26.66667px; }
 
 .color-81 {
   background: #00C; }
 
-.node-content.area-81 h4 strong {
-  font-size: 40.5px; }
+.node-content.area-81 p {
+  font-size: 27px; }
 
 .color-82 {
   background: #00C; }
 
-.node-content.area-82 h4 strong {
-  font-size: 41px; }
+.node-content.area-82 p {
+  font-size: 27.33333px; }
 
 .color-83 {
   background: #00C; }
 
-.node-content.area-83 h4 strong {
-  font-size: 41.5px; }
+.node-content.area-83 p {
+  font-size: 27.66667px; }
 
 .color-84 {
   background: #00C; }
 
-.node-content.area-84 h4 strong {
-  font-size: 42px; }
+.node-content.area-84 p {
+  font-size: 28px; }
 
 .color-85 {
   background: #00C; }
 
-.node-content.area-85 h4 strong {
-  font-size: 42.5px; }
+.node-content.area-85 p {
+  font-size: 28.33333px; }
 
 .color-86 {
   background: #00C; }
 
-.node-content.area-86 h4 strong {
-  font-size: 43px; }
+.node-content.area-86 p {
+  font-size: 28.66667px; }
 
 .color-87 {
   background: #00C; }
 
-.node-content.area-87 h4 strong {
-  font-size: 43.5px; }
+.node-content.area-87 p {
+  font-size: 29px; }
 
 .color-88 {
   background: #00C; }
 
-.node-content.area-88 h4 strong {
-  font-size: 44px; }
+.node-content.area-88 p {
+  font-size: 29.33333px; }
 
 .color-89 {
   background: #00C; }
 
-.node-content.area-89 h4 strong {
-  font-size: 44.5px; }
+.node-content.area-89 p {
+  font-size: 29.66667px; }
 
 .color-90 {
   background: #00C; }
 
-.node-content.area-90 h4 strong {
-  font-size: 45px; }
+.node-content.area-90 p {
+  font-size: 30px; }
 
 .color-91 {
   background: #00C; }
 
-.node-content.area-91 h4 strong {
-  font-size: 45.5px; }
+.node-content.area-91 p {
+  font-size: 30.33333px; }
 
 .color-92 {
   background: #00C; }
 
-.node-content.area-92 h4 strong {
-  font-size: 46px; }
+.node-content.area-92 p {
+  font-size: 30.66667px; }
 
 .color-93 {
   background: #00C; }
 
-.node-content.area-93 h4 strong {
-  font-size: 46.5px; }
+.node-content.area-93 p {
+  font-size: 31px; }
 
 .color-94 {
   background: #00C; }
 
-.node-content.area-94 h4 strong {
-  font-size: 47px; }
+.node-content.area-94 p {
+  font-size: 31.33333px; }
 
 .color-95 {
   background: #00C; }
 
-.node-content.area-95 h4 strong {
-  font-size: 47.5px; }
+.node-content.area-95 p {
+  font-size: 31.66667px; }
 
 .color-96 {
   background: #00C; }
 
-.node-content.area-96 h4 strong {
-  font-size: 48px; }
+.node-content.area-96 p {
+  font-size: 32px; }
 
 .color-97 {
   background: #00C; }
 
-.node-content.area-97 h4 strong {
-  font-size: 48.5px; }
+.node-content.area-97 p {
+  font-size: 32.33333px; }
 
 .color-98 {
   background: #00C; }
 
-.node-content.area-98 h4 strong {
-  font-size: 49px; }
+.node-content.area-98 p {
+  font-size: 32.66667px; }
 
 .color-99 {
   background: #00C; }
 
-.node-content.area-99 h4 strong {
-  font-size: 49.5px; }
+.node-content.area-99 p {
+  font-size: 33px; }
 
 .color-100 {
   background: #00C; }
 
-.node-content.area-100 h4 strong {
-  font-size: 50px; }
+.node-content.area-100 p {
+  font-size: 33.33333px; }
 
 .color-101 {
   background: #00C; }
 
-.node-content.area-101 h4 strong {
-  font-size: 50.5px; }
+.node-content.area-101 p {
+  font-size: 33.66667px; }
 
 .color-102 {
   background: #00C; }
 
-.node-content.area-102 h4 strong {
-  font-size: 51px; }
+.node-content.area-102 p {
+  font-size: 34px; }
 
 .color-103 {
   background: #00C; }
 
-.node-content.area-103 h4 strong {
-  font-size: 51.5px; }
+.node-content.area-103 p {
+  font-size: 34.33333px; }
 
 .color-104 {
   background: #00C; }
 
-.node-content.area-104 h4 strong {
-  font-size: 52px; }
+.node-content.area-104 p {
+  font-size: 34.66667px; }
 
 .color-105 {
   background: #00C; }
 
-.node-content.area-105 h4 strong {
-  font-size: 52.5px; }
+.node-content.area-105 p {
+  font-size: 35px; }
 
 .color-106 {
   background: #00C; }
 
-.node-content.area-106 h4 strong {
-  font-size: 53px; }
+.node-content.area-106 p {
+  font-size: 35.33333px; }
 
 .color-107 {
   background: #00C; }
 
-.node-content.area-107 h4 strong {
-  font-size: 53.5px; }
+.node-content.area-107 p {
+  font-size: 35.66667px; }
 
 .color-108 {
   background: #00C; }
 
-.node-content.area-108 h4 strong {
-  font-size: 54px; }
+.node-content.area-108 p {
+  font-size: 36px; }
 
 .color-109 {
   background: #00C; }
 
-.node-content.area-109 h4 strong {
-  font-size: 54.5px; }
+.node-content.area-109 p {
+  font-size: 36.33333px; }
 
 .color-110 {
   background: #00C; }
 
-.node-content.area-110 h4 strong {
-  font-size: 55px; }
+.node-content.area-110 p {
+  font-size: 36.66667px; }
 
 .color-111 {
   background: #00C; }
 
-.node-content.area-111 h4 strong {
-  font-size: 55.5px; }
+.node-content.area-111 p {
+  font-size: 37px; }
 
 .color-112 {
   background: #00C; }
 
-.node-content.area-112 h4 strong {
-  font-size: 56px; }
+.node-content.area-112 p {
+  font-size: 37.33333px; }
 
 .color-113 {
   background: #00C; }
 
-.node-content.area-113 h4 strong {
-  font-size: 56.5px; }
+.node-content.area-113 p {
+  font-size: 37.66667px; }
 
 .color-114 {
   background: #00C; }
 
-.node-content.area-114 h4 strong {
-  font-size: 57px; }
+.node-content.area-114 p {
+  font-size: 38px; }
 
 .color-115 {
   background: #00C; }
 
-.node-content.area-115 h4 strong {
-  font-size: 57.5px; }
+.node-content.area-115 p {
+  font-size: 38.33333px; }
 
 .color-116 {
   background: #00C; }
 
-.node-content.area-116 h4 strong {
-  font-size: 58px; }
+.node-content.area-116 p {
+  font-size: 38.66667px; }
 
 .color-117 {
   background: #00C; }
 
-.node-content.area-117 h4 strong {
-  font-size: 58.5px; }
+.node-content.area-117 p {
+  font-size: 39px; }
 
 .color-118 {
   background: #00C; }
 
-.node-content.area-118 h4 strong {
-  font-size: 59px; }
+.node-content.area-118 p {
+  font-size: 39.33333px; }
 
 .color-119 {
   background: #00C; }
 
-.node-content.area-119 h4 strong {
-  font-size: 59.5px; }
+.node-content.area-119 p {
+  font-size: 39.66667px; }
 
 .color-120 {
   background: #00C; }
 
-.node-content.area-120 h4 strong {
-  font-size: 60px; }
+.node-content.area-120 p {
+  font-size: 40px; }
 
 .color-121 {
   background: #00C; }
 
-.node-content.area-121 h4 strong {
-  font-size: 60.5px; }
+.node-content.area-121 p {
+  font-size: 40.33333px; }
 
 .color-122 {
   background: #00C; }
 
-.node-content.area-122 h4 strong {
-  font-size: 61px; }
+.node-content.area-122 p {
+  font-size: 40.66667px; }
 
 .color-123 {
   background: #00C; }
 
-.node-content.area-123 h4 strong {
-  font-size: 61.5px; }
+.node-content.area-123 p {
+  font-size: 41px; }
 
 .color-124 {
   background: #00C; }
 
-.node-content.area-124 h4 strong {
-  font-size: 62px; }
+.node-content.area-124 p {
+  font-size: 41.33333px; }
 
 .color-125 {
   background: #00C; }
 
-.node-content.area-125 h4 strong {
-  font-size: 62.5px; }
+.node-content.area-125 p {
+  font-size: 41.66667px; }
 
 .color-126 {
   background: #00C; }
 
-.node-content.area-126 h4 strong {
-  font-size: 63px; }
+.node-content.area-126 p {
+  font-size: 42px; }
 
 .color-127 {
   background: #00C; }
 
-.node-content.area-127 h4 strong {
-  font-size: 63.5px; }
+.node-content.area-127 p {
+  font-size: 42.33333px; }
 
 .color-128 {
   background: #00C; }
 
-.node-content.area-128 h4 strong {
-  font-size: 64px; }
+.node-content.area-128 p {
+  font-size: 42.66667px; }
 
 .color-129 {
   background: #00C; }
 
-.node-content.area-129 h4 strong {
-  font-size: 64.5px; }
+.node-content.area-129 p {
+  font-size: 43px; }
 
 .color-130 {
   background: #00C; }
 
-.node-content.area-130 h4 strong {
-  font-size: 65px; }
+.node-content.area-130 p {
+  font-size: 43.33333px; }
 
 .color-131 {
   background: #00C; }
 
-.node-content.area-131 h4 strong {
-  font-size: 65.5px; }
+.node-content.area-131 p {
+  font-size: 43.66667px; }
 
 .color-132 {
   background: #00C; }
 
-.node-content.area-132 h4 strong {
-  font-size: 66px; }
+.node-content.area-132 p {
+  font-size: 44px; }
 
 .color-133 {
   background: #00C; }
 
-.node-content.area-133 h4 strong {
-  font-size: 66.5px; }
+.node-content.area-133 p {
+  font-size: 44.33333px; }
 
 .color-134 {
   background: #00C; }
 
-.node-content.area-134 h4 strong {
-  font-size: 67px; }
+.node-content.area-134 p {
+  font-size: 44.66667px; }
 
 .color-135 {
   background: #00C; }
 
-.node-content.area-135 h4 strong {
-  font-size: 67.5px; }
+.node-content.area-135 p {
+  font-size: 45px; }
 
 .color-136 {
   background: #00C; }
 
-.node-content.area-136 h4 strong {
-  font-size: 68px; }
+.node-content.area-136 p {
+  font-size: 45.33333px; }
 
 .color-137 {
   background: #00C; }
 
-.node-content.area-137 h4 strong {
-  font-size: 68.5px; }
+.node-content.area-137 p {
+  font-size: 45.66667px; }
 
 .color-138 {
   background: #00C; }
 
-.node-content.area-138 h4 strong {
-  font-size: 69px; }
+.node-content.area-138 p {
+  font-size: 46px; }
 
 .color-139 {
   background: #00C; }
 
-.node-content.area-139 h4 strong {
-  font-size: 69.5px; }
+.node-content.area-139 p {
+  font-size: 46.33333px; }
 
 .color-140 {
   background: #00C; }
 
-.node-content.area-140 h4 strong {
-  font-size: 70px; }
+.node-content.area-140 p {
+  font-size: 46.66667px; }
 
 .color-141 {
   background: #00C; }
 
-.node-content.area-141 h4 strong {
-  font-size: 70.5px; }
+.node-content.area-141 p {
+  font-size: 47px; }
 
 .color-142 {
   background: #00C; }
 
-.node-content.area-142 h4 strong {
-  font-size: 71px; }
+.node-content.area-142 p {
+  font-size: 47.33333px; }
 
 .color-143 {
   background: #00C; }
 
-.node-content.area-143 h4 strong {
-  font-size: 71.5px; }
+.node-content.area-143 p {
+  font-size: 47.66667px; }
 
 .color-144 {
   background: #00C; }
 
-.node-content.area-144 h4 strong {
-  font-size: 72px; }
+.node-content.area-144 p {
+  font-size: 48px; }
 
 .color-145 {
   background: #00C; }
 
-.node-content.area-145 h4 strong {
-  font-size: 72.5px; }
+.node-content.area-145 p {
+  font-size: 48.33333px; }
 
 .color-146 {
   background: #00C; }
 
-.node-content.area-146 h4 strong {
-  font-size: 73px; }
+.node-content.area-146 p {
+  font-size: 48.66667px; }
 
 .color-147 {
   background: #00C; }
 
-.node-content.area-147 h4 strong {
-  font-size: 73.5px; }
+.node-content.area-147 p {
+  font-size: 49px; }
 
 .color-148 {
   background: #00C; }
 
-.node-content.area-148 h4 strong {
-  font-size: 74px; }
+.node-content.area-148 p {
+  font-size: 49.33333px; }
 
 .color-149 {
   background: #00C; }
 
-.node-content.area-149 h4 strong {
-  font-size: 74.5px; }
+.node-content.area-149 p {
+  font-size: 49.66667px; }
 
 .color-150 {
   background: #00C; }
 
-.node-content.area-150 h4 strong {
-  font-size: 75px; }
+.node-content.area-150 p {
+  font-size: 50px; }
 
 .color-151 {
   background: #00C; }
 
-.node-content.area-151 h4 strong {
-  font-size: 75.5px; }
+.node-content.area-151 p {
+  font-size: 50.33333px; }
 
 .color-152 {
   background: #00C; }
 
-.node-content.area-152 h4 strong {
-  font-size: 76px; }
+.node-content.area-152 p {
+  font-size: 50.66667px; }
 
 .color-153 {
   background: #00C; }
 
-.node-content.area-153 h4 strong {
-  font-size: 76.5px; }
+.node-content.area-153 p {
+  font-size: 51px; }
 
 .color-154 {
   background: #00C; }
 
-.node-content.area-154 h4 strong {
-  font-size: 77px; }
+.node-content.area-154 p {
+  font-size: 51.33333px; }
 
 .color-155 {
   background: #00C; }
 
-.node-content.area-155 h4 strong {
-  font-size: 77.5px; }
+.node-content.area-155 p {
+  font-size: 51.66667px; }
 
 .color-156 {
   background: #00C; }
 
-.node-content.area-156 h4 strong {
-  font-size: 78px; }
+.node-content.area-156 p {
+  font-size: 52px; }
 
 .color-157 {
   background: #00C; }
 
-.node-content.area-157 h4 strong {
-  font-size: 78.5px; }
+.node-content.area-157 p {
+  font-size: 52.33333px; }
 
 .color-158 {
   background: #00C; }
 
-.node-content.area-158 h4 strong {
-  font-size: 79px; }
+.node-content.area-158 p {
+  font-size: 52.66667px; }
 
 .color-159 {
   background: #00C; }
 
-.node-content.area-159 h4 strong {
-  font-size: 79.5px; }
+.node-content.area-159 p {
+  font-size: 53px; }
 
 .color-160 {
   background: #00C; }
 
-.node-content.area-160 h4 strong {
-  font-size: 80px; }
+.node-content.area-160 p {
+  font-size: 53.33333px; }
 
 .color-161 {
   background: #00C; }
 
-.node-content.area-161 h4 strong {
-  font-size: 80.5px; }
+.node-content.area-161 p {
+  font-size: 53.66667px; }
 
 .color-162 {
   background: #00C; }
 
-.node-content.area-162 h4 strong {
-  font-size: 81px; }
+.node-content.area-162 p {
+  font-size: 54px; }
 
 .color-163 {
   background: #00C; }
 
-.node-content.area-163 h4 strong {
-  font-size: 81.5px; }
+.node-content.area-163 p {
+  font-size: 54.33333px; }
 
 .color-164 {
   background: #00C; }
 
-.node-content.area-164 h4 strong {
-  font-size: 82px; }
+.node-content.area-164 p {
+  font-size: 54.66667px; }
 
 .color-165 {
   background: #00C; }
 
-.node-content.area-165 h4 strong {
-  font-size: 82.5px; }
+.node-content.area-165 p {
+  font-size: 55px; }
 
 .color-166 {
   background: #00C; }
 
-.node-content.area-166 h4 strong {
-  font-size: 83px; }
+.node-content.area-166 p {
+  font-size: 55.33333px; }
 
 .color-167 {
   background: #00C; }
 
-.node-content.area-167 h4 strong {
-  font-size: 83.5px; }
+.node-content.area-167 p {
+  font-size: 55.66667px; }
 
 .color-168 {
   background: #00C; }
 
-.node-content.area-168 h4 strong {
-  font-size: 84px; }
+.node-content.area-168 p {
+  font-size: 56px; }
 
 .color-169 {
   background: #00C; }
 
-.node-content.area-169 h4 strong {
-  font-size: 84.5px; }
+.node-content.area-169 p {
+  font-size: 56.33333px; }
 
 .color-170 {
   background: #00C; }
 
-.node-content.area-170 h4 strong {
-  font-size: 85px; }
+.node-content.area-170 p {
+  font-size: 56.66667px; }
 
 .color-171 {
   background: #00C; }
 
-.node-content.area-171 h4 strong {
-  font-size: 85.5px; }
+.node-content.area-171 p {
+  font-size: 57px; }
 
 .color-172 {
   background: #00C; }
 
-.node-content.area-172 h4 strong {
-  font-size: 86px; }
+.node-content.area-172 p {
+  font-size: 57.33333px; }
 
 .color-173 {
   background: #00C; }
 
-.node-content.area-173 h4 strong {
-  font-size: 86.5px; }
+.node-content.area-173 p {
+  font-size: 57.66667px; }
 
 .color-174 {
   background: #00C; }
 
-.node-content.area-174 h4 strong {
-  font-size: 87px; }
+.node-content.area-174 p {
+  font-size: 58px; }
 
 .color-175 {
   background: #00C; }
 
-.node-content.area-175 h4 strong {
-  font-size: 87.5px; }
+.node-content.area-175 p {
+  font-size: 58.33333px; }
 
 .color-176 {
   background: #00C; }
 
-.node-content.area-176 h4 strong {
-  font-size: 88px; }
+.node-content.area-176 p {
+  font-size: 58.66667px; }
 
 .color-177 {
   background: #00C; }
 
-.node-content.area-177 h4 strong {
-  font-size: 88.5px; }
+.node-content.area-177 p {
+  font-size: 59px; }
 
 .color-178 {
   background: #00C; }
 
-.node-content.area-178 h4 strong {
-  font-size: 89px; }
+.node-content.area-178 p {
+  font-size: 59.33333px; }
 
 .color-179 {
   background: #00C; }
 
-.node-content.area-179 h4 strong {
-  font-size: 89.5px; }
+.node-content.area-179 p {
+  font-size: 59.66667px; }
 
 .color-180 {
   background: #00C; }
 
-.node-content.area-180 h4 strong {
-  font-size: 90px; }
+.node-content.area-180 p {
+  font-size: 60px; }
 
 .color-181 {
   background: #00C; }
 
-.node-content.area-181 h4 strong {
-  font-size: 90.5px; }
+.node-content.area-181 p {
+  font-size: 60.33333px; }
 
 .color-182 {
   background: #00C; }
 
-.node-content.area-182 h4 strong {
-  font-size: 91px; }
+.node-content.area-182 p {
+  font-size: 60.66667px; }
 
 .color-183 {
   background: #00C; }
 
-.node-content.area-183 h4 strong {
-  font-size: 91.5px; }
+.node-content.area-183 p {
+  font-size: 61px; }
 
 .color-184 {
   background: #00C; }
 
-.node-content.area-184 h4 strong {
-  font-size: 92px; }
+.node-content.area-184 p {
+  font-size: 61.33333px; }
 
 .color-185 {
   background: #00C; }
 
-.node-content.area-185 h4 strong {
-  font-size: 92.5px; }
+.node-content.area-185 p {
+  font-size: 61.66667px; }
 
 .color-186 {
   background: #00C; }
 
-.node-content.area-186 h4 strong {
-  font-size: 93px; }
+.node-content.area-186 p {
+  font-size: 62px; }
 
 .color-187 {
   background: #00C; }
 
-.node-content.area-187 h4 strong {
-  font-size: 93.5px; }
+.node-content.area-187 p {
+  font-size: 62.33333px; }
 
 .color-188 {
   background: #00C; }
 
-.node-content.area-188 h4 strong {
-  font-size: 94px; }
+.node-content.area-188 p {
+  font-size: 62.66667px; }
 
 .color-189 {
   background: #00C; }
 
-.node-content.area-189 h4 strong {
-  font-size: 94.5px; }
+.node-content.area-189 p {
+  font-size: 63px; }
 
 .color-190 {
   background: #00C; }
 
-.node-content.area-190 h4 strong {
-  font-size: 95px; }
+.node-content.area-190 p {
+  font-size: 63.33333px; }
 
 .color-191 {
   background: #00C; }
 
-.node-content.area-191 h4 strong {
-  font-size: 95.5px; }
+.node-content.area-191 p {
+  font-size: 63.66667px; }
 
 .color-192 {
   background: #00C; }
 
-.node-content.area-192 h4 strong {
-  font-size: 96px; }
+.node-content.area-192 p {
+  font-size: 64px; }
 
 .color-193 {
   background: #00C; }
 
-.node-content.area-193 h4 strong {
-  font-size: 96.5px; }
+.node-content.area-193 p {
+  font-size: 64.33333px; }
 
 .color-194 {
   background: #00C; }
 
-.node-content.area-194 h4 strong {
-  font-size: 97px; }
+.node-content.area-194 p {
+  font-size: 64.66667px; }
 
 .color-195 {
   background: #00C; }
 
-.node-content.area-195 h4 strong {
-  font-size: 97.5px; }
+.node-content.area-195 p {
+  font-size: 65px; }
 
 .color-196 {
   background: #00C; }
 
-.node-content.area-196 h4 strong {
-  font-size: 98px; }
+.node-content.area-196 p {
+  font-size: 65.33333px; }
 
 .color-197 {
   background: #00C; }
 
-.node-content.area-197 h4 strong {
-  font-size: 98.5px; }
+.node-content.area-197 p {
+  font-size: 65.66667px; }
 
 .color-198 {
   background: #00C; }
 
-.node-content.area-198 h4 strong {
-  font-size: 99px; }
+.node-content.area-198 p {
+  font-size: 66px; }
 
 .color-199 {
   background: #00C; }
 
-.node-content.area-199 h4 strong {
-  font-size: 99.5px; }
+.node-content.area-199 p {
+  font-size: 66.33333px; }
 
 .color-200 {
   background: #00C; }
 
-.node-content.area-200 h4 strong {
-  font-size: 100px; }
+.node-content.area-200 p {
+  font-size: 66.66667px; }
 
 .color-201 {
   background: #00C; }
 
-.node-content.area-201 h4 strong {
-  font-size: 100.5px; }
+.node-content.area-201 p {
+  font-size: 67px; }
 
 .color-202 {
   background: #00C; }
 
-.node-content.area-202 h4 strong {
-  font-size: 101px; }
+.node-content.area-202 p {
+  font-size: 67.33333px; }
 
 .color-203 {
   background: #00C; }
 
-.node-content.area-203 h4 strong {
-  font-size: 101.5px; }
+.node-content.area-203 p {
+  font-size: 67.66667px; }
 
 .color-204 {
   background: #00C; }
 
-.node-content.area-204 h4 strong {
-  font-size: 102px; }
+.node-content.area-204 p {
+  font-size: 68px; }
 
 .color-205 {
   background: #00C; }
 
-.node-content.area-205 h4 strong {
-  font-size: 102.5px; }
+.node-content.area-205 p {
+  font-size: 68.33333px; }
 
 .color-206 {
   background: #00C; }
 
-.node-content.area-206 h4 strong {
-  font-size: 103px; }
+.node-content.area-206 p {
+  font-size: 68.66667px; }
 
 .color-207 {
   background: #00C; }
 
-.node-content.area-207 h4 strong {
-  font-size: 103.5px; }
+.node-content.area-207 p {
+  font-size: 69px; }
 
 .color-208 {
   background: #00C; }
 
-.node-content.area-208 h4 strong {
-  font-size: 104px; }
+.node-content.area-208 p {
+  font-size: 69.33333px; }
 
 .color-209 {
   background: #00C; }
 
-.node-content.area-209 h4 strong {
-  font-size: 104.5px; }
+.node-content.area-209 p {
+  font-size: 69.66667px; }
 
 .color-210 {
   background: #00C; }
 
-.node-content.area-210 h4 strong {
-  font-size: 105px; }
+.node-content.area-210 p {
+  font-size: 70px; }
 
 .color-211 {
   background: #00C; }
 
-.node-content.area-211 h4 strong {
-  font-size: 105.5px; }
+.node-content.area-211 p {
+  font-size: 70.33333px; }
 
 .color-212 {
   background: #00C; }
 
-.node-content.area-212 h4 strong {
-  font-size: 106px; }
+.node-content.area-212 p {
+  font-size: 70.66667px; }
 
 .color-213 {
   background: #00C; }
 
-.node-content.area-213 h4 strong {
-  font-size: 106.5px; }
+.node-content.area-213 p {
+  font-size: 71px; }
 
 .color-214 {
   background: #00C; }
 
-.node-content.area-214 h4 strong {
-  font-size: 107px; }
+.node-content.area-214 p {
+  font-size: 71.33333px; }
 
 .color-215 {
   background: #00C; }
 
-.node-content.area-215 h4 strong {
-  font-size: 107.5px; }
+.node-content.area-215 p {
+  font-size: 71.66667px; }
 
 .color-216 {
   background: #00C; }
 
-.node-content.area-216 h4 strong {
-  font-size: 108px; }
+.node-content.area-216 p {
+  font-size: 72px; }
 
 .color-217 {
   background: #00C; }
 
-.node-content.area-217 h4 strong {
-  font-size: 108.5px; }
+.node-content.area-217 p {
+  font-size: 72.33333px; }
 
 .color-218 {
   background: #00C; }
 
-.node-content.area-218 h4 strong {
-  font-size: 109px; }
+.node-content.area-218 p {
+  font-size: 72.66667px; }
 
 .color-219 {
   background: #00C; }
 
-.node-content.area-219 h4 strong {
-  font-size: 109.5px; }
+.node-content.area-219 p {
+  font-size: 73px; }
 
 .color-220 {
   background: #00C; }
 
-.node-content.area-220 h4 strong {
-  font-size: 110px; }
+.node-content.area-220 p {
+  font-size: 73.33333px; }
 
 .color-221 {
   background: #00C; }
 
-.node-content.area-221 h4 strong {
-  font-size: 110.5px; }
+.node-content.area-221 p {
+  font-size: 73.66667px; }
 
 .color-222 {
   background: #00C; }
 
-.node-content.area-222 h4 strong {
-  font-size: 111px; }
+.node-content.area-222 p {
+  font-size: 74px; }
 
 .color-223 {
   background: #00C; }
 
-.node-content.area-223 h4 strong {
-  font-size: 111.5px; }
+.node-content.area-223 p {
+  font-size: 74.33333px; }
 
 .color-224 {
   background: #00C; }
 
-.node-content.area-224 h4 strong {
-  font-size: 112px; }
+.node-content.area-224 p {
+  font-size: 74.66667px; }
 
 .color-225 {
   background: #00C; }
 
-.node-content.area-225 h4 strong {
-  font-size: 112.5px; }
+.node-content.area-225 p {
+  font-size: 75px; }
 
 .color-226 {
   background: #00C; }
 
-.node-content.area-226 h4 strong {
-  font-size: 113px; }
+.node-content.area-226 p {
+  font-size: 75.33333px; }
 
 .color-227 {
   background: #00C; }
 
-.node-content.area-227 h4 strong {
-  font-size: 113.5px; }
+.node-content.area-227 p {
+  font-size: 75.66667px; }
 
 .color-228 {
   background: #00C; }
 
-.node-content.area-228 h4 strong {
-  font-size: 114px; }
+.node-content.area-228 p {
+  font-size: 76px; }
 
 .color-229 {
   background: #00C; }
 
-.node-content.area-229 h4 strong {
-  font-size: 114.5px; }
+.node-content.area-229 p {
+  font-size: 76.33333px; }
 
 .color-230 {
   background: #00C; }
 
-.node-content.area-230 h4 strong {
-  font-size: 115px; }
+.node-content.area-230 p {
+  font-size: 76.66667px; }
 
 .color-231 {
   background: #00C; }
 
-.node-content.area-231 h4 strong {
-  font-size: 115.5px; }
+.node-content.area-231 p {
+  font-size: 77px; }
 
 .color-232 {
   background: #00C; }
 
-.node-content.area-232 h4 strong {
-  font-size: 116px; }
+.node-content.area-232 p {
+  font-size: 77.33333px; }
 
 .color-233 {
   background: #00C; }
 
-.node-content.area-233 h4 strong {
-  font-size: 116.5px; }
+.node-content.area-233 p {
+  font-size: 77.66667px; }
 
 .color-234 {
   background: #00C; }
 
-.node-content.area-234 h4 strong {
-  font-size: 117px; }
+.node-content.area-234 p {
+  font-size: 78px; }
 
 .color-235 {
   background: #00C; }
 
-.node-content.area-235 h4 strong {
-  font-size: 117.5px; }
+.node-content.area-235 p {
+  font-size: 78.33333px; }
 
 .color-236 {
   background: #00C; }
 
-.node-content.area-236 h4 strong {
-  font-size: 118px; }
+.node-content.area-236 p {
+  font-size: 78.66667px; }
 
 .color-237 {
   background: #00C; }
 
-.node-content.area-237 h4 strong {
-  font-size: 118.5px; }
+.node-content.area-237 p {
+  font-size: 79px; }
 
 .color-238 {
   background: #00C; }
 
-.node-content.area-238 h4 strong {
-  font-size: 119px; }
+.node-content.area-238 p {
+  font-size: 79.33333px; }
 
 .color-239 {
   background: #00C; }
 
-.node-content.area-239 h4 strong {
-  font-size: 119.5px; }
+.node-content.area-239 p {
+  font-size: 79.66667px; }
 
 .color-240 {
   background: #00C; }
 
-.node-content.area-240 h4 strong {
-  font-size: 120px; }
+.node-content.area-240 p {
+  font-size: 80px; }
 
 .color-241 {
   background: #00C; }
 
-.node-content.area-241 h4 strong {
-  font-size: 120.5px; }
+.node-content.area-241 p {
+  font-size: 80.33333px; }
 
 .color-242 {
   background: #00C; }
 
-.node-content.area-242 h4 strong {
-  font-size: 121px; }
+.node-content.area-242 p {
+  font-size: 80.66667px; }
 
 .color-243 {
   background: #00C; }
 
-.node-content.area-243 h4 strong {
-  font-size: 121.5px; }
+.node-content.area-243 p {
+  font-size: 81px; }
 
 .color-244 {
   background: #00C; }
 
-.node-content.area-244 h4 strong {
-  font-size: 122px; }
+.node-content.area-244 p {
+  font-size: 81.33333px; }
 
 .color-245 {
   background: #00C; }
 
-.node-content.area-245 h4 strong {
-  font-size: 122.5px; }
+.node-content.area-245 p {
+  font-size: 81.66667px; }
 
 .color-246 {
   background: #00C; }
 
-.node-content.area-246 h4 strong {
-  font-size: 123px; }
+.node-content.area-246 p {
+  font-size: 82px; }
 
 .color-247 {
   background: #00C; }
 
-.node-content.area-247 h4 strong {
-  font-size: 123.5px; }
+.node-content.area-247 p {
+  font-size: 82.33333px; }
 
 .color-248 {
   background: #00C; }
 
-.node-content.area-248 h4 strong {
-  font-size: 124px; }
+.node-content.area-248 p {
+  font-size: 82.66667px; }
 
 .color-249 {
   background: #00C; }
 
-.node-content.area-249 h4 strong {
-  font-size: 124.5px; }
+.node-content.area-249 p {
+  font-size: 83px; }
 
 .color-250 {
   background: #00C; }
 
-.node-content.area-250 h4 strong {
-  font-size: 125px; }
+.node-content.area-250 p {
+  font-size: 83.33333px; }
 
 .color-251 {
   background: #00C; }
 
-.node-content.area-251 h4 strong {
-  font-size: 125.5px; }
+.node-content.area-251 p {
+  font-size: 83.66667px; }
 
 .color-252 {
   background: #00C; }
 
-.node-content.area-252 h4 strong {
-  font-size: 126px; }
+.node-content.area-252 p {
+  font-size: 84px; }
 
 .color-253 {
   background: #00C; }
 
-.node-content.area-253 h4 strong {
-  font-size: 126.5px; }
+.node-content.area-253 p {
+  font-size: 84.33333px; }
 
 .color-254 {
   background: #00C; }
 
-.node-content.area-254 h4 strong {
-  font-size: 127px; }
+.node-content.area-254 p {
+  font-size: 84.66667px; }
 
 .color-255 {
   background: #00C; }
 
-.node-content.area-255 h4 strong {
-  font-size: 127.5px; }
+.node-content.area-255 p {
+  font-size: 85px; }
 
 .color-256 {
   background: #00C; }
 
-.node-content.area-256 h4 strong {
-  font-size: 128px; }
+.node-content.area-256 p {
+  font-size: 85.33333px; }
 
 .color-257 {
   background: #00C; }
 
-.node-content.area-257 h4 strong {
-  font-size: 128.5px; }
+.node-content.area-257 p {
+  font-size: 85.66667px; }
 
 .color-258 {
   background: #00C; }
 
-.node-content.area-258 h4 strong {
-  font-size: 129px; }
+.node-content.area-258 p {
+  font-size: 86px; }
 
 .color-259 {
   background: #00C; }
 
-.node-content.area-259 h4 strong {
-  font-size: 129.5px; }
+.node-content.area-259 p {
+  font-size: 86.33333px; }
 
 .color-260 {
   background: #00C; }
 
-.node-content.area-260 h4 strong {
-  font-size: 130px; }
+.node-content.area-260 p {
+  font-size: 86.66667px; }
 
 .color-261 {
   background: #00C; }
 
-.node-content.area-261 h4 strong {
-  font-size: 130.5px; }
+.node-content.area-261 p {
+  font-size: 87px; }
 
 .color-262 {
   background: #00C; }
 
-.node-content.area-262 h4 strong {
-  font-size: 131px; }
+.node-content.area-262 p {
+  font-size: 87.33333px; }
 
 .color-263 {
   background: #00C; }
 
-.node-content.area-263 h4 strong {
-  font-size: 131.5px; }
+.node-content.area-263 p {
+  font-size: 87.66667px; }
 
 .color-264 {
   background: #00C; }
 
-.node-content.area-264 h4 strong {
-  font-size: 132px; }
+.node-content.area-264 p {
+  font-size: 88px; }
 
 .color-265 {
   background: #00C; }
 
-.node-content.area-265 h4 strong {
-  font-size: 132.5px; }
+.node-content.area-265 p {
+  font-size: 88.33333px; }
 
 .color-266 {
   background: #00C; }
 
-.node-content.area-266 h4 strong {
-  font-size: 133px; }
+.node-content.area-266 p {
+  font-size: 88.66667px; }
 
 .color-267 {
   background: #00C; }
 
-.node-content.area-267 h4 strong {
-  font-size: 133.5px; }
+.node-content.area-267 p {
+  font-size: 89px; }
 
 .color-268 {
   background: #00C; }
 
-.node-content.area-268 h4 strong {
-  font-size: 134px; }
+.node-content.area-268 p {
+  font-size: 89.33333px; }
 
 .color-269 {
   background: #00C; }
 
-.node-content.area-269 h4 strong {
-  font-size: 134.5px; }
+.node-content.area-269 p {
+  font-size: 89.66667px; }
 
 .color-270 {
   background: #00C; }
 
-.node-content.area-270 h4 strong {
-  font-size: 135px; }
+.node-content.area-270 p {
+  font-size: 90px; }
 
 .color-271 {
   background: #00C; }
 
-.node-content.area-271 h4 strong {
-  font-size: 135.5px; }
+.node-content.area-271 p {
+  font-size: 90.33333px; }
 
 .color-272 {
   background: #00C; }
 
-.node-content.area-272 h4 strong {
-  font-size: 136px; }
+.node-content.area-272 p {
+  font-size: 90.66667px; }
 
 .color-273 {
   background: #00C; }
 
-.node-content.area-273 h4 strong {
-  font-size: 136.5px; }
+.node-content.area-273 p {
+  font-size: 91px; }
 
 .color-274 {
   background: #00C; }
 
-.node-content.area-274 h4 strong {
-  font-size: 137px; }
+.node-content.area-274 p {
+  font-size: 91.33333px; }
 
 .color-275 {
   background: #00C; }
 
-.node-content.area-275 h4 strong {
-  font-size: 137.5px; }
+.node-content.area-275 p {
+  font-size: 91.66667px; }
 
 .color-276 {
   background: #00C; }
 
-.node-content.area-276 h4 strong {
-  font-size: 138px; }
+.node-content.area-276 p {
+  font-size: 92px; }
 
 .color-277 {
   background: #00C; }
 
-.node-content.area-277 h4 strong {
-  font-size: 138.5px; }
+.node-content.area-277 p {
+  font-size: 92.33333px; }
 
 .color-278 {
   background: #00C; }
 
-.node-content.area-278 h4 strong {
-  font-size: 139px; }
+.node-content.area-278 p {
+  font-size: 92.66667px; }
 
 .color-279 {
   background: #00C; }
 
-.node-content.area-279 h4 strong {
-  font-size: 139.5px; }
+.node-content.area-279 p {
+  font-size: 93px; }
 
 .color-280 {
   background: #00C; }
 
-.node-content.area-280 h4 strong {
-  font-size: 140px; }
+.node-content.area-280 p {
+  font-size: 93.33333px; }
 
 .color-281 {
   background: #00C; }
 
-.node-content.area-281 h4 strong {
-  font-size: 140.5px; }
+.node-content.area-281 p {
+  font-size: 93.66667px; }
 
 .color-282 {
   background: #00C; }
 
-.node-content.area-282 h4 strong {
-  font-size: 141px; }
+.node-content.area-282 p {
+  font-size: 94px; }
 
 .color-283 {
   background: #00C; }
 
-.node-content.area-283 h4 strong {
-  font-size: 141.5px; }
+.node-content.area-283 p {
+  font-size: 94.33333px; }
 
 .color-284 {
   background: #00C; }
 
-.node-content.area-284 h4 strong {
-  font-size: 142px; }
+.node-content.area-284 p {
+  font-size: 94.66667px; }
 
 .color-285 {
   background: #00C; }
 
-.node-content.area-285 h4 strong {
-  font-size: 142.5px; }
+.node-content.area-285 p {
+  font-size: 95px; }
 
 .color-286 {
   background: #00C; }
 
-.node-content.area-286 h4 strong {
-  font-size: 143px; }
+.node-content.area-286 p {
+  font-size: 95.33333px; }
 
 .color-287 {
   background: #00C; }
 
-.node-content.area-287 h4 strong {
-  font-size: 143.5px; }
+.node-content.area-287 p {
+  font-size: 95.66667px; }
 
 .color-288 {
   background: #00C; }
 
-.node-content.area-288 h4 strong {
-  font-size: 144px; }
+.node-content.area-288 p {
+  font-size: 96px; }
 
 .color-289 {
   background: #00C; }
 
-.node-content.area-289 h4 strong {
-  font-size: 144.5px; }
+.node-content.area-289 p {
+  font-size: 96.33333px; }
 
 .color-290 {
   background: #00C; }
 
-.node-content.area-290 h4 strong {
-  font-size: 145px; }
+.node-content.area-290 p {
+  font-size: 96.66667px; }
 
 .color-291 {
   background: #00C; }
 
-.node-content.area-291 h4 strong {
-  font-size: 145.5px; }
+.node-content.area-291 p {
+  font-size: 97px; }
 
 .color-292 {
   background: #00C; }
 
-.node-content.area-292 h4 strong {
-  font-size: 146px; }
+.node-content.area-292 p {
+  font-size: 97.33333px; }
 
 .color-293 {
   background: #00C; }
 
-.node-content.area-293 h4 strong {
-  font-size: 146.5px; }
+.node-content.area-293 p {
+  font-size: 97.66667px; }
 
 .color-294 {
   background: #00C; }
 
-.node-content.area-294 h4 strong {
-  font-size: 147px; }
+.node-content.area-294 p {
+  font-size: 98px; }
 
 .color-295 {
   background: #00C; }
 
-.node-content.area-295 h4 strong {
-  font-size: 147.5px; }
+.node-content.area-295 p {
+  font-size: 98.33333px; }
 
 .color-296 {
   background: #00C; }
 
-.node-content.area-296 h4 strong {
-  font-size: 148px; }
+.node-content.area-296 p {
+  font-size: 98.66667px; }
 
 .color-297 {
   background: #00C; }
 
-.node-content.area-297 h4 strong {
-  font-size: 148.5px; }
+.node-content.area-297 p {
+  font-size: 99px; }
 
 .color-298 {
   background: #00C; }
 
-.node-content.area-298 h4 strong {
-  font-size: 149px; }
+.node-content.area-298 p {
+  font-size: 99.33333px; }
 
 .color-299 {
   background: #00C; }
 
-.node-content.area-299 h4 strong {
-  font-size: 149.5px; }
+.node-content.area-299 p {
+  font-size: 99.66667px; }
 
 .color-300 {
   background: #00C; }
 
-.node-content.area-300 h4 strong {
-  font-size: 150px; }
+.node-content.area-300 p {
+  font-size: 100px; }
 
 .color-301 {
   background: #00C; }
 
-.node-content.area-301 h4 strong {
-  font-size: 150.5px; }
+.node-content.area-301 p {
+  font-size: 100.33333px; }
 
 .color-302 {
   background: #00C; }
 
-.node-content.area-302 h4 strong {
-  font-size: 151px; }
+.node-content.area-302 p {
+  font-size: 100.66667px; }
 
 .color-303 {
   background: #00C; }
 
-.node-content.area-303 h4 strong {
-  font-size: 151.5px; }
+.node-content.area-303 p {
+  font-size: 101px; }
 
 .color-304 {
   background: #00C; }
 
-.node-content.area-304 h4 strong {
-  font-size: 152px; }
+.node-content.area-304 p {
+  font-size: 101.33333px; }
 
 .color-305 {
   background: #00C; }
 
-.node-content.area-305 h4 strong {
-  font-size: 152.5px; }
+.node-content.area-305 p {
+  font-size: 101.66667px; }
 
 .color-306 {
   background: #00C; }
 
-.node-content.area-306 h4 strong {
-  font-size: 153px; }
+.node-content.area-306 p {
+  font-size: 102px; }
 
 .color-307 {
   background: #00C; }
 
-.node-content.area-307 h4 strong {
-  font-size: 153.5px; }
+.node-content.area-307 p {
+  font-size: 102.33333px; }
 
 .color-308 {
   background: #00C; }
 
-.node-content.area-308 h4 strong {
-  font-size: 154px; }
+.node-content.area-308 p {
+  font-size: 102.66667px; }
 
 .color-309 {
   background: #00C; }
 
-.node-content.area-309 h4 strong {
-  font-size: 154.5px; }
+.node-content.area-309 p {
+  font-size: 103px; }
 
 .color-310 {
   background: #00C; }
 
-.node-content.area-310 h4 strong {
-  font-size: 155px; }
+.node-content.area-310 p {
+  font-size: 103.33333px; }
 
 .color-311 {
   background: #00C; }
 
-.node-content.area-311 h4 strong {
-  font-size: 155.5px; }
+.node-content.area-311 p {
+  font-size: 103.66667px; }
 
 .color-312 {
   background: #00C; }
 
-.node-content.area-312 h4 strong {
-  font-size: 156px; }
+.node-content.area-312 p {
+  font-size: 104px; }
 
 .color-313 {
   background: #00C; }
 
-.node-content.area-313 h4 strong {
-  font-size: 156.5px; }
+.node-content.area-313 p {
+  font-size: 104.33333px; }
 
 .color-314 {
   background: #00C; }
 
-.node-content.area-314 h4 strong {
-  font-size: 157px; }
+.node-content.area-314 p {
+  font-size: 104.66667px; }
 
 .color-315 {
   background: #00C; }
 
-.node-content.area-315 h4 strong {
-  font-size: 157.5px; }
+.node-content.area-315 p {
+  font-size: 105px; }
 
 .color-316 {
   background: #00C; }
 
-.node-content.area-316 h4 strong {
-  font-size: 158px; }
+.node-content.area-316 p {
+  font-size: 105.33333px; }
 
 .color-317 {
   background: #00C; }
 
-.node-content.area-317 h4 strong {
-  font-size: 158.5px; }
+.node-content.area-317 p {
+  font-size: 105.66667px; }
 
 .color-318 {
   background: #00C; }
 
-.node-content.area-318 h4 strong {
-  font-size: 159px; }
+.node-content.area-318 p {
+  font-size: 106px; }
 
 .color-319 {
   background: #00C; }
 
-.node-content.area-319 h4 strong {
-  font-size: 159.5px; }
+.node-content.area-319 p {
+  font-size: 106.33333px; }
 
 .color-320 {
   background: #00C; }
 
-.node-content.area-320 h4 strong {
-  font-size: 160px; }
+.node-content.area-320 p {
+  font-size: 106.66667px; }
 
 .color-321 {
   background: #00C; }
 
-.node-content.area-321 h4 strong {
-  font-size: 160.5px; }
+.node-content.area-321 p {
+  font-size: 107px; }
 
 .color-322 {
   background: #00C; }
 
-.node-content.area-322 h4 strong {
-  font-size: 161px; }
+.node-content.area-322 p {
+  font-size: 107.33333px; }
 
 .color-323 {
   background: #00C; }
 
-.node-content.area-323 h4 strong {
-  font-size: 161.5px; }
+.node-content.area-323 p {
+  font-size: 107.66667px; }
 
 .color-324 {
   background: #00C; }
 
-.node-content.area-324 h4 strong {
-  font-size: 162px; }
+.node-content.area-324 p {
+  font-size: 108px; }
 
 .color-325 {
   background: #00C; }
 
-.node-content.area-325 h4 strong {
-  font-size: 162.5px; }
+.node-content.area-325 p {
+  font-size: 108.33333px; }
 
 .color-326 {
   background: #00C; }
 
-.node-content.area-326 h4 strong {
-  font-size: 163px; }
+.node-content.area-326 p {
+  font-size: 108.66667px; }
 
 .color-327 {
   background: #00C; }
 
-.node-content.area-327 h4 strong {
-  font-size: 163.5px; }
+.node-content.area-327 p {
+  font-size: 109px; }
 
 .color-328 {
   background: #00C; }
 
-.node-content.area-328 h4 strong {
-  font-size: 164px; }
+.node-content.area-328 p {
+  font-size: 109.33333px; }
 
 .color-329 {
   background: #00C; }
 
-.node-content.area-329 h4 strong {
-  font-size: 164.5px; }
+.node-content.area-329 p {
+  font-size: 109.66667px; }
 
 .color-330 {
   background: #00C; }
 
-.node-content.area-330 h4 strong {
-  font-size: 165px; }
+.node-content.area-330 p {
+  font-size: 110px; }
 
 .color-331 {
   background: #00C; }
 
-.node-content.area-331 h4 strong {
-  font-size: 165.5px; }
+.node-content.area-331 p {
+  font-size: 110.33333px; }
 
 .color-332 {
   background: #00C; }
 
-.node-content.area-332 h4 strong {
-  font-size: 166px; }
+.node-content.area-332 p {
+  font-size: 110.66667px; }
 
 .color-333 {
   background: #00C; }
 
-.node-content.area-333 h4 strong {
-  font-size: 166.5px; }
+.node-content.area-333 p {
+  font-size: 111px; }
 
 .color-334 {
   background: #00C; }
 
-.node-content.area-334 h4 strong {
-  font-size: 167px; }
+.node-content.area-334 p {
+  font-size: 111.33333px; }
 
 .color-335 {
   background: #00C; }
 
-.node-content.area-335 h4 strong {
-  font-size: 167.5px; }
+.node-content.area-335 p {
+  font-size: 111.66667px; }
 
 .color-336 {
   background: #00C; }
 
-.node-content.area-336 h4 strong {
-  font-size: 168px; }
+.node-content.area-336 p {
+  font-size: 112px; }
 
 .color-337 {
   background: #00C; }
 
-.node-content.area-337 h4 strong {
-  font-size: 168.5px; }
+.node-content.area-337 p {
+  font-size: 112.33333px; }
 
 .color-338 {
   background: #00C; }
 
-.node-content.area-338 h4 strong {
-  font-size: 169px; }
+.node-content.area-338 p {
+  font-size: 112.66667px; }
 
 .color-339 {
   background: #00C; }
 
-.node-content.area-339 h4 strong {
-  font-size: 169.5px; }
+.node-content.area-339 p {
+  font-size: 113px; }
 
 .color-340 {
   background: #00C; }
 
-.node-content.area-340 h4 strong {
-  font-size: 170px; }
+.node-content.area-340 p {
+  font-size: 113.33333px; }
 
 .color-341 {
   background: #00C; }
 
-.node-content.area-341 h4 strong {
-  font-size: 170.5px; }
+.node-content.area-341 p {
+  font-size: 113.66667px; }
 
 .color-342 {
   background: #00C; }
 
-.node-content.area-342 h4 strong {
-  font-size: 171px; }
+.node-content.area-342 p {
+  font-size: 114px; }
 
 .color-343 {
   background: #00C; }
 
-.node-content.area-343 h4 strong {
-  font-size: 171.5px; }
+.node-content.area-343 p {
+  font-size: 114.33333px; }
 
 .color-344 {
   background: #00C; }
 
-.node-content.area-344 h4 strong {
-  font-size: 172px; }
+.node-content.area-344 p {
+  font-size: 114.66667px; }
 
 .color-345 {
   background: #00C; }
 
-.node-content.area-345 h4 strong {
-  font-size: 172.5px; }
+.node-content.area-345 p {
+  font-size: 115px; }
 
 .color-346 {
   background: #00C; }
 
-.node-content.area-346 h4 strong {
-  font-size: 173px; }
+.node-content.area-346 p {
+  font-size: 115.33333px; }
 
 .color-347 {
   background: #00C; }
 
-.node-content.area-347 h4 strong {
-  font-size: 173.5px; }
+.node-content.area-347 p {
+  font-size: 115.66667px; }
 
 .color-348 {
   background: #00C; }
 
-.node-content.area-348 h4 strong {
-  font-size: 174px; }
+.node-content.area-348 p {
+  font-size: 116px; }
 
 .color-349 {
   background: #00C; }
 
-.node-content.area-349 h4 strong {
-  font-size: 174.5px; }
+.node-content.area-349 p {
+  font-size: 116.33333px; }
 
 .color-350 {
   background: #00C; }
 
-.node-content.area-350 h4 strong {
-  font-size: 175px; }
+.node-content.area-350 p {
+  font-size: 116.66667px; }
 
 .color-351 {
   background: #00C; }
 
-.node-content.area-351 h4 strong {
-  font-size: 175.5px; }
+.node-content.area-351 p {
+  font-size: 117px; }
 
 .color-352 {
   background: #00C; }
 
-.node-content.area-352 h4 strong {
-  font-size: 176px; }
+.node-content.area-352 p {
+  font-size: 117.33333px; }
 
 .color-353 {
   background: #00C; }
 
-.node-content.area-353 h4 strong {
-  font-size: 176.5px; }
+.node-content.area-353 p {
+  font-size: 117.66667px; }
 
 .color-354 {
   background: #00C; }
 
-.node-content.area-354 h4 strong {
-  font-size: 177px; }
+.node-content.area-354 p {
+  font-size: 118px; }
 
 .color-355 {
   background: #00C; }
 
-.node-content.area-355 h4 strong {
-  font-size: 177.5px; }
+.node-content.area-355 p {
+  font-size: 118.33333px; }
 
 .color-356 {
   background: #00C; }
 
-.node-content.area-356 h4 strong {
-  font-size: 178px; }
+.node-content.area-356 p {
+  font-size: 118.66667px; }
 
 .color-357 {
   background: #00C; }
 
-.node-content.area-357 h4 strong {
-  font-size: 178.5px; }
+.node-content.area-357 p {
+  font-size: 119px; }
 
 .color-358 {
   background: #00C; }
 
-.node-content.area-358 h4 strong {
-  font-size: 179px; }
+.node-content.area-358 p {
+  font-size: 119.33333px; }
 
 .color-359 {
   background: #00C; }
 
-.node-content.area-359 h4 strong {
-  font-size: 179.5px; }
+.node-content.area-359 p {
+  font-size: 119.66667px; }
 
 .color-360 {
   background: #00C; }
 
-.node-content.area-360 h4 strong {
-  font-size: 180px; }
+.node-content.area-360 p {
+  font-size: 120px; }
 
 .color-361 {
   background: #00C; }
 
-.node-content.area-361 h4 strong {
-  font-size: 180.5px; }
+.node-content.area-361 p {
+  font-size: 120.33333px; }
 
 .color-362 {
   background: #00C; }
 
-.node-content.area-362 h4 strong {
-  font-size: 181px; }
+.node-content.area-362 p {
+  font-size: 120.66667px; }
 
 .color-363 {
   background: #00C; }
 
-.node-content.area-363 h4 strong {
-  font-size: 181.5px; }
+.node-content.area-363 p {
+  font-size: 121px; }
 
 .color-364 {
   background: #00C; }
 
-.node-content.area-364 h4 strong {
-  font-size: 182px; }
+.node-content.area-364 p {
+  font-size: 121.33333px; }
 
 .color-365 {
   background: #00C; }
 
-.node-content.area-365 h4 strong {
-  font-size: 182.5px; }
+.node-content.area-365 p {
+  font-size: 121.66667px; }
 
 .color-366 {
   background: #00C; }
 
-.node-content.area-366 h4 strong {
-  font-size: 183px; }
+.node-content.area-366 p {
+  font-size: 122px; }
 
 .color-367 {
   background: #00C; }
 
-.node-content.area-367 h4 strong {
-  font-size: 183.5px; }
+.node-content.area-367 p {
+  font-size: 122.33333px; }
 
 .color-368 {
   background: #00C; }
 
-.node-content.area-368 h4 strong {
-  font-size: 184px; }
+.node-content.area-368 p {
+  font-size: 122.66667px; }
 
 .color-369 {
   background: #00C; }
 
-.node-content.area-369 h4 strong {
-  font-size: 184.5px; }
+.node-content.area-369 p {
+  font-size: 123px; }
 
 .color-370 {
   background: #00C; }
 
-.node-content.area-370 h4 strong {
-  font-size: 185px; }
+.node-content.area-370 p {
+  font-size: 123.33333px; }
 
 .color-371 {
   background: #00C; }
 
-.node-content.area-371 h4 strong {
-  font-size: 185.5px; }
+.node-content.area-371 p {
+  font-size: 123.66667px; }
 
 .color-372 {
   background: #00C; }
 
-.node-content.area-372 h4 strong {
-  font-size: 186px; }
+.node-content.area-372 p {
+  font-size: 124px; }
 
 .color-373 {
   background: #00C; }
 
-.node-content.area-373 h4 strong {
-  font-size: 186.5px; }
+.node-content.area-373 p {
+  font-size: 124.33333px; }
 
 .color-374 {
   background: #00C; }
 
-.node-content.area-374 h4 strong {
-  font-size: 187px; }
+.node-content.area-374 p {
+  font-size: 124.66667px; }
 
 .color-375 {
   background: #00C; }
 
-.node-content.area-375 h4 strong {
-  font-size: 187.5px; }
+.node-content.area-375 p {
+  font-size: 125px; }
 
 .color-376 {
   background: #00C; }
 
-.node-content.area-376 h4 strong {
-  font-size: 188px; }
+.node-content.area-376 p {
+  font-size: 125.33333px; }
 
 .color-377 {
   background: #00C; }
 
-.node-content.area-377 h4 strong {
-  font-size: 188.5px; }
+.node-content.area-377 p {
+  font-size: 125.66667px; }
 
 .color-378 {
   background: #00C; }
 
-.node-content.area-378 h4 strong {
-  font-size: 189px; }
+.node-content.area-378 p {
+  font-size: 126px; }
 
 .color-379 {
   background: #00C; }
 
-.node-content.area-379 h4 strong {
-  font-size: 189.5px; }
+.node-content.area-379 p {
+  font-size: 126.33333px; }
 
 .color-380 {
   background: #00C; }
 
-.node-content.area-380 h4 strong {
-  font-size: 190px; }
+.node-content.area-380 p {
+  font-size: 126.66667px; }
 
 .color-381 {
   background: #00C; }
 
-.node-content.area-381 h4 strong {
-  font-size: 190.5px; }
+.node-content.area-381 p {
+  font-size: 127px; }
 
 .color-382 {
   background: #00C; }
 
-.node-content.area-382 h4 strong {
-  font-size: 191px; }
+.node-content.area-382 p {
+  font-size: 127.33333px; }
 
 .color-383 {
   background: #00C; }
 
-.node-content.area-383 h4 strong {
-  font-size: 191.5px; }
+.node-content.area-383 p {
+  font-size: 127.66667px; }
 
 .color-384 {
   background: #00C; }
 
-.node-content.area-384 h4 strong {
-  font-size: 192px; }
+.node-content.area-384 p {
+  font-size: 128px; }
 
 .color-385 {
   background: #00C; }
 
-.node-content.area-385 h4 strong {
-  font-size: 192.5px; }
+.node-content.area-385 p {
+  font-size: 128.33333px; }
 
 .color-386 {
   background: #00C; }
 
-.node-content.area-386 h4 strong {
-  font-size: 193px; }
+.node-content.area-386 p {
+  font-size: 128.66667px; }
 
 .color-387 {
   background: #00C; }
 
-.node-content.area-387 h4 strong {
-  font-size: 193.5px; }
+.node-content.area-387 p {
+  font-size: 129px; }
 
 .color-388 {
   background: #00C; }
 
-.node-content.area-388 h4 strong {
-  font-size: 194px; }
+.node-content.area-388 p {
+  font-size: 129.33333px; }
 
 .color-389 {
   background: #00C; }
 
-.node-content.area-389 h4 strong {
-  font-size: 194.5px; }
+.node-content.area-389 p {
+  font-size: 129.66667px; }
 
 .color-390 {
   background: #00C; }
 
-.node-content.area-390 h4 strong {
-  font-size: 195px; }
+.node-content.area-390 p {
+  font-size: 130px; }
 
 .color-391 {
   background: #00C; }
 
-.node-content.area-391 h4 strong {
-  font-size: 195.5px; }
+.node-content.area-391 p {
+  font-size: 130.33333px; }
 
 .color-392 {
   background: #00C; }
 
-.node-content.area-392 h4 strong {
-  font-size: 196px; }
+.node-content.area-392 p {
+  font-size: 130.66667px; }
 
 .color-393 {
   background: #00C; }
 
-.node-content.area-393 h4 strong {
-  font-size: 196.5px; }
+.node-content.area-393 p {
+  font-size: 131px; }
 
 .color-394 {
   background: #00C; }
 
-.node-content.area-394 h4 strong {
-  font-size: 197px; }
+.node-content.area-394 p {
+  font-size: 131.33333px; }
 
 .color-395 {
   background: #00C; }
 
-.node-content.area-395 h4 strong {
-  font-size: 197.5px; }
+.node-content.area-395 p {
+  font-size: 131.66667px; }
 
 .color-396 {
   background: #00C; }
 
-.node-content.area-396 h4 strong {
-  font-size: 198px; }
+.node-content.area-396 p {
+  font-size: 132px; }
 
 .color-397 {
   background: #00C; }
 
-.node-content.area-397 h4 strong {
-  font-size: 198.5px; }
+.node-content.area-397 p {
+  font-size: 132.33333px; }
 
 .color-398 {
   background: #00C; }
 
-.node-content.area-398 h4 strong {
-  font-size: 199px; }
+.node-content.area-398 p {
+  font-size: 132.66667px; }
 
 .color-399 {
   background: #00C; }
 
-.node-content.area-399 h4 strong {
-  font-size: 199.5px; }
+.node-content.area-399 p {
+  font-size: 133px; }
 
 .color-400 {
   background: #00C; }
 
-.node-content.area-400 h4 strong {
-  font-size: 200px; }
-
-.node-content {
-  padding: 0px; }
-  .node-content h4 {
-    padding: 0px;
-    font-size: 0.8vw; }
-    .node-content h4 strong {
-      letter-spacing: -1px;
-      color: #FFF; }
-    .node-content h4 span {
-      font-size: 1vw;
-      padding: 8px;
-      margin-top: 8px;
-      box-shadow: inset 0px 2px 0px 0px #C00;
-      display: inline-block; }
-
-/*TOOLTIPS*/
-.tip {
-  color: #fff;
-  width: 139px;
-  background-color: black;
-  opacity: 0.9;
-  filter: alpha(opacity=90);
-  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-  padding: 7px; }
+.node-content.area-400 p {
+  font-size: 133.33333px; }
 
 .album {
   width: 100px;

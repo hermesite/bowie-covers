@@ -2,8 +2,12 @@
     font-family: 'Roboto Condensed', sans-serif;
     .vis-time-axis {
       .vis-text {
+        font-size: 10px;
         font-weight: 300;
       }
+    }
+    .vis-item-content {
+        font-size: 10px;
     }
 }
 .tick {
@@ -12,11 +16,13 @@
     
   }
 }
-.bar-chart-label {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 11px;
-    fill: #FFF;
-    font-weight: 700;
+
+.vis-time-axis .vis-grid.vis-minor {
+  border: none;
+}
+
+.vis-dot {
+  display: none;
 }
 
 .vis-timeline {
@@ -28,18 +34,23 @@
   &.vis-box {
     border: none;
     border-radius: 0px;
+    background: transparent !important;
   }
   &.vis-background {
-    background-color: rgba(200,0,0,.1);
-    &.negative {
-      background-color: rgba(200,0,0,.2);
+    background: transparent;
+    .vis-item-content {
+      padding-top: 5px;
     }
+    // background-color: rgba(200,0,0,.1);
+    // &.negative {
+    //   background-color: rgba(200,0,0,.2);
+    // }
   }
   .vis-item-content {
     padding-top: 0px;
     padding-right: 0px;
     padding-left: 0px;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
   }
 }
 
@@ -48,6 +59,7 @@
 .album-thumbnail {
     width: 60px;
     height: 60px;
+    margin-top: 20px;
 }
 
 div.vis-tooltip {
@@ -74,8 +86,4 @@ div.vis-tooltip {
 .timeline-chart {
 
   padding-top: 0px;
-}
-.bar-chart {
-  height: calc(100vh - 50px);
-  padding-bottom: 0px;
 }

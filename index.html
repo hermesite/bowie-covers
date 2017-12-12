@@ -9,15 +9,15 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Bowie - Cover</title>
+    <title>Bowie Covers</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Advent+Pro:100,200,300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="bower_components/bulma/css/bulma.css">
+    <link rel="stylesheet" href="bower_components/tooltipster/dist/css/tooltipster.bundle.css">
     <link rel="stylesheet" href="bower_components/vis/dist/vis.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -26,55 +26,71 @@
     <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="article-cover" style="background-image:url(images/article-cover.png)">
-        <div class="section bar-chart">
-            <svg id="coversBar"></svg>
+    <!-- MOSCA -->
+    <a class="mosca" href="#">
+      <img src="svg/bsides.svg" alt="">
+    </a>
+    <!-- ARTICLE COVER -->
+    <div class="article-cover" style="background-image:url(images/article-cover-lazarus.png)">
+    </div>
+    <!--     <div class="section is-white">
+        <div class="container">
+            <div class="buttons"></div>
+        </div>
+    </div> -->
+    <!-- TIMELINE -->
+    <div id="timeline" class="viz timeline-chart"></div>
+    <!-- ARTICLE TITLE -->
+    <div class="section is-white">
+        <div class="container">
+            <h1 class="title">The many covers of Bowie song</h1>
+            <h2 class="subtitle">Figure out the influence of Bowie over more than 500 artists and listen to <strong id="allOthers"></strong> covers</h2>
         </div>
     </div>
-    <nav class="navbar is-transparent" style="z-index:20">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="#">
-              <img src="images/b-sides.png" alt="">
-            </a>
-        </div>
-        <!-- 
-        <div id="navbarExampleTransparentExample" class="navbar-menu">
-            <div class="navbar-start">
-                <a class="navbar-item" href="https://bulma.io/">What is this</a>
-            </div>
-            <div class="navbar-end">
-                <div class="navbar-item">
-                    <div class="buttons has-addons">
-                        <span id="all" class="button is-active is-small">All covers</span>
-                        <span id="bowie" class="button is-small">Covers of Bowie</span>
-                        <span id="others" class="button is-small">Covers by Bowie</span>
-                    </div>
+    <!-- TREEMAP -->
+    <!-- <div class="section is-white">
+        <div class="container">
+            <article class="message">
+                <div class="message-header">
+                    <p>Hover</p>
+                    <button class="delete" aria-label="delete"></button>
                 </div>
-            </div>
-        </div>
-    -->
-    </nav>
-    <section class="hero">
-        <div class="hero-body row middle-xs">
-            <div class="container">
-                <div class="columns">
-                    <div class="column is-2"></div>
-                    <div class="column">
-                        <h1 class="title is-centered"><span>Explore the <strong id="allOthers"></strong> Bowie covers</span></h1>
-                        <!--                         <h2 class="subtitle is-centered">Discover the <strong id="allTracks">000</strong> songs that Bowie played as cover</h2> -->
-                    </div>
-                    <div class="column is-2"></div>
+                <div class="message-body">
+                    Pass over the album images to view more information
                 </div>
+            </article>
+            <h3>Distribution of covers by album</h3>
+            <p>hover the album for numbers</p>
+            <p>click the album to see the covers</p>
+        </div>
+    </div> -->
+    <div id="covers-treemap" class="viz section-treemap"></div>
+    <!-- RADIAL CHARTS CONTAINER -->
+    <div class="section is-white">
+        <div class="container">
+            <div class="viz radial-container">
+                <div class="radial-album" style="display:none;"></div>
             </div>
         </div>
-    </section>
-    <div class="section">
-        <div id="sunburst-bowie" class="half-size"></div>
+    </div>
+    <!-- TIMELINE WITH PERIOD FILTERING -->
+    <div class="section is-white">
+        <div class="container">
+            <h5>Distribution of covers by years and periods</h5>
+        </div>
     </div>
     <div class="section is-white">
         <div class="container">
-            <h1>Distribution</h1>
-            <hr>
+            <h2 class="tooltip" title="tururu">BSIDE - The covers that Bowie did</h2>
+            <h3>Pin Ups the covers album</h3>
+            <!--             <h3>Across the universe - The most versioned song</h3> -->
+            <h3>Tags associated to Bowie's music</h3>
+            <!-- /container -->
+        </div>
+    </div>
+    <!-- COUNTERS -->
+    <div class="section is-white">
+        <div class="container">
             <nav class="level">
                 <div class="level-item has-text-centered">
                     <div id="bowie-records">
@@ -92,56 +108,23 @@
                     </div>
                 </div>
             </nav>
-            <hr>
-            <h2>By periods</h2>
-            <div class="buttons"></div>
-            <div id="timeline" class="timeline-chart"></div>
-            <nav class="level">
-                <div class="level-item has-text-centered">
-                    <div>
-                        <p class="heading">Album with more covers</p>
-                        <h3>The Rise and Fall of Ziggy Stardust and the Spiders From Mars</h3>
-                        <p class="title">123</p>
-                    </div>
-                </div>
-            </nav>
-            <nav class="level">
-                <div class="level-item has-text-centered">
-                    <div>
-                        <p class="heading">The most versioned song</p>
-                        <h3>The Man Who Sold The World</h3>
-                        <p class="title">95</p>
-                    </div>
-                </div>
-                
-            </nav>
-            <!-- <h2>Introduction</h2> -->
         </div>
     </div>
-    <!-- <div class="section"></div> -->
-    <div class="section is-white">
+    <!-- BAR CHART -->
+    <div class="bar-chart">
+        <svg id="coversBar"></svg>
+    </div>
+    <!-- RAW LIST -->
+    <div class="section">
         <div class="container">
-            <h3>Bowie's releases timeline and number of covers</h3>
-            <p>Periods of Bowie and how is the 70's when we find the majority of covers</p>
-            
-            <h3>Treemap showing distribution of covers closer look</h3>
-            <p>Let's separate cover Bowies did from the song that Bowie covered</p>
-            <div class="row section-treemap" style="z-index:10">
-                <div id="covers-treemap" class="col-xs-12"></div>
-            </div>
-            <h2>BSIDE - The covers that Bowie did</h2>
-            <h3>Pin Ups the covers album</h3>
-            <h3>Across the universe - The most versioned song</h3>
-            <h3>Tags associated to Bowie's music</h3>
-            <div class="row middle-xs section section-radial" style="z-index:0">
-                <a href="" class="close-radial"><i class="fa fa-times"></i></a>
-                <div id="covers-bowie" class="col-xs-offset-1 col-xs-10 col-lg-offset-1 col-lg-10 half-size"></div>
-            </div>
-            <!-- /container -->
+            <input type="button" id="test" value="Sort List (click again to reverse)" />
+            <ul id="rawList"></ul>
         </div>
     </div>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/tooltipster/dist/js/tooltipster.bundle.js"></script>
     <script src="bower_components/d3/d3.min.js"></script>
+    <script src="bower_components/d3-tip/index.js"></script>
     <script src="bower_components/vis/dist/vis.js"></script>
     <script src="bower_components/colorbrewer/colorbrewer.js"></script>
     <script src="scripts/treemap.js"></script>

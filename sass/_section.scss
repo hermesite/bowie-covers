@@ -1,0 +1,55 @@
+/*----------  Article cover text  ----------*/
+
+// .hero {
+//     height: 61.8vh;
+//     .title,
+//     .subtitle {
+//         display: inline-block;
+//         text-align: center;
+//         margin-bottom: 2rem;
+//         padding: 1rem;
+//         span {
+//             background-color: rgba(255, 255, 255, .5);
+//         }
+//     }
+// }
+
+.bar-chart {
+    position: relative;
+    height: 61.8vh;
+    padding-bottom: 0px;
+    width: 100%;
+    padding: 0px;
+}
+
+.section {}
+
+.section {
+    position: relative;
+    &.section-radial {
+        background-color: rgba(0, 0, 0, .75);
+    }
+    &.is-white {
+        background-color: #FFF;
+    }
+    &.is-black {
+        background-color: $black;
+    }
+}
+
+.section-white {}
+
+.section-black {}
+
+.article-cover {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-color: $bsides;
+    background-size: cover;
+    opacity: .5;
+}

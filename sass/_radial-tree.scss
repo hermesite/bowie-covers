@@ -1,0 +1,126 @@
+.radial-container {
+    position: relative;
+    // width: 61.8vw;
+    
+    .radial-item {
+        box-shadow: 0px 2px 0px 0px #CCC;
+        padding: 5vh 0px;
+    }
+
+    .radial-album,
+    .radial-aside {
+        // box-shadow: inset 0px 0px 0px 3px #C00;
+        display: inline-block;
+    }
+    .radial-album {
+        font-size: 1.25vh;
+        width: $base-layout;
+        height: $base-layout; // background-color: rgba(0, 0, 0, .75);
+        // background-color: $bsides;
+        // border: 1px solid $bsides;
+        padding: 0px;
+        position: relative;
+        text-align: center;
+        border-radius: 50%;
+        background-color: #F2F2F2;
+        // radial tree
+        svg {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: 1;
+            overflow: visible;
+            .node {
+                font-family: 'Roboto Condensed', sans-serif;
+                text {
+                    &.record {
+                        font-weight: 700;
+                        cursor: default; // letter-spacing: 1px;
+                    }
+                    &.artist {
+                        cursor: pointer;
+                        opacity: .75;
+                        fill: $bsides;
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            .no-link {
+                fill: none;
+            }
+
+            .link {
+                fill: none;
+                stroke-width: 2px;
+            }
+        } // Album image
+        .record {
+            border: 1px dotted $bsides;
+            position: absolute;
+            z-index: 0;
+            top: 50%;
+            left: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: 50% 50%;
+            background-repeat: no-repeat; // border: 2px solid rgba(0, 0, 0, .50);
+            &:before {
+                content: "";
+                position: absolute;
+                background-color: rgba(0, 0, 0, .75);
+                top: (100% - $inside-circle / $inside-circle-factor) / 2;
+                left: (100% - $inside-circle / $inside-circle-factor) / 2;
+                width: $inside-circle / $inside-circle-factor;
+                height: $inside-circle / $inside-circle-factor;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                border-radius: 50%;
+                border: 2px solid rgba(0, 0, 0, .50);
+            }
+        }
+    }
+    .radial-aside {
+        // box-shadow: inset 2px 0px 0px 0px #0CC;
+        max-width: calc(100% - #{$base-layout});
+        min-width: calc(100% - #{$base-layout});
+        .record-info {
+            text-align: left;
+            // width: 100%; // line-height: 50px;
+            padding: 16px;
+            h2 {
+                margin: 0px;
+            }
+            em {
+                max-width: 60%;
+                font-size: 24px;
+            }
+            strong {}
+            span,
+            em {
+                padding: 8px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            span {
+                text-transform: uppercase;
+                text-align: center;
+                font-size: 1vw;
+                box-shadow: 2px 0px 0px 0px #000;
+                padding-top: 0px;
+                padding-bottom: 0px;
+                strong {
+                    font-size: 3.5vw;
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+        .video {
+            padding: 0px 20px;
+        }
+    }
+}
