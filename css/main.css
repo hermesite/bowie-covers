@@ -1,6 +1,9 @@
 /*===============================
 =            Imports            =
 ===============================*/
+@import url(../fonts/Noway-Bold-webfont/stylesheet.css);
+@import url(../fonts/Noway-Regular-webfont/stylesheet.css);
+@import url(../fonts/Noway-Light-webfont/stylesheet.css);
 .ratio-phi {
   position: relative; }
   .ratio-phi:before {
@@ -2360,6 +2363,50 @@
 
   .last-lg {
     order: 1; } }
+/*----------  Based on http://type-scale.com/ Perfect 5  ----------*/
+html {
+  font-size: 0.625em; }
+
+body {
+  background-color: white;
+  font-family: 'nowayregular', serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333; }
+  body .content p {
+    margin-bottom: 1.3em; }
+  body .content h1, body .content h2, body .content h3, body .content h4 {
+    margin: 1.414em 0 0.5em;
+    font-weight: inherit;
+    line-height: 1.2; }
+  body .content h1 {
+    margin-top: 0;
+    font-size: 5.063em; }
+  body .content h2 {
+    font-size: 3.375em; }
+  body .content h3 {
+    font-size: 2.25em; }
+  body .content h4 {
+    font-size: 1.5em; }
+  body .content small, body .content .font_small {
+    font-size: 0.667em; }
+
+/*==============================
+=            Charts            =
+==============================*/
+.bar-chart-label {
+  font-family: 'nowayregular', sans-serif;
+  font-size: 12px;
+  cursor: hand;
+  cursor: pointer;
+  opacity: .8;
+  font-style: italic; }
+  .bar-chart-label.link {
+    fill: #600; }
+    .bar-chart-label.link:hover {
+      opacity: 1; }
+
+/*=====  End of Charts  ======*/
 .radial-container {
   position: relative; }
   .radial-container .radial-item {
@@ -2383,17 +2430,15 @@
       top: 0px;
       z-index: 1;
       overflow: visible; }
-      .radial-container .radial-album svg .node {
-        font-family: 'Roboto Condensed', sans-serif; }
-        .radial-container .radial-album svg .node text.record {
-          font-weight: 700;
-          cursor: default; }
-        .radial-container .radial-album svg .node text.artist {
-          cursor: pointer;
-          opacity: .75;
-          fill: #600; }
-          .radial-container .radial-album svg .node text.artist:hover {
-            opacity: 1; }
+      .radial-container .radial-album svg .node text.record {
+        font-weight: 700;
+        cursor: default; }
+      .radial-container .radial-album svg .node text.artist {
+        cursor: pointer;
+        opacity: .75;
+        fill: #600; }
+        .radial-container .radial-album svg .node text.artist:hover {
+          opacity: 1; }
       .radial-container .radial-album svg .no-link {
         fill: none; }
       .radial-container .radial-album svg .link {
@@ -2511,16 +2556,11 @@
           transform: translateY(0%); }
 
 /*=====  End of TREEMAP  ======*/
-#timeline {
-  font-family: 'Roboto Condensed', sans-serif; }
-  #timeline .vis-time-axis .vis-text {
-    font-size: 10px;
-    font-weight: 300; }
-  #timeline .vis-item-content {
-    font-size: 10px; }
-
-.tick text {
-  font-family: 'Roboto Condensed', sans-serif; }
+#timeline .vis-time-axis .vis-text {
+  font-size: 10px;
+  font-weight: 300; }
+#timeline .vis-item-content {
+  font-size: 10px; }
 
 .vis-time-axis .vis-grid.vis-minor {
   border: none; }
@@ -2552,18 +2592,22 @@
 .album-thumbnail {
   width: 60px;
   height: 60px;
-  margin-top: 20px; }
+  margin-top: 20px;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1); }
+  .album-thumbnail:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0); }
 
 div.vis-tooltip {
-  font-family: 'Roboto Condensed', sans-serif;
   font-size: 12px;
   font-weight: 400;
   border-radius: 0px;
-  background-color: #FFF; }
+  background-color: #FFF;
+  font-family: 'nowayregular', sans-serif; }
 
 .button,
 .axis text {
-  font-family: 'Roboto Condensed', sans-serif;
   font-size: 9px;
   fill: rgba(255, 255, 255, 0.5); }
 
@@ -2576,46 +2620,6 @@ div.vis-tooltip {
 .timeline-chart {
   padding-top: 0px; }
 
-/*----------  Based on http://type-scale.com/ Perfect 5  ----------*/
-body {
-  color: #070707;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: 'Merriweather', serif; }
-
-.viz h1, .viz h2, .viz h3, .viz h4, .viz h5, .viz h6 {
-  font-family: 'Roboto Condensed', sans-serif; }
-.viz p {
-  font-family: 'Roboto Condensed', sans-serif; }
-
-small,
-.font_small {
-  font-size: 0.667rem; }
-
-/*==============================
-=            Charts            =
-==============================*/
-.bar-chart-label {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 12px;
-  cursor: hand;
-  cursor: pointer;
-  opacity: .8;
-  font-style: italic; }
-  .bar-chart-label.link {
-    fill: #600; }
-    .bar-chart-label.link:hover {
-      opacity: 1; }
-
-/*=====  End of Charts  ======*/
 /*----------  Article cover text  ----------*/
 .bar-chart {
   position: relative;
@@ -2643,7 +2647,12 @@ small,
   right: 0px;
   background-color: #600;
   background-size: cover;
-  opacity: .5; }
+  opacity: .5;
+  z-index: 0; }
+
+.grid-covers, .button-group {
+  position: relative;
+  z-index: 99; }
 
 .mosca {
   position: fixed;
@@ -2653,6 +2662,48 @@ small,
   .mosca img {
     width: 200px;
     display: block; }
+
+* {
+  box-sizing: border-box; }
+
+/* force scrollbar, prevents initial gap */
+html {
+  overflow-y: scroll; }
+
+/* ---- grid ---- */
+.grid {
+  background: #DDD; }
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+/* ---- .element-item ---- */
+/* 5 columns, percentage width */
+.grid-item,
+.grid-sizer {
+  width: 20%; }
+
+.grid-item {
+  float: left;
+  height: 100px;
+  background: #0D8;
+  border: 2px solid #333;
+  border-color: rgba(0, 0, 0, 0.7); }
+
+.grid-item--width2 {
+  width: 40%; }
+
+.grid-item--height2 {
+  height: 200px; }
+
+.level .level-item.counter * {
+  margin: 0px; }
+.level .level-item.counter .counter-number {
+  font-family: 'nowaylight';
+  font-size: 3.375em; }
 
 path {
   fill: none; }

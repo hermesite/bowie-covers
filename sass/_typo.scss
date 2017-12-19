@@ -1,42 +1,44 @@
+@import "../fonts/Noway-Bold-webfont/stylesheet.css";
+@import "../fonts/Noway-Regular-webfont/stylesheet.css";
+@import "../fonts/Noway-Light-webfont/stylesheet.css";
+
+
 /*----------  Based on http://type-scale.com/ Perfect 5  ----------*/
 
-html {
-}
+html {font-size: 0.625em;}
+
+$h1Size: 5.063em;
+$h2Size: 3.375em;;
 
 body {
-    color: $black;
-    // Smooth text
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+  background-color: white;
+  font-family: 'nowayregular', serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333;
+  .content {
+    p {margin-bottom: 1.3em;}
 
-p {
-}
+    h1, h2, h3, h4 {
+      margin: 1.414em 0 0.5em;
+      font-weight: inherit;
+      line-height: 1.2;
+    }
 
-h1,
-h2,
-h3,
-h4 {
-    font-family: 'Merriweather', serif;
-}
+    h1 {
+      margin-top: 0;
+      font-size: $h1Size;
+    }
 
-.viz {
-	h1, h2, h3, h4, h5, h6 {
-		font-family: 'Roboto Condensed', sans-serif;
-	}
-	p {
-		font-family: 'Roboto Condensed', sans-serif;
-	}
-}
+    h2 {font-size: 3.375em;}
 
-small,
-.font_small {
-    font-size: 0.667rem;
-}
+    h3 {font-size: 2.25em;}
 
+    h4 {font-size: 1.5em;}
+
+    small, .font_small {font-size: 0.667em;}
+  }
+}
 
 
 /*==============================
@@ -44,7 +46,7 @@ small,
 ==============================*/
 
 .bar-chart-label {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'nowayregular', sans-serif;
     font-size: 12px;
     cursor: hand;
     cursor: pointer;
@@ -61,3 +63,7 @@ small,
 
 
 /*=====  End of Charts  ======*/
+
+.level {
+    .level-item {}
+}

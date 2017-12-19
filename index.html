@@ -13,9 +13,6 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="bower_components/bulma/css/bulma.css">
     <link rel="stylesheet" href="bower_components/tooltipster/dist/css/tooltipster.bundle.css">
     <link rel="stylesheet" href="bower_components/vis/dist/vis.css">
@@ -33,26 +30,56 @@
     <!-- ARTICLE COVER -->
     <div class="article-cover" style="background-image:url(images/article-cover-lazarus.png)">
     </div>
+    <!-- RAW LIST -->
+    <div id="buttonsCovers" class="button-group filter-button-group">
+        <button data-filter="*">show all</button>
+        <button data-filter=".96c1">96c1</button>
+    </div>
+    <div id="rawList" class="grid clearfix grid-covers">
+        
+        <div class="grid-sizer"></div>
+    </div>
     <!--     <div class="section is-white">
         <div class="container">
             <div class="buttons"></div>
         </div>
     </div> -->
-    <!-- TIMELINE -->
-    <div id="timeline" class="viz timeline-chart"></div>
     <!-- ARTICLE TITLE -->
     <div class="section is-white">
         <div class="container">
             <div class="content">
-                <h1 class="title">The many covers of Bowie songs</h1>
-                <h3 class="subtitle">Listen to <strong id="allOthers"></strong> covers in <strong id="allAlbums"></strong> David Bowie's albums</h3>
+                <h1 class="">The many covers of Bowie's songs</h1>
+                <h3 class="">Listen to <strong id="allOthers"></strong> covers in <strong id="allAlbums"></strong> David Bowie's albums</h3>
                 <p>[Bowie covers] is a project with the aim of measure the influence of Bowie all over the rock music tradition.</p>
                 <blockquote>We liked to visualize this influence based on covers of Bowie’s songs.</blockquote>
                 <p>You will be able to browse all the covers by album and see the performance or video-clip of cover based on a curated list of youtube embeds.</p>
             </div>
         </div>
     </div>
-    
+    <!-- TIMELINE -->
+    <div id="timeline" class="viz timeline-chart"></div>
+    <!-- COUNTERS -->
+    <div class="section is-white">
+        <div class="container">
+            <nav class="level">
+                <div class="level-item counter">
+                    <div id="bowie-album">
+                    </div>
+                </div>
+                <div class="level-item counter">
+                    <div id="bowie-track">
+                    </div>
+                </div>
+                <div class="level-item counter">
+                    <div id="bowie-covers">
+                        <p class="counter-number">0</p>
+                        <p class="counter-units">Covers</p>
+                        <p class="counter-entity">Pin Ups</p>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
     <!-- TREEMAP -->
     <!-- <div class="section is-white">
         <div class="container">
@@ -94,44 +121,15 @@
             <!-- /container -->
         </div>
     </div>
-
     <!-- BAR CHART -->
-<!--     <div class="bar-chart">
+    <!--     <div class="bar-chart">
         <svg id="coversBar"></svg>
     </div> -->
-    <!-- COUNTERS -->
-    <div class="section is-white">
-        <div class="container">
-            <nav class="level">
-                <div class="level-item has-text-centered">
-                    <div id="bowie-album">
-                    </div>
-                </div>
-                <div class="level-item has-text-centered">
-                    <div id="bowie-track">
-                    </div>
-                </div>
-                <div class="level-item has-text-centered">
-                    <div id="bowie-covers">
-                        <p class="heading">Pin Ups</p>
-                        <p class="title">0</p>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
-    <!-- RAW LIST -->
-    <div class="section">
-        <div class="container">
-            <input type="button" id="test" value="Sort List (click again to reverse)" />
-            <ul id="rawList"></ul>
-        </div>
-    </div>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/tooltipster/dist/js/tooltipster.bundle.js"></script>
     <script src="bower_components/d3/d3.min.js"></script>
     <script src="bower_components/d3-tip/index.js"></script>
     <script src="bower_components/vis/dist/vis.js"></script>
+    <script src="bower_components/isotope/dist/isotope.pkgd.js"></script>
     <script src="bower_components/colorbrewer/colorbrewer.js"></script>
     <script src="scripts/treemap.js"></script>
 </body>

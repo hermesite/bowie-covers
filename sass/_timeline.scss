@@ -1,59 +1,55 @@
 #timeline {
-    font-family: 'Roboto Condensed', sans-serif;
     .vis-time-axis {
-      .vis-text {
-        font-size: 10px;
-        font-weight: 300;
-      }
+        .vis-text {
+            font-size: 10px;
+            font-weight: 300;
+        }
     }
     .vis-item-content {
         font-size: 10px;
     }
 }
+
 .tick {
-  text {
-    font-family: 'Roboto Condensed', sans-serif;
-    
-  }
+    text {}
 }
 
 .vis-time-axis .vis-grid.vis-minor {
-  border: none;
+    border: none;
 }
 
 .vis-dot {
-  display: none;
+    display: none;
 }
 
 .vis-timeline {
-  border: none;
+    border: none;
 }
 
 .vis-item {
-  border-color: #CCC;
-  &.vis-box {
-    border: none;
-    border-radius: 0px;
-    background: transparent !important;
-  }
-  &.vis-background {
-    background: transparent;
-    .vis-item-content {
-      padding-top: 5px;
+    border-color: #CCC;
+    &.vis-box {
+        border: none;
+        border-radius: 0px;
+        background: transparent !important;
     }
-    // background-color: rgba(200,0,0,.1);
-    // &.negative {
-    //   background-color: rgba(200,0,0,.2);
-    // }
-  }
-  .vis-item-content {
-    cursor: hand;
-    cursor: pointer;
-    padding-top: 0px;
-    padding-right: 0px;
-    padding-left: 0px;
-    padding-bottom: 0px;
-  }
+    &.vis-background {
+        background: transparent;
+        .vis-item-content {
+            padding-top: 5px;
+        } // background-color: rgba(200,0,0,.1);
+        // &.negative {
+        //   background-color: rgba(200,0,0,.2);
+        // }
+    }
+    .vis-item-content {
+        cursor: hand;
+        cursor: pointer;
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-left: 0px;
+        padding-bottom: 0px;
+    }
 }
 
 
@@ -62,30 +58,36 @@
     width: 60px;
     height: 60px;
     margin-top: 20px;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    &:hover {
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0);
+    }
 }
 
 div.vis-tooltip {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  border-radius: 0px;
-  background-color: #FFF;
+    font-size: 12px;
+    font-weight: 400;
+    border-radius: 0px;
+    background-color: #FFF;
+    font-family: 'nowayregular', sans-serif;
 }
+
 .button,
 .axis text {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 9px;
-  fill: rgba(255,255,255,.5);
+    font-size: 9px;
+    fill: rgba(255, 255, 255, .5);
 }
 
 .axis path,
 .axis line {
-  fill: none;
-  stroke: rgba(255,255,255,.5);
-  shape-rendering: crispEdges;
+    fill: none;
+    stroke: rgba(255, 255, 255, .5);
+    shape-rendering: crispEdges;
 }
 
 .timeline-chart {
 
-  padding-top: 0px;
+    padding-top: 0px;
 }

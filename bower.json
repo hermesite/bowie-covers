@@ -25,7 +25,8 @@
     "colorbrewer": "^1.0.0",
     "tooltipster": "^4.2.5",
     "typeplate-starter-kit": "^3.0.1",
-    "d3-tip": "^0.7.1"
+    "d3-tip": "^0.7.1",
+    "isotope": "^3.0.4"
   },
   "resolutions": {
     "d3": "^3.5.17"

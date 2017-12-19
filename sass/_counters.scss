@@ -1,0 +1,16 @@
+
+
+
+.level {
+    .level-item {
+        &.counter {
+            * {
+                margin: 0px;
+            }
+            .counter-number {
+                font-family: 'nowaylight';
+                font-size: $h2Size;
+            }
+        }
+    }
+}

@@ -16,12 +16,14 @@ $max_width: 800;
 $min_font: 12;
 $max_font: 24;
 
+@import "typo";
 @import "radial-tree";
 @import "treemap";
 @import "timeline";
-@import "typo";
 @import "section";
 @import "components";
+@import "isotope";
+@import "counters";
 
 
 path { 

@@ -217,6 +217,13 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
             index++;
 
             var checkTitle;
+
+            d3.select('#buttonsCovers').append('button').attr('data-filter', function() {
+                    return '.' + i.substr(0, 4);
+                }).text(function() {
+                    return album.title;
+                });
+
             $.each(album.tracks, function(j, track) {
 
                 if (jQuery.inArray(track.title, countCovers) === -1) {
@@ -229,6 +236,8 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
 
                 var myTrackSun = {};
                 var myTrackRadial = {};
+
+
 
                 if (track.covers.length > 0) {
 
@@ -277,9 +286,18 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
 
 
                                 if (jQuery.inArray(cover.credits, countArtistsCover) === -1 || jQuery.inArray(cover.title, countCoverTitles) === -1) {
-                                    d3.select('#rawList').append("li").text(cover.credits + ' - ' + cover.title);
+                                    d3.select('#rawList').append("div")
+                                        .attr('class', function() {
+                                            return 'grid-item ' + i.substr(0, 4);
+                                        })
+                                        .text(cover.credits + ' - ' + cover.title + ' - ' + album.title);
+
+                                    
+
                                     coversByArtist.push({ 'key': cover.credits });
                                 };
+
+
 
                                 myTrackSun.children.push({
                                     'name': cover.credits,
@@ -313,22 +331,22 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
 
 
                     // console.log(myTrackSun);
-                    
 
-                        if (myTrackSun.children.length > 0) {
-                            trackCovers.push({
-                                'name' : myTrackSun.name,
-                                'size' : myTrackSun.children.length
-                            });
-                        };
-                    
+
+                    if (myTrackSun.children.length > 0) {
+                        trackCovers.push({
+                            'name': myTrackSun.name,
+                            'size': myTrackSun.children.length
+                        });
+                    };
+
 
 
                     d3.select('#allOthers').text(function() {
                         return coversByArtist.length;
                     })
 
-                    
+
 
                     myAlbumSun.children.push(myTrackSun);
                     myAlbumRadial.children.push(myTrackRadial);
@@ -339,6 +357,7 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
 
 
             });
+
 
 
 
@@ -361,7 +380,7 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
                     size: myAlbum.size,
                     style: 'background-color:' + colorScale(myAlbum.size) + ';',
                     className: myAlbum.size,
-                    title: '<strong>' + myAlbum.size + ' COVERS</strong> | <em>' + myAlbum.name + '</em> (' + album.first_date + ')'
+                    title: '<p><strong>' + myAlbum.size + ' COVERS</strong></p> <p><em>' + myAlbum.name + '</em> (' + album.first_date + ')</p>'
                 });
 
             }
@@ -420,6 +439,23 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
 
         });
 
+            var $grid = $('.grid').isotope({
+                // options
+                itemSelector: '.grid-item',
+                layoutMode: 'fitRows'
+            });
+
+            // filter items on button click
+            $('.filter-button-group').on('click', 'button', function() {
+                console.log('entro');
+                // $grid.isotope({ filter: '.96c14aa4-c378-33d5-99f9-3cade6f1ecb3' });
+
+
+                var filterValue = $(this).attr('data-filter');
+
+                $grid.isotope({ filter: filterValue });
+            });
+
         function scrollTo(hash) {
             location.hash = "#" + hash;
         }
@@ -461,20 +497,26 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
 
         // Album with more covers
         var bowieMoreAlbum = d3.select('#bowie-album');
-        bowieMoreAlbum.append("p").attr("class", "heading").text(function() {
-            return bowieSongsTree.children[0].name;
-        })
-        bowieMoreAlbum.append("p").attr("class", "title").text(function() {
+        bowieMoreAlbum.append("p").attr("class", "counter-number").text(function() {
             return bowieSongsTree.children[0].size;
+        })
+        bowieMoreAlbum.append("p").attr("class", "counter-units").text(function() {
+            return 'The album with more covers';
+        })
+        bowieMoreAlbum.append("p").attr("class", "counter-entity").text(function() {
+            return bowieSongsTree.children[0].name;
         })
 
         // Song with more covers
         var bowieMoreTrack = d3.select('#bowie-track');
-        bowieMoreTrack.append("p").attr("class", "heading").text(function() {
-            return trackCovers[0].name;
-        })
-        bowieMoreTrack.append("p").attr("class", "title").text(function() {
+        bowieMoreTrack.append("p").attr("class", "counter-number").text(function() {
             return trackCovers[0].size;
+        })
+        bowieMoreTrack.append("p").attr("class", "counter-units").text(function() {
+            return 'The song with more covers';
+        })
+        bowieMoreTrack.append("p").attr("class", "counter-entity").text(function() {
+            return trackCovers[0].name;
         })
 
         // d3.select('#bowie-covers').append("p").attr("class", "title").text(function() {
@@ -684,15 +726,15 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
 
         var youtubeContainer = aside.append('div').attr('class', 'video');
 
-        youtubeContainer.append('iframe')
-            .attr('src', 'https://www.youtube.com/embed/pMIOqxC7j68')
-            .attr('width', '100%')
-            .attr('height', '200px')
-            .attr('allowfullscreen', 'allowfullscreen')
-            .attr('mozallowfullscreen', 'mozallowfullscreen')
-            .attr('msallowfullscreen', 'msallowfullscreen')
-            .attr('oallowfullscreen', 'oallowfullscreen')
-            .attr('webkitallowfullscreen', 'webkitallowfullscreen')
+        // youtubeContainer.append('iframe')
+        //     .attr('src', 'https://www.youtube.com/embed/pMIOqxC7j68')
+        //     .attr('width', '100%')
+        //     .attr('height', '200px')
+        //     .attr('allowfullscreen', 'allowfullscreen')
+        //     .attr('mozallowfullscreen', 'mozallowfullscreen')
+        //     .attr('msallowfullscreen', 'msallowfullscreen')
+        //     .attr('oallowfullscreen', 'oallowfullscreen')
+        //     .attr('webkitallowfullscreen', 'webkitallowfullscreen')
 
 
         var
@@ -969,16 +1011,17 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
 
 $('document').ready(function() {
 
-    var desc = false;
-    document.getElementById("test").onclick = function() {
-        sortUnorderedList("rawList", desc);
-        desc = !desc;
-        return false;
-    }
+    // var desc = false;
+    // document.getElementById("test").onclick = function() {
+    //     sortUnorderedList("rawList", desc);
+    //     desc = !desc;
+    //     return false;
+    // }
 
-    $('.tooltip').tooltipster({
-        theme: 'tooltipster-noir'
-    });
+
+
+
+
 })
 
 

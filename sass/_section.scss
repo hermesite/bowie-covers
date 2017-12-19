@@ -52,4 +52,10 @@
     background-color: $bsides;
     background-size: cover;
     opacity: .5;
+    z-index: 0;
+}
+
+.grid-covers, .button-group {
+    position: relative;
+    z-index: 99;
 }
