@@ -36,9 +36,14 @@ class YouTubeSearch:
         os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
         self.youtube = get_authenticated_service()
 
+        print "Servicio Autenticado"
+
         return
 
     def search(self, query):
+
+        print "1"
+
         search_response = self.youtube.search().list(
         q=query,
         part="id,snippet",
@@ -47,20 +52,35 @@ class YouTubeSearch:
         maxResults=5
         ).execute()
 
-        result = search_response.get("items", [])[0]
+        print "2"
 
-        video_id = result['id']['videoId']
-        description = result['snippet']['description']
+        if len(search_response.get("items", [])) > 0:
+
+            result = search_response.get("items", [])[0]
+
+            print "3"
 
 
-        video_details = self.youtube.videos().list(
-          part = "statistics",
-          id = video_id
-        ).execute()
+            video_id = result['id']['videoId']
+            description = result['snippet']['description']
 
-        view_count = video_details['items'][0]['statistics']['viewCount']
 
-        return (video_id, description, view_count)
+            video_details = self.youtube.videos().list(
+              part = "statistics",
+              id = video_id
+            ).execute()
+
+            print "4"
+
+            if len(video_details['items']) > 0:
+
+                view_count = video_details['items'][0]['statistics']['viewCount']
+
+                return {'id': video_id, 'description': description, 'views': view_count}
+            else:
+                return {'id': None, 'description': None, 'views': 0}
+        else:
+            return {'id': None, 'description': None, 'views': 0}
 
 
 if __name__ == "__main__":
