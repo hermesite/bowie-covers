@@ -1,5 +1,9 @@
 'use strict';
 
+// Minimum number of views to display a cover video
+
+var MIN_VIDEO_VIEWS = 500;
+
 var
     widthTreemap = $(".section-treemap").width(),
     heightTreemap = $(".section-treemap").height(),
@@ -119,7 +123,7 @@ var colorScale = d3.scale.quantize()
 
 var trackCovers = [];
 
-d3.json('data/david_bowie_data.json', function(error, artist) {
+d3.json('data/david_bowie_data.videos.json', function(error, artist) {
 
     if (error) {
         return error;
@@ -303,6 +307,7 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
 
                                 myTrackSun.children.push({
                                     'name': cover.credits,
+                                    'youtube': cover.youtube,
                                     'size': 0,
                                     'cover': isCover,
                                     'color': colorCover
@@ -317,6 +322,7 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
 
                                 myTrackRadial.children.push({
                                     'name': cover.credits,
+                                    'youtube': cover.youtube,
                                     'size': 0,
                                     'cover': isCover,
                                     'color': colorCover
@@ -795,9 +801,24 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
                 return 'rotate(' + (d.x - 90) + ')translate(' + d.y + ')';
             })
             .on('click', function(d) {
-                if (!d.children) {
-                    window.open('http://youtube.com/results?search_query=' + d.name.replace(/ /g, '+') + '+' + d.parent.name.replace(/ /g, '+'), '_blank');
+                console.log("DATOS DE COVER:", d);
+
+                if(parseInt(d.youtube.views,10) > MIN_VIDEO_VIEWS){
+                    youtubeContainer.selectAll("*").remove();
+                    youtubeContainer.append('iframe')
+                         .attr('src', 'https://www.youtube.com/embed/' + d.youtube.id)
+                         .attr('width', '100%')
+                         .attr('height', '100%')
+                         .attr('allowfullscreen', 'allowfullscreen')
+                         .attr('mozallowfullscreen', 'mozallowfullscreen')
+                         .attr('msallowfullscreen', 'msallowfullscreen')
+                         .attr('oallowfullscreen', 'oallowfullscreen')
+                         .attr('webkitallowfullscreen', 'webkitallowfullscreen');
+
                 }
+//                if (!d.children) {
+//                    window.open('http://youtube.com/results?search_query=' + d.name.replace(/ /g, '+') + '+' + d.parent.name.replace(/ /g, '+'), '_blank');
+//                }
             });
 
         text.append('text')
