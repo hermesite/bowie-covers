@@ -402,7 +402,6 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
 
         // filter items on button click
         $('.filter-button-group').on('click', 'button', function() {
-
             var filterValue = $(this).attr('data-filter');
             $grid.isotope({ filter: filterValue });
         });
@@ -447,14 +446,11 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
 
             // Discography
             var bowieDiscography = d3.select('#bowie-discography');
-            bowieDiscography.append("h5").attr("class", "counter-units").text(function() {
-                return 'Bowie discography';
-            })
             bowieDiscography.append("p").attr("class", "counter-number").text(function() {
                 return bowieSongsTree.children.length;
             })
-            bowieDiscography.append("p").attr("class", "counter-entity").text(function() {
-                return 'Albums';
+            bowieDiscography.append("h5").attr("class", "counter-units").text(function() {
+                return 'Albums in Bowie discography';
             })
             bowieDiscography.append("h5").attr("class", "counter-link")
                 .append('a')
@@ -466,11 +462,11 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
                     })
             // Album with more covers
             var bowieMoreAlbum = d3.select('#bowie-album');
-            bowieMoreAlbum.append("h5").attr("class", "counter-units").text(function() {
-                return 'The album with more covers';
-            })
             bowieMoreAlbum.append("p").attr("class", "counter-number").text(function() {
                 return bowieSongsTree.children[0].size;
+            })
+            bowieMoreAlbum.append("h5").attr("class", "counter-units").text(function() {
+                return 'Covers in the album';
             })
             bowieMoreAlbum.append("p").attr("class", "counter-entity").text(function() {
                 return bowieSongsTree.children[0].name;
@@ -486,12 +482,12 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
 
             // Song with more covers
             var bowieMoreTrack = d3.select('#bowie-track');
-            bowieMoreTrack.append("h5").attr("class", "counter-units").text(function() {
-                return 'The song with more covers';
-            })
             bowieMoreTrack.append("p").attr("class", "counter-number").text(function() {
                 console.log(trackCovers[0]);
                 return trackCovers[0].size;
+            })
+            bowieMoreTrack.append("h5").attr("class", "counter-units").text(function() {
+                return 'Covers of the song';
             })
             bowieMoreTrack.append("p").attr("class", "counter-entity").text(function() {
                 return trackCovers[0].name;

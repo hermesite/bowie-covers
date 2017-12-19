@@ -97,7 +97,8 @@
                 max-width: 60%;
                 font-size: 24px;
             }
-            strong {}
+            strong {
+            }
             span,
             em {
                 padding: 8px;
@@ -111,7 +112,10 @@
                 box-shadow: 2px 0px 0px 0px #000;
                 padding-top: 0px;
                 padding-bottom: 0px;
+                font-family: 'nowaybold';
                 strong {
+                    font-weight: initial;
+                    font-family: 'nowaylight';
                     font-size: 3.5vw;
                     width: 100%;
                     display: block;

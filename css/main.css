@@ -2498,8 +2498,11 @@ body {
         font-size: 1vw;
         box-shadow: 2px 0px 0px 0px #000;
         padding-top: 0px;
-        padding-bottom: 0px; }
+        padding-bottom: 0px;
+        font-family: 'nowaybold'; }
         .radial-container .radial-aside .record-info span strong {
+          font-weight: initial;
+          font-family: 'nowaylight';
           font-size: 3.5vw;
           width: 100%;
           display: block; }
@@ -2721,8 +2724,9 @@ html {
       font-family: 'nowaylight';
       font-size: 3.375em; }
     .level .level-item.counter .counter-entity {
-      font-size: 14px;
       font-family: 'noway_regularitalic'; }
+    .level .level-item.counter .counter-link {
+      padding-top: 16px; }
 
 path {
   fill: none; }
