@@ -117,9 +117,6 @@ var colorScale = d3.scale.quantize()
     .range(colorbrewer.Greys[9])
     .domain([0, 123]);
 
-
-
-
 var trackCovers = [];
 
 d3.json('data/david_bowie_data.json', function(error, artist) {
@@ -127,6 +124,8 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
     if (error) {
         return error;
     }
+
+    console.log(artist);
 
     var isCover;
     var colorCover;
@@ -265,6 +264,8 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
                         var condition = jQuery.inArray(track.title, countCovers) != -1;
                     } else if (scope === "bowie") {
                         var condition = jQuery.inArray(track.title, countCovers) === -1;
+                    } else if (scope === "pinups") {
+                        var condition = i === '8b7bd1c2-be07-3083-989a-714f219f1ff8';
                     } else {
                         var condition = true;
                     }
@@ -293,8 +294,9 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
                                         .text(cover.credits + ' - ' + cover.title + ' - ' + album.title);
 
                                     
-
-                                    coversByArtist.push({ 'key': cover.credits });
+                                    if (scope != 'pinups') {
+                                        coversByArtist.push({ 'key': cover.credits });
+                                    }
                                 };
 
 
@@ -328,31 +330,26 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
                         }
                     });
 
-
-
-                    // console.log(myTrackSun);
-
-
                     if (myTrackSun.children.length > 0) {
                         trackCovers.push({
+                            'id': i,
                             'name': myTrackSun.name,
                             'size': myTrackSun.children.length
                         });
                     };
 
+                    if (scope != 'pinups') {                    
+                        d3.select('#allOthers').text(function() {
+                            return coversByArtist.length;
+                        })
+                    }
 
-
-                    d3.select('#allOthers').text(function() {
-                        return coversByArtist.length;
-                    })
 
 
 
                     myAlbumSun.children.push(myTrackSun);
                     myAlbumRadial.children.push(myTrackRadial);
 
-                    // createSunburst(myTrackSun, "#sunburst-bowie");
-                    // createTile(myTrackSun, "#sunburst-bowie", album, i);
                 }
 
 
@@ -365,7 +362,9 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
 
             createRadial(myAlbumRadial, '.radial-container', myAlbum.image, myAlbum.size);
 
-            if (myAlbum.size >= 4) {
+            /*----------  Add items to the timeline  ----------*/
+
+            if (myAlbum.size >= 10 && scope != 'pinups') {
 
                 items.add({
                     'id': i,
@@ -385,76 +384,28 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
 
             }
 
-
-            // myAlbum.year = parseDate(myAlbum.year);
-            // myAlbum.close = +myAlbum.close;
-
+            /*----------  Push data  ----------*/
 
             bowieSongsTree.children.push(myAlbum);
             bowieSongsSun.children.push(myAlbumSun);
             bowieSongsRadial.children.push(myAlbumRadial);
 
-            // chart.append("g")
-            //         .attr("transform", function(d, i) {
-            //             return "translate(" + x(new Date(myAlbum.year.substr(0,4), 0, 1)) + ",0)";
-            //         });
-
-            var barWidth = 1;
-
-
-            if (myAlbum.size > 0)  {
-                chart.append("rect")
-                    .attr("x", function() {
-                        return x(new Date(myAlbum.year.substr(0, 4), 0, 1));
-                    })
-                    .attr("y", function() {
-                        return y(myAlbum.size);
-                    })
-                    .attr("height", function() {
-                        return height - y(myAlbum.size);
-                    })
-                    .attr("width", barWidth)
-                    .attr("fill", "rgba(255,255,255,.25)");
-
-                chart.append("text")
-                    .attr('data-anchor', function() {
-                        return myAlbum.id;
-                    })
-                    .attr("class", "bar-chart-label link")
-                    .attr("x", function() {
-                        return x(new Date(myAlbum.year.substr(0, 4), 0, 1))
-                    })
-                    .attr("y", function() {
-                        return y(myAlbum.size) - 15;
-                    })
-                    .attr("dy", ".75em")
-                    .attr("text-anchor", "middle")
-                    // .text(function() { return myAlbum.name + ' (' + myAlbum.size + ')'; });
-                    .text(function() { return myAlbum.name; })
-                    .on('click', function() {
-                        scrollTo($(this).attr('data-anchor'));
-                    })
-            }
-
-
         });
 
-            var $grid = $('.grid').isotope({
-                // options
-                itemSelector: '.grid-item',
-                layoutMode: 'fitRows'
-            });
+        /*----------  Create isotope filter  ----------*/
+        
+        var $grid = $('.grid').isotope({
+            // options
+            itemSelector: '.grid-item',
+            layoutMode: 'fitRows'
+        });
 
-            // filter items on button click
-            $('.filter-button-group').on('click', 'button', function() {
-                console.log('entro');
-                // $grid.isotope({ filter: '.96c14aa4-c378-33d5-99f9-3cade6f1ecb3' });
+        // filter items on button click
+        $('.filter-button-group').on('click', 'button', function() {
 
-
-                var filterValue = $(this).attr('data-filter');
-
-                $grid.isotope({ filter: filterValue });
-            });
+            var filterValue = $(this).attr('data-filter');
+            $grid.isotope({ filter: filterValue });
+        });
 
         function scrollTo(hash) {
             location.hash = "#" + hash;
@@ -491,33 +442,70 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
         createTreemap(bowieSongsTree);
 
         // Album with more covers
-        d3.select('#allAlbums').text(function() {
-            return bowieSongsTree.children.length;;
-        })
 
-        // Album with more covers
-        var bowieMoreAlbum = d3.select('#bowie-album');
-        bowieMoreAlbum.append("p").attr("class", "counter-number").text(function() {
-            return bowieSongsTree.children[0].size;
-        })
-        bowieMoreAlbum.append("p").attr("class", "counter-units").text(function() {
-            return 'The album with more covers';
-        })
-        bowieMoreAlbum.append("p").attr("class", "counter-entity").text(function() {
-            return bowieSongsTree.children[0].name;
-        })
+        if (scope != 'pinups') {
 
-        // Song with more covers
-        var bowieMoreTrack = d3.select('#bowie-track');
-        bowieMoreTrack.append("p").attr("class", "counter-number").text(function() {
-            return trackCovers[0].size;
-        })
-        bowieMoreTrack.append("p").attr("class", "counter-units").text(function() {
-            return 'The song with more covers';
-        })
-        bowieMoreTrack.append("p").attr("class", "counter-entity").text(function() {
-            return trackCovers[0].name;
-        })
+            // Discography
+            var bowieDiscography = d3.select('#bowie-discography');
+            bowieDiscography.append("h5").attr("class", "counter-units").text(function() {
+                return 'Bowie discography';
+            })
+            bowieDiscography.append("p").attr("class", "counter-number").text(function() {
+                return bowieSongsTree.children.length;
+            })
+            bowieDiscography.append("p").attr("class", "counter-entity").text(function() {
+                return 'Albums';
+            })
+            bowieDiscography.append("h5").attr("class", "counter-link")
+                .append('a')
+                    .attr('href', function() {
+                        return '#covers-treemap';
+                    })
+                    .text(function() {
+                        return 'Go to albums';
+                    })
+            // Album with more covers
+            var bowieMoreAlbum = d3.select('#bowie-album');
+            bowieMoreAlbum.append("h5").attr("class", "counter-units").text(function() {
+                return 'The album with more covers';
+            })
+            bowieMoreAlbum.append("p").attr("class", "counter-number").text(function() {
+                return bowieSongsTree.children[0].size;
+            })
+            bowieMoreAlbum.append("p").attr("class", "counter-entity").text(function() {
+                return bowieSongsTree.children[0].name;
+            })
+            bowieMoreAlbum.append("h5").attr("class", "counter-link")
+                .append('a')
+                    .attr('href', function() {
+                        return '#' + bowieSongsTree.children[0].id
+                    })
+                    .text(function() {
+                        return 'Go to album';
+                    })
+
+            // Song with more covers
+            var bowieMoreTrack = d3.select('#bowie-track');
+            bowieMoreTrack.append("h5").attr("class", "counter-units").text(function() {
+                return 'The song with more covers';
+            })
+            bowieMoreTrack.append("p").attr("class", "counter-number").text(function() {
+                console.log(trackCovers[0]);
+                return trackCovers[0].size;
+            })
+            bowieMoreTrack.append("p").attr("class", "counter-entity").text(function() {
+                return trackCovers[0].name;
+            })
+
+            bowieMoreTrack.append("h5").attr("class", "counter-link")
+                .append('a')
+                    .attr('href', function() {
+                        return '#' + trackCovers[0].id
+                    })
+                    .text(function() {
+                        return 'Go to album';
+                    })
+        };
 
         // d3.select('#bowie-covers').append("p").attr("class", "title").text(function() {
         //     return bowieSongsTree.value;
@@ -570,6 +558,7 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
         createData("bowie");
     })
 
+    createData("pinups");
     createData("bowie");
 
     // Create a Timeline
@@ -651,9 +640,6 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
                 // scrollTo($(this).attr('data-anchor'));
                 $(document).scrollTop($(anchorLink).offset().top);
 
-                // createRadial(bowieSongsSun.children[d.positionInArray], '#covers-bowie', d.image, d.size);
-
-                // $('#covers').empty();
 
             })
             .style('background-image', function(d) {
@@ -904,106 +890,6 @@ d3.json('data/david_bowie_data.json', function(error, artist) {
         tile.append("p").text(function() {
             return data.name;
         })
-    }
-
-    function createSunburst(data, container) {
-
-        var svg = d3.select(container).append("svg")
-            .attr("width", width)
-            .attr("height", height)
-            .append("g")
-            .attr("transform", "translate(" + width / 2 + "," + (height / 2 + 10) + ")");
-
-        var partition = d3.layout.partition()
-            .value(function(d) {
-                return d.size;
-            });
-
-        var arc = d3.svg.arc()
-            .startAngle(function(d) {
-                return Math.max(0, Math.min(2 * Math.PI, x(d.x)));
-            })
-            .endAngle(function(d) {
-                return Math.max(0, Math.min(2 * Math.PI, x(d.x + d.dx)));
-            })
-            .innerRadius(function(d) {
-                return Math.max(0, y(d.y));
-            })
-            .outerRadius(function(d) {
-                return Math.max(0, y(d.y + d.dy));
-            });
-
-        var g = svg.selectAll("g")
-            .data(partition.nodes(data))
-            .enter().append("g");
-
-        var path = g.append("path")
-            .attr("d", arc)
-            .style("fill", function(d) {
-                return color((d.children ? d : d.parent).name);
-            })
-            .on("click", click);
-
-        var text = g.append("text")
-            .attr("transform", function(d) {
-                return "rotate(" + computeTextRotation(d) + ")";
-            })
-            .attr("x", function(d) {
-                return y(d.y);
-            })
-            .attr("dx", "6") // margin
-            .attr("dy", ".35em") // vertical-align
-            .text(function(d) {
-                return d.name;
-            });
-
-        function click(d) {
-            // fade out all text elements
-            text.transition().attr("opacity", 0);
-
-            path.transition()
-                .duration(750)
-                .attrTween("d", arcTween(d))
-                .each("end", function(e, i) {
-                    // check if the animated element's data e lies within the visible angle span given in d
-                    if (e.x >= d.x && e.x < (d.x + d.dx)) {
-                        // get a selection of the associated text element
-                        var arcText = d3.select(this.parentNode).select("text");
-                        // fade in the text element and recalculate positions
-                        arcText.transition().duration(750)
-                            .attr("opacity", 1)
-                            .attr("transform", function() {
-                                return "rotate(" + computeTextRotation(e) + ")"
-                            })
-                            .attr("x", function(d) {
-                                return y(d.y);
-                            });
-                    }
-                });
-        }
-
-        d3.select(self.frameElement).style("height", height + "px");
-
-        // Interpolate the scales!
-        function arcTween(d) {
-            var xd = d3.interpolate(x.domain(), [d.x, d.x + d.dx]),
-                yd = d3.interpolate(y.domain(), [d.y, 1]),
-                yr = d3.interpolate(y.range(), [d.y ? 20 : 0, radius]);
-            return function(d, i) {
-                return i ? function(t) {
-                    return arc(d);
-                } : function(t) {
-                    x.domain(xd(t));
-                    y.domain(yd(t)).range(yr(t));
-                    return arc(d);
-                };
-            };
-        }
-
-        function computeTextRotation(d) {
-
-            return (x(d.x + d.dx / 2) - Math.PI / 2) / Math.PI * 180;
-        }
     }
 
 

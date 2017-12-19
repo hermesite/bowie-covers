@@ -2,8 +2,10 @@
 =            Imports            =
 ===============================*/
 @import url(../fonts/Noway-Bold-webfont/stylesheet.css);
+@import url(../fonts/Noway-Medium-webfont/stylesheet.css);
 @import url(../fonts/Noway-Regular-webfont/stylesheet.css);
 @import url(../fonts/Noway-Light-webfont/stylesheet.css);
+@import url(../fonts/Noway-Regular-Italic-webfont/stylesheet.css);
 .ratio-phi {
   position: relative; }
   .ratio-phi:before {
@@ -2388,6 +2390,12 @@ body {
     font-size: 2.25em; }
   body .content h4 {
     font-size: 1.5em; }
+  body .content h5 {
+    font-size: 0.5em; }
+  body .content h6 {
+    font-size: 0.8em; }
+  body .content h5, body .content h6 {
+    text-transform: uppercase; }
   body .content small, body .content .font_small {
     font-size: 0.667em; }
 
@@ -2699,11 +2707,22 @@ html {
 .grid-item--height2 {
   height: 200px; }
 
-.level .level-item.counter * {
-  margin: 0px; }
-.level .level-item.counter .counter-number {
-  font-family: 'nowaylight';
-  font-size: 3.375em; }
+.level {
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start; }
+  .level .level-item {
+    max-width: 25%; }
+    .level .level-item.counter * {
+      margin: 0px; }
+    .level .level-item.counter .counter-units {
+      font-family: 'nowaymedium'; }
+    .level .level-item.counter .counter-number {
+      font-family: 'nowaylight';
+      font-size: 3.375em; }
+    .level .level-item.counter .counter-entity {
+      font-size: 14px;
+      font-family: 'noway_regularitalic'; }
 
 path {
   fill: none; }

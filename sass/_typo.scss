@@ -1,6 +1,8 @@
 @import "../fonts/Noway-Bold-webfont/stylesheet.css";
+@import "../fonts/Noway-Medium-webfont/stylesheet.css";
 @import "../fonts/Noway-Regular-webfont/stylesheet.css";
 @import "../fonts/Noway-Light-webfont/stylesheet.css";
+@import "../fonts/Noway-Regular-Italic-webfont/stylesheet.css";
 
 
 /*----------  Based on http://type-scale.com/ Perfect 5  ----------*/
@@ -30,11 +32,21 @@ body {
       font-size: $h1Size;
     }
 
-    h2 {font-size: 3.375em;}
+    h2 {font-size: $h2Size;}
 
     h3 {font-size: 2.25em;}
 
     h4 {font-size: 1.5em;}
+    
+    h5 {
+      font-size: 0.5em;
+    }
+    h6 {
+      font-size: 0.8em;
+    }
+    h5, h6 {
+      text-transform: uppercase;
+    }
 
     small, .font_small {font-size: 0.667em;}
   }
