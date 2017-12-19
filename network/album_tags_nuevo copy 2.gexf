@@ -1,0 +1,1723 @@
+<gexf version="1.1" xmlns="http://www.gexf.net/1.1draft" xmlns:viz="http://www.gexf.net/1.1draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance">
+  <graph defaultedgetype="undirected" mode="static">
+    <attributes class="node" mode="static">
+      <attribute id="0" title="type" type="string" />
+      <attribute id="1" title="size" type="double" />
+    </attributes>
+    <nodes>
+      <node id="folk rock" label="folk rock">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="7.0" />
+        </attvalues>
+      </node>
+      <node id="Station to Station" label="Station to Station">
+        <attvalues>
+          <attvalue for="0" value="album" />
+          <attvalue for="1" value="90.0" />
+        </attvalues>
+      </node>
+      <node id="german" label="german">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="power pop" label="power pop">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="manchester" label="manchester">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="7.0" />
+        </attvalues>
+      </node>
+      <node id="progressive metal" label="progressive metal">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="6.0" />
+        </attvalues>
+      </node>
+      <node id="heavy metal" label="heavy metal">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="16.0" />
+        </attvalues>
+      </node>
+      <node id="alternative" label="alternative">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="22.0" />
+        </attvalues>
+      </node>
+      <node id="bogus artist" label="bogus artist">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="6.0" />
+        </attvalues>
+      </node>
+      <node id="“Heroes”" label="“Heroes”">
+        <attvalues>
+          <attvalue for="0" value="album" />
+          <attvalue for="1" value="90.0" />
+        </attvalues>
+      </node>
+      <node id="alternative rock" label="alternative rock">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="98.0" />
+        </attvalues>
+      </node>
+      <node id="baroque pop" label="baroque pop">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="6.0" />
+        </attvalues>
+      </node>
+      <node id="art rock" label="art rock">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="55.0" />
+        </attvalues>
+      </node>
+      <node id="glam rock" label="glam rock">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="44.0" />
+        </attvalues>
+      </node>
+      <node id="new romantic" label="new romantic">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="7.0" />
+        </attvalues>
+      </node>
+      <node id="experimental rock" label="experimental rock">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="48.0" />
+        </attvalues>
+      </node>
+      <node id="psychedelic pop" label="psychedelic pop">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="48.0" />
+        </attvalues>
+      </node>
+      <node id="jazz" label="jazz">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="14.0" />
+        </attvalues>
+      </node>
+      <node id="pop and chart" label="pop and chart">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="art pop" label="art pop">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="49.0" />
+        </attvalues>
+      </node>
+      <node id="Christiane F.: Wir Kinder vom Bahnhof Zoo" label="Christiane F.: Wir Kinder vom Bahnhof Zoo">
+        <attvalues>
+          <attvalue for="0" value="album" />
+          <attvalue for="1" value="90.0" />
+        </attvalues>
+      </node>
+      <node id="Love You Till Tuesday" label="Love You Till Tuesday">
+        <attvalues>
+          <attvalue for="0" value="album" />
+          <attvalue for="1" value="90.0" />
+        </attvalues>
+      </node>
+      <node id="Aladdin Sane" label="Aladdin Sane">
+        <attvalues>
+          <attvalue for="0" value="album" />
+          <attvalue for="1" value="90.0" />
+        </attvalues>
+      </node>
+      <node id="fixme" label="fixme">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="6.0" />
+        </attvalues>
+      </node>
+      <node id="classic pop and rock" label="classic pop and rock">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="67.0" />
+        </attvalues>
+      </node>
+      <node id="chamber" label="chamber">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="12.0" />
+        </attvalues>
+      </node>
+      <node id="Black Tie White Noise" label="Black Tie White Noise">
+        <attvalues>
+          <attvalue for="0" value="album" />
+          <attvalue for="1" value="90.0" />
+        </attvalues>
+      </node>
+      <node id="psychedelic rock" label="psychedelic rock">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="6.0" />
+        </attvalues>
+      </node>
+      <node id="rock" label="rock">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="179.0" />
+        </attvalues>
+      </node>
+      <node id="américain" label="américain">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="14.0" />
+        </attvalues>
+      </node>
+      <node id="Low" label="Low">
+        <attvalues>
+          <attvalue for="0" value="album" />
+          <attvalue for="1" value="90.0" />
+        </attvalues>
+      </node>
+      <node id="england" label="england">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="28.0" />
+        </attvalues>
+      </node>
+      <node id="1.Outside: The Nathan Adler Diaries: A Hyper Cycle" label="1.Outside: The Nathan Adler Diaries: A Hyper Cycle">
+        <attvalues>
+          <attvalue for="0" value="album" />
+          <attvalue for="1" value="90.0" />
+        </attvalues>
+      </node>
+      <node id="classical" label="classical">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="17.0" />
+        </attvalues>
+      </node>
+      <node id="new wave" label="new wave">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="24.0" />
+        </attvalues>
+      </node>
+      <node id="a cappella" label="a cappella">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="6.0" />
+        </attvalues>
+      </node>
+      <node id="Never Let Me Down" label="Never Let Me Down">
+        <attvalues>
+          <attvalue for="0" value="album" />
+          <attvalue for="1" value="90.0" />
+        </attvalues>
+      </node>
+      <node id="blues" label="blues">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="6.0" />
+        </attvalues>
+      </node>
+      <node id="progressive rock" label="progressive rock">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="24.0" />
+        </attvalues>
+      </node>
+      <node id="acoustic rock" label="acoustic rock">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="11.0" />
+        </attvalues>
+      </node>
+      <node id="folk" label="folk">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="35.0" />
+        </attvalues>
+      </node>
+      <node id="90s" label="90s">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="11.0" />
+        </attvalues>
+      </node>
+      <node id="indie rock" label="indie rock">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="32.0" />
+        </attvalues>
+      </node>
+      <node id="electronic" label="electronic">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="28.0" />
+        </attvalues>
+      </node>
+      <node id="shoegaze" label="shoegaze">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="7.0" />
+        </attvalues>
+      </node>
+      <node id="orchestra" label="orchestra">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="6.0" />
+        </attvalues>
+      </node>
+      <node id="Club Bowie: Rare and Unreleased 12″ Mixes" label="Club Bowie: Rare and Unreleased 12″ Mixes">
+        <attvalues>
+          <attvalue for="0" value="album" />
+          <attvalue for="1" value="90.0" />
+        </attvalues>
+      </node>
+      <node id="dutch" label="dutch">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="6.0" />
+        </attvalues>
+      </node>
+      <node id="tribute" label="tribute">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="12.0" />
+        </attvalues>
+      </node>
+      <node id="fictitious artist" label="fictitious artist">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="18.0" />
+        </attvalues>
+      </node>
+      <node id="jazz and blues" label="jazz and blues">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="7.0" />
+        </attvalues>
+      </node>
+      <node id="goth" label="goth">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="14.0" />
+        </attvalues>
+      </node>
+      <node id="french" label="french">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="symphonic rock" label="symphonic rock">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="9.0" />
+        </attvalues>
+      </node>
+      <node id="Let’s Dance" label="Let’s Dance">
+        <attvalues>
+          <attvalue for="0" value="album" />
+          <attvalue for="1" value="90.0" />
+        </attvalues>
+      </node>
+      <node id="canadian" label="canadian">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="post-disco" label="post-disco">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="43.0" />
+        </attvalues>
+      </node>
+      <node id="punk" label="punk">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="20.0" />
+        </attvalues>
+      </node>
+      <node id="british" label="british">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="118.0" />
+        </attvalues>
+      </node>
+      <node id="glam metal" label="glam metal">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="american" label="american">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="48.0" />
+        </attvalues>
+      </node>
+      <node id="experimental" label="experimental">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="Toy" label="Toy">
+        <attvalues>
+          <attvalue for="0" value="album" />
+          <attvalue for="1" value="90.0" />
+        </attvalues>
+      </node>
+      <node id="male vocalists" label="male vocalists">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="7.0" />
+        </attvalues>
+      </node>
+      <node id="dark cabaret" label="dark cabaret">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="9.0" />
+        </attvalues>
+      </node>
+      <node id="pop" label="pop">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="97.0" />
+        </attvalues>
+      </node>
+      <node id="united states" label="united states">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="9.0" />
+        </attvalues>
+      </node>
+      <node id="Hunky Dory" label="Hunky Dory">
+        <attvalues>
+          <attvalue for="0" value="album" />
+          <attvalue for="1" value="90.0" />
+        </attvalues>
+      </node>
+      <node id="composer" label="composer">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="14.0" />
+        </attvalues>
+      </node>
+      <node id="scottish" label="scottish">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="13.0" />
+        </attvalues>
+      </node>
+      <node id="hard rock" label="hard rock">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="37.0" />
+        </attvalues>
+      </node>
+      <node id="goth rock" label="goth rock">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="On Air" label="On Air">
+        <attvalues>
+          <attvalue for="0" value="album" />
+          <attvalue for="1" value="90.0" />
+        </attvalues>
+      </node>
+      <node id="adult contemporary" label="adult contemporary">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="7.0" />
+        </attvalues>
+      </node>
+      <node id="pop rock" label="pop rock">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="90.0" />
+        </attvalues>
+      </node>
+      <node id="usa" label="usa">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="28.0" />
+        </attvalues>
+      </node>
+      <node id="nwobhm" label="nwobhm">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="6.0" />
+        </attvalues>
+      </node>
+      <node id="symphony orchestra" label="symphony orchestra">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="australian" label="australian">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="12.0" />
+        </attvalues>
+      </node>
+      <node id="David Bowie" label="David Bowie">
+        <attvalues>
+          <attvalue for="0" value="album" />
+          <attvalue for="1" value="90.0" />
+        </attvalues>
+      </node>
+      <node id="grunge" label="grunge">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="11.0" />
+        </attvalues>
+      </node>
+      <node id="4ad" label="4ad">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="9.0" />
+        </attvalues>
+      </node>
+      <node id="soft rock" label="soft rock">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="9.0" />
+        </attvalues>
+      </node>
+      <node id="neo-psychedelia" label="neo-psychedelia">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="7.0" />
+        </attvalues>
+      </node>
+      <node id="rock and indie" label="rock and indie">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="67.0" />
+        </attvalues>
+      </node>
+      <node id="death metal" label="death metal">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="7.0" />
+        </attvalues>
+      </node>
+      <node id="soul" label="soul">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="46.0" />
+        </attvalues>
+      </node>
+      <node id="Tonight" label="Tonight">
+        <attvalues>
+          <attvalue for="0" value="album" />
+          <attvalue for="1" value="90.0" />
+        </attvalues>
+      </node>
+      <node id="uk" label="uk">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="124.0" />
+        </attvalues>
+      </node>
+      <node id="indie pop" label="indie pop">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="7.0" />
+        </attvalues>
+      </node>
+      <node id="★" label="★">
+        <attvalues>
+          <attvalue for="0" value="album" />
+          <attvalue for="1" value="90.0" />
+        </attvalues>
+      </node>
+      <node id="indie" label="indie">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="7.0" />
+        </attvalues>
+      </node>
+      <node id="cover" label="cover">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="14.0" />
+        </attvalues>
+      </node>
+      <node id="Reality" label="Reality">
+        <attvalues>
+          <attvalue for="0" value="album" />
+          <attvalue for="1" value="90.0" />
+        </attvalues>
+      </node>
+      <node id="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" label="The Rise and Fall of Ziggy Stardust and the Spiders From Mars">
+        <attvalues>
+          <attvalue for="0" value="album" />
+          <attvalue for="1" value="90.0" />
+        </attvalues>
+      </node>
+      <node id="ambient" label="ambient">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="11.0" />
+        </attvalues>
+      </node>
+      <node id="Heathen" label="Heathen">
+        <attvalues>
+          <attvalue for="0" value="album" />
+          <attvalue for="1" value="90.0" />
+        </attvalues>
+      </node>
+      <node id="singer/songwriter" label="singer/songwriter">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="alternative dance" label="alternative dance">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="7.0" />
+        </attvalues>
+      </node>
+      <node id="blues rock" label="blues rock">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="dream pop" label="dream pop">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="9.0" />
+        </attvalues>
+      </node>
+      <node id="synthpop" label="synthpop">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="18.0" />
+        </attvalues>
+      </node>
+      <node id="new age" label="new age">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="6.0" />
+        </attvalues>
+      </node>
+      <node id="post-punk" label="post-punk">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="80s" label="80s">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="7.0" />
+        </attvalues>
+      </node>
+      <node id="Young Americans" label="Young Americans">
+        <attvalues>
+          <attvalue for="0" value="album" />
+          <attvalue for="1" value="90.0" />
+        </attvalues>
+      </node>
+      <node id="Pin Ups" label="Pin Ups">
+        <attvalues>
+          <attvalue for="0" value="album" />
+          <attvalue for="1" value="90.0" />
+        </attvalues>
+      </node>
+      <node id="The Man Who Sold the World" label="The Man Who Sold the World">
+        <attvalues>
+          <attvalue for="0" value="album" />
+          <attvalue for="1" value="90.0" />
+        </attvalues>
+      </node>
+      <node id="european" label="european">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="11.0" />
+        </attvalues>
+      </node>
+      <node id="punk rock" label="punk rock">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="britannique" label="britannique">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="9.0" />
+        </attvalues>
+      </node>
+      <node id="easy listening soundtracks and musicals" label="easy listening soundtracks and musicals">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="12.0" />
+        </attvalues>
+      </node>
+      <node id="soundtrack" label="soundtrack">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="string quartet" label="string quartet">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="13.0" />
+        </attvalues>
+      </node>
+      <node id="Scary Monsters… and Super Creeps" label="Scary Monsters… and Super Creeps">
+        <attvalues>
+          <attvalue for="0" value="album" />
+          <attvalue for="1" value="90.0" />
+        </attvalues>
+      </node>
+      <node id="Diamond Dogs" label="Diamond Dogs">
+        <attvalues>
+          <attvalue for="0" value="album" />
+          <attvalue for="1" value="90.0" />
+        </attvalues>
+      </node>
+      <node id="Lodger" label="Lodger">
+        <attvalues>
+          <attvalue for="0" value="album" />
+          <attvalue for="1" value="90.0" />
+        </attvalues>
+      </node>
+      <node id="punk cabaret" label="punk cabaret">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="7.0" />
+        </attvalues>
+      </node>
+      <node id="metal" label="metal">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="26.0" />
+        </attvalues>
+      </node>
+      <node id="blue-eyed soul" label="blue-eyed soul">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="48.0" />
+        </attvalues>
+      </node>
+      <node id="english" label="english">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="43.0" />
+        </attvalues>
+      </node>
+      <node id="gothic rock" label="gothic rock">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="11.0" />
+        </attvalues>
+      </node>
+      <node id="strings" label="strings">
+        <attvalues>
+          <attvalue for="0" value="tag" />
+          <attvalue for="1" value="12.0" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="0" source="folk rock" target="Aladdin Sane" weight="1" />
+      <edge id="1" source="folk rock" target="Diamond Dogs" weight="1" />
+      <edge id="2" source="folk rock" target="Young Americans" weight="1" />
+      <edge id="3" source="folk rock" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="2" />
+      <edge id="4" source="folk rock" target="Pin Ups" weight="2" />
+      <edge id="5" source="Station to Station" target="classical" weight="1" />
+      <edge id="6" source="Station to Station" target="metal" weight="2" />
+      <edge id="7" source="Station to Station" target="pop" weight="4" />
+      <edge id="8" source="Station to Station" target="ambient" weight="1" />
+      <edge id="9" source="Station to Station" target="blues" weight="1" />
+      <edge id="10" source="Station to Station" target="folk" weight="1" />
+      <edge id="11" source="Station to Station" target="alternative rock" weight="2" />
+      <edge id="12" source="Station to Station" target="adult contemporary" weight="2" />
+      <edge id="13" source="Station to Station" target="pop rock" weight="3" />
+      <edge id="14" source="Station to Station" target="usa" weight="1" />
+      <edge id="15" source="Station to Station" target="blues rock" weight="1" />
+      <edge id="16" source="Station to Station" target="glam rock" weight="2" />
+      <edge id="17" source="Station to Station" target="art rock" weight="2" />
+      <edge id="18" source="Station to Station" target="dutch" weight="1" />
+      <edge id="19" source="Station to Station" target="tribute" weight="1" />
+      <edge id="20" source="Station to Station" target="fictitious artist" weight="1" />
+      <edge id="21" source="Station to Station" target="experimental rock" weight="2" />
+      <edge id="22" source="Station to Station" target="jazz and blues" weight="1" />
+      <edge id="23" source="Station to Station" target="jazz" weight="2" />
+      <edge id="24" source="Station to Station" target="psychedelic pop" weight="2" />
+      <edge id="25" source="Station to Station" target="easy listening soundtracks and musicals" weight="1" />
+      <edge id="26" source="Station to Station" target="4ad" weight="1" />
+      <edge id="27" source="Station to Station" target="art pop" weight="2" />
+      <edge id="28" source="Station to Station" target="string quartet" weight="1" />
+      <edge id="29" source="Station to Station" target="rock and indie" weight="2" />
+      <edge id="30" source="Station to Station" target="post-disco" weight="2" />
+      <edge id="31" source="Station to Station" target="cover" weight="1" />
+      <edge id="32" source="Station to Station" target="soul" weight="3" />
+      <edge id="33" source="Station to Station" target="british" weight="3" />
+      <edge id="34" source="Station to Station" target="blue-eyed soul" weight="3" />
+      <edge id="35" source="Station to Station" target="chamber" weight="1" />
+      <edge id="36" source="Station to Station" target="american" weight="2" />
+      <edge id="37" source="Station to Station" target="uk" weight="2" />
+      <edge id="38" source="Station to Station" target="rock" weight="3" />
+      <edge id="39" source="Station to Station" target="gothic rock" weight="1" />
+      <edge id="40" source="Station to Station" target="european" weight="1" />
+      <edge id="41" source="Station to Station" target="strings" weight="1" />
+      <edge id="42" source="german" target="David Bowie" weight="2" />
+      <edge id="43" source="german" target="“Heroes”" weight="1" />
+      <edge id="44" source="german" target="Club Bowie: Rare and Unreleased 12″ Mixes" weight="2" />
+      <edge id="45" source="german" target="Love You Till Tuesday" weight="2" />
+      <edge id="46" source="german" target="Pin Ups" weight="1" />
+      <edge id="47" source="german" target="Young Americans" weight="1" />
+      <edge id="48" source="german" target="Let’s Dance" weight="1" />
+      <edge id="49" source="power pop" target="Aladdin Sane" weight="1" />
+      <edge id="50" source="power pop" target="On Air" weight="2" />
+      <edge id="51" source="power pop" target="Pin Ups" weight="1" />
+      <edge id="52" source="power pop" target="“Heroes”" weight="2" />
+      <edge id="53" source="power pop" target="Diamond Dogs" weight="2" />
+      <edge id="54" source="manchester" target="Club Bowie: Rare and Unreleased 12″ Mixes" weight="3" />
+      <edge id="55" source="manchester" target="Let’s Dance" weight="2" />
+      <edge id="56" source="manchester" target="Hunky Dory" weight="1" />
+      <edge id="57" source="manchester" target="“Heroes”" weight="1" />
+      <edge id="58" source="progressive metal" target="David Bowie" weight="2" />
+      <edge id="59" source="progressive metal" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="1" />
+      <edge id="60" source="progressive metal" target="Love You Till Tuesday" weight="2" />
+      <edge id="61" source="progressive metal" target="1.Outside: The Nathan Adler Diaries: A Hyper Cycle" weight="1" />
+      <edge id="62" source="heavy metal" target="Aladdin Sane" weight="1" />
+      <edge id="63" source="heavy metal" target="On Air" weight="1" />
+      <edge id="64" source="heavy metal" target="David Bowie" weight="2" />
+      <edge id="65" source="heavy metal" target="Diamond Dogs" weight="2" />
+      <edge id="66" source="heavy metal" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="4" />
+      <edge id="67" source="heavy metal" target="Young Americans" weight="1" />
+      <edge id="68" source="heavy metal" target="Pin Ups" weight="3" />
+      <edge id="69" source="heavy metal" target="Love You Till Tuesday" weight="2" />
+      <edge id="70" source="alternative" target="Aladdin Sane" weight="1" />
+      <edge id="71" source="alternative" target="Diamond Dogs" weight="1" />
+      <edge id="72" source="alternative" target="David Bowie" weight="2" />
+      <edge id="73" source="alternative" target="★" weight="1" />
+      <edge id="74" source="alternative" target="“Heroes”" weight="1" />
+      <edge id="75" source="alternative" target="Scary Monsters… and Super Creeps" weight="1" />
+      <edge id="76" source="alternative" target="Club Bowie: Rare and Unreleased 12″ Mixes" weight="2" />
+      <edge id="77" source="alternative" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="2" />
+      <edge id="78" source="alternative" target="Hunky Dory" weight="3" />
+      <edge id="79" source="alternative" target="Young Americans" weight="2" />
+      <edge id="80" source="alternative" target="Pin Ups" weight="1" />
+      <edge id="81" source="alternative" target="Love You Till Tuesday" weight="2" />
+      <edge id="82" source="alternative" target="The Man Who Sold the World" weight="2" />
+      <edge id="83" source="alternative" target="Let’s Dance" weight="1" />
+      <edge id="84" source="bogus artist" target="David Bowie" weight="1" />
+      <edge id="85" source="bogus artist" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="2" />
+      <edge id="86" source="bogus artist" target="Love You Till Tuesday" weight="1" />
+      <edge id="87" source="bogus artist" target="“Heroes”" weight="2" />
+      <edge id="88" source="“Heroes”" target="english" weight="3" />
+      <edge id="89" source="“Heroes”" target="england" weight="1" />
+      <edge id="90" source="“Heroes”" target="classical" weight="1" />
+      <edge id="91" source="“Heroes”" target="death metal" weight="1" />
+      <edge id="92" source="“Heroes”" target="ambient" weight="2" />
+      <edge id="93" source="“Heroes”" target="dark cabaret" weight="1" />
+      <edge id="94" source="“Heroes”" target="punk rock" weight="2" />
+      <edge id="95" source="“Heroes”" target="pop" weight="4" />
+      <edge id="96" source="“Heroes”" target="easy listening soundtracks and musicals" weight="1" />
+      <edge id="97" source="“Heroes”" target="new wave" weight="4" />
+      <edge id="98" source="“Heroes”" target="composer" weight="1" />
+      <edge id="99" source="“Heroes”" target="scottish" weight="1" />
+      <edge id="100" source="“Heroes”" target="hard rock" weight="1" />
+      <edge id="101" source="“Heroes”" target="progressive rock" weight="4" />
+      <edge id="102" source="“Heroes”" target="folk" weight="1" />
+      <edge id="103" source="“Heroes”" target="alternative rock" weight="3" />
+      <edge id="104" source="“Heroes”" target="alternative dance" weight="1" />
+      <edge id="105" source="“Heroes”" target="pop rock" weight="4" />
+      <edge id="106" source="“Heroes”" target="indie rock" weight="3" />
+      <edge id="107" source="“Heroes”" target="electronic" weight="1" />
+      <edge id="108" source="“Heroes”" target="new age" weight="1" />
+      <edge id="109" source="“Heroes”" target="indie" weight="1" />
+      <edge id="110" source="“Heroes”" target="art rock" weight="2" />
+      <edge id="111" source="“Heroes”" target="dutch" weight="1" />
+      <edge id="112" source="“Heroes”" target="tribute" weight="1" />
+      <edge id="113" source="“Heroes”" target="fictitious artist" weight="1" />
+      <edge id="114" source="“Heroes”" target="goth rock" weight="1" />
+      <edge id="115" source="“Heroes”" target="goth" weight="1" />
+      <edge id="116" source="“Heroes”" target="usa" weight="1" />
+      <edge id="117" source="“Heroes”" target="jazz" weight="1" />
+      <edge id="118" source="“Heroes”" target="metal" weight="1" />
+      <edge id="119" source="“Heroes”" target="pop and chart" weight="1" />
+      <edge id="120" source="“Heroes”" target="4ad" weight="2" />
+      <edge id="121" source="“Heroes”" target="art pop" weight="1" />
+      <edge id="122" source="“Heroes”" target="soft rock" weight="1" />
+      <edge id="123" source="“Heroes”" target="string quartet" weight="1" />
+      <edge id="124" source="“Heroes”" target="cover" weight="2" />
+      <edge id="125" source="“Heroes”" target="symphonic rock" weight="1" />
+      <edge id="126" source="“Heroes”" target="australian" weight="2" />
+      <edge id="127" source="“Heroes”" target="britannique" weight="1" />
+      <edge id="128" source="“Heroes”" target="neo-psychedelia" weight="2" />
+      <edge id="129" source="“Heroes”" target="soundtrack" weight="2" />
+      <edge id="130" source="“Heroes”" target="fixme" weight="2" />
+      <edge id="131" source="“Heroes”" target="classic pop and rock" weight="6" />
+      <edge id="132" source="“Heroes”" target="rock and indie" weight="5" />
+      <edge id="133" source="“Heroes”" target="punk cabaret" weight="1" />
+      <edge id="134" source="“Heroes”" target="punk" weight="2" />
+      <edge id="135" source="“Heroes”" target="british" weight="7" />
+      <edge id="136" source="“Heroes”" target="chamber" weight="1" />
+      <edge id="137" source="“Heroes”" target="american" weight="4" />
+      <edge id="138" source="“Heroes”" target="psychedelic rock" weight="1" />
+      <edge id="139" source="“Heroes”" target="uk" weight="6" />
+      <edge id="140" source="“Heroes”" target="rock" weight="11" />
+      <edge id="141" source="“Heroes”" target="indie pop" weight="1" />
+      <edge id="142" source="“Heroes”" target="gothic rock" weight="2" />
+      <edge id="143" source="“Heroes”" target="european" weight="2" />
+      <edge id="144" source="“Heroes”" target="américain" weight="1" />
+      <edge id="145" source="“Heroes”" target="strings" weight="1" />
+      <edge id="146" source="“Heroes”" target="experimental" weight="1" />
+      <edge id="147" source="alternative rock" target="Toy" weight="1" />
+      <edge id="148" source="alternative rock" target="★" weight="1" />
+      <edge id="149" source="alternative rock" target="Reality" weight="2" />
+      <edge id="150" source="alternative rock" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="8" />
+      <edge id="151" source="alternative rock" target="Hunky Dory" weight="9" />
+      <edge id="152" source="alternative rock" target="Never Let Me Down" weight="1" />
+      <edge id="153" source="alternative rock" target="Heathen" weight="4" />
+      <edge id="154" source="alternative rock" target="On Air" weight="5" />
+      <edge id="155" source="alternative rock" target="Scary Monsters… and Super Creeps" weight="5" />
+      <edge id="156" source="alternative rock" target="Club Bowie: Rare and Unreleased 12″ Mixes" weight="5" />
+      <edge id="157" source="alternative rock" target="Young Americans" weight="5" />
+      <edge id="158" source="alternative rock" target="Pin Ups" weight="15" />
+      <edge id="159" source="alternative rock" target="The Man Who Sold the World" weight="2" />
+      <edge id="160" source="alternative rock" target="David Bowie" weight="4" />
+      <edge id="161" source="alternative rock" target="Christiane F.: Wir Kinder vom Bahnhof Zoo" weight="1" />
+      <edge id="162" source="alternative rock" target="Love You Till Tuesday" weight="4" />
+      <edge id="163" source="alternative rock" target="Aladdin Sane" weight="4" />
+      <edge id="164" source="alternative rock" target="Diamond Dogs" weight="1" />
+      <edge id="165" source="alternative rock" target="Let’s Dance" weight="4" />
+      <edge id="166" source="alternative rock" target="Tonight" weight="4" />
+      <edge id="167" source="alternative rock" target="Black Tie White Noise" weight="5" />
+      <edge id="168" source="alternative rock" target="Low" weight="3" />
+      <edge id="169" source="baroque pop" target="Young Americans" weight="1" />
+      <edge id="170" source="baroque pop" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="1" />
+      <edge id="171" source="baroque pop" target="Hunky Dory" weight="2" />
+      <edge id="172" source="baroque pop" target="The Man Who Sold the World" weight="1" />
+      <edge id="173" source="baroque pop" target="Reality" weight="1" />
+      <edge id="174" source="art rock" target="Aladdin Sane" weight="3" />
+      <edge id="175" source="art rock" target="On Air" weight="4" />
+      <edge id="176" source="art rock" target="Toy" weight="1" />
+      <edge id="177" source="art rock" target="★" weight="1" />
+      <edge id="178" source="art rock" target="Low" weight="2" />
+      <edge id="179" source="art rock" target="Reality" weight="3" />
+      <edge id="180" source="art rock" target="Tonight" weight="3" />
+      <edge id="181" source="art rock" target="Let’s Dance" weight="1" />
+      <edge id="182" source="art rock" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="2" />
+      <edge id="183" source="art rock" target="Hunky Dory" weight="3" />
+      <edge id="184" source="art rock" target="Never Let Me Down" weight="1" />
+      <edge id="185" source="art rock" target="Black Tie White Noise" weight="4" />
+      <edge id="186" source="art rock" target="Heathen" weight="3" />
+      <edge id="187" source="art rock" target="Young Americans" weight="2" />
+      <edge id="188" source="art rock" target="Scary Monsters… and Super Creeps" weight="1" />
+      <edge id="189" source="art rock" target="Pin Ups" weight="14" />
+      <edge id="190" source="art rock" target="Love You Till Tuesday" weight="1" />
+      <edge id="191" source="art rock" target="The Man Who Sold the World" weight="2" />
+      <edge id="192" source="glam rock" target="Aladdin Sane" weight="2" />
+      <edge id="193" source="glam rock" target="On Air" weight="4" />
+      <edge id="194" source="glam rock" target="Toy" weight="1" />
+      <edge id="195" source="glam rock" target="Reality" weight="2" />
+      <edge id="196" source="glam rock" target="Tonight" weight="3" />
+      <edge id="197" source="glam rock" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="1" />
+      <edge id="198" source="glam rock" target="Hunky Dory" weight="2" />
+      <edge id="199" source="glam rock" target="Never Let Me Down" weight="1" />
+      <edge id="200" source="glam rock" target="Black Tie White Noise" weight="4" />
+      <edge id="201" source="glam rock" target="Heathen" weight="3" />
+      <edge id="202" source="glam rock" target="Young Americans" weight="1" />
+      <edge id="203" source="glam rock" target="Scary Monsters… and Super Creeps" weight="1" />
+      <edge id="204" source="glam rock" target="Pin Ups" weight="15" />
+      <edge id="205" source="glam rock" target="Love You Till Tuesday" weight="1" />
+      <edge id="206" source="glam rock" target="Let’s Dance" weight="1" />
+      <edge id="207" source="new romantic" target="Lodger" weight="1" />
+      <edge id="208" source="new romantic" target="Tonight" weight="1" />
+      <edge id="209" source="new romantic" target="Club Bowie: Rare and Unreleased 12″ Mixes" weight="1" />
+      <edge id="210" source="new romantic" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="1" />
+      <edge id="211" source="new romantic" target="Christiane F.: Wir Kinder vom Bahnhof Zoo" weight="1" />
+      <edge id="212" source="new romantic" target="Young Americans" weight="1" />
+      <edge id="213" source="new romantic" target="The Man Who Sold the World" weight="1" />
+      <edge id="214" source="experimental rock" target="Aladdin Sane" weight="2" />
+      <edge id="215" source="experimental rock" target="On Air" weight="4" />
+      <edge id="216" source="experimental rock" target="Toy" weight="1" />
+      <edge id="217" source="experimental rock" target="Diamond Dogs" weight="1" />
+      <edge id="218" source="experimental rock" target="David Bowie" weight="1" />
+      <edge id="219" source="experimental rock" target="Reality" weight="3" />
+      <edge id="220" source="experimental rock" target="Tonight" weight="3" />
+      <edge id="221" source="experimental rock" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="1" />
+      <edge id="222" source="experimental rock" target="Hunky Dory" weight="3" />
+      <edge id="223" source="experimental rock" target="Never Let Me Down" weight="1" />
+      <edge id="224" source="experimental rock" target="Black Tie White Noise" weight="4" />
+      <edge id="225" source="experimental rock" target="Heathen" weight="3" />
+      <edge id="226" source="experimental rock" target="Young Americans" weight="1" />
+      <edge id="227" source="experimental rock" target="Scary Monsters… and Super Creeps" weight="1" />
+      <edge id="228" source="experimental rock" target="Pin Ups" weight="14" />
+      <edge id="229" source="experimental rock" target="Love You Till Tuesday" weight="1" />
+      <edge id="230" source="experimental rock" target="The Man Who Sold the World" weight="1" />
+      <edge id="231" source="experimental rock" target="Let’s Dance" weight="1" />
+      <edge id="232" source="psychedelic pop" target="Aladdin Sane" weight="2" />
+      <edge id="233" source="psychedelic pop" target="On Air" weight="5" />
+      <edge id="234" source="psychedelic pop" target="Toy" weight="1" />
+      <edge id="235" source="psychedelic pop" target="Diamond Dogs" weight="1" />
+      <edge id="236" source="psychedelic pop" target="Reality" weight="2" />
+      <edge id="237" source="psychedelic pop" target="Tonight" weight="3" />
+      <edge id="238" source="psychedelic pop" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="1" />
+      <edge id="239" source="psychedelic pop" target="Hunky Dory" weight="3" />
+      <edge id="240" source="psychedelic pop" target="Never Let Me Down" weight="1" />
+      <edge id="241" source="psychedelic pop" target="Black Tie White Noise" weight="4" />
+      <edge id="242" source="psychedelic pop" target="Heathen" weight="3" />
+      <edge id="243" source="psychedelic pop" target="Young Americans" weight="1" />
+      <edge id="244" source="psychedelic pop" target="Scary Monsters… and Super Creeps" weight="2" />
+      <edge id="245" source="psychedelic pop" target="Pin Ups" weight="15" />
+      <edge id="246" source="psychedelic pop" target="Love You Till Tuesday" weight="1" />
+      <edge id="247" source="psychedelic pop" target="Let’s Dance" weight="1" />
+      <edge id="248" source="jazz" target="Let’s Dance" weight="1" />
+      <edge id="249" source="jazz" target="Scary Monsters… and Super Creeps" weight="1" />
+      <edge id="250" source="jazz" target="Club Bowie: Rare and Unreleased 12″ Mixes" weight="2" />
+      <edge id="251" source="jazz" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="2" />
+      <edge id="252" source="jazz" target="Low" weight="1" />
+      <edge id="253" source="jazz" target="Young Americans" weight="2" />
+      <edge id="254" source="jazz" target="Pin Ups" weight="1" />
+      <edge id="255" source="jazz" target="The Man Who Sold the World" weight="1" />
+      <edge id="256" source="pop and chart" target="David Bowie" weight="1" />
+      <edge id="257" source="pop and chart" target="Club Bowie: Rare and Unreleased 12″ Mixes" weight="2" />
+      <edge id="258" source="pop and chart" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="2" />
+      <edge id="259" source="pop and chart" target="Love You Till Tuesday" weight="1" />
+      <edge id="260" source="pop and chart" target="Let’s Dance" weight="1" />
+      <edge id="261" source="art pop" target="Aladdin Sane" weight="2" />
+      <edge id="262" source="art pop" target="On Air" weight="4" />
+      <edge id="263" source="art pop" target="Toy" weight="1" />
+      <edge id="264" source="art pop" target="Reality" weight="2" />
+      <edge id="265" source="art pop" target="Tonight" weight="3" />
+      <edge id="266" source="art pop" target="Let’s Dance" weight="1" />
+      <edge id="267" source="art pop" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="1" />
+      <edge id="268" source="art pop" target="Hunky Dory" weight="2" />
+      <edge id="269" source="art pop" target="Never Let Me Down" weight="1" />
+      <edge id="270" source="art pop" target="Black Tie White Noise" weight="4" />
+      <edge id="271" source="art pop" target="Heathen" weight="3" />
+      <edge id="272" source="art pop" target="Young Americans" weight="4" />
+      <edge id="273" source="art pop" target="Scary Monsters… and Super Creeps" weight="2" />
+      <edge id="274" source="art pop" target="Pin Ups" weight="14" />
+      <edge id="275" source="art pop" target="Love You Till Tuesday" weight="1" />
+      <edge id="276" source="art pop" target="The Man Who Sold the World" weight="1" />
+      <edge id="277" source="Christiane F.: Wir Kinder vom Bahnhof Zoo" target="punk rock" weight="1" />
+      <edge id="278" source="Christiane F.: Wir Kinder vom Bahnhof Zoo" target="england" weight="1" />
+      <edge id="279" source="Christiane F.: Wir Kinder vom Bahnhof Zoo" target="classic pop and rock" weight="2" />
+      <edge id="280" source="Christiane F.: Wir Kinder vom Bahnhof Zoo" target="usa" weight="1" />
+      <edge id="281" source="Christiane F.: Wir Kinder vom Bahnhof Zoo" target="english" weight="1" />
+      <edge id="282" source="Christiane F.: Wir Kinder vom Bahnhof Zoo" target="punk cabaret" weight="1" />
+      <edge id="283" source="Christiane F.: Wir Kinder vom Bahnhof Zoo" target="male vocalists" weight="1" />
+      <edge id="284" source="Christiane F.: Wir Kinder vom Bahnhof Zoo" target="dark cabaret" weight="1" />
+      <edge id="285" source="Christiane F.: Wir Kinder vom Bahnhof Zoo" target="metal" weight="1" />
+      <edge id="286" source="Christiane F.: Wir Kinder vom Bahnhof Zoo" target="pop" weight="2" />
+      <edge id="287" source="Christiane F.: Wir Kinder vom Bahnhof Zoo" target="synthpop" weight="3" />
+      <edge id="288" source="Christiane F.: Wir Kinder vom Bahnhof Zoo" target="new wave" weight="3" />
+      <edge id="289" source="Christiane F.: Wir Kinder vom Bahnhof Zoo" target="british" weight="3" />
+      <edge id="290" source="Christiane F.: Wir Kinder vom Bahnhof Zoo" target="uk" weight="3" />
+      <edge id="291" source="Christiane F.: Wir Kinder vom Bahnhof Zoo" target="scottish" weight="1" />
+      <edge id="292" source="Christiane F.: Wir Kinder vom Bahnhof Zoo" target="pop rock" weight="1" />
+      <edge id="293" source="Christiane F.: Wir Kinder vom Bahnhof Zoo" target="electronic" weight="2" />
+      <edge id="294" source="Love You Till Tuesday" target="alternative dance" weight="1" />
+      <edge id="295" source="Love You Till Tuesday" target="english" weight="4" />
+      <edge id="296" source="Love You Till Tuesday" target="england" weight="2" />
+      <edge id="297" source="Love You Till Tuesday" target="classical" weight="2" />
+      <edge id="298" source="Love You Till Tuesday" target="death metal" weight="1" />
+      <edge id="299" source="Love You Till Tuesday" target="ambient" weight="2" />
+      <edge id="300" source="Love You Till Tuesday" target="dark cabaret" weight="1" />
+      <edge id="301" source="Love You Till Tuesday" target="pop" weight="4" />
+      <edge id="302" source="Love You Till Tuesday" target="soul" weight="1" />
+      <edge id="303" source="Love You Till Tuesday" target="united states" weight="1" />
+      <edge id="304" source="Love You Till Tuesday" target="a cappella" weight="2" />
+      <edge id="305" source="Love You Till Tuesday" target="composer" weight="2" />
+      <edge id="306" source="Love You Till Tuesday" target="hard rock" weight="3" />
+      <edge id="307" source="Love You Till Tuesday" target="progressive rock" weight="3" />
+      <edge id="308" source="Love You Till Tuesday" target="acoustic rock" weight="1" />
+      <edge id="309" source="Love You Till Tuesday" target="folk" weight="2" />
+      <edge id="310" source="Love You Till Tuesday" target="90s" weight="1" />
+      <edge id="311" source="Love You Till Tuesday" target="pop rock" weight="3" />
+      <edge id="312" source="Love You Till Tuesday" target="indie rock" weight="1" />
+      <edge id="313" source="Love You Till Tuesday" target="electronic" weight="4" />
+      <edge id="314" source="Love You Till Tuesday" target="shoegaze" weight="1" />
+      <edge id="315" source="Love You Till Tuesday" target="orchestra" weight="1" />
+      <edge id="316" source="Love You Till Tuesday" target="dream pop" weight="1" />
+      <edge id="317" source="Love You Till Tuesday" target="new age" weight="2" />
+      <edge id="318" source="Love You Till Tuesday" target="dutch" weight="1" />
+      <edge id="319" source="Love You Till Tuesday" target="symphony orchestra" weight="2" />
+      <edge id="320" source="Love You Till Tuesday" target="tribute" weight="1" />
+      <edge id="321" source="Love You Till Tuesday" target="fictitious artist" weight="1" />
+      <edge id="322" source="Love You Till Tuesday" target="usa" weight="1" />
+      <edge id="323" source="Love You Till Tuesday" target="grunge" weight="1" />
+      <edge id="324" source="Love You Till Tuesday" target="easy listening soundtracks and musicals" weight="1" />
+      <edge id="325" source="Love You Till Tuesday" target="cover" weight="1" />
+      <edge id="326" source="Love You Till Tuesday" target="french" weight="1" />
+      <edge id="327" source="Love You Till Tuesday" target="soundtrack" weight="1" />
+      <edge id="328" source="Love You Till Tuesday" target="string quartet" weight="1" />
+      <edge id="329" source="Love You Till Tuesday" target="symphonic rock" weight="2" />
+      <edge id="330" source="Love You Till Tuesday" target="fixme" weight="1" />
+      <edge id="331" source="Love You Till Tuesday" target="classic pop and rock" weight="4" />
+      <edge id="332" source="Love You Till Tuesday" target="rock and indie" weight="2" />
+      <edge id="333" source="Love You Till Tuesday" target="punk cabaret" weight="1" />
+      <edge id="334" source="Love You Till Tuesday" target="post-disco" weight="1" />
+      <edge id="335" source="Love You Till Tuesday" target="punk" weight="2" />
+      <edge id="336" source="Love You Till Tuesday" target="nwobhm" weight="1" />
+      <edge id="337" source="Love You Till Tuesday" target="british" weight="7" />
+      <edge id="338" source="Love You Till Tuesday" target="blue-eyed soul" weight="1" />
+      <edge id="339" source="Love You Till Tuesday" target="glam metal" weight="1" />
+      <edge id="340" source="Love You Till Tuesday" target="chamber" weight="1" />
+      <edge id="341" source="Love You Till Tuesday" target="american" weight="1" />
+      <edge id="342" source="Love You Till Tuesday" target="uk" weight="9" />
+      <edge id="343" source="Love You Till Tuesday" target="rock" weight="8" />
+      <edge id="344" source="Love You Till Tuesday" target="metal" weight="3" />
+      <edge id="345" source="Love You Till Tuesday" target="european" weight="2" />
+      <edge id="346" source="Love You Till Tuesday" target="américain" weight="1" />
+      <edge id="347" source="Love You Till Tuesday" target="strings" weight="1" />
+      <edge id="348" source="Love You Till Tuesday" target="post-punk" weight="1" />
+      <edge id="349" source="Aladdin Sane" target="england" weight="1" />
+      <edge id="350" source="Aladdin Sane" target="classical" weight="1" />
+      <edge id="351" source="Aladdin Sane" target="pop" weight="5" />
+      <edge id="352" source="Aladdin Sane" target="new wave" weight="1" />
+      <edge id="353" source="Aladdin Sane" target="scottish" weight="2" />
+      <edge id="354" source="Aladdin Sane" target="blues" weight="1" />
+      <edge id="355" source="Aladdin Sane" target="hard rock" weight="3" />
+      <edge id="356" source="Aladdin Sane" target="electronic" weight="1" />
+      <edge id="357" source="Aladdin Sane" target="folk" weight="1" />
+      <edge id="358" source="Aladdin Sane" target="alternative dance" weight="1" />
+      <edge id="359" source="Aladdin Sane" target="adult contemporary" weight="1" />
+      <edge id="360" source="Aladdin Sane" target="pop rock" weight="7" />
+      <edge id="361" source="Aladdin Sane" target="usa" weight="1" />
+      <edge id="362" source="Aladdin Sane" target="nwobhm" weight="1" />
+      <edge id="363" source="Aladdin Sane" target="orchestra" weight="1" />
+      <edge id="364" source="Aladdin Sane" target="post-punk" weight="1" />
+      <edge id="365" source="Aladdin Sane" target="symphony orchestra" weight="1" />
+      <edge id="366" source="Aladdin Sane" target="classic pop and rock" weight="6" />
+      <edge id="367" source="Aladdin Sane" target="goth" weight="2" />
+      <edge id="368" source="Aladdin Sane" target="english" weight="3" />
+      <edge id="369" source="Aladdin Sane" target="soft rock" weight="1" />
+      <edge id="370" source="Aladdin Sane" target="neo-psychedelia" weight="1" />
+      <edge id="371" source="Aladdin Sane" target="indie rock" weight="2" />
+      <edge id="372" source="Aladdin Sane" target="rock and indie" weight="1" />
+      <edge id="373" source="Aladdin Sane" target="post-disco" weight="2" />
+      <edge id="374" source="Aladdin Sane" target="metal" weight="1" />
+      <edge id="375" source="Aladdin Sane" target="soul" weight="3" />
+      <edge id="376" source="Aladdin Sane" target="british" weight="6" />
+      <edge id="377" source="Aladdin Sane" target="blue-eyed soul" weight="3" />
+      <edge id="378" source="Aladdin Sane" target="glam metal" weight="2" />
+      <edge id="379" source="Aladdin Sane" target="american" weight="1" />
+      <edge id="380" source="Aladdin Sane" target="psychedelic rock" weight="1" />
+      <edge id="381" source="Aladdin Sane" target="uk" weight="6" />
+      <edge id="382" source="Aladdin Sane" target="rock" weight="11" />
+      <edge id="383" source="Aladdin Sane" target="indie pop" weight="1" />
+      <edge id="384" source="fixme" target="David Bowie" weight="1" />
+      <edge id="385" source="fixme" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="2" />
+      <edge id="386" source="classic pop and rock" target="On Air" weight="4" />
+      <edge id="387" source="classic pop and rock" target="Toy" weight="1" />
+      <edge id="388" source="classic pop and rock" target="Lodger" weight="2" />
+      <edge id="389" source="classic pop and rock" target="Diamond Dogs" weight="4" />
+      <edge id="390" source="classic pop and rock" target="David Bowie" weight="5" />
+      <edge id="391" source="classic pop and rock" target="Reality" weight="1" />
+      <edge id="392" source="classic pop and rock" target="Tonight" weight="3" />
+      <edge id="393" source="classic pop and rock" target="Club Bowie: Rare and Unreleased 12″ Mixes" weight="1" />
+      <edge id="394" source="classic pop and rock" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="5" />
+      <edge id="395" source="classic pop and rock" target="Hunky Dory" weight="2" />
+      <edge id="396" source="classic pop and rock" target="Low" weight="4" />
+      <edge id="397" source="classic pop and rock" target="Young Americans" weight="1" />
+      <edge id="398" source="classic pop and rock" target="Pin Ups" weight="10" />
+      <edge id="399" source="classic pop and rock" target="The Man Who Sold the World" weight="2" />
+      <edge id="400" source="classic pop and rock" target="Let’s Dance" weight="3" />
+      <edge id="401" source="chamber" target="David Bowie" weight="1" />
+      <edge id="402" source="chamber" target="Let’s Dance" weight="1" />
+      <edge id="403" source="chamber" target="Scary Monsters… and Super Creeps" weight="1" />
+      <edge id="404" source="chamber" target="Club Bowie: Rare and Unreleased 12″ Mixes" weight="2" />
+      <edge id="405" source="chamber" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="1" />
+      <edge id="406" source="chamber" target="Hunky Dory" weight="1" />
+      <edge id="407" source="chamber" target="Young Americans" weight="1" />
+      <edge id="408" source="chamber" target="The Man Who Sold the World" weight="1" />
+      <edge id="409" source="Black Tie White Noise" target="adult contemporary" weight="1" />
+      <edge id="410" source="Black Tie White Noise" target="pop rock" weight="6" />
+      <edge id="411" source="Black Tie White Noise" target="post-disco" weight="4" />
+      <edge id="412" source="Black Tie White Noise" target="american" weight="1" />
+      <edge id="413" source="Black Tie White Noise" target="rock and indie" weight="1" />
+      <edge id="414" source="Black Tie White Noise" target="cover" weight="1" />
+      <edge id="415" source="Black Tie White Noise" target="soul" weight="4" />
+      <edge id="416" source="Black Tie White Noise" target="british" weight="4" />
+      <edge id="417" source="Black Tie White Noise" target="pop" weight="5" />
+      <edge id="418" source="Black Tie White Noise" target="uk" weight="4" />
+      <edge id="419" source="Black Tie White Noise" target="blue-eyed soul" weight="4" />
+      <edge id="420" source="Black Tie White Noise" target="grunge" weight="1" />
+      <edge id="421" source="Black Tie White Noise" target="rock" weight="5" />
+      <edge id="422" source="Black Tie White Noise" target="hard rock" weight="1" />
+      <edge id="423" source="Black Tie White Noise" target="acoustic rock" weight="1" />
+      <edge id="424" source="psychedelic rock" target="On Air" weight="1" />
+      <edge id="425" source="psychedelic rock" target="Pin Ups" weight="2" />
+      <edge id="426" source="psychedelic rock" target="Hunky Dory" weight="1" />
+      <edge id="427" source="rock" target="Toy" weight="1" />
+      <edge id="428" source="rock" target="Reality" weight="3" />
+      <edge id="429" source="rock" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="18" />
+      <edge id="430" source="rock" target="Low" weight="6" />
+      <edge id="431" source="rock" target="Never Let Me Down" weight="1" />
+      <edge id="432" source="rock" target="Heathen" weight="5" />
+      <edge id="433" source="rock" target="On Air" weight="9" />
+      <edge id="434" source="rock" target="Scary Monsters… and Super Creeps" weight="4" />
+      <edge id="435" source="rock" target="Club Bowie: Rare and Unreleased 12″ Mixes" weight="7" />
+      <edge id="436" source="rock" target="Young Americans" weight="11" />
+      <edge id="437" source="rock" target="Pin Ups" weight="29" />
+      <edge id="438" source="rock" target="The Man Who Sold the World" weight="6" />
+      <edge id="439" source="rock" target="David Bowie" weight="10" />
+      <edge id="440" source="rock" target="Diamond Dogs" weight="5" />
+      <edge id="441" source="rock" target="Let’s Dance" weight="6" />
+      <edge id="442" source="rock" target="Tonight" weight="11" />
+      <edge id="443" source="rock" target="Hunky Dory" weight="9" />
+      <edge id="444" source="américain" target="On Air" weight="1" />
+      <edge id="445" source="américain" target="David Bowie" weight="2" />
+      <edge id="446" source="américain" target="Low" weight="1" />
+      <edge id="447" source="américain" target="Club Bowie: Rare and Unreleased 12″ Mixes" weight="2" />
+      <edge id="448" source="américain" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="1" />
+      <edge id="449" source="américain" target="Hunky Dory" weight="1" />
+      <edge id="450" source="américain" target="Heathen" weight="1" />
+      <edge id="451" source="américain" target="Young Americans" weight="1" />
+      <edge id="452" source="américain" target="Pin Ups" weight="1" />
+      <edge id="453" source="américain" target="Let’s Dance" weight="1" />
+      <edge id="454" source="Low" target="pop" weight="2" />
+      <edge id="455" source="Low" target="scottish" weight="2" />
+      <edge id="456" source="Low" target="electronic" weight="2" />
+      <edge id="457" source="Low" target="90s" weight="2" />
+      <edge id="458" source="Low" target="usa" weight="1" />
+      <edge id="459" source="Low" target="synthpop" weight="2" />
+      <edge id="460" source="Low" target="post-punk" weight="2" />
+      <edge id="461" source="Low" target="80s" weight="2" />
+      <edge id="462" source="Low" target="britannique" weight="2" />
+      <edge id="463" source="Low" target="alternative dance" weight="2" />
+      <edge id="464" source="Low" target="indie rock" weight="2" />
+      <edge id="465" source="Low" target="rock and indie" weight="3" />
+      <edge id="466" source="Low" target="british" weight="2" />
+      <edge id="467" source="Low" target="american" weight="2" />
+      <edge id="468" source="Low" target="uk" weight="3" />
+      <edge id="469" source="Low" target="indie pop" weight="1" />
+      <edge id="470" source="Low" target="experimental" weight="1" />
+      <edge id="471" source="england" target="On Air" weight="1" />
+      <edge id="472" source="england" target="David Bowie" weight="2" />
+      <edge id="473" source="england" target="Diamond Dogs" weight="2" />
+      <edge id="474" source="england" target="Lodger" weight="1" />
+      <edge id="475" source="england" target="Club Bowie: Rare and Unreleased 12″ Mixes" weight="1" />
+      <edge id="476" source="england" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="5" />
+      <edge id="477" source="england" target="Hunky Dory" weight="3" />
+      <edge id="478" source="england" target="Young Americans" weight="1" />
+      <edge id="479" source="england" target="Pin Ups" weight="4" />
+      <edge id="480" source="england" target="The Man Who Sold the World" weight="2" />
+      <edge id="481" source="england" target="Let’s Dance" weight="1" />
+      <edge id="482" source="1.Outside: The Nathan Adler Diaries: A Hyper Cycle" target="goth" weight="1" />
+      <edge id="483" source="1.Outside: The Nathan Adler Diaries: A Hyper Cycle" target="death metal" weight="1" />
+      <edge id="484" source="1.Outside: The Nathan Adler Diaries: A Hyper Cycle" target="metal" weight="2" />
+      <edge id="485" source="1.Outside: The Nathan Adler Diaries: A Hyper Cycle" target="gothic rock" weight="1" />
+      <edge id="486" source="1.Outside: The Nathan Adler Diaries: A Hyper Cycle" target="goth rock" weight="1" />
+      <edge id="487" source="classical" target="David Bowie" weight="2" />
+      <edge id="488" source="classical" target="Let’s Dance" weight="1" />
+      <edge id="489" source="classical" target="Scary Monsters… and Super Creeps" weight="1" />
+      <edge id="490" source="classical" target="Tonight" weight="1" />
+      <edge id="491" source="classical" target="Club Bowie: Rare and Unreleased 12″ Mixes" weight="2" />
+      <edge id="492" source="classical" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="1" />
+      <edge id="493" source="classical" target="Hunky Dory" weight="2" />
+      <edge id="494" source="classical" target="Young Americans" weight="1" />
+      <edge id="495" source="classical" target="The Man Who Sold the World" weight="1" />
+      <edge id="496" source="new wave" target="Lodger" weight="2" />
+      <edge id="497" source="new wave" target="Scary Monsters… and Super Creeps" weight="1" />
+      <edge id="498" source="new wave" target="Tonight" weight="4" />
+      <edge id="499" source="new wave" target="Club Bowie: Rare and Unreleased 12″ Mixes" weight="2" />
+      <edge id="500" source="new wave" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="3" />
+      <edge id="501" source="new wave" target="Young Americans" weight="3" />
+      <edge id="502" source="new wave" target="The Man Who Sold the World" weight="1" />
+      <edge id="503" source="a cappella" target="Young Americans" weight="1" />
+      <edge id="504" source="a cappella" target="David Bowie" weight="2" />
+      <edge id="505" source="a cappella" target="Hunky Dory" weight="1" />
+      <edge id="506" source="Never Let Me Down" target="pop rock" weight="1" />
+      <edge id="507" source="Never Let Me Down" target="post-disco" weight="1" />
+      <edge id="508" source="Never Let Me Down" target="soul" weight="1" />
+      <edge id="509" source="Never Let Me Down" target="british" weight="1" />
+      <edge id="510" source="Never Let Me Down" target="blue-eyed soul" weight="1" />
+      <edge id="511" source="Never Let Me Down" target="pop" weight="1" />
+      <edge id="512" source="Never Let Me Down" target="uk" weight="1" />
+      <edge id="513" source="blues" target="Tonight" weight="1" />
+      <edge id="514" source="blues" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="1" />
+      <edge id="515" source="blues" target="Hunky Dory" weight="1" />
+      <edge id="516" source="blues" target="Pin Ups" weight="1" />
+      <edge id="517" source="progressive rock" target="David Bowie" weight="3" />
+      <edge id="518" source="progressive rock" target="Scary Monsters… and Super Creeps" weight="1" />
+      <edge id="519" source="progressive rock" target="Club Bowie: Rare and Unreleased 12″ Mixes" weight="2" />
+      <edge id="520" source="progressive rock" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="3" />
+      <edge id="521" source="progressive rock" target="Hunky Dory" weight="2" />
+      <edge id="522" source="progressive rock" target="Young Americans" weight="1" />
+      <edge id="523" source="progressive rock" target="Pin Ups" weight="4" />
+      <edge id="524" source="progressive rock" target="Let’s Dance" weight="1" />
+      <edge id="525" source="acoustic rock" target="David Bowie" weight="1" />
+      <edge id="526" source="acoustic rock" target="Scary Monsters… and Super Creeps" weight="1" />
+      <edge id="527" source="acoustic rock" target="Tonight" weight="1" />
+      <edge id="528" source="acoustic rock" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="2" />
+      <edge id="529" source="acoustic rock" target="Hunky Dory" weight="1" />
+      <edge id="530" source="acoustic rock" target="Young Americans" weight="1" />
+      <edge id="531" source="acoustic rock" target="Pin Ups" weight="1" />
+      <edge id="532" source="acoustic rock" target="The Man Who Sold the World" weight="1" />
+      <edge id="533" source="folk" target="On Air" weight="3" />
+      <edge id="534" source="folk" target="David Bowie" weight="2" />
+      <edge id="535" source="folk" target="Diamond Dogs" weight="2" />
+      <edge id="536" source="folk" target="Tonight" weight="4" />
+      <edge id="537" source="folk" target="Let’s Dance" weight="1" />
+      <edge id="538" source="folk" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="4" />
+      <edge id="539" source="folk" target="Hunky Dory" weight="3" />
+      <edge id="540" source="folk" target="Heathen" weight="1" />
+      <edge id="541" source="folk" target="Young Americans" weight="5" />
+      <edge id="542" source="folk" target="Pin Ups" weight="4" />
+      <edge id="543" source="folk" target="The Man Who Sold the World" weight="1" />
+      <edge id="544" source="90s" target="David Bowie" weight="1" />
+      <edge id="545" source="90s" target="Let’s Dance" weight="1" />
+      <edge id="546" source="90s" target="Club Bowie: Rare and Unreleased 12″ Mixes" weight="2" />
+      <edge id="547" source="90s" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="1" />
+      <edge id="548" source="90s" target="Hunky Dory" weight="1" />
+      <edge id="549" source="90s" target="Pin Ups" weight="1" />
+      <edge id="550" source="90s" target="The Man Who Sold the World" weight="1" />
+      <edge id="551" source="indie rock" target="On Air" weight="2" />
+      <edge id="552" source="indie rock" target="David Bowie" weight="2" />
+      <edge id="553" source="indie rock" target="★" weight="1" />
+      <edge id="554" source="indie rock" target="Diamond Dogs" weight="1" />
+      <edge id="555" source="indie rock" target="Scary Monsters… and Super Creeps" weight="2" />
+      <edge id="556" source="indie rock" target="Tonight" weight="1" />
+      <edge id="557" source="indie rock" target="Club Bowie: Rare and Unreleased 12″ Mixes" weight="2" />
+      <edge id="558" source="indie rock" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="3" />
+      <edge id="559" source="indie rock" target="Hunky Dory" weight="6" />
+      <edge id="560" source="indie rock" target="Heathen" weight="1" />
+      <edge id="561" source="indie rock" target="Pin Ups" weight="1" />
+      <edge id="562" source="indie rock" target="Let’s Dance" weight="2" />
+      <edge id="563" source="electronic" target="Diamond Dogs" weight="1" />
+      <edge id="564" source="electronic" target="David Bowie" weight="4" />
+      <edge id="565" source="electronic" target="Lodger" weight="2" />
+      <edge id="566" source="electronic" target="Scary Monsters… and Super Creeps" weight="2" />
+      <edge id="567" source="electronic" target="Club Bowie: Rare and Unreleased 12″ Mixes" weight="1" />
+      <edge id="568" source="electronic" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="2" />
+      <edge id="569" source="electronic" target="Hunky Dory" weight="1" />
+      <edge id="570" source="electronic" target="Young Americans" weight="3" />
+      <edge id="571" source="electronic" target="The Man Who Sold the World" weight="2" />
+      <edge id="572" source="shoegaze" target="David Bowie" weight="1" />
+      <edge id="573" source="shoegaze" target="Let’s Dance" weight="1" />
+      <edge id="574" source="shoegaze" target="Club Bowie: Rare and Unreleased 12″ Mixes" weight="2" />
+      <edge id="575" source="shoegaze" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="1" />
+      <edge id="576" source="shoegaze" target="Hunky Dory" weight="1" />
+      <edge id="577" source="orchestra" target="Young Americans" weight="1" />
+      <edge id="578" source="orchestra" target="David Bowie" weight="1" />
+      <edge id="579" source="orchestra" target="Hunky Dory" weight="2" />
+      <edge id="580" source="Club Bowie: Rare and Unreleased 12″ Mixes" target="cover" weight="2" />
+      <edge id="581" source="Club Bowie: Rare and Unreleased 12″ Mixes" target="dark cabaret" weight="1" />
+      <edge id="582" source="Club Bowie: Rare and Unreleased 12″ Mixes" target="pop" weight="2" />
+      <edge id="583" source="Club Bowie: Rare and Unreleased 12″ Mixes" target="united states" weight="2" />
+      <edge id="584" source="Club Bowie: Rare and Unreleased 12″ Mixes" target="ambient" weight="2" />
+      <edge id="585" source="Club Bowie: Rare and Unreleased 12″ Mixes" target="hard rock" weight="2" />
+      <edge id="586" source="Club Bowie: Rare and Unreleased 12″ Mixes" target="pop rock" weight="1" />
+      <edge id="587" source="Club Bowie: Rare and Unreleased 12″ Mixes" target="dream pop" weight="2" />
+      <edge id="588" source="Club Bowie: Rare and Unreleased 12″ Mixes" target="synthpop" weight="1" />
+      <edge id="589" source="Club Bowie: Rare and Unreleased 12″ Mixes" target="indie" weight="1" />
+      <edge id="590" source="Club Bowie: Rare and Unreleased 12″ Mixes" target="australian" weight="3" />
+      <edge id="591" source="Club Bowie: Rare and Unreleased 12″ Mixes" target="fictitious artist" weight="3" />
+      <edge id="592" source="Club Bowie: Rare and Unreleased 12″ Mixes" target="usa" weight="2" />
+      <edge id="593" source="Club Bowie: Rare and Unreleased 12″ Mixes" target="grunge" weight="2" />
+      <edge id="594" source="Club Bowie: Rare and Unreleased 12″ Mixes" target="4ad" weight="2" />
+      <edge id="595" source="Club Bowie: Rare and Unreleased 12″ Mixes" target="string quartet" weight="2" />
+      <edge id="596" source="Club Bowie: Rare and Unreleased 12″ Mixes" target="symphonic rock" weight="2" />
+      <edge id="597" source="Club Bowie: Rare and Unreleased 12″ Mixes" target="tribute" weight="2" />
+      <edge id="598" source="Club Bowie: Rare and Unreleased 12″ Mixes" target="rock and indie" weight="6" />
+      <edge id="599" source="Club Bowie: Rare and Unreleased 12″ Mixes" target="death metal" weight="2" />
+      <edge id="600" source="Club Bowie: Rare and Unreleased 12″ Mixes" target="british" weight="1" />
+      <edge id="601" source="Club Bowie: Rare and Unreleased 12″ Mixes" target="american" weight="5" />
+      <edge id="602" source="Club Bowie: Rare and Unreleased 12″ Mixes" target="uk" weight="1" />
+      <edge id="603" source="Club Bowie: Rare and Unreleased 12″ Mixes" target="english" weight="1" />
+      <edge id="604" source="Club Bowie: Rare and Unreleased 12″ Mixes" target="strings" weight="2" />
+      <edge id="605" source="Club Bowie: Rare and Unreleased 12″ Mixes" target="experimental" weight="2" />
+      <edge id="606" source="dutch" target="David Bowie" weight="1" />
+      <edge id="607" source="dutch" target="Tonight" weight="1" />
+      <edge id="608" source="dutch" target="Hunky Dory" weight="1" />
+      <edge id="609" source="tribute" target="David Bowie" weight="1" />
+      <edge id="610" source="tribute" target="Let’s Dance" weight="1" />
+      <edge id="611" source="tribute" target="Scary Monsters… and Super Creeps" weight="1" />
+      <edge id="612" source="tribute" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="1" />
+      <edge id="613" source="tribute" target="Hunky Dory" weight="1" />
+      <edge id="614" source="tribute" target="Young Americans" weight="1" />
+      <edge id="615" source="tribute" target="The Man Who Sold the World" weight="1" />
+      <edge id="616" source="fictitious artist" target="On Air" weight="1" />
+      <edge id="617" source="fictitious artist" target="David Bowie" weight="1" />
+      <edge id="618" source="fictitious artist" target="Diamond Dogs" weight="1" />
+      <edge id="619" source="fictitious artist" target="Let’s Dance" weight="3" />
+      <edge id="620" source="fictitious artist" target="Hunky Dory" weight="2" />
+      <edge id="621" source="fictitious artist" target="Young Americans" weight="3" />
+      <edge id="622" source="fictitious artist" target="The Man Who Sold the World" weight="1" />
+      <edge id="623" source="jazz and blues" target="Tonight" weight="1" />
+      <edge id="624" source="jazz and blues" target="Young Americans" weight="1" />
+      <edge id="625" source="jazz and blues" target="Pin Ups" weight="2" />
+      <edge id="626" source="jazz and blues" target="Hunky Dory" weight="2" />
+      <edge id="627" source="goth" target="On Air" weight="1" />
+      <edge id="628" source="goth" target="Scary Monsters… and Super Creeps" weight="1" />
+      <edge id="629" source="goth" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="3" />
+      <edge id="630" source="goth" target="Young Americans" weight="1" />
+      <edge id="631" source="goth" target="The Man Who Sold the World" weight="3" />
+      <edge id="632" source="goth" target="Let’s Dance" weight="1" />
+      <edge id="633" source="french" target="Heathen" weight="1" />
+      <edge id="634" source="french" target="On Air" weight="3" />
+      <edge id="635" source="french" target="David Bowie" weight="1" />
+      <edge id="636" source="french" target="Hunky Dory" weight="2" />
+      <edge id="637" source="symphonic rock" target="David Bowie" weight="2" />
+      <edge id="638" source="symphonic rock" target="Let’s Dance" weight="1" />
+      <edge id="639" source="symphonic rock" target="Hunky Dory" weight="1" />
+      <edge id="640" source="Let’s Dance" target="english" weight="1" />
+      <edge id="641" source="Let’s Dance" target="indie" weight="1" />
+      <edge id="642" source="Let’s Dance" target="cover" weight="1" />
+      <edge id="643" source="Let’s Dance" target="dark cabaret" weight="1" />
+      <edge id="644" source="Let’s Dance" target="pop" weight="2" />
+      <edge id="645" source="Let’s Dance" target="united states" weight="1" />
+      <edge id="646" source="Let’s Dance" target="ambient" weight="1" />
+      <edge id="647" source="Let’s Dance" target="hard rock" weight="1" />
+      <edge id="648" source="Let’s Dance" target="pop rock" weight="2" />
+      <edge id="649" source="Let’s Dance" target="usa" weight="1" />
+      <edge id="650" source="Let’s Dance" target="goth rock" weight="1" />
+      <edge id="651" source="Let’s Dance" target="dream pop" weight="1" />
+      <edge id="652" source="Let’s Dance" target="australian" weight="1" />
+      <edge id="653" source="Let’s Dance" target="grunge" weight="1" />
+      <edge id="654" source="Let’s Dance" target="4ad" weight="1" />
+      <edge id="655" source="Let’s Dance" target="string quartet" weight="1" />
+      <edge id="656" source="Let’s Dance" target="rock and indie" weight="4" />
+      <edge id="657" source="Let’s Dance" target="post-disco" weight="1" />
+      <edge id="658" source="Let’s Dance" target="death metal" weight="1" />
+      <edge id="659" source="Let’s Dance" target="soul" weight="1" />
+      <edge id="660" source="Let’s Dance" target="british" weight="2" />
+      <edge id="661" source="Let’s Dance" target="blue-eyed soul" weight="1" />
+      <edge id="662" source="Let’s Dance" target="american" weight="3" />
+      <edge id="663" source="Let’s Dance" target="uk" weight="2" />
+      <edge id="664" source="Let’s Dance" target="gothic rock" weight="1" />
+      <edge id="665" source="Let’s Dance" target="strings" weight="1" />
+      <edge id="666" source="Let’s Dance" target="experimental" weight="1" />
+      <edge id="667" source="canadian" target="On Air" weight="1" />
+      <edge id="668" source="canadian" target="Tonight" weight="1" />
+      <edge id="669" source="canadian" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="3" />
+      <edge id="670" source="canadian" target="Heathen" weight="1" />
+      <edge id="671" source="canadian" target="Young Americans" weight="1" />
+      <edge id="672" source="canadian" target="Pin Ups" weight="1" />
+      <edge id="673" source="post-disco" target="On Air" weight="4" />
+      <edge id="674" source="post-disco" target="Toy" weight="1" />
+      <edge id="675" source="post-disco" target="Reality" weight="2" />
+      <edge id="676" source="post-disco" target="Tonight" weight="3" />
+      <edge id="677" source="post-disco" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="1" />
+      <edge id="678" source="post-disco" target="Hunky Dory" weight="2" />
+      <edge id="679" source="post-disco" target="Heathen" weight="3" />
+      <edge id="680" source="post-disco" target="Young Americans" weight="1" />
+      <edge id="681" source="post-disco" target="Scary Monsters… and Super Creeps" weight="1" />
+      <edge id="682" source="post-disco" target="Pin Ups" weight="14" />
+      <edge id="683" source="punk" target="Diamond Dogs" weight="1" />
+      <edge id="684" source="punk" target="David Bowie" weight="2" />
+      <edge id="685" source="punk" target="Reality" weight="1" />
+      <edge id="686" source="punk" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="4" />
+      <edge id="687" source="punk" target="Hunky Dory" weight="2" />
+      <edge id="688" source="punk" target="Pin Ups" weight="5" />
+      <edge id="689" source="punk" target="The Man Who Sold the World" weight="1" />
+      <edge id="690" source="british" target="Toy" weight="1" />
+      <edge id="691" source="british" target="Reality" weight="3" />
+      <edge id="692" source="british" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="12" />
+      <edge id="693" source="british" target="Hunky Dory" weight="7" />
+      <edge id="694" source="british" target="Heathen" weight="3" />
+      <edge id="695" source="british" target="On Air" weight="6" />
+      <edge id="696" source="british" target="Scary Monsters… and Super Creeps" weight="2" />
+      <edge id="697" source="british" target="Young Americans" weight="8" />
+      <edge id="698" source="british" target="Pin Ups" weight="20" />
+      <edge id="699" source="british" target="The Man Who Sold the World" weight="2" />
+      <edge id="700" source="british" target="David Bowie" weight="5" />
+      <edge id="701" source="british" target="Diamond Dogs" weight="3" />
+      <edge id="702" source="british" target="Lodger" weight="3" />
+      <edge id="703" source="british" target="Tonight" weight="7" />
+      <edge id="704" source="glam metal" target="On Air" weight="1" />
+      <edge id="705" source="glam metal" target="David Bowie" weight="1" />
+      <edge id="706" source="glam metal" target="Diamond Dogs" weight="1" />
+      <edge id="707" source="glam metal" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="4" />
+      <edge id="708" source="american" target="On Air" weight="2" />
+      <edge id="709" source="american" target="David Bowie" weight="2" />
+      <edge id="710" source="american" target="Diamond Dogs" weight="3" />
+      <edge id="711" source="american" target="Scary Monsters… and Super Creeps" weight="2" />
+      <edge id="712" source="american" target="Tonight" weight="3" />
+      <edge id="713" source="american" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="7" />
+      <edge id="714" source="american" target="Hunky Dory" weight="2" />
+      <edge id="715" source="american" target="Heathen" weight="1" />
+      <edge id="716" source="american" target="Young Americans" weight="3" />
+      <edge id="717" source="american" target="Pin Ups" weight="1" />
+      <edge id="718" source="american" target="The Man Who Sold the World" weight="3" />
+      <edge id="719" source="experimental" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="2" />
+      <edge id="720" source="experimental" target="Young Americans" weight="1" />
+      <edge id="721" source="experimental" target="Pin Ups" weight="1" />
+      <edge id="722" source="experimental" target="The Man Who Sold the World" weight="1" />
+      <edge id="723" source="Toy" target="pop rock" weight="1" />
+      <edge id="724" source="Toy" target="soul" weight="1" />
+      <edge id="725" source="Toy" target="blue-eyed soul" weight="1" />
+      <edge id="726" source="Toy" target="pop" weight="1" />
+      <edge id="727" source="Toy" target="uk" weight="1" />
+      <edge id="728" source="male vocalists" target="Lodger" weight="1" />
+      <edge id="729" source="male vocalists" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="2" />
+      <edge id="730" source="male vocalists" target="Young Americans" weight="1" />
+      <edge id="731" source="male vocalists" target="Pin Ups" weight="1" />
+      <edge id="732" source="male vocalists" target="The Man Who Sold the World" weight="1" />
+      <edge id="733" source="dark cabaret" target="David Bowie" weight="1" />
+      <edge id="734" source="dark cabaret" target="★" weight="1" />
+      <edge id="735" source="dark cabaret" target="Scary Monsters… and Super Creeps" weight="1" />
+      <edge id="736" source="dark cabaret" target="Hunky Dory" weight="1" />
+      <edge id="737" source="pop" target="Reality" weight="2" />
+      <edge id="738" source="pop" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="5" />
+      <edge id="739" source="pop" target="Hunky Dory" weight="6" />
+      <edge id="740" source="pop" target="Heathen" weight="3" />
+      <edge id="741" source="pop" target="On Air" weight="6" />
+      <edge id="742" source="pop" target="Scary Monsters… and Super Creeps" weight="1" />
+      <edge id="743" source="pop" target="Young Americans" weight="6" />
+      <edge id="744" source="pop" target="Pin Ups" weight="17" />
+      <edge id="745" source="pop" target="The Man Who Sold the World" weight="3" />
+      <edge id="746" source="pop" target="David Bowie" weight="3" />
+      <edge id="747" source="pop" target="Diamond Dogs" weight="3" />
+      <edge id="748" source="pop" target="Lodger" weight="1" />
+      <edge id="749" source="pop" target="Tonight" weight="9" />
+      <edge id="750" source="united states" target="Diamond Dogs" weight="1" />
+      <edge id="751" source="united states" target="David Bowie" weight="1" />
+      <edge id="752" source="united states" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="1" />
+      <edge id="753" source="united states" target="Hunky Dory" weight="1" />
+      <edge id="754" source="united states" target="The Man Who Sold the World" weight="1" />
+      <edge id="755" source="Hunky Dory" target="english" weight="3" />
+      <edge id="756" source="Hunky Dory" target="cover" weight="1" />
+      <edge id="757" source="Hunky Dory" target="european" weight="1" />
+      <edge id="758" source="Hunky Dory" target="composer" weight="1" />
+      <edge id="759" source="Hunky Dory" target="ambient" weight="1" />
+      <edge id="760" source="Hunky Dory" target="hard rock" weight="3" />
+      <edge id="761" source="Hunky Dory" target="pop rock" weight="3" />
+      <edge id="762" source="Hunky Dory" target="dream pop" weight="1" />
+      <edge id="763" source="Hunky Dory" target="new age" weight="1" />
+      <edge id="764" source="Hunky Dory" target="symphony orchestra" weight="2" />
+      <edge id="765" source="Hunky Dory" target="punk rock" weight="1" />
+      <edge id="766" source="Hunky Dory" target="usa" weight="3" />
+      <edge id="767" source="Hunky Dory" target="grunge" weight="2" />
+      <edge id="768" source="Hunky Dory" target="easy listening soundtracks and musicals" weight="3" />
+      <edge id="769" source="Hunky Dory" target="soundtrack" weight="1" />
+      <edge id="770" source="Hunky Dory" target="string quartet" weight="1" />
+      <edge id="771" source="Hunky Dory" target="britannique" weight="2" />
+      <edge id="772" source="Hunky Dory" target="neo-psychedelia" weight="1" />
+      <edge id="773" source="Hunky Dory" target="rock and indie" weight="10" />
+      <edge id="774" source="Hunky Dory" target="punk cabaret" weight="1" />
+      <edge id="775" source="Hunky Dory" target="soul" weight="2" />
+      <edge id="776" source="Hunky Dory" target="blue-eyed soul" weight="2" />
+      <edge id="777" source="Hunky Dory" target="uk" weight="7" />
+      <edge id="778" source="Hunky Dory" target="strings" weight="1" />
+      <edge id="779" source="composer" target="On Air" weight="1" />
+      <edge id="780" source="composer" target="David Bowie" weight="2" />
+      <edge id="781" source="composer" target="Diamond Dogs" weight="1" />
+      <edge id="782" source="composer" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="5" />
+      <edge id="783" source="composer" target="Young Americans" weight="1" />
+      <edge id="784" source="scottish" target="Lodger" weight="1" />
+      <edge id="785" source="scottish" target="Scary Monsters… and Super Creeps" weight="1" />
+      <edge id="786" source="scottish" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="1" />
+      <edge id="787" source="scottish" target="Young Americans" weight="2" />
+      <edge id="788" source="scottish" target="The Man Who Sold the World" weight="2" />
+      <edge id="789" source="hard rock" target="On Air" weight="1" />
+      <edge id="790" source="hard rock" target="David Bowie" weight="3" />
+      <edge id="791" source="hard rock" target="Diamond Dogs" weight="2" />
+      <edge id="792" source="hard rock" target="Tonight" weight="1" />
+      <edge id="793" source="hard rock" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="5" />
+      <edge id="794" source="hard rock" target="Young Americans" weight="2" />
+      <edge id="795" source="hard rock" target="Pin Ups" weight="9" />
+      <edge id="796" source="goth rock" target="Scary Monsters… and Super Creeps" weight="1" />
+      <edge id="797" source="goth rock" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="2" />
+      <edge id="798" source="goth rock" target="The Man Who Sold the World" weight="2" />
+      <edge id="799" source="On Air" target="singer/songwriter" weight="1" />
+      <edge id="800" source="On Air" target="pop rock" weight="8" />
+      <edge id="801" source="On Air" target="blues rock" weight="1" />
+      <edge id="802" source="On Air" target="nwobhm" weight="1" />
+      <edge id="803" source="On Air" target="easy listening soundtracks and musicals" weight="1" />
+      <edge id="804" source="On Air" target="4ad" weight="1" />
+      <edge id="805" source="On Air" target="soft rock" weight="2" />
+      <edge id="806" source="On Air" target="usa" weight="1" />
+      <edge id="807" source="On Air" target="rock and indie" weight="3" />
+      <edge id="808" source="On Air" target="metal" weight="1" />
+      <edge id="809" source="On Air" target="soul" weight="4" />
+      <edge id="810" source="On Air" target="blue-eyed soul" weight="4" />
+      <edge id="811" source="On Air" target="uk" weight="6" />
+      <edge id="812" source="On Air" target="english" weight="2" />
+      <edge id="813" source="adult contemporary" target="Diamond Dogs" weight="1" />
+      <edge id="814" source="adult contemporary" target="Tonight" weight="2" />
+      <edge id="815" source="pop rock" target="Reality" weight="2" />
+      <edge id="816" source="pop rock" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="4" />
+      <edge id="817" source="pop rock" target="Heathen" weight="3" />
+      <edge id="818" source="pop rock" target="Scary Monsters… and Super Creeps" weight="2" />
+      <edge id="819" source="pop rock" target="Young Americans" weight="6" />
+      <edge id="820" source="pop rock" target="Pin Ups" weight="18" />
+      <edge id="821" source="pop rock" target="The Man Who Sold the World" weight="2" />
+      <edge id="822" source="pop rock" target="David Bowie" weight="2" />
+      <edge id="823" source="pop rock" target="Diamond Dogs" weight="5" />
+      <edge id="824" source="pop rock" target="Lodger" weight="1" />
+      <edge id="825" source="pop rock" target="Tonight" weight="5" />
+      <edge id="826" source="usa" target="David Bowie" weight="2" />
+      <edge id="827" source="usa" target="Diamond Dogs" weight="2" />
+      <edge id="828" source="usa" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="4" />
+      <edge id="829" source="usa" target="Heathen" weight="1" />
+      <edge id="830" source="usa" target="Young Americans" weight="1" />
+      <edge id="831" source="usa" target="Pin Ups" weight="4" />
+      <edge id="832" source="usa" target="The Man Who Sold the World" weight="1" />
+      <edge id="833" source="nwobhm" target="David Bowie" weight="1" />
+      <edge id="834" source="nwobhm" target="Diamond Dogs" weight="1" />
+      <edge id="835" source="nwobhm" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="1" />
+      <edge id="836" source="symphony orchestra" target="Young Americans" weight="1" />
+      <edge id="837" source="symphony orchestra" target="David Bowie" weight="2" />
+      <edge id="838" source="australian" target="Scary Monsters… and Super Creeps" weight="1" />
+      <edge id="839" source="australian" target="Tonight" weight="1" />
+      <edge id="840" source="australian" target="Young Americans" weight="2" />
+      <edge id="841" source="australian" target="Pin Ups" weight="2" />
+      <edge id="842" source="David Bowie" target="english" weight="5" />
+      <edge id="843" source="David Bowie" target="death metal" weight="1" />
+      <edge id="844" source="David Bowie" target="ambient" weight="2" />
+      <edge id="845" source="David Bowie" target="dream pop" weight="2" />
+      <edge id="846" source="David Bowie" target="new age" weight="2" />
+      <edge id="847" source="David Bowie" target="post-punk" weight="1" />
+      <edge id="848" source="David Bowie" target="grunge" weight="1" />
+      <edge id="849" source="David Bowie" target="alternative dance" weight="1" />
+      <edge id="850" source="David Bowie" target="easy listening soundtracks and musicals" weight="1" />
+      <edge id="851" source="David Bowie" target="cover" weight="1" />
+      <edge id="852" source="David Bowie" target="soundtrack" weight="1" />
+      <edge id="853" source="David Bowie" target="string quartet" weight="1" />
+      <edge id="854" source="David Bowie" target="neo-psychedelia" weight="1" />
+      <edge id="855" source="David Bowie" target="rock and indie" weight="3" />
+      <edge id="856" source="David Bowie" target="punk cabaret" weight="1" />
+      <edge id="857" source="David Bowie" target="uk" weight="7" />
+      <edge id="858" source="David Bowie" target="metal" weight="3" />
+      <edge id="859" source="David Bowie" target="european" weight="2" />
+      <edge id="860" source="David Bowie" target="strings" weight="1" />
+      <edge id="861" source="grunge" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="1" />
+      <edge id="862" source="grunge" target="Pin Ups" weight="1" />
+      <edge id="863" source="grunge" target="The Man Who Sold the World" weight="1" />
+      <edge id="864" source="4ad" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="1" />
+      <edge id="865" source="4ad" target="Heathen" weight="1" />
+      <edge id="866" source="soft rock" target="Diamond Dogs" weight="2" />
+      <edge id="867" source="soft rock" target="Tonight" weight="1" />
+      <edge id="868" source="soft rock" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="1" />
+      <edge id="869" source="soft rock" target="The Man Who Sold the World" weight="1" />
+      <edge id="870" source="neo-psychedelia" target="Scary Monsters… and Super Creeps" weight="1" />
+      <edge id="871" source="neo-psychedelia" target="Pin Ups" weight="1" />
+      <edge id="872" source="rock and indie" target="Diamond Dogs" weight="4" />
+      <edge id="873" source="rock and indie" target="Scary Monsters… and Super Creeps" weight="4" />
+      <edge id="874" source="rock and indie" target="Tonight" weight="1" />
+      <edge id="875" source="rock and indie" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="8" />
+      <edge id="876" source="rock and indie" target="Heathen" weight="1" />
+      <edge id="877" source="rock and indie" target="Young Americans" weight="3" />
+      <edge id="878" source="rock and indie" target="Pin Ups" weight="4" />
+      <edge id="879" source="rock and indie" target="The Man Who Sold the World" weight="2" />
+      <edge id="880" source="soul" target="Diamond Dogs" weight="1" />
+      <edge id="881" source="soul" target="Reality" weight="2" />
+      <edge id="882" source="soul" target="Tonight" weight="3" />
+      <edge id="883" source="soul" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="1" />
+      <edge id="884" source="soul" target="Heathen" weight="3" />
+      <edge id="885" source="soul" target="Young Americans" weight="1" />
+      <edge id="886" source="soul" target="Scary Monsters… and Super Creeps" weight="1" />
+      <edge id="887" source="soul" target="Pin Ups" weight="14" />
+      <edge id="888" source="Tonight" target="synthpop" weight="1" />
+      <edge id="889" source="Tonight" target="singer/songwriter" weight="2" />
+      <edge id="890" source="Tonight" target="string quartet" weight="1" />
+      <edge id="891" source="Tonight" target="blue-eyed soul" weight="3" />
+      <edge id="892" source="Tonight" target="uk" weight="7" />
+      <edge id="893" source="Tonight" target="english" weight="2" />
+      <edge id="894" source="uk" target="Reality" weight="3" />
+      <edge id="895" source="uk" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="15" />
+      <edge id="896" source="uk" target="Heathen" weight="3" />
+      <edge id="897" source="uk" target="Scary Monsters… and Super Creeps" weight="3" />
+      <edge id="898" source="uk" target="Young Americans" weight="6" />
+      <edge id="899" source="uk" target="Pin Ups" weight="21" />
+      <edge id="900" source="uk" target="The Man Who Sold the World" weight="2" />
+      <edge id="901" source="uk" target="Diamond Dogs" weight="3" />
+      <edge id="902" source="uk" target="Lodger" weight="3" />
+      <edge id="903" source="indie pop" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="3" />
+      <edge id="904" source="indie pop" target="Pin Ups" weight="1" />
+      <edge id="905" source="★" target="punk cabaret" weight="1" />
+      <edge id="906" source="indie" target="Diamond Dogs" weight="1" />
+      <edge id="907" source="indie" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="2" />
+      <edge id="908" source="indie" target="Pin Ups" weight="1" />
+      <edge id="909" source="cover" target="Scary Monsters… and Super Creeps" weight="1" />
+      <edge id="910" source="cover" target="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" weight="1" />
+      <edge id="911" source="cover" target="Young Americans" weight="1" />
+      <edge id="912" source="cover" target="The Man Who Sold the World" weight="1" />
+      <edge id="913" source="Reality" target="blue-eyed soul" weight="2" />
+      <edge id="914" source="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" target="english" weight="9" />
+      <edge id="915" source="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" target="punk rock" weight="3" />
+      <edge id="916" source="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" target="britannique" weight="3" />
+      <edge id="917" source="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" target="dream pop" weight="1" />
+      <edge id="918" source="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" target="post-punk" weight="2" />
+      <edge id="919" source="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" target="synthpop" weight="4" />
+      <edge id="920" source="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" target="80s" weight="2" />
+      <edge id="921" source="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" target="metal" weight="5" />
+      <edge id="922" source="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" target="string quartet" weight="1" />
+      <edge id="923" source="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" target="easy listening soundtracks and musicals" weight="2" />
+      <edge id="924" source="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" target="blue-eyed soul" weight="3" />
+      <edge id="925" source="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" target="soundtrack" weight="2" />
+      <edge id="926" source="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" target="gothic rock" weight="3" />
+      <edge id="927" source="The Rise and Fall of Ziggy Stardust and the Spiders From Mars" target="strings" weight="1" />
+      <edge id="928" source="Heathen" target="blue-eyed soul" weight="3" />
+      <edge id="929" source="singer/songwriter" target="Young Americans" weight="1" />
+      <edge id="930" source="singer/songwriter" target="Pin Ups" weight="2" />
+      <edge id="931" source="singer/songwriter" target="Diamond Dogs" weight="2" />
+      <edge id="932" source="alternative dance" target="Young Americans" weight="1" />
+      <edge id="933" source="blues rock" target="Pin Ups" weight="6" />
+      <edge id="934" source="dream pop" target="Scary Monsters… and Super Creeps" weight="1" />
+      <edge id="935" source="synthpop" target="Lodger" weight="2" />
+      <edge id="936" source="synthpop" target="Scary Monsters… and Super Creeps" weight="1" />
+      <edge id="937" source="synthpop" target="Young Americans" weight="2" />
+      <edge id="938" source="synthpop" target="The Man Who Sold the World" weight="2" />
+      <edge id="939" source="post-punk" target="Young Americans" weight="2" />
+      <edge id="940" source="post-punk" target="The Man Who Sold the World" weight="1" />
+      <edge id="941" source="80s" target="Young Americans" weight="1" />
+      <edge id="942" source="80s" target="Pin Ups" weight="2" />
+      <edge id="943" source="Young Americans" target="english" weight="2" />
+      <edge id="944" source="Young Americans" target="easy listening soundtracks and musicals" weight="2" />
+      <edge id="945" source="Young Americans" target="gothic rock" weight="1" />
+      <edge id="946" source="Young Americans" target="metal" weight="1" />
+      <edge id="947" source="Young Americans" target="string quartet" weight="1" />
+      <edge id="948" source="Young Americans" target="britannique" weight="1" />
+      <edge id="949" source="Young Americans" target="blue-eyed soul" weight="1" />
+      <edge id="950" source="Young Americans" target="european" weight="2" />
+      <edge id="951" source="Young Americans" target="strings" weight="1" />
+      <edge id="952" source="Pin Ups" target="english" weight="2" />
+      <edge id="953" source="Pin Ups" target="european" weight="1" />
+      <edge id="954" source="Pin Ups" target="punk rock" weight="1" />
+      <edge id="955" source="Pin Ups" target="metal" weight="3" />
+      <edge id="956" source="Pin Ups" target="blue-eyed soul" weight="15" />
+      <edge id="957" source="The Man Who Sold the World" target="english" weight="1" />
+      <edge id="958" source="The Man Who Sold the World" target="punk rock" weight="1" />
+      <edge id="959" source="The Man Who Sold the World" target="string quartet" weight="1" />
+      <edge id="960" source="The Man Who Sold the World" target="gothic rock" weight="1" />
+      <edge id="961" source="The Man Who Sold the World" target="strings" weight="1" />
+      <edge id="962" source="punk rock" target="Scary Monsters… and Super Creeps" weight="1" />
+      <edge id="963" source="soundtrack" target="Scary Monsters… and Super Creeps" weight="1" />
+      <edge id="964" source="string quartet" target="Scary Monsters… and Super Creeps" weight="1" />
+      <edge id="965" source="Scary Monsters… and Super Creeps" target="punk cabaret" weight="1" />
+      <edge id="966" source="Scary Monsters… and Super Creeps" target="metal" weight="1" />
+      <edge id="967" source="Scary Monsters… and Super Creeps" target="blue-eyed soul" weight="1" />
+      <edge id="968" source="Scary Monsters… and Super Creeps" target="gothic rock" weight="1" />
+      <edge id="969" source="Scary Monsters… and Super Creeps" target="strings" weight="1" />
+      <edge id="970" source="Diamond Dogs" target="metal" weight="2" />
+      <edge id="971" source="Diamond Dogs" target="english" weight="3" />
+      <edge id="972" source="Lodger" target="english" weight="1" />
+    </edges>
+  </graph>
+</gexf>
