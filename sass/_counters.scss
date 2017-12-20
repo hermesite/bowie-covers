@@ -1,29 +1,24 @@
-
-
-
 .level {
     -webkit-box-align: flex-start;
     -ms-flex-align: flex-start;
     align-items: flex-start;
     .level-item {
-        max-width: 25%;
-        &.counter {
-            * {
-                margin: 0px;
-            }
-            .counter-units {
-                font-family: 'nowaymedium';
-            }
-            .counter-number {
-                font-family: 'nowaylight';
-                font-size: $h2Size;
-            }
-            .counter-entity {
-                font-family: 'noway_regularitalic';
-            }
-            .counter-link {
-                padding-top: 16px;
-            }
+        max-width: 40%;
+    }
+    .counter {
+        .counter-units {
+            font-family: 'nowaymedium';
+        }
+        .counter-number {
+            font-family: 'nowaylight';
+            font-size: $h2Size;
+            margin: 0px;
+        }
+        .counter-entity {
+            // font-family: 'noway_regularitalic';
+        }
+        .counter-link {
+            padding-top: 16px;
         }
     }
 }

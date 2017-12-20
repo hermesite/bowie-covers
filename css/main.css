@@ -6,6 +6,7 @@
 @import url(../fonts/Noway-Regular-webfont/stylesheet.css);
 @import url(../fonts/Noway-Light-webfont/stylesheet.css);
 @import url(../fonts/Noway-Regular-Italic-webfont/stylesheet.css);
+@import url(../fonts/Noway-Medium-Italic-webfont/stylesheet.css);
 .ratio-phi {
   position: relative; }
   .ratio-phi:before {
@@ -2418,34 +2419,36 @@ body {
 .radial-container {
   position: relative; }
   .radial-container .radial-item {
-    box-shadow: 0px 2px 0px 0px #CCC;
-    padding: 5vh 0px; }
+    padding: 10vh 0px; }
   .radial-container .radial-album,
   .radial-container .radial-aside {
     display: inline-block; }
   .radial-container .radial-album {
     font-size: 1.25vh;
-    width: 61.8vh;
-    height: 61.8vh;
+    width: 80vh;
+    height: 80vh;
     padding: 0px;
     position: relative;
-    text-align: center;
-    border-radius: 50%;
-    background-color: #F2F2F2; }
+    border: 1px dotted #CCC; }
     .radial-container .radial-album svg {
       position: absolute;
       left: 0px;
       top: 0px;
       z-index: 1;
       overflow: visible; }
+      .radial-container .radial-album svg .node.inactive text.artist {
+        pointer-events: none;
+        fill: #CCC; }
       .radial-container .radial-album svg .node text.record {
-        font-weight: 700;
+        font-family: 'nowaymedium';
         cursor: default; }
       .radial-container .radial-album svg .node text.artist {
+        font-family: 'noway_regularitalic';
         cursor: pointer;
         opacity: .75;
         fill: #600; }
         .radial-container .radial-album svg .node text.artist:hover {
+          font-family: 'nowaymedium_italic';
           opacity: 1; }
       .radial-container .radial-album svg .no-link {
         fill: none; }
@@ -2476,9 +2479,12 @@ body {
         -moz-border-radius: 50%;
         border-radius: 50%;
         border: 2px solid rgba(0, 0, 0, 0.5); }
+  .radial-container .radial-counter {
+    width: 12%; }
   .radial-container .radial-aside {
-    max-width: calc(100% - 61.8vh);
-    min-width: calc(100% - 61.8vh); }
+    max-width: calc(88% - 80vh);
+    min-width: calc(88% - 80vh);
+    padding-left: 40px; }
     .radial-container .radial-aside .record-info {
       text-align: left;
       padding: 16px; }
@@ -2506,8 +2512,16 @@ body {
           font-size: 3.5vw;
           width: 100%;
           display: block; }
+    .radial-container .radial-aside .cover-title {
+      font-family: 'nowaymedium'; }
+    .radial-container .radial-aside .cover-artist {
+      font-family: 'noway_regularitalic'; }
     .radial-container .radial-aside .video {
-      padding: 0px 20px; }
+      margin-top: 30px;
+      margin-bottom: 30px;
+      background-color: #F2F2F2;
+      height: 40vh;
+      position: relative; }
 
 /*===============================
 =            TREEMAP            =
@@ -2715,18 +2729,15 @@ html {
   -ms-flex-align: flex-start;
   align-items: flex-start; }
   .level .level-item {
-    max-width: 25%; }
-    .level .level-item.counter * {
-      margin: 0px; }
-    .level .level-item.counter .counter-units {
-      font-family: 'nowaymedium'; }
-    .level .level-item.counter .counter-number {
-      font-family: 'nowaylight';
-      font-size: 3.375em; }
-    .level .level-item.counter .counter-entity {
-      font-family: 'noway_regularitalic'; }
-    .level .level-item.counter .counter-link {
-      padding-top: 16px; }
+    max-width: 40%; }
+  .level .counter .counter-units {
+    font-family: 'nowaymedium'; }
+  .level .counter .counter-number {
+    font-family: 'nowaylight';
+    font-size: 3.375em;
+    margin: 0px; }
+  .level .counter .counter-link {
+    padding-top: 16px; }
 
 path {
   fill: none; }

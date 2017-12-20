@@ -3,8 +3,8 @@
     // width: 61.8vw;
     
     .radial-item {
-        box-shadow: 0px 2px 0px 0px #CCC;
-        padding: 5vh 0px;
+        // box-shadow: 0px 2px 0px 0px #CCC;
+        padding: 10vh 0px;
     }
 
     .radial-album,
@@ -20,9 +20,10 @@
         // border: 1px solid $bsides;
         padding: 0px;
         position: relative;
-        text-align: center;
-        border-radius: 50%;
-        background-color: #F2F2F2;
+        // text-align: center;
+        // border-radius: 50%;
+        
+        border: 1px dotted #CCC;
         // radial tree
         svg {
             position: absolute;
@@ -31,16 +32,26 @@
             z-index: 1;
             overflow: visible;
             .node {
+                &.inactive {
+                    text {
+                        &.artist {
+                            pointer-events: none;
+                            fill: #CCC;
+                        }
+                    }
+                }
                 text {
                     &.record {
-                        font-weight: 700;
+                        font-family: 'nowaymedium';
                         cursor: default; // letter-spacing: 1px;
                     }
                     &.artist {
+                        font-family: 'noway_regularitalic';
                         cursor: pointer;
                         opacity: .75;
                         fill: $bsides;
                         &:hover {
+                            font-family: 'nowaymedium_italic';
                             opacity: 1;
                         }
                     }
@@ -82,10 +93,14 @@
             }
         }
     }
+    .radial-counter {
+        width: 12%;
+    }
     .radial-aside {
         // box-shadow: inset 2px 0px 0px 0px #0CC;
-        max-width: calc(100% - #{$base-layout});
-        min-width: calc(100% - #{$base-layout});
+        max-width: calc(88% - #{$base-layout});
+        min-width: calc(88% - #{$base-layout});
+        padding-left: 40px;
         .record-info {
             text-align: left;
             // width: 100%; // line-height: 50px;
@@ -122,8 +137,29 @@
                 }
             }
         }
+        .cover-title {
+            font-family: 'nowaymedium';
+        }
+        .cover-artist {
+            font-family: 'noway_regularitalic';
+        }
         .video {
-            padding: 0px 20px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            background-color: #F2F2F2;
+            height: 40vh;
+            position: relative;
+            // &:before {
+            //     content: "Click on artists to load de video cover";
+            //     position: absolute;
+            //     z-index: 0;
+            //     left: 35%;
+            //     top: 35%;
+            //     width: 30%;
+            //     height: 30%;
+            //     text-align: center;
+            //     font-size: 10px;
+            // }
         }
     }
 }

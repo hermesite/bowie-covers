@@ -692,48 +692,43 @@ d3.json('data/david_bowie_data.videos.json', function(error, artist) {
             .attr('id', data.id)
             .attr('class', 'radial-item row')
 
-        var box = radialItem.append('div')
-            .attr('id', data.id.substr(0, 5))
-            .attr('class', 'radial-album');
 
-        var aside = radialItem.append('div')
-            .attr('class', 'radial-aside');
+            var counterSide = radialItem.append('div')
+                .attr('class', 'radial-counter');
 
+            var box = radialItem.append('div')
+                .attr('id', data.id.substr(0, 5))
+                .attr('class', 'radial-album');
 
+            var aside = radialItem.append('div')
+                .attr('class', 'radial-aside');
 
-        // $(container).empty();
+            counterSide.append('nav').attr('class', 'level')
+                .append('div').attr('class', 'counter')
+                .append('div').attr('class', 'content')
+                .html(function() {
+                    return '<p class="counter-number">' + size + '</p><h5 class="counter-units">Covers</h5><p class="counter-entity">' + data.name + '</p>';
+                });
 
-        // $(box).css({ 'width': diameter });
-        // $(box).css({ 'height': diameter });
-
-        box.append('div').attr('class', 'record');
-
-        aside.append('div').attr('class', 'record-info').html(function() {
-            return '<h2><span><strong>' + size + '</strong>covers</span><em>' + data.name + '</em></h2>';
-        });
-
-        var youtubeContainer = aside.append('div').attr('class', 'video');
-
-        // youtubeContainer.append('iframe')
-        //     .attr('src', 'https://www.youtube.com/embed/pMIOqxC7j68')
-        //     .attr('width', '100%')
-        //     .attr('height', '200px')
-        //     .attr('allowfullscreen', 'allowfullscreen')
-        //     .attr('mozallowfullscreen', 'mozallowfullscreen')
-        //     .attr('msallowfullscreen', 'msallowfullscreen')
-        //     .attr('oallowfullscreen', 'oallowfullscreen')
-        //     .attr('webkitallowfullscreen', 'webkitallowfullscreen')
+            box.append('div').attr('class', 'record');
 
 
-        var
-            widthFactor = 1.67,
-            recordSize = widthRadial / widthFactor;
+            var coverTitle = aside.append('p').attr('class', 'cover-title').text('Song title');
+            var coverArtist = aside.append('p').attr('class', 'cover-artist').text('Cover artist');
+
+            var youtubeContainer = aside.append('div').attr('class', 'video');
+
+            var backLink = aside.append('a').attr('href', '#covers-treemap').text('Back to albums');
+
+            var
+                widthFactor = 1.67,
+                recordSize = widthRadial / widthFactor;
 
 
-        $('.record').css('height', recordSize + 'px');
-        $('.record').css('width', recordSize + 'px');
-        $('.record').css('margin-top', -(recordSize / 2) + 'px');
-        $('.record').css('margin-left', -(recordSize / 2) + 'px');
+            $('.record').css('height', recordSize + 'px');
+            $('.record').css('width', recordSize + 'px');
+            $('.record').css('margin-top', -(recordSize / 2) + 'px');
+            $('.record').css('margin-left', -(recordSize / 2) + 'px');
 
         $('#' + data.id.substr(0, 5) + ' .record')
             .css({
@@ -797,11 +792,29 @@ d3.json('data/david_bowie_data.videos.json', function(error, artist) {
         var text = svg.selectAll('text').data(nodes)
             .enter().append('g')
             .attr('class', 'node')
+            .attr('class', function(d) {
+                
+                if(d.youtube){
+
+                    if(parseInt(d.youtube.views,10) > MIN_VIDEO_VIEWS){
+                        return 'node'
+                    } else {
+                        return 'node inactive'
+                    }
+                }
+            })
             .attr('transform', function(d) {
                 return 'rotate(' + (d.x - 90) + ')translate(' + d.y + ')';
             })
             .on('click', function(d) {
                 console.log("DATOS DE COVER:", d);
+
+                coverTitle.text(function() {
+                    return d.parent.name;
+                })
+                coverArtist.text(function() {
+                    return d.name;
+                })
 
                 if(parseInt(d.youtube.views,10) > MIN_VIDEO_VIEWS){
                     youtubeContainer.selectAll("*").remove();
@@ -823,6 +836,7 @@ d3.json('data/david_bowie_data.videos.json', function(error, artist) {
 
         text.append('text')
             .attr('fill', function(d) {
+
                 if (d.cover) {
                     return d.color;
                 } else {
