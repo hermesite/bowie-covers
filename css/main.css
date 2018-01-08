@@ -2376,6 +2376,8 @@ body {
   font-weight: 400;
   line-height: 1.45;
   color: #333; }
+  body .content a {
+    color: #600; }
   body .content p {
     margin-bottom: 1.3em; }
   body .content h1, body .content h2, body .content h3, body .content h4 {
@@ -2419,7 +2421,8 @@ body {
 .radial-container {
   position: relative; }
   .radial-container .radial-item {
-    padding: 10vh 0px; }
+    margin: 5vh 0px;
+    padding: 5vh 0px; }
   .radial-container .radial-album,
   .radial-container .radial-aside {
     display: inline-block; }
@@ -2479,12 +2482,12 @@ body {
         -moz-border-radius: 50%;
         border-radius: 50%;
         border: 2px solid rgba(0, 0, 0, 0.5); }
-  .radial-container .radial-counter {
-    width: 12%; }
   .radial-container .radial-aside {
-    max-width: calc(88% - 80vh);
-    min-width: calc(88% - 80vh);
+    max-width: calc(100% - 80vh);
+    min-width: calc(100% - 80vh);
     padding-left: 40px; }
+    .radial-container .radial-aside .level {
+      margin: 0px; }
     .radial-container .radial-aside .record-info {
       text-align: left;
       padding: 16px; }
@@ -2512,22 +2515,26 @@ body {
           font-size: 3.5vw;
           width: 100%;
           display: block; }
-    .radial-container .radial-aside .cover-title {
-      font-family: 'nowaymedium'; }
+    .radial-container .radial-aside .cover-title,
     .radial-container .radial-aside .cover-artist {
+      font-size: 0.8em; }
+    .radial-container .radial-aside .cover-title {
+      margin: 0px; }
+    .radial-container .radial-aside .cover-artist {
+      margin: 0px;
       font-family: 'noway_regularitalic'; }
     .radial-container .radial-aside .video {
       margin-top: 30px;
       margin-bottom: 30px;
       background-color: #F2F2F2;
-      height: 40vh;
       position: relative; }
 
 /*===============================
 =            TREEMAP            =
 ===============================*/
 .section-treemap {
-  height: 90vh; }
+  height: 70vh;
+  position: relative; }
   .section-treemap .node {
     position: absolute;
     overflow: hidden;
@@ -2542,6 +2549,8 @@ body {
         position: relative;
         margin: 0px auto;
         padding: 18px 20px; }
+        .section-treemap .node .node-content p strong {
+          font-family: 'nowaylight'; }
         .section-treemap .node .node-content p strong, .section-treemap .node .node-content p em {
           opacity: 0;
           -webkit-transform: translateY(-10px);
@@ -2552,11 +2561,10 @@ body {
           font-style: normal;
           font-size: 14px; }
         .section-treemap .node .node-content p span {
-          font-style: italic;
+          font-family: 'nowaymedium';
           z-index: 1;
           display: block;
           padding: 8px 0 0 0;
-          color: rgba(0, 0, 0, 0.4);
           text-shadow: none;
           text-transform: none;
           font-size: 0.75em;
@@ -2630,6 +2638,11 @@ div.vis-tooltip {
   border-radius: 0px;
   background-color: #FFF;
   font-family: 'nowayregular', sans-serif; }
+  div.vis-tooltip .timeline-tooltip-number {
+    font-size: 1.75em; }
+  div.vis-tooltip .timeline-tooltip-album {
+    font-size: 1.25em;
+    font-family: 'nowaymedium'; }
 
 .button,
 .axis text {
@@ -2724,20 +2737,18 @@ html {
 .grid-item--height2 {
   height: 200px; }
 
-.level {
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start; }
-  .level .level-item {
-    max-width: 40%; }
-  .level .counter .counter-units {
-    font-family: 'nowaymedium'; }
-  .level .counter .counter-number {
-    font-family: 'nowaylight';
-    font-size: 3.375em;
-    margin: 0px; }
-  .level .counter .counter-link {
-    padding-top: 16px; }
+.level-item {
+  background-color: #FFF;
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
+  justify-content: left; }
+
+.content .counter .counter-number {
+  font-family: 'nowaylight';
+  font-size: 3.375em;
+  margin: 0px; }
+.content .counter .counter-entity {
+  font-family: 'nowaymedium'; }
 
 path {
   fill: none; }

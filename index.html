@@ -30,34 +30,30 @@
     <!-- ARTICLE COVER -->
     <div class="article-cover" style="background-image:url(images/article-cover-lazarus.png)">
     </div>
+    
+    <!-- TREEMAP COVERS -->
+    <div id="covers-treemap" class="viz section-treemap"></div>
 
-    <!--     <div class="section is-white">
-        <div class="container">
-            <div class="buttons"></div>
-        </div>
-    </div> -->
-    <!-- TIMELINE -->
-    <div id="timeline" class="viz timeline-chart"></div>
     <!-- COUNTERS -->
-    <div class="section is-white">
+    <div class="section">
         <div class="container">
             <div class="content">
                 <!-- ARTICLE TITLE -->
                 <h1 class="">Listen the many covers of Bowie</h1>
-                <nav class="level">
-                    <div class="level-item counter">
+                <div class="columns">
+                    <div class="column counter">
                         <div id="bowie-discography">
                         </div>
                     </div>
-                    <div class="level-item counter">
+                    <div class="column counter">
                         <div id="bowie-album">
                         </div>
                     </div>
-                    <div class="level-item counter">
+                    <div class="column counter">
                         <div id="bowie-track">
                         </div>
                     </div>
-                    <div class="level-item counter">
+                    <div class="column counter">
                         <div id="bowie-covers">
                             <p class="counter-number">0</p>
                             <h5 class="counter-units">Covers in the Bowie's covers album</h5>
@@ -65,19 +61,26 @@
                             <h5 class="counter-link"><a href="#8b7bd1c2-be07-3083-989a-714f219f1ff8">Go to album</a></h5>
                         </div>
                     </div>
-                </nav>
-                <h3 class="">Listen to <strong id="allOthers"></strong> covers in David Bowie's albums</h3>
-                <p>[Bowie covers] is a project with the aim of measure the influence of Bowie in RNR music.</p>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- TREEMAP -->
-    <div id="covers-treemap" class="viz section-treemap"></div>
+
     <!-- RADIAL CHARTS CONTAINER -->
     <div class="section is-white">
         <div class="container">
-            <div class="viz radial-container">
+            <div id="coversRadial" class="viz radial-container">
+                <div class="radial-album" style="display:none;"></div>
+            </div>
+        </div>
+    </div>
+    <!-- TREEMAP PINUPS -->
+    <div id="covers-pinups" class="viz section-treemap"></div>
+    <!-- RADIAL CHARTS CONTAINER PINUPS -->
+    <div class="section is-white">
+        <div class="container">
+            <div id="coversRadialPinups" class="viz radial-container">
                 <div class="radial-album" style="display:none;"></div>
             </div>
         </div>
@@ -85,30 +88,34 @@
     <!-- TIMELINE WITH PERIOD FILTERING -->
     <div class="section is-white">
         <div class="container">
-            <h5>Distribution of covers by years and periods</h5>
+            <div class="content">
+                <h2>Distribution of albums by years and periods</h2>
+                <div class="buttons"></div>
+            </div>
         </div>
     </div>
-    <div class="section is-white">
-        <div class="container">
-            <h2 class="tooltip" title="tururu">BSIDE - The covers that Bowie did</h2>
-            <h3>Pin Ups the covers album</h3>
-            <!--             <h3>Across the universe - The most versioned song</h3> -->
-            <h3>Tags associated to Bowie's music</h3>
-            <!-- /container -->
-        </div>
-    </div>
+
+    <!-- TIMELINE -->
+    <div id="timeline" class="viz timeline-chart"></div>
+
+
     <!-- RAW LIST -->
-    <div id="buttonsCovers" class="button-group filter-button-group">
-        <button data-filter="*">show all</button>
-        <button data-filter=".96c1">96c1</button>
-    </div>
-    <div id="rawList" class="grid clearfix grid-covers">
-        <div class="grid-sizer"></div>
-    </div>
+    <!-- 
+        <div id="buttonsCovers" class="button-group filter-button-group">
+            <button data-filter="*">show all</button>
+            <button data-filter=".96c1">96c1</button>
+        </div>  
+        <div id="rawList" class="grid clearfix grid-covers">
+            <div class="grid-sizer"></div>
+        </div> 
+    -->
+
     <!-- BAR CHART -->
-    <!--     <div class="bar-chart">
-        <svg id="coversBar"></svg>
-    </div> -->
+    <!--     
+        <div class="bar-chart">
+            <svg id="coversBar"></svg>
+        </div> 
+    -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/d3/d3.min.js"></script>
     <script src="bower_components/d3-tip/index.js"></script>

@@ -52,8 +52,6 @@
     }
 }
 
-
-
 .album-thumbnail {
     width: 60px;
     height: 60px;
@@ -72,6 +70,13 @@ div.vis-tooltip {
     border-radius: 0px;
     background-color: #FFF;
     font-family: 'nowayregular', sans-serif;
+    .timeline-tooltip-number {
+        font-size: 1.75em;
+    }
+    .timeline-tooltip-album {
+        font-size: 1.25em;
+        font-family: 'nowaymedium';
+    }
 }
 
 .button,
@@ -88,6 +93,5 @@ div.vis-tooltip {
 }
 
 .timeline-chart {
-
     padding-top: 0px;
 }

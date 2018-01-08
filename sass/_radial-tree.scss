@@ -1,10 +1,9 @@
 .radial-container {
-    position: relative;
-    // width: 61.8vw;
-    
+    position: relative; // width: 61.8vw;
     .radial-item {
         // box-shadow: 0px 2px 0px 0px #CCC;
-        padding: 10vh 0px;
+        margin: 5vh 0px;
+        padding: 5vh 0px;
     }
 
     .radial-album,
@@ -19,12 +18,9 @@
         // background-color: $bsides;
         // border: 1px solid $bsides;
         padding: 0px;
-        position: relative;
-        // text-align: center;
+        position: relative; // text-align: center;
         // border-radius: 50%;
-        
-        border: 1px dotted #CCC;
-        // radial tree
+        border: 1px dotted #CCC; // radial tree
         svg {
             position: absolute;
             left: 0px;
@@ -94,16 +90,18 @@
         }
     }
     .radial-counter {
-        width: 12%;
+        // width: 12%;
     }
     .radial-aside {
         // box-shadow: inset 2px 0px 0px 0px #0CC;
-        max-width: calc(88% - #{$base-layout});
-        min-width: calc(88% - #{$base-layout});
+        max-width: calc(100% - #{$base-layout});
+        min-width: calc(100% - #{$base-layout});
         padding-left: 40px;
+        .level {
+            margin: 0px
+        }
         .record-info {
-            text-align: left;
-            // width: 100%; // line-height: 50px;
+            text-align: left; // width: 100%; // line-height: 50px;
             padding: 16px;
             h2 {
                 margin: 0px;
@@ -112,8 +110,7 @@
                 max-width: 60%;
                 font-size: 24px;
             }
-            strong {
-            }
+            strong {}
             span,
             em {
                 padding: 8px;
@@ -137,19 +134,23 @@
                 }
             }
         }
+        .cover-title,
+        .cover-artist {
+            font-size: 0.8em;
+        }
         .cover-title {
-            font-family: 'nowaymedium';
+            // font-family: 'nowaymedium';
+            margin: 0px;
         }
         .cover-artist {
+            margin: 0px;
             font-family: 'noway_regularitalic';
         }
         .video {
             margin-top: 30px;
             margin-bottom: 30px;
-            background-color: #F2F2F2;
-            height: 40vh;
-            position: relative;
-            // &:before {
+            background-color: #F2F2F2; // height: 40vh;
+            position: relative; // &:before {
             //     content: "Click on artists to load de video cover";
             //     position: absolute;
             //     z-index: 0;

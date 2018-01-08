@@ -20,6 +20,9 @@ body {
   line-height: 1.45;
   color: #333;
   .content {
+    a {
+      color: $bsides;
+    }
     p {margin-bottom: 1.3em;}
 
     h1, h2, h3, h4 {

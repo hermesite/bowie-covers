@@ -6,7 +6,8 @@
 
 .section-treemap {
     // height: 61.8vh;
-    height: 90vh;
+    height: 70vh;
+    position: relative;
     .node {
         position: absolute;
         overflow: hidden;
@@ -23,6 +24,10 @@
                 margin: 0px auto;
                 padding: 18px 20px;
 
+                strong {
+                    font-family: 'nowaylight';
+                }
+
                 strong, em {
                     opacity: 0;
                     -webkit-transform: translateY(-10px);
@@ -37,11 +42,10 @@
                 }
 
                 span {
-                    font-style: italic;
+                    font-family: 'nowaymedium';
                     z-index: 1;
                     display: block;
                     padding: 8px 0 0 0;
-                    color: rgba(0, 0, 0, 0.4);
                     text-shadow: none;
                     text-transform: none;
                     font-size: 0.75em;
