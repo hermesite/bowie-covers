@@ -53,18 +53,6 @@ chart.append("g")
     .call(yAxis);
 
 
-// var width = 200,
-//     height = 200,
-var radius = 100;
-
-
-// var x = d3.scale.linear()
-//     .range([0, 2 * Math.PI]);
-
-// var y = d3.scale.linear()
-//     .range([0, radius]);
-
-
 var color = d3.scale.category20c();
 
 var tree = d3.layout.tree()
@@ -636,22 +624,24 @@ d3.json('data/david_bowie_data.videos.json', function(error, artist) {
         // var counterSide = radialItem.append('div')
         //     .attr('class', 'radial-counter content');
 
+        var albumTitle = radialItem.append('div').attr('class', 'col-xs-12 radial-album-title');
+
+        albumTitle.append('nav').attr('class', 'level')
+            .append('div').attr('class', 'counter')
+            .append('div').attr('class', 'content')
+            .html(function() {
+                return '<p class="counter-number"><strong>' + data.name + '</strong> | ' + size + ' <span class="counter-units">Covers</span></p>';
+            });
+
         var box = radialItem.append('div')
-            .attr('id', data.id.substr(0, 5))
+            .attr('id', data.id)
             .attr('class', 'radial-album');
 
         var aside = radialItem.append('div')
             .attr('class', 'radial-aside content');
 
-        aside.append('nav').attr('class', 'level')
-            .append('div').attr('class', 'counter')
-            .append('div').attr('class', 'content')
-            .html(function() {
-                return '<p class="counter-number">' + size + '</p><h5 class="counter-units">Covers</h5><p class="counter-entity">' + data.name + '</p>';
-            });
 
         box.append('div').attr('class', 'record');
-
 
         var coverTitle = aside.append('p').attr('class', 'cover-title').text('Song title');
         var coverArtist = aside.append('p').attr('class', 'cover-artist').text('Cover artist');
@@ -666,23 +656,22 @@ d3.json('data/david_bowie_data.videos.json', function(error, artist) {
         });
 
         var
-            widthFactor = 1.67,
+            widthFactor = 13.5,
             recordSize = widthRadial / widthFactor;
 
+        $('.record').css('height', recordSize + '%');
+        $('.record').css('width', recordSize + '%');
+        $('.record').css('margin-top', -(recordSize / 2) + '%');
+        $('.record').css('margin-left', -(recordSize / 2) + '%');
 
-        $('.record').css('height', recordSize + 'px');
-        $('.record').css('width', recordSize + 'px');
-        $('.record').css('margin-top', -(recordSize / 2) + 'px');
-        $('.record').css('margin-left', -(recordSize / 2) + 'px');
-
-        $('#' + data.id.substr(0, 5) + ' .record')
+        $('#' + data.id + ' .record')
             .css({
                 'background-image': 'url(' + image + ')'
             });
 
         var svg = box.append('svg')
-            .attr('width', widthRadial)
-            .attr('height', diameter)
+            .attr('width', "100%")
+            .attr('height', "100%")
             .append('g')
             .attr('transform', 'translate(' + widthRadial / 2 + ',' + diameter / 2 + ')');
 
@@ -733,8 +722,6 @@ d3.json('data/david_bowie_data.videos.json', function(error, artist) {
             });
 
         // oscar
-
-
 
         var text = svg.selectAll('text').data(nodes)
             .enter().append('g')

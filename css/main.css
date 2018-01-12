@@ -2482,39 +2482,14 @@ body {
         -moz-border-radius: 50%;
         border-radius: 50%;
         border: 2px solid rgba(0, 0, 0, 0.5); }
+  .radial-container .radial-album-title .counter-units {
+    text-transform: uppercase; }
   .radial-container .radial-aside {
     max-width: calc(100% - 80vh);
     min-width: calc(100% - 80vh);
     padding-left: 40px; }
     .radial-container .radial-aside .level {
       margin: 0px; }
-    .radial-container .radial-aside .record-info {
-      text-align: left;
-      padding: 16px; }
-      .radial-container .radial-aside .record-info h2 {
-        margin: 0px; }
-      .radial-container .radial-aside .record-info em {
-        max-width: 60%;
-        font-size: 24px; }
-      .radial-container .radial-aside .record-info span,
-      .radial-container .radial-aside .record-info em {
-        padding: 8px;
-        display: inline-block;
-        vertical-align: middle; }
-      .radial-container .radial-aside .record-info span {
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 1vw;
-        box-shadow: 2px 0px 0px 0px #000;
-        padding-top: 0px;
-        padding-bottom: 0px;
-        font-family: 'nowaybold'; }
-        .radial-container .radial-aside .record-info span strong {
-          font-weight: initial;
-          font-family: 'nowaylight';
-          font-size: 3.5vw;
-          width: 100%;
-          display: block; }
     .radial-container .radial-aside .cover-title,
     .radial-container .radial-aside .cover-artist {
       font-size: 0.8em; }
