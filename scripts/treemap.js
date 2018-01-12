@@ -8,9 +8,9 @@ var MIN_COVERS_ALBUM = 8;
 var bannedAlbums = ['bc02d917-a52e-3d77-ae5f-75aa3fb754ef']
 // Club Bowie: Rare and Unreleased 12″ Mixes
 
-var
-    widthTreemap = $(".section-treemap").width(),
+var widthTreemap = $(".section-treemap").width(),
     heightTreemap = $(".section-treemap").height(),
+
     widthRadial = $('.radial-album').width(),
     diameter = widthRadial,
     radialOffset = diameter / 5;
@@ -247,8 +247,6 @@ d3.json('data/david_bowie_data.videos.json', function(error, artist) {
                     var myTrackSun = {};
                     var myTrackRadial = {};
 
-
-
                     if (track.covers.length > 0) {
 
                         if (jQuery.inArray(track.title, countCovers) === -1 && jQuery.inArray(track.title.substr(0, 8), countRepeated) === -1) {
@@ -443,6 +441,12 @@ d3.json('data/david_bowie_data.videos.json', function(error, artist) {
 
         createTreemap(bowieSongsTree, treemapContainer);
 
+        // $(window).resize(function() {
+        //     console.log("EYY");
+        //     createTreemap(bowieSongsTree, treemapContainer);
+
+        // });
+
         // Album with more covers
 
         if (scope != 'pinups') {
@@ -551,13 +555,9 @@ d3.json('data/david_bowie_data.videos.json', function(error, artist) {
 
     function createTreemap(treeData, container) {
 
-        var div = d3.select(container)
-            .style('width', widthTreemap + 'px')
-            .style('height', heightTreemap + 'px');
-
         var treemap = d3.layout.treemap()
-            .size([widthTreemap, heightTreemap])
-            .sticky(false)
+            .size([100, 100])
+            .sticky(true)
             .round(true)
             .mode('squarify')
             .value(function(d) {
@@ -566,9 +566,15 @@ d3.json('data/david_bowie_data.videos.json', function(error, artist) {
                 }
             });
 
-        div.datum(treeData).selectAll('.node')
+        var treemapContainer = d3.select(container);
+        treemapContainer.datum(treeData);
+
+        var treemapJoin = treemapContainer.selectAll('.node')
             .data(treemap.nodes)
-            .enter().append('a')
+
+        treemapJoin.attr('class', 'update');
+
+        treemapJoin.enter().append('a')
             .attr('id', function(d) {
                 return d.positionInArray;
             })
@@ -577,27 +583,15 @@ d3.json('data/david_bowie_data.videos.json', function(error, artist) {
                     return '#' + d.id;
                 }
             })
-            .attr('data-anchor', function(d) {
-                if (d.id) {
-                    return d.id;
-                }
-            })
             .attr('class', 'node row middle-xs')
-
-            // .on('click', function() {
-
-            //     var anchorLink = '#' + $(this).attr('data-anchor')
-            //     $(document).scrollTop($(anchorLink).offset().top);
-
-
-            // })
             .style('background-image', function(d) {
                 if (d.image) {
                     return 'url(' + d.image + ')';
                 }
             })
-            .call(position)
-            .append('div')
+            .call(position);
+
+        treemapJoin.append('div')
             .attr('class', function(d) {
                 var textSize = Math.round(d.area / 1000);
                 return 'col-xs row middle-xs node-content area-' + textSize;
@@ -615,16 +609,16 @@ d3.json('data/david_bowie_data.videos.json', function(error, artist) {
     function position() {
 
         this.style('left', function(d) {
-                return d.x + 'px';
+                return d.x + '%';
             })
             .style('top', function(d) {
-                return d.y + 'px';
+                return d.y + '%';
             })
             .style('width', function(d) {
-                return Math.max(0, d.dx - 1) + 'px';
+                return Math.max(0, d.dx) + '%';
             })
             .style('height', function(d) {
-                return Math.max(0, d.dy - 1) + 'px';
+                return Math.max(0, d.dy) + '%';
             });
     }
 
@@ -892,6 +886,7 @@ $('a[href*="#"]')
             }
         }
     });
+
 function navigateSooth() {
     $('a[href*="#"]')
         // Remove links that don't actually link to anything
@@ -933,6 +928,8 @@ function navigateSooth() {
 $('document').ready(function() {
     // Select all links with hashes
 })
+
+
 
 
 function sortUnorderedList(ul, sortDescending) {

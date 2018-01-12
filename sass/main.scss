@@ -188,15 +188,18 @@ form {
 
     //$size: $i;
     .node-content {
-        &.area-#{$i} {
-            p {
-                    @if ($i <= 50) {
-                        font-size: 14px;
-                    } @else {
-                        font-size: ($i/3) + px;
-                    }
-            }
+        p {
+            font-size: 14px;
         }
+        // &.area-#{$i} {
+        //     p {
+        //             @if ($i <= 50) {
+        //                 font-size: 14px;
+        //             } @else {
+        //                 font-size: ($i/3) + px;
+        //             }
+        //     }
+        // }
     }
 }
 
