@@ -2482,39 +2482,14 @@ body {
         -moz-border-radius: 50%;
         border-radius: 50%;
         border: 2px solid rgba(0, 0, 0, 0.5); }
+  .radial-container .radial-album-title .counter-units {
+    text-transform: uppercase; }
   .radial-container .radial-aside {
     max-width: calc(100% - 80vh);
     min-width: calc(100% - 80vh);
     padding-left: 40px; }
     .radial-container .radial-aside .level {
       margin: 0px; }
-    .radial-container .radial-aside .record-info {
-      text-align: left;
-      padding: 16px; }
-      .radial-container .radial-aside .record-info h2 {
-        margin: 0px; }
-      .radial-container .radial-aside .record-info em {
-        max-width: 60%;
-        font-size: 24px; }
-      .radial-container .radial-aside .record-info span,
-      .radial-container .radial-aside .record-info em {
-        padding: 8px;
-        display: inline-block;
-        vertical-align: middle; }
-      .radial-container .radial-aside .record-info span {
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 1vw;
-        box-shadow: 2px 0px 0px 0px #000;
-        padding-top: 0px;
-        padding-bottom: 0px;
-        font-family: 'nowaybold'; }
-        .radial-container .radial-aside .record-info span strong {
-          font-weight: initial;
-          font-family: 'nowaylight';
-          font-size: 3.5vw;
-          width: 100%;
-          display: block; }
     .radial-container .radial-aside .cover-title,
     .radial-container .radial-aside .cover-artist {
       font-size: 0.8em; }
@@ -2533,8 +2508,10 @@ body {
 =            TREEMAP            =
 ===============================*/
 .section-treemap {
-  height: 70vh;
-  position: relative; }
+  height: 61.8vh;
+  width: 100%;
+  position: relative;
+  background-color: #FFF; }
   .section-treemap .node {
     position: absolute;
     overflow: hidden;
@@ -3145,2402 +3122,2402 @@ form {
 .color-1 {
   background: #C00; }
 
-.node-content.area-1 p {
+.node-content p {
   font-size: 14px; }
 
 .color-2 {
   background: #C00; }
 
-.node-content.area-2 p {
+.node-content p {
   font-size: 14px; }
 
 .color-3 {
   background: #C00; }
 
-.node-content.area-3 p {
+.node-content p {
   font-size: 14px; }
 
 .color-4 {
   background: #C00; }
 
-.node-content.area-4 p {
+.node-content p {
   font-size: 14px; }
 
 .color-5 {
   background: #C00; }
 
-.node-content.area-5 p {
+.node-content p {
   font-size: 14px; }
 
 .color-6 {
   background: #C00; }
 
-.node-content.area-6 p {
+.node-content p {
   font-size: 14px; }
 
 .color-7 {
   background: #C00; }
 
-.node-content.area-7 p {
+.node-content p {
   font-size: 14px; }
 
 .color-8 {
   background: #C00; }
 
-.node-content.area-8 p {
+.node-content p {
   font-size: 14px; }
 
 .color-9 {
   background: #C00; }
 
-.node-content.area-9 p {
+.node-content p {
   font-size: 14px; }
 
 .color-10 {
   background: #C00; }
 
-.node-content.area-10 p {
+.node-content p {
   font-size: 14px; }
 
 .color-11 {
   background: #0C0; }
 
-.node-content.area-11 p {
+.node-content p {
   font-size: 14px; }
 
 .color-12 {
   background: #0C0; }
 
-.node-content.area-12 p {
+.node-content p {
   font-size: 14px; }
 
 .color-13 {
   background: #0C0; }
 
-.node-content.area-13 p {
+.node-content p {
   font-size: 14px; }
 
 .color-14 {
   background: #0C0; }
 
-.node-content.area-14 p {
+.node-content p {
   font-size: 14px; }
 
 .color-15 {
   background: #0C0; }
 
-.node-content.area-15 p {
+.node-content p {
   font-size: 14px; }
 
 .color-16 {
   background: #0C0; }
 
-.node-content.area-16 p {
+.node-content p {
   font-size: 14px; }
 
 .color-17 {
   background: #0C0; }
 
-.node-content.area-17 p {
+.node-content p {
   font-size: 14px; }
 
 .color-18 {
   background: #0C0; }
 
-.node-content.area-18 p {
+.node-content p {
   font-size: 14px; }
 
 .color-19 {
   background: #0C0; }
 
-.node-content.area-19 p {
+.node-content p {
   font-size: 14px; }
 
 .color-20 {
   background: #00C; }
 
-.node-content.area-20 p {
+.node-content p {
   font-size: 14px; }
 
 .color-21 {
   background: #00C; }
 
-.node-content.area-21 p {
+.node-content p {
   font-size: 14px; }
 
 .color-22 {
   background: #00C; }
 
-.node-content.area-22 p {
+.node-content p {
   font-size: 14px; }
 
 .color-23 {
   background: #00C; }
 
-.node-content.area-23 p {
+.node-content p {
   font-size: 14px; }
 
 .color-24 {
   background: #00C; }
 
-.node-content.area-24 p {
+.node-content p {
   font-size: 14px; }
 
 .color-25 {
   background: #00C; }
 
-.node-content.area-25 p {
+.node-content p {
   font-size: 14px; }
 
 .color-26 {
   background: #00C; }
 
-.node-content.area-26 p {
+.node-content p {
   font-size: 14px; }
 
 .color-27 {
   background: #00C; }
 
-.node-content.area-27 p {
+.node-content p {
   font-size: 14px; }
 
 .color-28 {
   background: #00C; }
 
-.node-content.area-28 p {
+.node-content p {
   font-size: 14px; }
 
 .color-29 {
   background: #00C; }
 
-.node-content.area-29 p {
+.node-content p {
   font-size: 14px; }
 
 .color-30 {
   background: #00C; }
 
-.node-content.area-30 p {
+.node-content p {
   font-size: 14px; }
 
 .color-31 {
   background: #00C; }
 
-.node-content.area-31 p {
+.node-content p {
   font-size: 14px; }
 
 .color-32 {
   background: #00C; }
 
-.node-content.area-32 p {
+.node-content p {
   font-size: 14px; }
 
 .color-33 {
   background: #00C; }
 
-.node-content.area-33 p {
+.node-content p {
   font-size: 14px; }
 
 .color-34 {
   background: #00C; }
 
-.node-content.area-34 p {
+.node-content p {
   font-size: 14px; }
 
 .color-35 {
   background: #00C; }
 
-.node-content.area-35 p {
+.node-content p {
   font-size: 14px; }
 
 .color-36 {
   background: #00C; }
 
-.node-content.area-36 p {
+.node-content p {
   font-size: 14px; }
 
 .color-37 {
   background: #00C; }
 
-.node-content.area-37 p {
+.node-content p {
   font-size: 14px; }
 
 .color-38 {
   background: #00C; }
 
-.node-content.area-38 p {
+.node-content p {
   font-size: 14px; }
 
 .color-39 {
   background: #00C; }
 
-.node-content.area-39 p {
+.node-content p {
   font-size: 14px; }
 
 .color-40 {
   background: #00C; }
 
-.node-content.area-40 p {
+.node-content p {
   font-size: 14px; }
 
 .color-41 {
   background: #00C; }
 
-.node-content.area-41 p {
+.node-content p {
   font-size: 14px; }
 
 .color-42 {
   background: #00C; }
 
-.node-content.area-42 p {
+.node-content p {
   font-size: 14px; }
 
 .color-43 {
   background: #00C; }
 
-.node-content.area-43 p {
+.node-content p {
   font-size: 14px; }
 
 .color-44 {
   background: #00C; }
 
-.node-content.area-44 p {
+.node-content p {
   font-size: 14px; }
 
 .color-45 {
   background: #00C; }
 
-.node-content.area-45 p {
+.node-content p {
   font-size: 14px; }
 
 .color-46 {
   background: #00C; }
 
-.node-content.area-46 p {
+.node-content p {
   font-size: 14px; }
 
 .color-47 {
   background: #00C; }
 
-.node-content.area-47 p {
+.node-content p {
   font-size: 14px; }
 
 .color-48 {
   background: #00C; }
 
-.node-content.area-48 p {
+.node-content p {
   font-size: 14px; }
 
 .color-49 {
   background: #00C; }
 
-.node-content.area-49 p {
+.node-content p {
   font-size: 14px; }
 
 .color-50 {
   background: #00C; }
 
-.node-content.area-50 p {
+.node-content p {
   font-size: 14px; }
 
 .color-51 {
   background: #00C; }
 
-.node-content.area-51 p {
-  font-size: 17px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-52 {
   background: #00C; }
 
-.node-content.area-52 p {
-  font-size: 17.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-53 {
   background: #00C; }
 
-.node-content.area-53 p {
-  font-size: 17.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-54 {
   background: #00C; }
 
-.node-content.area-54 p {
-  font-size: 18px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-55 {
   background: #00C; }
 
-.node-content.area-55 p {
-  font-size: 18.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-56 {
   background: #00C; }
 
-.node-content.area-56 p {
-  font-size: 18.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-57 {
   background: #00C; }
 
-.node-content.area-57 p {
-  font-size: 19px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-58 {
   background: #00C; }
 
-.node-content.area-58 p {
-  font-size: 19.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-59 {
   background: #00C; }
 
-.node-content.area-59 p {
-  font-size: 19.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-60 {
   background: #00C; }
 
-.node-content.area-60 p {
-  font-size: 20px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-61 {
   background: #00C; }
 
-.node-content.area-61 p {
-  font-size: 20.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-62 {
   background: #00C; }
 
-.node-content.area-62 p {
-  font-size: 20.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-63 {
   background: #00C; }
 
-.node-content.area-63 p {
-  font-size: 21px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-64 {
   background: #00C; }
 
-.node-content.area-64 p {
-  font-size: 21.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-65 {
   background: #00C; }
 
-.node-content.area-65 p {
-  font-size: 21.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-66 {
   background: #00C; }
 
-.node-content.area-66 p {
-  font-size: 22px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-67 {
   background: #00C; }
 
-.node-content.area-67 p {
-  font-size: 22.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-68 {
   background: #00C; }
 
-.node-content.area-68 p {
-  font-size: 22.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-69 {
   background: #00C; }
 
-.node-content.area-69 p {
-  font-size: 23px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-70 {
   background: #00C; }
 
-.node-content.area-70 p {
-  font-size: 23.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-71 {
   background: #00C; }
 
-.node-content.area-71 p {
-  font-size: 23.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-72 {
   background: #00C; }
 
-.node-content.area-72 p {
-  font-size: 24px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-73 {
   background: #00C; }
 
-.node-content.area-73 p {
-  font-size: 24.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-74 {
   background: #00C; }
 
-.node-content.area-74 p {
-  font-size: 24.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-75 {
   background: #00C; }
 
-.node-content.area-75 p {
-  font-size: 25px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-76 {
   background: #00C; }
 
-.node-content.area-76 p {
-  font-size: 25.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-77 {
   background: #00C; }
 
-.node-content.area-77 p {
-  font-size: 25.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-78 {
   background: #00C; }
 
-.node-content.area-78 p {
-  font-size: 26px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-79 {
   background: #00C; }
 
-.node-content.area-79 p {
-  font-size: 26.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-80 {
   background: #00C; }
 
-.node-content.area-80 p {
-  font-size: 26.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-81 {
   background: #00C; }
 
-.node-content.area-81 p {
-  font-size: 27px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-82 {
   background: #00C; }
 
-.node-content.area-82 p {
-  font-size: 27.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-83 {
   background: #00C; }
 
-.node-content.area-83 p {
-  font-size: 27.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-84 {
   background: #00C; }
 
-.node-content.area-84 p {
-  font-size: 28px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-85 {
   background: #00C; }
 
-.node-content.area-85 p {
-  font-size: 28.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-86 {
   background: #00C; }
 
-.node-content.area-86 p {
-  font-size: 28.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-87 {
   background: #00C; }
 
-.node-content.area-87 p {
-  font-size: 29px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-88 {
   background: #00C; }
 
-.node-content.area-88 p {
-  font-size: 29.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-89 {
   background: #00C; }
 
-.node-content.area-89 p {
-  font-size: 29.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-90 {
   background: #00C; }
 
-.node-content.area-90 p {
-  font-size: 30px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-91 {
   background: #00C; }
 
-.node-content.area-91 p {
-  font-size: 30.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-92 {
   background: #00C; }
 
-.node-content.area-92 p {
-  font-size: 30.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-93 {
   background: #00C; }
 
-.node-content.area-93 p {
-  font-size: 31px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-94 {
   background: #00C; }
 
-.node-content.area-94 p {
-  font-size: 31.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-95 {
   background: #00C; }
 
-.node-content.area-95 p {
-  font-size: 31.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-96 {
   background: #00C; }
 
-.node-content.area-96 p {
-  font-size: 32px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-97 {
   background: #00C; }
 
-.node-content.area-97 p {
-  font-size: 32.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-98 {
   background: #00C; }
 
-.node-content.area-98 p {
-  font-size: 32.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-99 {
   background: #00C; }
 
-.node-content.area-99 p {
-  font-size: 33px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-100 {
   background: #00C; }
 
-.node-content.area-100 p {
-  font-size: 33.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-101 {
   background: #00C; }
 
-.node-content.area-101 p {
-  font-size: 33.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-102 {
   background: #00C; }
 
-.node-content.area-102 p {
-  font-size: 34px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-103 {
   background: #00C; }
 
-.node-content.area-103 p {
-  font-size: 34.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-104 {
   background: #00C; }
 
-.node-content.area-104 p {
-  font-size: 34.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-105 {
   background: #00C; }
 
-.node-content.area-105 p {
-  font-size: 35px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-106 {
   background: #00C; }
 
-.node-content.area-106 p {
-  font-size: 35.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-107 {
   background: #00C; }
 
-.node-content.area-107 p {
-  font-size: 35.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-108 {
   background: #00C; }
 
-.node-content.area-108 p {
-  font-size: 36px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-109 {
   background: #00C; }
 
-.node-content.area-109 p {
-  font-size: 36.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-110 {
   background: #00C; }
 
-.node-content.area-110 p {
-  font-size: 36.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-111 {
   background: #00C; }
 
-.node-content.area-111 p {
-  font-size: 37px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-112 {
   background: #00C; }
 
-.node-content.area-112 p {
-  font-size: 37.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-113 {
   background: #00C; }
 
-.node-content.area-113 p {
-  font-size: 37.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-114 {
   background: #00C; }
 
-.node-content.area-114 p {
-  font-size: 38px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-115 {
   background: #00C; }
 
-.node-content.area-115 p {
-  font-size: 38.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-116 {
   background: #00C; }
 
-.node-content.area-116 p {
-  font-size: 38.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-117 {
   background: #00C; }
 
-.node-content.area-117 p {
-  font-size: 39px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-118 {
   background: #00C; }
 
-.node-content.area-118 p {
-  font-size: 39.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-119 {
   background: #00C; }
 
-.node-content.area-119 p {
-  font-size: 39.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-120 {
   background: #00C; }
 
-.node-content.area-120 p {
-  font-size: 40px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-121 {
   background: #00C; }
 
-.node-content.area-121 p {
-  font-size: 40.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-122 {
   background: #00C; }
 
-.node-content.area-122 p {
-  font-size: 40.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-123 {
   background: #00C; }
 
-.node-content.area-123 p {
-  font-size: 41px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-124 {
   background: #00C; }
 
-.node-content.area-124 p {
-  font-size: 41.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-125 {
   background: #00C; }
 
-.node-content.area-125 p {
-  font-size: 41.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-126 {
   background: #00C; }
 
-.node-content.area-126 p {
-  font-size: 42px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-127 {
   background: #00C; }
 
-.node-content.area-127 p {
-  font-size: 42.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-128 {
   background: #00C; }
 
-.node-content.area-128 p {
-  font-size: 42.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-129 {
   background: #00C; }
 
-.node-content.area-129 p {
-  font-size: 43px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-130 {
   background: #00C; }
 
-.node-content.area-130 p {
-  font-size: 43.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-131 {
   background: #00C; }
 
-.node-content.area-131 p {
-  font-size: 43.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-132 {
   background: #00C; }
 
-.node-content.area-132 p {
-  font-size: 44px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-133 {
   background: #00C; }
 
-.node-content.area-133 p {
-  font-size: 44.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-134 {
   background: #00C; }
 
-.node-content.area-134 p {
-  font-size: 44.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-135 {
   background: #00C; }
 
-.node-content.area-135 p {
-  font-size: 45px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-136 {
   background: #00C; }
 
-.node-content.area-136 p {
-  font-size: 45.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-137 {
   background: #00C; }
 
-.node-content.area-137 p {
-  font-size: 45.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-138 {
   background: #00C; }
 
-.node-content.area-138 p {
-  font-size: 46px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-139 {
   background: #00C; }
 
-.node-content.area-139 p {
-  font-size: 46.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-140 {
   background: #00C; }
 
-.node-content.area-140 p {
-  font-size: 46.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-141 {
   background: #00C; }
 
-.node-content.area-141 p {
-  font-size: 47px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-142 {
   background: #00C; }
 
-.node-content.area-142 p {
-  font-size: 47.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-143 {
   background: #00C; }
 
-.node-content.area-143 p {
-  font-size: 47.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-144 {
   background: #00C; }
 
-.node-content.area-144 p {
-  font-size: 48px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-145 {
   background: #00C; }
 
-.node-content.area-145 p {
-  font-size: 48.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-146 {
   background: #00C; }
 
-.node-content.area-146 p {
-  font-size: 48.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-147 {
   background: #00C; }
 
-.node-content.area-147 p {
-  font-size: 49px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-148 {
   background: #00C; }
 
-.node-content.area-148 p {
-  font-size: 49.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-149 {
   background: #00C; }
 
-.node-content.area-149 p {
-  font-size: 49.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-150 {
   background: #00C; }
 
-.node-content.area-150 p {
-  font-size: 50px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-151 {
   background: #00C; }
 
-.node-content.area-151 p {
-  font-size: 50.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-152 {
   background: #00C; }
 
-.node-content.area-152 p {
-  font-size: 50.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-153 {
   background: #00C; }
 
-.node-content.area-153 p {
-  font-size: 51px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-154 {
   background: #00C; }
 
-.node-content.area-154 p {
-  font-size: 51.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-155 {
   background: #00C; }
 
-.node-content.area-155 p {
-  font-size: 51.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-156 {
   background: #00C; }
 
-.node-content.area-156 p {
-  font-size: 52px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-157 {
   background: #00C; }
 
-.node-content.area-157 p {
-  font-size: 52.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-158 {
   background: #00C; }
 
-.node-content.area-158 p {
-  font-size: 52.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-159 {
   background: #00C; }
 
-.node-content.area-159 p {
-  font-size: 53px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-160 {
   background: #00C; }
 
-.node-content.area-160 p {
-  font-size: 53.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-161 {
   background: #00C; }
 
-.node-content.area-161 p {
-  font-size: 53.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-162 {
   background: #00C; }
 
-.node-content.area-162 p {
-  font-size: 54px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-163 {
   background: #00C; }
 
-.node-content.area-163 p {
-  font-size: 54.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-164 {
   background: #00C; }
 
-.node-content.area-164 p {
-  font-size: 54.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-165 {
   background: #00C; }
 
-.node-content.area-165 p {
-  font-size: 55px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-166 {
   background: #00C; }
 
-.node-content.area-166 p {
-  font-size: 55.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-167 {
   background: #00C; }
 
-.node-content.area-167 p {
-  font-size: 55.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-168 {
   background: #00C; }
 
-.node-content.area-168 p {
-  font-size: 56px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-169 {
   background: #00C; }
 
-.node-content.area-169 p {
-  font-size: 56.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-170 {
   background: #00C; }
 
-.node-content.area-170 p {
-  font-size: 56.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-171 {
   background: #00C; }
 
-.node-content.area-171 p {
-  font-size: 57px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-172 {
   background: #00C; }
 
-.node-content.area-172 p {
-  font-size: 57.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-173 {
   background: #00C; }
 
-.node-content.area-173 p {
-  font-size: 57.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-174 {
   background: #00C; }
 
-.node-content.area-174 p {
-  font-size: 58px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-175 {
   background: #00C; }
 
-.node-content.area-175 p {
-  font-size: 58.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-176 {
   background: #00C; }
 
-.node-content.area-176 p {
-  font-size: 58.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-177 {
   background: #00C; }
 
-.node-content.area-177 p {
-  font-size: 59px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-178 {
   background: #00C; }
 
-.node-content.area-178 p {
-  font-size: 59.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-179 {
   background: #00C; }
 
-.node-content.area-179 p {
-  font-size: 59.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-180 {
   background: #00C; }
 
-.node-content.area-180 p {
-  font-size: 60px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-181 {
   background: #00C; }
 
-.node-content.area-181 p {
-  font-size: 60.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-182 {
   background: #00C; }
 
-.node-content.area-182 p {
-  font-size: 60.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-183 {
   background: #00C; }
 
-.node-content.area-183 p {
-  font-size: 61px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-184 {
   background: #00C; }
 
-.node-content.area-184 p {
-  font-size: 61.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-185 {
   background: #00C; }
 
-.node-content.area-185 p {
-  font-size: 61.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-186 {
   background: #00C; }
 
-.node-content.area-186 p {
-  font-size: 62px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-187 {
   background: #00C; }
 
-.node-content.area-187 p {
-  font-size: 62.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-188 {
   background: #00C; }
 
-.node-content.area-188 p {
-  font-size: 62.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-189 {
   background: #00C; }
 
-.node-content.area-189 p {
-  font-size: 63px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-190 {
   background: #00C; }
 
-.node-content.area-190 p {
-  font-size: 63.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-191 {
   background: #00C; }
 
-.node-content.area-191 p {
-  font-size: 63.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-192 {
   background: #00C; }
 
-.node-content.area-192 p {
-  font-size: 64px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-193 {
   background: #00C; }
 
-.node-content.area-193 p {
-  font-size: 64.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-194 {
   background: #00C; }
 
-.node-content.area-194 p {
-  font-size: 64.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-195 {
   background: #00C; }
 
-.node-content.area-195 p {
-  font-size: 65px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-196 {
   background: #00C; }
 
-.node-content.area-196 p {
-  font-size: 65.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-197 {
   background: #00C; }
 
-.node-content.area-197 p {
-  font-size: 65.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-198 {
   background: #00C; }
 
-.node-content.area-198 p {
-  font-size: 66px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-199 {
   background: #00C; }
 
-.node-content.area-199 p {
-  font-size: 66.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-200 {
   background: #00C; }
 
-.node-content.area-200 p {
-  font-size: 66.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-201 {
   background: #00C; }
 
-.node-content.area-201 p {
-  font-size: 67px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-202 {
   background: #00C; }
 
-.node-content.area-202 p {
-  font-size: 67.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-203 {
   background: #00C; }
 
-.node-content.area-203 p {
-  font-size: 67.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-204 {
   background: #00C; }
 
-.node-content.area-204 p {
-  font-size: 68px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-205 {
   background: #00C; }
 
-.node-content.area-205 p {
-  font-size: 68.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-206 {
   background: #00C; }
 
-.node-content.area-206 p {
-  font-size: 68.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-207 {
   background: #00C; }
 
-.node-content.area-207 p {
-  font-size: 69px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-208 {
   background: #00C; }
 
-.node-content.area-208 p {
-  font-size: 69.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-209 {
   background: #00C; }
 
-.node-content.area-209 p {
-  font-size: 69.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-210 {
   background: #00C; }
 
-.node-content.area-210 p {
-  font-size: 70px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-211 {
   background: #00C; }
 
-.node-content.area-211 p {
-  font-size: 70.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-212 {
   background: #00C; }
 
-.node-content.area-212 p {
-  font-size: 70.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-213 {
   background: #00C; }
 
-.node-content.area-213 p {
-  font-size: 71px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-214 {
   background: #00C; }
 
-.node-content.area-214 p {
-  font-size: 71.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-215 {
   background: #00C; }
 
-.node-content.area-215 p {
-  font-size: 71.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-216 {
   background: #00C; }
 
-.node-content.area-216 p {
-  font-size: 72px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-217 {
   background: #00C; }
 
-.node-content.area-217 p {
-  font-size: 72.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-218 {
   background: #00C; }
 
-.node-content.area-218 p {
-  font-size: 72.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-219 {
   background: #00C; }
 
-.node-content.area-219 p {
-  font-size: 73px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-220 {
   background: #00C; }
 
-.node-content.area-220 p {
-  font-size: 73.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-221 {
   background: #00C; }
 
-.node-content.area-221 p {
-  font-size: 73.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-222 {
   background: #00C; }
 
-.node-content.area-222 p {
-  font-size: 74px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-223 {
   background: #00C; }
 
-.node-content.area-223 p {
-  font-size: 74.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-224 {
   background: #00C; }
 
-.node-content.area-224 p {
-  font-size: 74.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-225 {
   background: #00C; }
 
-.node-content.area-225 p {
-  font-size: 75px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-226 {
   background: #00C; }
 
-.node-content.area-226 p {
-  font-size: 75.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-227 {
   background: #00C; }
 
-.node-content.area-227 p {
-  font-size: 75.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-228 {
   background: #00C; }
 
-.node-content.area-228 p {
-  font-size: 76px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-229 {
   background: #00C; }
 
-.node-content.area-229 p {
-  font-size: 76.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-230 {
   background: #00C; }
 
-.node-content.area-230 p {
-  font-size: 76.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-231 {
   background: #00C; }
 
-.node-content.area-231 p {
-  font-size: 77px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-232 {
   background: #00C; }
 
-.node-content.area-232 p {
-  font-size: 77.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-233 {
   background: #00C; }
 
-.node-content.area-233 p {
-  font-size: 77.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-234 {
   background: #00C; }
 
-.node-content.area-234 p {
-  font-size: 78px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-235 {
   background: #00C; }
 
-.node-content.area-235 p {
-  font-size: 78.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-236 {
   background: #00C; }
 
-.node-content.area-236 p {
-  font-size: 78.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-237 {
   background: #00C; }
 
-.node-content.area-237 p {
-  font-size: 79px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-238 {
   background: #00C; }
 
-.node-content.area-238 p {
-  font-size: 79.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-239 {
   background: #00C; }
 
-.node-content.area-239 p {
-  font-size: 79.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-240 {
   background: #00C; }
 
-.node-content.area-240 p {
-  font-size: 80px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-241 {
   background: #00C; }
 
-.node-content.area-241 p {
-  font-size: 80.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-242 {
   background: #00C; }
 
-.node-content.area-242 p {
-  font-size: 80.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-243 {
   background: #00C; }
 
-.node-content.area-243 p {
-  font-size: 81px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-244 {
   background: #00C; }
 
-.node-content.area-244 p {
-  font-size: 81.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-245 {
   background: #00C; }
 
-.node-content.area-245 p {
-  font-size: 81.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-246 {
   background: #00C; }
 
-.node-content.area-246 p {
-  font-size: 82px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-247 {
   background: #00C; }
 
-.node-content.area-247 p {
-  font-size: 82.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-248 {
   background: #00C; }
 
-.node-content.area-248 p {
-  font-size: 82.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-249 {
   background: #00C; }
 
-.node-content.area-249 p {
-  font-size: 83px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-250 {
   background: #00C; }
 
-.node-content.area-250 p {
-  font-size: 83.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-251 {
   background: #00C; }
 
-.node-content.area-251 p {
-  font-size: 83.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-252 {
   background: #00C; }
 
-.node-content.area-252 p {
-  font-size: 84px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-253 {
   background: #00C; }
 
-.node-content.area-253 p {
-  font-size: 84.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-254 {
   background: #00C; }
 
-.node-content.area-254 p {
-  font-size: 84.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-255 {
   background: #00C; }
 
-.node-content.area-255 p {
-  font-size: 85px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-256 {
   background: #00C; }
 
-.node-content.area-256 p {
-  font-size: 85.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-257 {
   background: #00C; }
 
-.node-content.area-257 p {
-  font-size: 85.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-258 {
   background: #00C; }
 
-.node-content.area-258 p {
-  font-size: 86px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-259 {
   background: #00C; }
 
-.node-content.area-259 p {
-  font-size: 86.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-260 {
   background: #00C; }
 
-.node-content.area-260 p {
-  font-size: 86.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-261 {
   background: #00C; }
 
-.node-content.area-261 p {
-  font-size: 87px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-262 {
   background: #00C; }
 
-.node-content.area-262 p {
-  font-size: 87.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-263 {
   background: #00C; }
 
-.node-content.area-263 p {
-  font-size: 87.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-264 {
   background: #00C; }
 
-.node-content.area-264 p {
-  font-size: 88px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-265 {
   background: #00C; }
 
-.node-content.area-265 p {
-  font-size: 88.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-266 {
   background: #00C; }
 
-.node-content.area-266 p {
-  font-size: 88.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-267 {
   background: #00C; }
 
-.node-content.area-267 p {
-  font-size: 89px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-268 {
   background: #00C; }
 
-.node-content.area-268 p {
-  font-size: 89.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-269 {
   background: #00C; }
 
-.node-content.area-269 p {
-  font-size: 89.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-270 {
   background: #00C; }
 
-.node-content.area-270 p {
-  font-size: 90px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-271 {
   background: #00C; }
 
-.node-content.area-271 p {
-  font-size: 90.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-272 {
   background: #00C; }
 
-.node-content.area-272 p {
-  font-size: 90.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-273 {
   background: #00C; }
 
-.node-content.area-273 p {
-  font-size: 91px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-274 {
   background: #00C; }
 
-.node-content.area-274 p {
-  font-size: 91.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-275 {
   background: #00C; }
 
-.node-content.area-275 p {
-  font-size: 91.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-276 {
   background: #00C; }
 
-.node-content.area-276 p {
-  font-size: 92px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-277 {
   background: #00C; }
 
-.node-content.area-277 p {
-  font-size: 92.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-278 {
   background: #00C; }
 
-.node-content.area-278 p {
-  font-size: 92.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-279 {
   background: #00C; }
 
-.node-content.area-279 p {
-  font-size: 93px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-280 {
   background: #00C; }
 
-.node-content.area-280 p {
-  font-size: 93.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-281 {
   background: #00C; }
 
-.node-content.area-281 p {
-  font-size: 93.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-282 {
   background: #00C; }
 
-.node-content.area-282 p {
-  font-size: 94px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-283 {
   background: #00C; }
 
-.node-content.area-283 p {
-  font-size: 94.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-284 {
   background: #00C; }
 
-.node-content.area-284 p {
-  font-size: 94.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-285 {
   background: #00C; }
 
-.node-content.area-285 p {
-  font-size: 95px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-286 {
   background: #00C; }
 
-.node-content.area-286 p {
-  font-size: 95.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-287 {
   background: #00C; }
 
-.node-content.area-287 p {
-  font-size: 95.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-288 {
   background: #00C; }
 
-.node-content.area-288 p {
-  font-size: 96px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-289 {
   background: #00C; }
 
-.node-content.area-289 p {
-  font-size: 96.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-290 {
   background: #00C; }
 
-.node-content.area-290 p {
-  font-size: 96.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-291 {
   background: #00C; }
 
-.node-content.area-291 p {
-  font-size: 97px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-292 {
   background: #00C; }
 
-.node-content.area-292 p {
-  font-size: 97.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-293 {
   background: #00C; }
 
-.node-content.area-293 p {
-  font-size: 97.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-294 {
   background: #00C; }
 
-.node-content.area-294 p {
-  font-size: 98px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-295 {
   background: #00C; }
 
-.node-content.area-295 p {
-  font-size: 98.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-296 {
   background: #00C; }
 
-.node-content.area-296 p {
-  font-size: 98.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-297 {
   background: #00C; }
 
-.node-content.area-297 p {
-  font-size: 99px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-298 {
   background: #00C; }
 
-.node-content.area-298 p {
-  font-size: 99.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-299 {
   background: #00C; }
 
-.node-content.area-299 p {
-  font-size: 99.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-300 {
   background: #00C; }
 
-.node-content.area-300 p {
-  font-size: 100px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-301 {
   background: #00C; }
 
-.node-content.area-301 p {
-  font-size: 100.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-302 {
   background: #00C; }
 
-.node-content.area-302 p {
-  font-size: 100.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-303 {
   background: #00C; }
 
-.node-content.area-303 p {
-  font-size: 101px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-304 {
   background: #00C; }
 
-.node-content.area-304 p {
-  font-size: 101.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-305 {
   background: #00C; }
 
-.node-content.area-305 p {
-  font-size: 101.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-306 {
   background: #00C; }
 
-.node-content.area-306 p {
-  font-size: 102px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-307 {
   background: #00C; }
 
-.node-content.area-307 p {
-  font-size: 102.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-308 {
   background: #00C; }
 
-.node-content.area-308 p {
-  font-size: 102.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-309 {
   background: #00C; }
 
-.node-content.area-309 p {
-  font-size: 103px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-310 {
   background: #00C; }
 
-.node-content.area-310 p {
-  font-size: 103.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-311 {
   background: #00C; }
 
-.node-content.area-311 p {
-  font-size: 103.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-312 {
   background: #00C; }
 
-.node-content.area-312 p {
-  font-size: 104px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-313 {
   background: #00C; }
 
-.node-content.area-313 p {
-  font-size: 104.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-314 {
   background: #00C; }
 
-.node-content.area-314 p {
-  font-size: 104.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-315 {
   background: #00C; }
 
-.node-content.area-315 p {
-  font-size: 105px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-316 {
   background: #00C; }
 
-.node-content.area-316 p {
-  font-size: 105.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-317 {
   background: #00C; }
 
-.node-content.area-317 p {
-  font-size: 105.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-318 {
   background: #00C; }
 
-.node-content.area-318 p {
-  font-size: 106px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-319 {
   background: #00C; }
 
-.node-content.area-319 p {
-  font-size: 106.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-320 {
   background: #00C; }
 
-.node-content.area-320 p {
-  font-size: 106.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-321 {
   background: #00C; }
 
-.node-content.area-321 p {
-  font-size: 107px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-322 {
   background: #00C; }
 
-.node-content.area-322 p {
-  font-size: 107.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-323 {
   background: #00C; }
 
-.node-content.area-323 p {
-  font-size: 107.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-324 {
   background: #00C; }
 
-.node-content.area-324 p {
-  font-size: 108px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-325 {
   background: #00C; }
 
-.node-content.area-325 p {
-  font-size: 108.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-326 {
   background: #00C; }
 
-.node-content.area-326 p {
-  font-size: 108.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-327 {
   background: #00C; }
 
-.node-content.area-327 p {
-  font-size: 109px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-328 {
   background: #00C; }
 
-.node-content.area-328 p {
-  font-size: 109.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-329 {
   background: #00C; }
 
-.node-content.area-329 p {
-  font-size: 109.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-330 {
   background: #00C; }
 
-.node-content.area-330 p {
-  font-size: 110px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-331 {
   background: #00C; }
 
-.node-content.area-331 p {
-  font-size: 110.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-332 {
   background: #00C; }
 
-.node-content.area-332 p {
-  font-size: 110.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-333 {
   background: #00C; }
 
-.node-content.area-333 p {
-  font-size: 111px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-334 {
   background: #00C; }
 
-.node-content.area-334 p {
-  font-size: 111.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-335 {
   background: #00C; }
 
-.node-content.area-335 p {
-  font-size: 111.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-336 {
   background: #00C; }
 
-.node-content.area-336 p {
-  font-size: 112px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-337 {
   background: #00C; }
 
-.node-content.area-337 p {
-  font-size: 112.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-338 {
   background: #00C; }
 
-.node-content.area-338 p {
-  font-size: 112.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-339 {
   background: #00C; }
 
-.node-content.area-339 p {
-  font-size: 113px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-340 {
   background: #00C; }
 
-.node-content.area-340 p {
-  font-size: 113.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-341 {
   background: #00C; }
 
-.node-content.area-341 p {
-  font-size: 113.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-342 {
   background: #00C; }
 
-.node-content.area-342 p {
-  font-size: 114px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-343 {
   background: #00C; }
 
-.node-content.area-343 p {
-  font-size: 114.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-344 {
   background: #00C; }
 
-.node-content.area-344 p {
-  font-size: 114.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-345 {
   background: #00C; }
 
-.node-content.area-345 p {
-  font-size: 115px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-346 {
   background: #00C; }
 
-.node-content.area-346 p {
-  font-size: 115.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-347 {
   background: #00C; }
 
-.node-content.area-347 p {
-  font-size: 115.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-348 {
   background: #00C; }
 
-.node-content.area-348 p {
-  font-size: 116px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-349 {
   background: #00C; }
 
-.node-content.area-349 p {
-  font-size: 116.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-350 {
   background: #00C; }
 
-.node-content.area-350 p {
-  font-size: 116.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-351 {
   background: #00C; }
 
-.node-content.area-351 p {
-  font-size: 117px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-352 {
   background: #00C; }
 
-.node-content.area-352 p {
-  font-size: 117.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-353 {
   background: #00C; }
 
-.node-content.area-353 p {
-  font-size: 117.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-354 {
   background: #00C; }
 
-.node-content.area-354 p {
-  font-size: 118px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-355 {
   background: #00C; }
 
-.node-content.area-355 p {
-  font-size: 118.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-356 {
   background: #00C; }
 
-.node-content.area-356 p {
-  font-size: 118.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-357 {
   background: #00C; }
 
-.node-content.area-357 p {
-  font-size: 119px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-358 {
   background: #00C; }
 
-.node-content.area-358 p {
-  font-size: 119.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-359 {
   background: #00C; }
 
-.node-content.area-359 p {
-  font-size: 119.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-360 {
   background: #00C; }
 
-.node-content.area-360 p {
-  font-size: 120px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-361 {
   background: #00C; }
 
-.node-content.area-361 p {
-  font-size: 120.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-362 {
   background: #00C; }
 
-.node-content.area-362 p {
-  font-size: 120.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-363 {
   background: #00C; }
 
-.node-content.area-363 p {
-  font-size: 121px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-364 {
   background: #00C; }
 
-.node-content.area-364 p {
-  font-size: 121.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-365 {
   background: #00C; }
 
-.node-content.area-365 p {
-  font-size: 121.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-366 {
   background: #00C; }
 
-.node-content.area-366 p {
-  font-size: 122px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-367 {
   background: #00C; }
 
-.node-content.area-367 p {
-  font-size: 122.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-368 {
   background: #00C; }
 
-.node-content.area-368 p {
-  font-size: 122.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-369 {
   background: #00C; }
 
-.node-content.area-369 p {
-  font-size: 123px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-370 {
   background: #00C; }
 
-.node-content.area-370 p {
-  font-size: 123.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-371 {
   background: #00C; }
 
-.node-content.area-371 p {
-  font-size: 123.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-372 {
   background: #00C; }
 
-.node-content.area-372 p {
-  font-size: 124px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-373 {
   background: #00C; }
 
-.node-content.area-373 p {
-  font-size: 124.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-374 {
   background: #00C; }
 
-.node-content.area-374 p {
-  font-size: 124.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-375 {
   background: #00C; }
 
-.node-content.area-375 p {
-  font-size: 125px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-376 {
   background: #00C; }
 
-.node-content.area-376 p {
-  font-size: 125.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-377 {
   background: #00C; }
 
-.node-content.area-377 p {
-  font-size: 125.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-378 {
   background: #00C; }
 
-.node-content.area-378 p {
-  font-size: 126px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-379 {
   background: #00C; }
 
-.node-content.area-379 p {
-  font-size: 126.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-380 {
   background: #00C; }
 
-.node-content.area-380 p {
-  font-size: 126.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-381 {
   background: #00C; }
 
-.node-content.area-381 p {
-  font-size: 127px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-382 {
   background: #00C; }
 
-.node-content.area-382 p {
-  font-size: 127.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-383 {
   background: #00C; }
 
-.node-content.area-383 p {
-  font-size: 127.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-384 {
   background: #00C; }
 
-.node-content.area-384 p {
-  font-size: 128px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-385 {
   background: #00C; }
 
-.node-content.area-385 p {
-  font-size: 128.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-386 {
   background: #00C; }
 
-.node-content.area-386 p {
-  font-size: 128.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-387 {
   background: #00C; }
 
-.node-content.area-387 p {
-  font-size: 129px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-388 {
   background: #00C; }
 
-.node-content.area-388 p {
-  font-size: 129.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-389 {
   background: #00C; }
 
-.node-content.area-389 p {
-  font-size: 129.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-390 {
   background: #00C; }
 
-.node-content.area-390 p {
-  font-size: 130px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-391 {
   background: #00C; }
 
-.node-content.area-391 p {
-  font-size: 130.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-392 {
   background: #00C; }
 
-.node-content.area-392 p {
-  font-size: 130.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-393 {
   background: #00C; }
 
-.node-content.area-393 p {
-  font-size: 131px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-394 {
   background: #00C; }
 
-.node-content.area-394 p {
-  font-size: 131.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-395 {
   background: #00C; }
 
-.node-content.area-395 p {
-  font-size: 131.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-396 {
   background: #00C; }
 
-.node-content.area-396 p {
-  font-size: 132px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-397 {
   background: #00C; }
 
-.node-content.area-397 p {
-  font-size: 132.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-398 {
   background: #00C; }
 
-.node-content.area-398 p {
-  font-size: 132.66667px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-399 {
   background: #00C; }
 
-.node-content.area-399 p {
-  font-size: 133px; }
+.node-content p {
+  font-size: 14px; }
 
 .color-400 {
   background: #00C; }
 
-.node-content.area-400 p {
-  font-size: 133.33333px; }
+.node-content p {
+  font-size: 14px; }
 
 .album {
   width: 100px;

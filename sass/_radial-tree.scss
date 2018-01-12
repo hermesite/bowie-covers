@@ -92,6 +92,11 @@
     .radial-counter {
         // width: 12%;
     }
+    .radial-album-title {
+        .counter-units {
+            text-transform: uppercase;
+        }
+    }
     .radial-aside {
         // box-shadow: inset 2px 0px 0px 0px #0CC;
         max-width: calc(100% - #{$base-layout});
@@ -100,39 +105,40 @@
         .level {
             margin: 0px
         }
+
         .record-info {
-            text-align: left; // width: 100%; // line-height: 50px;
-            padding: 16px;
-            h2 {
-                margin: 0px;
-            }
-            em {
-                max-width: 60%;
-                font-size: 24px;
-            }
-            strong {}
-            span,
-            em {
-                padding: 8px;
-                display: inline-block;
-                vertical-align: middle;
-            }
-            span {
-                text-transform: uppercase;
-                text-align: center;
-                font-size: 1vw;
-                box-shadow: 2px 0px 0px 0px #000;
-                padding-top: 0px;
-                padding-bottom: 0px;
-                font-family: 'nowaybold';
-                strong {
-                    font-weight: initial;
-                    font-family: 'nowaylight';
-                    font-size: 3.5vw;
-                    width: 100%;
-                    display: block;
-                }
-            }
+            // text-align: left; // width: 100%; // line-height: 50px;
+            // padding: 16px;
+            // h2 {
+            //     margin: 0px;
+            // }
+            // em {
+            //     max-width: 60%;
+            //     font-size: 24px;
+            // }
+            // strong {}
+            // span,
+            // em {
+            //     padding: 8px;
+            //     display: inline-block;
+            //     vertical-align: middle;
+            // }
+            // span {
+            //     text-transform: uppercase;
+            //     text-align: center;
+            //     font-size: 1vw;
+            //     box-shadow: 2px 0px 0px 0px #000;
+            //     padding-top: 0px;
+            //     padding-bottom: 0px;
+            //     font-family: 'nowaybold';
+            //     strong {
+            //         font-weight: initial;
+            //         font-family: 'nowaylight';
+            //         font-size: 3.5vw;
+            //         width: 100%;
+            //         display: block;
+            //     }
+            // }
         }
         .cover-title,
         .cover-artist {
