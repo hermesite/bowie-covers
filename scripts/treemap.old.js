@@ -4,7 +4,6 @@
 
 var MIN_VIDEO_VIEWS = 500;
 var MIN_COVERS_ALBUM = 8;
-var DEFAULT_VIDEO_TEXT = "DEFAULT VIDEO TEXT";
 
 var bannedAlbums = ['bc02d917-a52e-3d77-ae5f-75aa3fb754ef']
 // Club Bowie: Rare and Unreleased 12″ Mixes
@@ -124,13 +123,13 @@ var colorScale = d3.scale.quantize()
 
 var trackCovers = [];
 
-d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
+d3.json('data/david_bowie_data.videos.json', function(error, artist) {
 
     if (error) {
         return error;
     }
 
-    var params = get_params();
+    console.log(artist);
 
     var isCover;
     var colorCover;
@@ -667,48 +666,6 @@ d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
             return $(this).width() - ($(this).width() / 3) + 'px';
         });
 
-        // OSCAR
-
-
-        console.log("LOOKING FOR THE MOST VIEWED VIDEO");
-
-//        console.log(data);
-
-        var candidate = {'name': undefined, 'id': undefined, 'count': 0};
-
-        data.children.forEach(function(d,i){
-           console.log("SONG", d.name, i);
-            if(('children' in d) && (d.children.length > 0)){
-                var children = d.children;
-                children.forEach(function(version,j){
-                    if('youtube' in version) {
-                        console.log("VERSION", version.name, version.youtube.id, version.youtube.views, candidate);
-                        if(parseInt(version.youtube.views,10) > candidate.count) {
-                            candidate = {name: version.name, id: version.youtube.id, count: parseInt(version.youtube.views,10)};
-                        }
-                    }
-                })
-            }
-
-        });
-
-        console.log("CANDIDATE!", candidate);
-
-        youtubeContainer.append('iframe')
-            .attr('id', 'video')
-            .attr('src', 'https://www.youtube.com/embed/' + candidate.id)
-            .attr('width', '100%')
-            .attr('height', '100%')
-            .attr('allowfullscreen', 'allowfullscreen')
-            .attr('mozallowfullscreen', 'mozallowfullscreen')
-            .attr('msallowfullscreen', 'msallowfullscreen')
-            .attr('oallowfullscreen', 'oallowfullscreen')
-            .attr('webkitallowfullscreen', 'webkitallowfullscreen');
-
-        var youtubeContainerSubText = aside.append('div').attr('class', 'video_subtext').html(DEFAULT_VIDEO_TEXT);
-
-        // OSCAR
-
         var backLink = aside.append('a').attr('href', '#covers-treemap').text('Back to albums').on('click', function() {
             $('.video').empty();
             navigateSooth();
@@ -897,30 +854,6 @@ d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
 
     var indexControl;
 
-    // OSCAR 'land' en el video
-
-    console.log("LANDING", myData, params, location.hash);
-
-    if('id' in params) {
-
-        var hash = location.hash;
-
-        var youtubeContainer = d3.select("#coversRadial").select(hash).select(".video");
-
-        $(youtubeContainer.node()).empty();
-
-        youtubeContainer.append('iframe')
-            .attr('id', 'video')
-            .attr('src', 'https://www.youtube.com/embed/' + params['id'])
-            .attr('width', '100%')
-            .attr('height', '100%')
-            .attr('allowfullscreen', 'allowfullscreen')
-            .attr('mozallowfullscreen', 'mozallowfullscreen')
-            .attr('msallowfullscreen', 'msallowfullscreen')
-            .attr('oallowfullscreen', 'oallowfullscreen')
-            .attr('webkitallowfullscreen', 'webkitallowfullscreen');
-    }
-
 
 });
 
@@ -998,13 +931,8 @@ function navigateSooth() {
 
 }
 $('document').ready(function() {
-
     // Select all links with hashes
-
-    // id in params?
-
-
-});
+})
 
 
 function sortUnorderedList(ul, sortDescending) {
@@ -1024,109 +952,4 @@ function sortUnorderedList(ul, sortDescending) {
 
     for (var i = 0, l = lis.length; i < l; i++)
         lis[i].innerHTML = vals[i];
-}
-
-
-        (function ($) {
-          $.deparam = function (params, coerce) {
-            var obj = {},
-                coerce_types = { 'true': !0, 'false': !1, 'null': null };
-
-            // Iterate over all name=value pairs.
-            $.each(params.replace(/\+/g, ' ').split('&'), function (j,v) {
-              var param = v.split('='),
-                  key = decodeURIComponent(param[0]),
-                  val,
-                  cur = obj,
-                  i = 0,
-
-                  // If key is more complex than 'foo', like 'a[]' or 'a[b][c]', split it
-                  // into its component parts.
-                  keys = key.split(']['),
-                  keys_last = keys.length - 1;
-
-              // If the first keys part contains [ and the last ends with ], then []
-              // are correctly balanced.
-              if (/\[/.test(keys[0]) && /\]$/.test(keys[keys_last])) {
-                // Remove the trailing ] from the last keys part.
-                keys[keys_last] = keys[keys_last].replace(/\]$/, '');
-
-                // Split first keys part into two parts on the [ and add them back onto
-                // the beginning of the keys array.
-                keys = keys.shift().split('[').concat(keys);
-
-                keys_last = keys.length - 1;
-              } else {
-                // Basic 'foo' style key.
-                keys_last = 0;
-              }
-
-              // Are we dealing with a name=value pair, or just a name?
-              if (param.length === 2) {
-                val = decodeURIComponent(param[1]);
-
-                // Coerce values.
-                if (coerce) {
-                  val = val && !isNaN(val)              ? +val              // number
-                      : val === 'undefined'             ? undefined         // undefined
-                      : coerce_types[val] !== undefined ? coerce_types[val] // true, false, null
-                      : val;                                                // string
-                }
-
-                if ( keys_last ) {
-                  // Complex key, build deep object structure based on a few rules:
-                  // * The 'cur' pointer starts at the object top-level.
-                  // * [] = array push (n is set to array length), [n] = array if n is
-                  //   numeric, otherwise object.
-                  // * If at the last keys part, set the value.
-                  // * For each keys part, if the current level is undefined create an
-                  //   object or array based on the type of the next keys part.
-                  // * Move the 'cur' pointer to the next level.
-                  // * Rinse & repeat.
-                  for (; i <= keys_last; i++) {
-                    key = keys[i] === '' ? cur.length : keys[i];
-                    cur = cur[key] = i < keys_last
-                      ? cur[key] || (keys[i+1] && isNaN(keys[i+1]) ? {} : [])
-                      : val;
-                  }
-
-                } else {
-                  // Simple key, even simpler rules, since only scalars and shallow
-                  // arrays are allowed.
-
-                  if ($.isArray(obj[key])) {
-                    // val is already an array, so push on the next value.
-                    obj[key].push( val );
-
-                  } else if (obj[key] !== undefined) {
-                    // val isn't an array, but since a second value has been specified,
-                    // convert val into an array.
-                    obj[key] = [obj[key], val];
-
-                  } else {
-                    // val is a scalar.
-                    obj[key] = val;
-                  }
-                }
-
-              } else if (key) {
-                // No value was defined, so set something meaningful.
-                obj[key] = coerce
-                  ? undefined
-                  : '';
-              }
-            });
-
-            return obj;
-          };
-        })(jQuery);
-
-function get_params(){
-        return $.deparam(location.search.substring(1));
-}
-
-function set_params(params){
-
-        window.history.replaceState( {} , document.title, window.location.origin + window.location.pathname + "?" + $.param(params));
-
 }
