@@ -9,11 +9,7 @@ var bannedAlbums = ['bc02d917-a52e-3d77-ae5f-75aa3fb754ef']
 // Club Bowie: Rare and Unreleased 12″ Mixes
 
 var widthTreemap = $(".section-treemap").width(),
-    heightTreemap = $(".section-treemap").height(),
-
-    widthRadial = $('.radial-album').width(),
-    diameter = widthRadial,
-    radialOffset = diameter / 5;
+    heightTreemap = $(".section-treemap").height();
 
 var margin = { top: 40, right: 0, bottom: 25, left: 0 },
     width = $('.bar-chart').width() - margin.left - margin.right,
@@ -54,12 +50,6 @@ chart.append("g")
 
 
 var color = d3.scale.category20c();
-
-var tree = d3.layout.tree()
-    .size([360, diameter / 2 - radialOffset])
-    .separation(function(a, b) {
-        return (a.parent === b.parent ? 1 : 2) / a.depth;
-    });
 
 var diagonal = d3.svg.diagonal.radial()
     .projection(function(d) {
@@ -349,6 +339,11 @@ d3.json('data/david_bowie_data.videos.json', function(error, artist) {
 
                 createRadial(myAlbumRadial, radialContainer, myAlbum.image, myAlbum.size);
 
+
+                $(window).resize(function() {
+                    createRadial(myAlbumRadial, radialContainer, myAlbum.image, myAlbum.size);
+                });
+
                 /*----------  Add items to the timeline  ----------*/
 
                 if (myAlbum.size >= MIN_COVERS_ALBUM && scope != 'pinups') {
@@ -428,12 +423,6 @@ d3.json('data/david_bowie_data.videos.json', function(error, artist) {
         });
 
         createTreemap(bowieSongsTree, treemapContainer);
-
-        // $(window).resize(function() {
-        //     console.log("EYY");
-        //     createTreemap(bowieSongsTree, treemapContainer);
-
-        // });
 
         // Album with more covers
 
@@ -545,9 +534,9 @@ d3.json('data/david_bowie_data.videos.json', function(error, artist) {
 
         var treemap = d3.layout.treemap()
             .size([100, 100])
-            .sticky(true)
-            .round(true)
-            .mode('squarify')
+            // .sticky(true)
+            // .round(true)
+            // .mode('squarify')
             .value(function(d) {
                 if (d.size >= MIN_COVERS_ALBUM) {
                     return d.size;
@@ -613,6 +602,19 @@ d3.json('data/david_bowie_data.videos.json', function(error, artist) {
 
     function createRadial(data, container, image, size) {
 
+        // $('.radial-album *').empty();
+
+        var widthRadial = $('.radial-album').width(),
+            diameter = widthRadial,
+            radialOffset = diameter / 5;
+
+
+        var tree = d3.layout.tree()
+            .size([360, diameter / 2 - radialOffset])
+            .separation(function(a, b) {
+                return (a.parent === b.parent ? 1 : 2) / a.depth;
+            });
+
         if (size <= MIN_COVERS_ALBUM) {
             return false;
         }
@@ -620,6 +622,8 @@ d3.json('data/david_bowie_data.videos.json', function(error, artist) {
         var radialItem = d3.select(container).append('div')
             .attr('id', data.id)
             .attr('class', 'radial-item row')
+
+        // radialItem.remove();
 
         // var counterSide = radialItem.append('div')
         //     .attr('class', 'radial-counter content');
@@ -634,7 +638,7 @@ d3.json('data/david_bowie_data.videos.json', function(error, artist) {
             });
 
         var box = radialItem.append('div')
-            .attr('id', data.id)
+            .attr('id', data.id + '-album')
             .attr('class', 'radial-album');
 
         var aside = radialItem.append('div')
@@ -915,6 +919,8 @@ function navigateSooth() {
 $('document').ready(function() {
     // Select all links with hashes
 })
+
+
 
 
 
