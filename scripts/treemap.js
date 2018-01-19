@@ -5,6 +5,7 @@
 var MIN_VIDEO_VIEWS = 500;
 var MIN_COVERS_ALBUM = 8;
 var DEFAULT_VIDEO_TEXT = "DEFAULT VIDEO TEXT";
+var BASE_URL = "http://127.0.0.1/bowie-covers/";
 
 var FORBIDDEN_VIDEOS = [
     "aCHg5r6rFoI", "CMThz7eQ6K0", "aySEzuNSN1k", "v--IqqusnNQ"
@@ -704,6 +705,29 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
 
         var youtubeContainerSubText = aside.append('div').attr('class', 'video_subtext').html(DEFAULT_VIDEO_TEXT);
 
+        var tweetbutton_container = aside.append('div').attr('class', 'tweet_button');
+
+        tweetbutton_container.append("img").attr("src","images/twitter.svg");
+
+        tweetbutton_container.on("click", function () {
+            var text = "I saw this amazing version of Bowie's " + candidate.coverName + " by " + candidate.name + " here: ";
+            var url = BASE_URL + "?id=" + candidate.id;
+            window.open("https://twitter.com/share?url="+escape(url)+"&text="+text, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
+            return false;
+        });
+
+
+//        tweetbutton_container.append("a")
+//            .attr("href", "https://twitter.com/share")
+//            .classed("twitter-share-button", true)
+//            .attr("data-url", BASE_URL + "?id=" + candidate.id)
+//            .attr("data-text", "I saw this amazing version of Bowie's " + candidate.coverName + " by " + candidate.name + " here: ")
+//            .attr("data-size", "normal")
+//            .attr("data-show-count", false).html("TROLLEO");
+
+//        tweetbutton_container.html('<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-url="http://outliers.es" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>');
+//        tweetbutton_container.html('<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hello%20world" data-size="large">Tweet</a>');
+
         // OSCAR
 
         var backLink = aside.append('a').attr('href', '#covers-treemap').text('Back to albums').on('click', function() {
@@ -823,6 +847,15 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
                         .attr('msallowfullscreen', 'msallowfullscreen')
                         .attr('oallowfullscreen', 'oallowfullscreen')
                         .attr('webkitallowfullscreen', 'webkitallowfullscreen');
+
+                    // Remake the tweet button
+
+                    tweetbutton_container.on("click", function () {
+                        var text = "I saw this amazing version of Bowie's " + d.parent.name + " by " + d.name + " here: ";
+                        var url = BASE_URL + "#" + d.parent.parent.id + "?id=" + d.youtube.id;
+                        window.open("https://twitter.com/share?url="+escape(url)+"&text="+text, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
+                        return false;
+                    });
 
                 }
             });

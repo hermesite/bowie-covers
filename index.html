@@ -14,7 +14,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Fonts -->
     <!-- <link rel="stylesheet" href="bower_components/bulma/css/bulma.css"> -->
-    <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="bower_components/tooltipster/dist/css/tooltipster.bundle.css">
     <link rel="stylesheet" href="bower_components/vis/dist/vis.css">
@@ -119,6 +118,25 @@
             <svg id="coversBar"></svg>
         </div> 
     -->
+    <script>
+            window.twttr = (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+              if (d.getElementById(id)) return t;
+              js = d.createElement(s);
+              js.id = id;
+              js.src = "https://platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js, fjs);
+
+              t._e = [];
+              t.ready = function(f) {
+                t._e.push(f);
+              };
+
+              return t;
+            }(document, "script", "twitter-wjs"));
+    </script>
+    <!--<script src="https://platform.twitter.com/widgets.js"></script>-->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/d3/d3.min.js"></script>
     <script src="bower_components/d3-tip/index.js"></script>
@@ -126,6 +144,7 @@
     <script src="bower_components/isotope/dist/isotope.pkgd.js"></script>
     <script src="bower_components/colorbrewer/colorbrewer.js"></script>
     <script src="scripts/treemap.js"></script>
+
 </body>
 
 </html>
