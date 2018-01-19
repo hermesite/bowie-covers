@@ -12,6 +12,10 @@ var bannedAlbums = ['bc02d917-a52e-3d77-ae5f-75aa3fb754ef']
 var widthTreemap = $(".section-treemap").width(),
     heightTreemap = $(".section-treemap").height();
 
+var widthRadial = $('.radial-album').width(),
+    diameter = widthRadial,
+    radialOffset = diameter / 5;
+
 var margin = { top: 40, right: 0, bottom: 25, left: 0 },
     width = $('.bar-chart').width() - margin.left - margin.right,
     height = $('.bar-chart').height() - margin.top - margin.bottom;
@@ -151,6 +155,8 @@ d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
     var bowieSongsRadial;
 
     function createData(scope, treemapContainer, radialContainer) {
+
+        $(treemapContainer).empty();
 
         bowieSongsTree = {
             'name': 'Bowie',
@@ -340,11 +346,6 @@ d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
 
                 createRadial(myAlbumRadial, radialContainer, myAlbum.image, myAlbum.size);
 
-
-                $(window).resize(function() {
-                    createRadial(myAlbumRadial, radialContainer, myAlbum.image, myAlbum.size);
-                });
-
                 /*----------  Add items to the timeline  ----------*/
 
                 if (myAlbum.size >= MIN_COVERS_ALBUM && scope != 'pinups') {
@@ -493,6 +494,11 @@ d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
     createData('bowie', '#covers-treemap', '#coversRadial');
     createData('pinups', '#covers-pinups', '#coversRadialPinups');
 
+    // $(window).resize(function() {
+    //     createData('bowie', '#covers-treemap', '#coversRadial');
+    //     createData('pinups', '#covers-pinups', '#coversRadialPinups');
+    // });
+
     // Create a Timeline
     var timeline = new vis.Timeline(container, items, options);
 
@@ -582,6 +588,8 @@ d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
                 return d.children ? null : '<p class="col-xs text-center"><strong>' + d.size + '</strong><em>COVERS</em><span>' + d.name + '</span></p>';
             });
 
+        treemapJoin.exit().remove();
+
     }
 
     function position() {
@@ -603,12 +611,6 @@ d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
 
     function createRadial(data, container, image, size) {
 
-        // $('.radial-album *').empty();
-
-        var widthRadial = $('.radial-album').width(),
-            diameter = widthRadial,
-            radialOffset = diameter / 5;
-
 
         var tree = d3.layout.tree()
             .size([360, diameter / 2 - radialOffset])
@@ -619,6 +621,7 @@ d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
         if (size <= MIN_COVERS_ALBUM) {
             return false;
         }
+
 
         var radialItem = d3.select(container).append('div')
             .attr('id', data.id)
@@ -645,7 +648,6 @@ d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
         var aside = radialItem.append('div')
             .attr('class', 'radial-aside content');
 
-
         box.append('div').attr('class', 'record');
 
         var coverTitle = aside.append('p').attr('class', 'cover-title').text('Song title');
@@ -660,19 +662,19 @@ d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
 
         console.log("LOOKING FOR THE MOST VIEWED VIDEO");
 
-//        console.log(data);
+        //        console.log(data);
 
-        var candidate = {'name': undefined, 'id': undefined, 'count': 0};
+        var candidate = { 'name': undefined, 'id': undefined, 'count': 0 };
 
-        data.children.forEach(function(d,i){
-           console.log("SONG", d.name, i);
-            if(('children' in d) && (d.children.length > 0)){
+        data.children.forEach(function(d, i) {
+            console.log("SONG", d.name, i);
+            if (('children' in d) && (d.children.length > 0)) {
                 var children = d.children;
-                children.forEach(function(version,j){
-                    if('youtube' in version) {
+                children.forEach(function(version, j) {
+                    if ('youtube' in version) {
                         console.log("VERSION", version.name, version.youtube.id, version.youtube.views, candidate);
-                        if(parseInt(version.youtube.views,10) > candidate.count) {
-                            candidate = {name: version.name, id: version.youtube.id, count: parseInt(version.youtube.views,10)};
+                        if (parseInt(version.youtube.views, 10) > candidate.count) {
+                            candidate = { name: version.name, id: version.youtube.id, count: parseInt(version.youtube.views, 10) };
                         }
                     }
                 })
@@ -703,7 +705,7 @@ d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
         });
 
         var
-            widthFactor = 13.5,
+            widthFactor = 10,
             recordSize = widthRadial / widthFactor;
 
         $('.record').css('height', recordSize + '%');
@@ -716,18 +718,36 @@ d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
                 'background-image': 'url(' + image + ')'
             });
 
-        var svg = box.append('svg')
-            .attr('width', "100%")
-            .attr('height', "100%")
-            .append('g')
-            .attr('transform', 'translate(' + widthRadial / 2 + ',' + diameter / 2 + ')');
-
         var nodes = tree.nodes(data),
             links = tree.links(nodes);
 
-        svg.selectAll('.link')
-            .data(links)
-            .enter().append('path')
+        var radialTreeContainer = box.append('svg')
+            .attr("viewBox", "0 0 " + widthRadial + " " + widthRadial)
+            .attr("preserveAspectRatio", "xMidYMid meet")
+            .append('g')
+            .attr('transform', 'translate(' + widthRadial / 2 + ',' + diameter / 2 + ')');
+
+
+        // DATA JOIN
+        // Join new data with old elements, if any.
+        var radialTreeJoin = radialTreeContainer.selectAll('.link').data(links);
+        var nodeJoin = radialTreeContainer.selectAll('.node').data(nodes)
+        var textJoin = radialTreeContainer.selectAll('text').data(nodes)
+
+        // UPDATE
+        // Update old elements as needed.
+        radialTreeJoin.attr("class", "update");
+        nodeJoin.attr("class", "update");
+        textJoin.attr("class", "update");
+
+        // ENTER
+        // Create new elements as needed.
+        //
+        // ENTER + UPDATE
+        // After merging the entered elements with the update selection,
+        // apply operations to both.
+
+        radialTreeJoin.enter().append('path')
             .attr('class', function(d) {
                 if (!d.source.id) {
                     return 'link';
@@ -745,33 +765,18 @@ d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
             })
             .attr('d', diagonal);
 
-        var node = svg.selectAll('.node')
-            .data(nodes)
-            .enter().append('g')
+        nodeJoin.enter().append('g')
             .attr('class', 'node')
             .attr('transform', function(d) {
                 return 'rotate(' + (d.x - 90) + ')translate(' + d.y + ')';
             });
 
-        node.append('circle')
-            .attr('r', 2)
-            .attr('fill', function(d) {
-                if (d.cover) {
-                    return d.color;
-                } else {
-                    return d.color;
-                }
-            });
-
-        node.append('title')
+        nodeJoin.append('title')
             .text(function(d) {
                 return d.name;
             });
 
-        // oscar
-
-        var text = svg.selectAll('text').data(nodes)
-            .enter().append('g')
+        textJoin.enter().append('g')
             .attr('class', 'node')
             .attr('class', function(d) {
 
@@ -815,7 +820,7 @@ d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
                 }
             });
 
-        text.append('text')
+        textJoin.append('text')
             .attr('fill', function(d) {
 
                 if (d.cover) {
@@ -877,6 +882,11 @@ d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
 
             });
 
+        // EXIT
+        // Remove old elements as needed.
+        radialTreeJoin.exit().remove();
+        nodeJoin.exit().remove();
+        textJoin.exit().remove();
 
     }
 
@@ -886,7 +896,7 @@ d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
 
     console.log("LANDING", myData, params, location.hash);
 
-    if('id' in params) {
+    if ('id' in params) {
 
         var hash = location.hash;
 
@@ -1017,27 +1027,27 @@ function sortUnorderedList(ul, sortDescending) {
 }
 
 
-        (function ($) {
-          $.deparam = function (params, coerce) {
-            var obj = {},
-                coerce_types = { 'true': !0, 'false': !1, 'null': null };
+(function($) {
+    $.deparam = function(params, coerce) {
+        var obj = {},
+            coerce_types = { 'true': !0, 'false': !1, 'null': null };
 
-            // Iterate over all name=value pairs.
-            $.each(params.replace(/\+/g, ' ').split('&'), function (j,v) {
-              var param = v.split('='),
-                  key = decodeURIComponent(param[0]),
-                  val,
-                  cur = obj,
-                  i = 0,
+        // Iterate over all name=value pairs.
+        $.each(params.replace(/\+/g, ' ').split('&'), function(j, v) {
+            var param = v.split('='),
+                key = decodeURIComponent(param[0]),
+                val,
+                cur = obj,
+                i = 0,
 
-                  // If key is more complex than 'foo', like 'a[]' or 'a[b][c]', split it
-                  // into its component parts.
-                  keys = key.split(']['),
-                  keys_last = keys.length - 1;
+                // If key is more complex than 'foo', like 'a[]' or 'a[b][c]', split it
+                // into its component parts.
+                keys = key.split(']['),
+                keys_last = keys.length - 1;
 
-              // If the first keys part contains [ and the last ends with ], then []
-              // are correctly balanced.
-              if (/\[/.test(keys[0]) && /\]$/.test(keys[keys_last])) {
+            // If the first keys part contains [ and the last ends with ], then []
+            // are correctly balanced.
+            if (/\[/.test(keys[0]) && /\]$/.test(keys[keys_last])) {
                 // Remove the trailing ] from the last keys part.
                 keys[keys_last] = keys[keys_last].replace(/\]$/, '');
 
@@ -1046,77 +1056,80 @@ function sortUnorderedList(ul, sortDescending) {
                 keys = keys.shift().split('[').concat(keys);
 
                 keys_last = keys.length - 1;
-              } else {
+            } else {
                 // Basic 'foo' style key.
                 keys_last = 0;
-              }
+            }
 
-              // Are we dealing with a name=value pair, or just a name?
-              if (param.length === 2) {
+            // Are we dealing with a name=value pair, or just a name?
+            if (param.length === 2) {
                 val = decodeURIComponent(param[1]);
 
                 // Coerce values.
                 if (coerce) {
-                  val = val && !isNaN(val)              ? +val              // number
-                      : val === 'undefined'             ? undefined         // undefined
-                      : coerce_types[val] !== undefined ? coerce_types[val] // true, false, null
-                      : val;                                                // string
+                    val = val && !isNaN(val) ? +val // number
+                        :
+                        val === 'undefined' ? undefined // undefined
+                        :
+                        coerce_types[val] !== undefined ? coerce_types[val] // true, false, null
+                        :
+                        val; // string
                 }
 
-                if ( keys_last ) {
-                  // Complex key, build deep object structure based on a few rules:
-                  // * The 'cur' pointer starts at the object top-level.
-                  // * [] = array push (n is set to array length), [n] = array if n is
-                  //   numeric, otherwise object.
-                  // * If at the last keys part, set the value.
-                  // * For each keys part, if the current level is undefined create an
-                  //   object or array based on the type of the next keys part.
-                  // * Move the 'cur' pointer to the next level.
-                  // * Rinse & repeat.
-                  for (; i <= keys_last; i++) {
-                    key = keys[i] === '' ? cur.length : keys[i];
-                    cur = cur[key] = i < keys_last
-                      ? cur[key] || (keys[i+1] && isNaN(keys[i+1]) ? {} : [])
-                      : val;
-                  }
+                if (keys_last) {
+                    // Complex key, build deep object structure based on a few rules:
+                    // * The 'cur' pointer starts at the object top-level.
+                    // * [] = array push (n is set to array length), [n] = array if n is
+                    //   numeric, otherwise object.
+                    // * If at the last keys part, set the value.
+                    // * For each keys part, if the current level is undefined create an
+                    //   object or array based on the type of the next keys part.
+                    // * Move the 'cur' pointer to the next level.
+                    // * Rinse & repeat.
+                    for (; i <= keys_last; i++) {
+                        key = keys[i] === '' ? cur.length : keys[i];
+                        cur = cur[key] = i < keys_last ?
+                            cur[key] || (keys[i + 1] && isNaN(keys[i + 1]) ? {} : []) :
+                            val;
+                    }
 
                 } else {
-                  // Simple key, even simpler rules, since only scalars and shallow
-                  // arrays are allowed.
+                    // Simple key, even simpler rules, since only scalars and shallow
+                    // arrays are allowed.
 
-                  if ($.isArray(obj[key])) {
-                    // val is already an array, so push on the next value.
-                    obj[key].push( val );
+                    if ($.isArray(obj[key])) {
+                        // val is already an array, so push on the next value.
+                        obj[key].push(val);
 
-                  } else if (obj[key] !== undefined) {
-                    // val isn't an array, but since a second value has been specified,
-                    // convert val into an array.
-                    obj[key] = [obj[key], val];
+                    } else if (obj[key] !== undefined) {
+                        // val isn't an array, but since a second value has been specified,
+                        // convert val into an array.
+                        obj[key] = [obj[key], val];
 
-                  } else {
-                    // val is a scalar.
-                    obj[key] = val;
-                  }
+                    } else {
+                        // val is a scalar.
+                        obj[key] = val;
+                    }
                 }
 
-              } else if (key) {
+            } else if (key) {
                 // No value was defined, so set something meaningful.
-                obj[key] = coerce
-                  ? undefined
-                  : '';
-              }
-            });
+                obj[key] = coerce ?
+                    undefined :
+                    '';
+            }
+        });
 
-            return obj;
-          };
-        })(jQuery);
+        return obj;
+    };
+})(jQuery);
 
-function get_params(){
-        return $.deparam(location.search.substring(1));
+function get_params() {
+    return $.deparam(location.search.substring(1));
 }
 
-function set_params(params){
+function set_params(params) {
 
-        window.history.replaceState( {} , document.title, window.location.origin + window.location.pathname + "?" + $.param(params));
+    window.history.replaceState({}, document.title, window.location.origin + window.location.pathname + "?" + $.param(params));
 
 }

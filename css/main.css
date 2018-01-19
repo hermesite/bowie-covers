@@ -2428,8 +2428,8 @@ body {
     display: inline-block; }
   .radial-container .radial-album {
     font-size: 1.25vh;
-    width: 50vw;
-    height: 50vw;
+    width: 60vh;
+    height: 60vh;
     padding: 0px;
     position: relative;
     border: 1px dotted #CCC; }
@@ -2485,8 +2485,8 @@ body {
   .radial-container .radial-album-title .counter-units {
     text-transform: uppercase; }
   .radial-container .radial-aside {
-    max-width: calc(100% - 50vw);
-    min-width: calc(100% - 50vw);
+    max-width: calc(100% - 60vh);
+    min-width: calc(100% - 60vh);
     padding-left: 40px; }
     .radial-container .radial-aside .level {
       margin: 0px; }
