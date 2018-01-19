@@ -106,7 +106,7 @@ var colorScale = d3.scale.quantize()
 
 var trackCovers = [];
 
-d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
+d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) {
 
     if (error) {
         return error;

@@ -8,7 +8,7 @@ from YouTubeSearch import YouTubeSearch
 
 FILE_IN = "../data/david_bowie_data.json"
 
-FILE_OUT = "./david_bowie_data.videos.cometas.json"
+FILE_OUT = "./david_bowie_data.videos.sincometas.json"
 
 print "Init youtube search..."
 
@@ -26,7 +26,8 @@ for album, entry in my_data.items():
         if 'covers' in track:
             for cover in track['covers']:
                 print "========================="
-                query = '"' + cover['credits'] + '"' + " " + cover['title'] + " bowie"
+                # query = '"' + cover['credits'] + '"' + " " + cover['title'] + " bowie"
+                query = cover['credits'] + " " + cover['title'] + " bowie"
                 cover['youtube'] = youtube.search(query)
                 cover['youtube']['query'] = query
                 pprint.pprint(cover)
