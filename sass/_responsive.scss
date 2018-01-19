@@ -1,0 +1,20 @@
+@media (min-width:999px) {
+    $base-layout: 60vh;
+    $label-size: 1.25vh;
+    .radial-container {
+      .radial-album {
+          width: $base-layout;
+          height: $base-layout;
+          font-size: $label-size;
+          .record {
+            height: $base-layout / $radial-factor;
+            width: $base-layout / $radial-factor;
+            margin-top: - $base-layout / ($radial-factor * 2);
+            margin-left: - $base-layout / ($radial-factor * 2);
+          }
+      }
+      .radial-aside {
+          width: calc(100% - #{$base-layout});
+      }
+    }
+}

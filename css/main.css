@@ -2422,17 +2422,17 @@ body {
   position: relative; }
   .radial-container .radial-item {
     margin: 5vh 0px;
-    padding: 5vh 0px; }
+    padding: 5vh 0px;
+    overflow: hidden; }
   .radial-container .radial-album,
   .radial-container .radial-aside {
     display: inline-block; }
   .radial-container .radial-album {
-    font-size: 1.25vh;
-    width: 60vh;
-    height: 60vh;
-    padding: 0px;
     position: relative;
-    border: 1px dotted #CCC; }
+    width: 100vw;
+    height: calc(100vw - (15px * 2));
+    font-size: 2vh;
+    padding: 0px; }
     .radial-container .radial-album svg {
       position: absolute;
       left: 0px;
@@ -2459,6 +2459,10 @@ body {
         fill: none;
         stroke-width: 2px; }
     .radial-container .radial-album .record {
+      height: 57.14286vw;
+      width: 57.14286vw;
+      margin-top: -28.57143vw;
+      margin-left: -28.57143vw;
       border: 1px dotted #600;
       position: absolute;
       z-index: 0;
@@ -2485,9 +2489,8 @@ body {
   .radial-container .radial-album-title .counter-units {
     text-transform: uppercase; }
   .radial-container .radial-aside {
-    max-width: calc(100% - 60vh);
-    min-width: calc(100% - 60vh);
-    padding-left: 40px; }
+    width: 100vw;
+    padding: 40px; }
     .radial-container .radial-aside .level {
       margin: 0px; }
     .radial-container .radial-aside .cover-title,
@@ -5560,5 +5563,18 @@ form {
   rx: 5;
   fill: black;
   stroke: #2b2b2b; }
+
+@media (min-width: 999px) {
+  .radial-container .radial-album {
+    width: 60vh;
+    height: 60vh;
+    font-size: 1.25vh; }
+    .radial-container .radial-album .record {
+      height: 34.28571vh;
+      width: 34.28571vh;
+      margin-top: -17.14286vh;
+      margin-left: -17.14286vh; }
+  .radial-container .radial-aside {
+    width: calc(100% - 60vh); } }
 
 /*# sourceMappingURL=main.css.map */

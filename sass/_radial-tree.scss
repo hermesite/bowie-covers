@@ -1,26 +1,23 @@
 .radial-container {
     position: relative; // width: 61.8vw;
     .radial-item {
-        // box-shadow: 0px 2px 0px 0px #CCC;
         margin: 5vh 0px;
         padding: 5vh 0px;
+        overflow: hidden;
     }
 
     .radial-album,
     .radial-aside {
-        // box-shadow: inset 0px 0px 0px 3px #C00;
         display: inline-block;
     }
     .radial-album {
-        font-size: 1.25vh;
+        position: relative; 
         width: $base-layout;
-        height: $base-layout; // background-color: rgba(0, 0, 0, .75);
-        // background-color: $bsides;
-        // border: 1px solid $bsides;
+        height: calc(#{$base-layout} - (#{$responsive-gap} * 2)); 
+        font-size: $label-size;
         padding: 0px;
-        position: relative; // text-align: center;
-        // border-radius: 50%;
-        border: 1px dotted #CCC; // radial tree
+        // border: 1px dotted #CCC; 
+        // radial tree
         svg {
             position: absolute;
             left: 0px;
@@ -63,6 +60,10 @@
             }
         } // Album image
         .record {
+            height: $base-layout / $radial-factor;
+            width: $base-layout / $radial-factor;
+            margin-top: - $base-layout / ($radial-factor * 2);
+            margin-left: - $base-layout / ($radial-factor * 2);
             border: 1px dotted $bsides;
             position: absolute;
             z-index: 0;
@@ -98,10 +99,9 @@
         }
     }
     .radial-aside {
-        // box-shadow: inset 2px 0px 0px 0px #0CC;
-        max-width: calc(100% - #{$base-layout});
-        min-width: calc(100% - #{$base-layout});
-        padding-left: 40px;
+        width: 100vw;
+        padding: 40px;
+        // background-color: #333;
         .level {
             margin: 0px
         }

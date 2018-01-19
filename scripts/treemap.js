@@ -708,10 +708,10 @@ d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
             widthFactor = 10,
             recordSize = widthRadial / widthFactor;
 
-        $('.record').css('height', recordSize + '%');
-        $('.record').css('width', recordSize + '%');
-        $('.record').css('margin-top', -(recordSize / 2) + '%');
-        $('.record').css('margin-left', -(recordSize / 2) + '%');
+        // $('.record').css('height', recordSize + '%');
+        // $('.record').css('width', recordSize + '%');
+        // $('.record').css('margin-top', -(recordSize / 2) + '%');
+        // $('.record').css('margin-left', -(recordSize / 2) + '%');
 
         $('#' + data.id + ' .record')
             .css({
