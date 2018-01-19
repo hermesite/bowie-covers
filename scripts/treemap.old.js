@@ -4,13 +4,16 @@
 
 var MIN_VIDEO_VIEWS = 500;
 var MIN_COVERS_ALBUM = 8;
-var DEFAULT_VIDEO_TEXT = "DEFAULT VIDEO TEXT";
 
 var bannedAlbums = ['bc02d917-a52e-3d77-ae5f-75aa3fb754ef']
 // Club Bowie: Rare and Unreleased 12″ Mixes
 
-var widthTreemap = $(".section-treemap").width(),
-    heightTreemap = $(".section-treemap").height();
+var
+    widthTreemap = $(".section-treemap").width(),
+    heightTreemap = $(".section-treemap").height(),
+    widthRadial = $('.radial-album').width(),
+    diameter = widthRadial,
+    radialOffset = diameter / 5;
 
 var margin = { top: 40, right: 0, bottom: 25, left: 0 },
     width = $('.bar-chart').width() - margin.left - margin.right,
@@ -50,7 +53,25 @@ chart.append("g")
     .call(yAxis);
 
 
+// var width = 200,
+//     height = 200,
+var radius = 100;
+
+
+// var x = d3.scale.linear()
+//     .range([0, 2 * Math.PI]);
+
+// var y = d3.scale.linear()
+//     .range([0, radius]);
+
+
 var color = d3.scale.category20c();
+
+var tree = d3.layout.tree()
+    .size([360, diameter / 2 - radialOffset])
+    .separation(function(a, b) {
+        return (a.parent === b.parent ? 1 : 2) / a.depth;
+    });
 
 var diagonal = d3.svg.diagonal.radial()
     .projection(function(d) {
@@ -102,13 +123,13 @@ var colorScale = d3.scale.quantize()
 
 var trackCovers = [];
 
-d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
+d3.json('data/david_bowie_data.videos.json', function(error, artist) {
 
     if (error) {
         return error;
     }
 
-    var params = get_params();
+    console.log(artist);
 
     var isCover;
     var colorCover;
@@ -226,6 +247,8 @@ d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
                     var myTrackSun = {};
                     var myTrackRadial = {};
 
+
+
                     if (track.covers.length > 0) {
 
                         if (jQuery.inArray(track.title, countCovers) === -1 && jQuery.inArray(track.title.substr(0, 8), countRepeated) === -1) {
@@ -339,11 +362,6 @@ d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
                 /*----------  Create the radialtree graph  ----------*/
 
                 createRadial(myAlbumRadial, radialContainer, myAlbum.image, myAlbum.size);
-
-
-                $(window).resize(function() {
-                    createRadial(myAlbumRadial, radialContainer, myAlbum.image, myAlbum.size);
-                });
 
                 /*----------  Add items to the timeline  ----------*/
 
@@ -533,26 +551,24 @@ d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
 
     function createTreemap(treeData, container) {
 
+        var div = d3.select(container)
+            .style('width', widthTreemap + 'px')
+            .style('height', heightTreemap + 'px');
+
         var treemap = d3.layout.treemap()
-            .size([100, 100])
-            // .sticky(true)
-            // .round(true)
-            // .mode('squarify')
+            .size([widthTreemap, heightTreemap])
+            .sticky(false)
+            .round(true)
+            .mode('squarify')
             .value(function(d) {
                 if (d.size >= MIN_COVERS_ALBUM) {
                     return d.size;
                 }
             });
 
-        var treemapContainer = d3.select(container);
-        treemapContainer.datum(treeData);
-
-        var treemapJoin = treemapContainer.selectAll('.node')
+        div.datum(treeData).selectAll('.node')
             .data(treemap.nodes)
-
-        treemapJoin.attr('class', 'update');
-
-        treemapJoin.enter().append('a')
+            .enter().append('a')
             .attr('id', function(d) {
                 return d.positionInArray;
             })
@@ -561,15 +577,27 @@ d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
                     return '#' + d.id;
                 }
             })
+            .attr('data-anchor', function(d) {
+                if (d.id) {
+                    return d.id;
+                }
+            })
             .attr('class', 'node row middle-xs')
+
+            // .on('click', function() {
+
+            //     var anchorLink = '#' + $(this).attr('data-anchor')
+            //     $(document).scrollTop($(anchorLink).offset().top);
+
+
+            // })
             .style('background-image', function(d) {
                 if (d.image) {
                     return 'url(' + d.image + ')';
                 }
             })
-            .call(position);
-
-        treemapJoin.append('div')
+            .call(position)
+            .append('div')
             .attr('class', function(d) {
                 var textSize = Math.round(d.area / 1000);
                 return 'col-xs row middle-xs node-content area-' + textSize;
@@ -587,34 +615,21 @@ d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
     function position() {
 
         this.style('left', function(d) {
-                return d.x + '%';
+                return d.x + 'px';
             })
             .style('top', function(d) {
-                return d.y + '%';
+                return d.y + 'px';
             })
             .style('width', function(d) {
-                return Math.max(0, d.dx) + '%';
+                return Math.max(0, d.dx - 1) + 'px';
             })
             .style('height', function(d) {
-                return Math.max(0, d.dy) + '%';
+                return Math.max(0, d.dy - 1) + 'px';
             });
     }
 
 
     function createRadial(data, container, image, size) {
-
-        // $('.radial-album *').empty();
-
-        var widthRadial = $('.radial-album').width(),
-            diameter = widthRadial,
-            radialOffset = diameter / 5;
-
-
-        var tree = d3.layout.tree()
-            .size([360, diameter / 2 - radialOffset])
-            .separation(function(a, b) {
-                return (a.parent === b.parent ? 1 : 2) / a.depth;
-            });
 
         if (size <= MIN_COVERS_ALBUM) {
             return false;
@@ -624,29 +639,25 @@ d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
             .attr('id', data.id)
             .attr('class', 'radial-item row')
 
-        // radialItem.remove();
-
         // var counterSide = radialItem.append('div')
         //     .attr('class', 'radial-counter content');
 
-        var albumTitle = radialItem.append('div').attr('class', 'col-xs-12 radial-album-title');
-
-        albumTitle.append('nav').attr('class', 'level')
-            .append('div').attr('class', 'counter')
-            .append('div').attr('class', 'content')
-            .html(function() {
-                return '<p class="counter-number"><strong>' + data.name + '</strong> | ' + size + ' <span class="counter-units">Covers</span></p>';
-            });
-
         var box = radialItem.append('div')
-            .attr('id', data.id + '-album')
+            .attr('id', data.id.substr(0, 5))
             .attr('class', 'radial-album');
 
         var aside = radialItem.append('div')
             .attr('class', 'radial-aside content');
 
+        aside.append('nav').attr('class', 'level')
+            .append('div').attr('class', 'counter')
+            .append('div').attr('class', 'content')
+            .html(function() {
+                return '<p class="counter-number">' + size + '</p><h5 class="counter-units">Covers</h5><p class="counter-entity">' + data.name + '</p>';
+            });
 
         box.append('div').attr('class', 'record');
+
 
         var coverTitle = aside.append('p').attr('class', 'cover-title').text('Song title');
         var coverArtist = aside.append('p').attr('class', 'cover-artist').text('Cover artist');
@@ -655,70 +666,29 @@ d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
             return $(this).width() - ($(this).width() / 3) + 'px';
         });
 
-        // OSCAR
-
-
-        console.log("LOOKING FOR THE MOST VIEWED VIDEO");
-
-//        console.log(data);
-
-        var candidate = {'name': undefined, 'id': undefined, 'count': 0};
-
-        data.children.forEach(function(d,i){
-           console.log("SONG", d.name, i);
-            if(('children' in d) && (d.children.length > 0)){
-                var children = d.children;
-                children.forEach(function(version,j){
-                    if('youtube' in version) {
-                        console.log("VERSION", version.name, version.youtube.id, version.youtube.views, candidate);
-                        if(parseInt(version.youtube.views,10) > candidate.count) {
-                            candidate = {name: version.name, id: version.youtube.id, count: parseInt(version.youtube.views,10)};
-                        }
-                    }
-                })
-            }
-
-        });
-
-        console.log("CANDIDATE!", candidate);
-
-        youtubeContainer.append('iframe')
-            .attr('id', 'video')
-            .attr('src', 'https://www.youtube.com/embed/' + candidate.id)
-            .attr('width', '100%')
-            .attr('height', '100%')
-            .attr('allowfullscreen', 'allowfullscreen')
-            .attr('mozallowfullscreen', 'mozallowfullscreen')
-            .attr('msallowfullscreen', 'msallowfullscreen')
-            .attr('oallowfullscreen', 'oallowfullscreen')
-            .attr('webkitallowfullscreen', 'webkitallowfullscreen');
-
-        var youtubeContainerSubText = aside.append('div').attr('class', 'video_subtext').html(DEFAULT_VIDEO_TEXT);
-
-        // OSCAR
-
         var backLink = aside.append('a').attr('href', '#covers-treemap').text('Back to albums').on('click', function() {
             $('.video').empty();
             navigateSooth();
         });
 
         var
-            widthFactor = 13.5,
+            widthFactor = 1.67,
             recordSize = widthRadial / widthFactor;
 
-        $('.record').css('height', recordSize + '%');
-        $('.record').css('width', recordSize + '%');
-        $('.record').css('margin-top', -(recordSize / 2) + '%');
-        $('.record').css('margin-left', -(recordSize / 2) + '%');
 
-        $('#' + data.id + ' .record')
+        $('.record').css('height', recordSize + 'px');
+        $('.record').css('width', recordSize + 'px');
+        $('.record').css('margin-top', -(recordSize / 2) + 'px');
+        $('.record').css('margin-left', -(recordSize / 2) + 'px');
+
+        $('#' + data.id.substr(0, 5) + ' .record')
             .css({
                 'background-image': 'url(' + image + ')'
             });
 
         var svg = box.append('svg')
-            .attr('width', "100%")
-            .attr('height', "100%")
+            .attr('width', widthRadial)
+            .attr('height', diameter)
             .append('g')
             .attr('transform', 'translate(' + widthRadial / 2 + ',' + diameter / 2 + ')');
 
@@ -769,6 +739,8 @@ d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
             });
 
         // oscar
+
+
 
         var text = svg.selectAll('text').data(nodes)
             .enter().append('g')
@@ -882,30 +854,6 @@ d3.json('data/david_bowie_data.videos.cometas.json', function(error, artist) {
 
     var indexControl;
 
-    // OSCAR 'land' en el video
-
-    console.log("LANDING", myData, params, location.hash);
-
-    if('id' in params) {
-
-        var hash = location.hash;
-
-        var youtubeContainer = d3.select("#coversRadial").select(hash).select(".video");
-
-        $(youtubeContainer.node()).empty();
-
-        youtubeContainer.append('iframe')
-            .attr('id', 'video')
-            .attr('src', 'https://www.youtube.com/embed/' + params['id'])
-            .attr('width', '100%')
-            .attr('height', '100%')
-            .attr('allowfullscreen', 'allowfullscreen')
-            .attr('mozallowfullscreen', 'mozallowfullscreen')
-            .attr('msallowfullscreen', 'msallowfullscreen')
-            .attr('oallowfullscreen', 'oallowfullscreen')
-            .attr('webkitallowfullscreen', 'webkitallowfullscreen');
-    }
-
 
 });
 
@@ -944,7 +892,6 @@ $('a[href*="#"]')
             }
         }
     });
-
 function navigateSooth() {
     $('a[href*="#"]')
         // Remove links that don't actually link to anything
@@ -984,17 +931,8 @@ function navigateSooth() {
 
 }
 $('document').ready(function() {
-
     // Select all links with hashes
-
-    // id in params?
-
-
-});
-
-
-
-
+})
 
 
 function sortUnorderedList(ul, sortDescending) {
@@ -1014,109 +952,4 @@ function sortUnorderedList(ul, sortDescending) {
 
     for (var i = 0, l = lis.length; i < l; i++)
         lis[i].innerHTML = vals[i];
-}
-
-
-        (function ($) {
-          $.deparam = function (params, coerce) {
-            var obj = {},
-                coerce_types = { 'true': !0, 'false': !1, 'null': null };
-
-            // Iterate over all name=value pairs.
-            $.each(params.replace(/\+/g, ' ').split('&'), function (j,v) {
-              var param = v.split('='),
-                  key = decodeURIComponent(param[0]),
-                  val,
-                  cur = obj,
-                  i = 0,
-
-                  // If key is more complex than 'foo', like 'a[]' or 'a[b][c]', split it
-                  // into its component parts.
-                  keys = key.split(']['),
-                  keys_last = keys.length - 1;
-
-              // If the first keys part contains [ and the last ends with ], then []
-              // are correctly balanced.
-              if (/\[/.test(keys[0]) && /\]$/.test(keys[keys_last])) {
-                // Remove the trailing ] from the last keys part.
-                keys[keys_last] = keys[keys_last].replace(/\]$/, '');
-
-                // Split first keys part into two parts on the [ and add them back onto
-                // the beginning of the keys array.
-                keys = keys.shift().split('[').concat(keys);
-
-                keys_last = keys.length - 1;
-              } else {
-                // Basic 'foo' style key.
-                keys_last = 0;
-              }
-
-              // Are we dealing with a name=value pair, or just a name?
-              if (param.length === 2) {
-                val = decodeURIComponent(param[1]);
-
-                // Coerce values.
-                if (coerce) {
-                  val = val && !isNaN(val)              ? +val              // number
-                      : val === 'undefined'             ? undefined         // undefined
-                      : coerce_types[val] !== undefined ? coerce_types[val] // true, false, null
-                      : val;                                                // string
-                }
-
-                if ( keys_last ) {
-                  // Complex key, build deep object structure based on a few rules:
-                  // * The 'cur' pointer starts at the object top-level.
-                  // * [] = array push (n is set to array length), [n] = array if n is
-                  //   numeric, otherwise object.
-                  // * If at the last keys part, set the value.
-                  // * For each keys part, if the current level is undefined create an
-                  //   object or array based on the type of the next keys part.
-                  // * Move the 'cur' pointer to the next level.
-                  // * Rinse & repeat.
-                  for (; i <= keys_last; i++) {
-                    key = keys[i] === '' ? cur.length : keys[i];
-                    cur = cur[key] = i < keys_last
-                      ? cur[key] || (keys[i+1] && isNaN(keys[i+1]) ? {} : [])
-                      : val;
-                  }
-
-                } else {
-                  // Simple key, even simpler rules, since only scalars and shallow
-                  // arrays are allowed.
-
-                  if ($.isArray(obj[key])) {
-                    // val is already an array, so push on the next value.
-                    obj[key].push( val );
-
-                  } else if (obj[key] !== undefined) {
-                    // val isn't an array, but since a second value has been specified,
-                    // convert val into an array.
-                    obj[key] = [obj[key], val];
-
-                  } else {
-                    // val is a scalar.
-                    obj[key] = val;
-                  }
-                }
-
-              } else if (key) {
-                // No value was defined, so set something meaningful.
-                obj[key] = coerce
-                  ? undefined
-                  : '';
-              }
-            });
-
-            return obj;
-          };
-        })(jQuery);
-
-function get_params(){
-        return $.deparam(location.search.substring(1));
-}
-
-function set_params(params){
-
-        window.history.replaceState( {} , document.title, window.location.origin + window.location.pathname + "?" + $.param(params));
-
 }
