@@ -6,7 +6,12 @@ var MIN_VIDEO_VIEWS = 500;
 var MIN_COVERS_ALBUM = 8;
 var DEFAULT_VIDEO_TEXT = "DEFAULT VIDEO TEXT";
 
-var bannedAlbums = ['bc02d917-a52e-3d77-ae5f-75aa3fb754ef']
+var FORBIDDEN_VIDEOS = [
+    "aCHg5r6rFoI", "CMThz7eQ6K0", "aySEzuNSN1k"
+];
+
+var bannedAlbums = ['bc02d917-a52e-3d77-ae5f-75aa3fb754ef'];
+
 // Club Bowie: Rare and Unreleased 12″ Mixes
 
 var widthTreemap = $(".section-treemap").width(),
@@ -671,7 +676,7 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
             if (('children' in d) && (d.children.length > 0)) {
                 var children = d.children;
                 children.forEach(function(version, j) {
-                    if ('youtube' in version) {
+                    if ('youtube' in version && FORBIDDEN_VIDEOS.indexOf(version.youtube.id) == -1) {
                         console.log("VERSION", version.name, version.youtube.id, version.youtube.views, candidate);
                         if (parseInt(version.youtube.views, 10) > candidate.count) {
                             candidate = { name: version.name, id: version.youtube.id, count: parseInt(version.youtube.views, 10) };
@@ -752,7 +757,7 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
                 if (!d.source.id) {
                     return 'link';
                 } else {
-                    return 'no-link';
+                    return 'link';
                 }
 
             })
@@ -782,7 +787,7 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
 
                 if (d.youtube) {
 
-                    if (parseInt(d.youtube.views, 10) > MIN_VIDEO_VIEWS) {
+                    if ((parseInt(d.youtube.views, 10) > MIN_VIDEO_VIEWS) && (FORBIDDEN_VIDEOS.indexOf(d.youtube.id)==-1)) {
                         return 'node'
                     } else {
                         return 'node inactive'
