@@ -2439,6 +2439,9 @@ body {
       top: 0px;
       z-index: 1;
       overflow: visible; }
+      .radial-container .radial-album svg .node.active text.artist {
+        font-family: 'nowaymedium_italic';
+        opacity: 1; }
       .radial-container .radial-album svg .node.inactive text.artist {
         pointer-events: none;
         fill: #CCC; }

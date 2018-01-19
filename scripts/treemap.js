@@ -82,8 +82,6 @@ items.add({ id: 'I', content: 'Neoclassicist Bowie', start: '1999-01-1', end: '2
 items.add({ id: 'J', content: 'Final years', start: '2012-07-1', end: '2016-12-31', type: 'background', className: 'negative', size: 2 })
 
 function customOrder(a, b) {
-    // order by id
-    // console.log(a.size);
     return a.size - b.size;
 }
 
@@ -235,8 +233,6 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
                     if (track.covers.length > 0) {
 
                         if (jQuery.inArray(track.title, countCovers) === -1 && jQuery.inArray(track.title.substr(0, 8), countRepeated) === -1) {
-
-                            // console.log(track);
 
                             trackCoversCount.push({
                                 id: track.recording_id,
@@ -664,7 +660,7 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
 
         //        console.log(data);
 
-        var candidate = { 'name': undefined, 'id': undefined, 'count': 0 };
+        var candidate = { 'coverName': undefined , 'name': undefined, 'id': undefined, 'count': 0 };
 
         data.children.forEach(function(d, i) {
             console.log("SONG", d.name, i);
@@ -674,7 +670,13 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
                     if ('youtube' in version) {
                         console.log("VERSION", version.name, version.youtube.id, version.youtube.views, candidate);
                         if (parseInt(version.youtube.views, 10) > candidate.count) {
-                            candidate = { name: version.name, id: version.youtube.id, count: parseInt(version.youtube.views, 10) };
+                            candidate = { coverName: d.name, name: version.name, id: version.youtube.id, count: parseInt(version.youtube.views, 10) };
+                            coverTitle.text(function() {
+                                return d.name;
+                            })
+                            coverArtist.text(function() {
+                                return version.name;
+                            })
                         }
                     }
                 })
@@ -793,6 +795,8 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
                 return 'rotate(' + (d.x - 90) + ')translate(' + d.y + ')';
             })
             .on('click', function(d) {
+                d3.selectAll('.node').classed('active', false)
+                d3.select(this).classed('active', true);
                 console.log("DATOS DE COVER:", d);
 
                 coverTitle.text(function() {
@@ -801,8 +805,6 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
                 coverArtist.text(function() {
                     return d.name;
                 })
-
-
 
                 if (parseInt(d.youtube.views, 10) > MIN_VIDEO_VIEWS) {
                     $('.video').empty();

@@ -25,6 +25,14 @@
             z-index: 1;
             overflow: visible;
             .node {
+                &.active {
+                    text {
+                        &.artist {
+                            font-family: 'nowaymedium_italic';
+                            opacity: 1;
+                        }
+                    }
+                }
                 &.inactive {
                     text {
                         &.artist {
