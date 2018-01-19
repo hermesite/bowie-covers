@@ -8,7 +8,40 @@ var DEFAULT_VIDEO_TEXT = "DEFAULT VIDEO TEXT";
 var BASE_URL = "http://127.0.0.1/bowie-covers/";
 
 var FORBIDDEN_VIDEOS = [
-    "aCHg5r6rFoI", "CMThz7eQ6K0", "aySEzuNSN1k", "v--IqqusnNQ"
+    "aCHg5r6rFoI", 
+    "CMThz7eQ6K0", 
+    "aySEzuNSN1k", 
+    "v--IqqusnNQ", 
+    "aCHg5r6rFoI", 
+    "SkkOu1BYNo0", 
+    "eF551z9KlA8", 
+    "4AyuiThAzaI",
+    "N4d7Wp9kKjA",
+    "jBuwC4VJi50",
+    "6bLOjmY--TA",
+    "EJBFD-Wvc7U",
+    "ot61jhzYtdo",
+    "LaqMwE5NKaM",
+    "YWX_MFNOL_Y",
+    "c65L71inrlg",
+    "-oQO-kGU2lA",
+    "0698sTH7mUk",
+    "0uazTyTrk-8",
+    "9G4jnaznUoQ",
+    "JDG2m5hN1vo",
+    "y-JqH1M4Ya8",
+    "5WICgADzDqw",
+    "3dv0AC0xnNI",
+    "Whcgt_NBT30",
+    "GA27aQZCQMk",
+    "CGQo6zpVzt8",
+    "6fHoMw8tCzo",
+    "QgPUxjQOk-w",
+    "rQtVB7_lDHg",
+    "Tgcc5V9Hu3g",
+    "YoDh_gHDvkk",
+    "-nbq6Ur103Q",
+    "J06yQb4lbPk"
 ];
 
 var bannedAlbums = ['bc02d917-a52e-3d77-ae5f-75aa3fb754ef'];
@@ -659,51 +692,6 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
             return $(this).width() - ($(this).width() / 3) + 'px';
         });
 
-        // OSCAR
-
-
-        console.log("LOOKING FOR THE MOST VIEWED VIDEO");
-
-        //        console.log(data);
-
-        var candidate = { 'coverName': undefined , 'name': undefined, 'id': undefined, 'count': 0 };
-
-        data.children.forEach(function(d, i) {
-            console.log("SONG", d.name, i);
-            if (('children' in d) && (d.children.length > 0)) {
-                var children = d.children;
-                children.forEach(function(version, j) {
-                    if ('youtube' in version && FORBIDDEN_VIDEOS.indexOf(version.youtube.id) == -1) {
-                        console.log("VERSION", version.name, version.youtube.id, version.youtube.views, candidate);
-                        if (parseInt(version.youtube.views, 10) > candidate.count) {
-                            candidate = { coverName: d.name, name: version.name, id: version.youtube.id, count: parseInt(version.youtube.views, 10) };
-                            coverTitle.text(function() {
-                                return d.name;
-                            })
-                            coverArtist.text(function() {
-                                return version.name;
-                            })
-                        }
-                    }
-                })
-            }
-
-        });
-
-        console.log("CANDIDATE!", candidate);
-
-        youtubeContainer.append('iframe')
-            .attr('id', 'video')
-            .attr('src', 'https://www.youtube.com/embed/' + candidate.id)
-            .attr('width', '100%')
-            .attr('height', '100%')
-            .attr('allowfullscreen', 'allowfullscreen')
-            .attr('mozallowfullscreen', 'mozallowfullscreen')
-            .attr('msallowfullscreen', 'msallowfullscreen')
-            .attr('oallowfullscreen', 'oallowfullscreen')
-            .attr('webkitallowfullscreen', 'webkitallowfullscreen');
-
-        var youtubeContainerSubText = aside.append('div').attr('class', 'video_subtext').html(DEFAULT_VIDEO_TEXT);
 
         var tweetbutton_container = aside.append('div').attr('class', 'tweet_button');
 
@@ -927,6 +915,56 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
         radialTreeJoin.exit().remove();
         nodeJoin.exit().remove();
         textJoin.exit().remove();
+
+                // OSCAR
+
+
+        console.log("LOOKING FOR THE MOST VIEWED VIDEO");
+
+        //        console.log(data);
+
+        var candidate = { 'coverName': undefined , 'name': undefined, 'id': undefined, 'count': 0 };
+
+        data.children.forEach(function(d, i) {
+            console.log("SONG", d.name, i);
+            if (('children' in d) && (d.children.length > 0)) {
+                var children = d.children;
+                children.forEach(function(version, j) {
+                    if ('youtube' in version && FORBIDDEN_VIDEOS.indexOf(version.youtube.id) == -1) {
+                        console.log("VERSION", version.name, version.youtube.id, version.youtube.views, candidate);
+                        if (parseInt(version.youtube.views, 10) > candidate.count) {
+                            candidate = { coverName: d.name, name: version.name, id: version.youtube.id, count: parseInt(version.youtube.views, 10) };
+
+                            $(".node text:contains(" + version.name + ")").parent().addClass('active');
+
+                            coverTitle.text(function() {
+                                return d.name;
+                            })
+                            coverArtist.text(function() {
+                                return version.name;
+                            })
+                        }
+                    }
+                })
+            }
+
+        });
+
+        console.log("CANDIDATE!", candidate);
+
+        youtubeContainer.append('iframe')
+            .attr('id', 'video')
+            .attr('src', 'https://www.youtube.com/embed/' + candidate.id)
+            .attr('width', '100%')
+            .attr('height', '100%')
+            .attr('allowfullscreen', 'allowfullscreen')
+            .attr('mozallowfullscreen', 'mozallowfullscreen')
+            .attr('msallowfullscreen', 'msallowfullscreen')
+            .attr('oallowfullscreen', 'oallowfullscreen')
+            .attr('webkitallowfullscreen', 'webkitallowfullscreen');
+
+        var youtubeContainerSubText = aside.append('div').attr('class', 'video_subtext').html(DEFAULT_VIDEO_TEXT);
+
 
     }
 
