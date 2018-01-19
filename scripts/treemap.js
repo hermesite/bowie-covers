@@ -7,7 +7,7 @@ var MIN_COVERS_ALBUM = 8;
 var DEFAULT_VIDEO_TEXT = "DEFAULT VIDEO TEXT";
 
 var FORBIDDEN_VIDEOS = [
-    "aCHg5r6rFoI", "CMThz7eQ6K0", "aySEzuNSN1k"
+    "aCHg5r6rFoI", "CMThz7eQ6K0", "aySEzuNSN1k", "v--IqqusnNQ"
 ];
 
 var bannedAlbums = ['bc02d917-a52e-3d77-ae5f-75aa3fb754ef'];
