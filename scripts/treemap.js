@@ -42,7 +42,7 @@ var FORBIDDEN_VIDEOS = [
     "YoDh_gHDvkk",
     "-nbq6Ur103Q",
     "J06yQb4lbPk", // End of video defaults
-    "mjedw-Ar_Y8", // Start Love you till tuesday
+    "mjedw-Ar_Y8", // Love you till tuesday
     "pXSGocWifAg",
     "ERxTaENbRdY",
     "ICgZj_2E9Sw",
@@ -53,7 +53,12 @@ var FORBIDDEN_VIDEOS = [
     "QFRqRUJHi4A",
     "1xINehkmCpc",
     "iYYRH4apXDo",
-    "MY23nChpciw"
+    "MY23nChpciw", // The Man Who Sold The World
+    "Yr5MmGN3NxY",
+    "SDtj9PS0wT0",
+    "HjKcCGaCiu0",
+    "x6rZIMB6mNk",
+    "NhKQinkxPak"
 ];
 
 var bannedAlbums = ['bc02d917-a52e-3d77-ae5f-75aa3fb754ef'];
