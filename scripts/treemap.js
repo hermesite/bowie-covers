@@ -41,7 +41,19 @@ var FORBIDDEN_VIDEOS = [
     "Tgcc5V9Hu3g",
     "YoDh_gHDvkk",
     "-nbq6Ur103Q",
-    "J06yQb4lbPk"
+    "J06yQb4lbPk", // End of video defaults
+    "mjedw-Ar_Y8", // Start Love you till tuesday
+    "pXSGocWifAg",
+    "ERxTaENbRdY",
+    "ICgZj_2E9Sw",
+    "CtBItBCZsvU",
+    "TaGAbCJ6AO8",
+    "nv8gySWBpRo",
+    "yefQwsHSkI0",
+    "QFRqRUJHi4A",
+    "1xINehkmCpc",
+    "iYYRH4apXDo",
+    "MY23nChpciw"
 ];
 
 var bannedAlbums = ['bc02d917-a52e-3d77-ae5f-75aa3fb754ef'];
