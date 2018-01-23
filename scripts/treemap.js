@@ -58,7 +58,20 @@ var FORBIDDEN_VIDEOS = [
     "SDtj9PS0wT0",
     "HjKcCGaCiu0",
     "x6rZIMB6mNk",
-    "NhKQinkxPak"
+    "NhKQinkxPak",
+    "T6z4lTf8qIs", // Lodger
+    "cyjePaiVKXM",
+    "XqUfX93EtJE", // Christiane F
+    "rThH2eGEtoA",
+    "WY0lAwPS38E",
+    "vucGm9MiDBI", // On Air
+    "hyH0Eo2WPfo",
+    "hVt07JAR7Ws",
+    "VdqsBX1q3sc", // David Bowie
+    "c3OA6Ud91a8",
+    "18kbAQXw11w",
+    "Dw3BcdtGnFg",
+    "Cr-SqRWImmI"
 ];
 
 var bannedAlbums = ['bc02d917-a52e-3d77-ae5f-75aa3fb754ef'];
@@ -831,7 +844,7 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
             .on('click', function(d) {
                 d3.selectAll('.node').classed('active', false)
                 d3.select(this).classed('active', true);
-                console.log("DATOS DE COVER:", d);
+                // console.log("DATOS DE COVER:", d);
 
                 coverTitle.text(function() {
                     return d.parent.name;
@@ -936,19 +949,19 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
                 // OSCAR
 
 
-        console.log("LOOKING FOR THE MOST VIEWED VIDEO");
+        // console.log("LOOKING FOR THE MOST VIEWED VIDEO");
 
         //        console.log(data);
 
         var candidate = { 'coverName': undefined , 'name': undefined, 'id': undefined, 'count': 0 };
 
         data.children.forEach(function(d, i) {
-            console.log("SONG", d.name, i);
+            // console.log("SONG", d.name, i);
             if (('children' in d) && (d.children.length > 0)) {
                 var children = d.children;
                 children.forEach(function(version, j) {
                     if ('youtube' in version && FORBIDDEN_VIDEOS.indexOf(version.youtube.id) == -1) {
-                        console.log("VERSION", version.name, version.youtube.id, version.youtube.views, candidate);
+                        // console.log("VERSION", version.name, version.youtube.id, version.youtube.views, candidate);
                         if (parseInt(version.youtube.views, 10) > candidate.count) {
                             candidate = { coverName: d.name, name: version.name, id: version.youtube.id, count: parseInt(version.youtube.views, 10) };
 
@@ -967,7 +980,7 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
 
         });
 
-        console.log("CANDIDATE!", candidate);
+        // console.log("CANDIDATE!", candidate);
 
         youtubeContainer.append('iframe')
             .attr('id', 'video')
@@ -1218,6 +1231,35 @@ function sortUnorderedList(ul, sortDescending) {
         return obj;
     };
 })(jQuery);
+
+// to top right away
+// if ( window.location.hash ) scroll(0,0);
+// // void some browsers issue
+// setTimeout( function() { scroll(0,0); }, 1);
+
+// $(function() {
+
+//     // your current click function
+//     $('.scroll').on('click', function(e) {
+//         e.preventDefault();
+//         $('html, body').animate({
+//             scrollTop: $($(this).attr('href')).offset().top + 'px'
+//         }, 1000, 'swing');
+//     });
+
+//     // *only* if we have anchor on the url
+//     if(window.location.hash) {
+
+//         // smooth scroll to the anchor id
+//         $('html, body').animate({
+//             scrollTop: $(window.location.hash).offset().top + 'px'
+//         }, 1000, 'swing');
+//     }
+
+// });
+
+
+
 
 function get_params() {
     return $.deparam(location.search.substring(1));
