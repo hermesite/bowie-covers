@@ -71,7 +71,17 @@ var FORBIDDEN_VIDEOS = [
     "c3OA6Ud91a8",
     "18kbAQXw11w",
     "Dw3BcdtGnFg",
-    "Cr-SqRWImmI"
+    "Cr-SqRWImmI",
+    "60-MoSGqhhg", // Ziggy Stardust
+    "oijZhA8NK48",
+    "IgJq6v6gA_4",
+    "JghPaZAbIyo",
+    "870wDkcQpHk",
+    "XYL9tHrVrz0",
+    "ha3_Hpicc3Y",
+    "mx2uE7FhIZk",
+    "VBe-idcujSg",
+    "5yC-6Mel2Ow", // Ziggy Stardust Def Leppard
 ];
 
 var bannedAlbums = ['bc02d917-a52e-3d77-ae5f-75aa3fb754ef'];
