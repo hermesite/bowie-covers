@@ -122,7 +122,15 @@ var FORBIDDEN_VIDEOS = [
     "kyb3LVGHwhE",
     "NhPZUJFC2LE",
     "RsynrZzCA94",
-    "2xHIWvY-Xoc"
+    "2xHIWvY-Xoc",
+    "4t9AgwAzgGw", // Aladdin Sane
+    "l8KSeYyxQbM",
+    "IMOAqxaOsec",
+    "NnOhBykB-z4", // Heroes
+    "v-DiwnZw6jw",
+    "ez9cRs_EkCk",
+    "jR_dk7iyGFA",
+    "4qEiT17OMOM"
 ];
 
 var bannedAlbums = ['bc02d917-a52e-3d77-ae5f-75aa3fb754ef'];
