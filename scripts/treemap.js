@@ -3,7 +3,7 @@
 // Minimum number of views to display a cover video
 
 var MIN_VIDEO_VIEWS = 500;
-var MIN_COVERS_ALBUM = 8;
+var MIN_COVERS_ALBUM = 4;
 var DEFAULT_VIDEO_TEXT = "DEFAULT VIDEO TEXT";
 var BASE_URL = "http://127.0.0.1/bowie-covers/";
 
@@ -639,7 +639,6 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
     var timeline = new vis.Timeline(container, items, options);
 
     timeline.on('click', function(properties) {
-
         var anchorLink = '#' + properties.item
         $(document).scrollTop($(anchorLink).offset().top);
 
@@ -768,31 +767,28 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
         // var counterSide = radialItem.append('div')
         //     .attr('class', 'radial-counter content');
 
-        var albumTitle = radialItem.append('div').attr('class', 'col-xs-12 radial-album-title');
+        var albumTitle = radialItem.append('div').attr('class', 'radial-album-title');
 
-        albumTitle.append('nav').attr('class', 'level')
-            .append('div').attr('class', 'counter')
-            .append('div').attr('class', 'content')
+        albumTitle.append('div').attr('class', 'album-title')
             .html(function() {
-                return '<p class="counter-number"><strong>' + data.name + '</strong> | ' + size + ' <span class="counter-units">Covers</span></p>';
+                return size + '<span class="counter-units">Covers</span>' + '<strong>' + data.name + '</strong>';
             });
 
         var box = radialItem.append('div')
             .attr('id', data.id + '-album')
             .attr('class', 'radial-album');
 
-        var aside = radialItem.append('div')
-            .attr('class', 'radial-aside content');
 
         box.append('div').attr('class', 'record');
 
-        var coverTitle = aside.append('p').attr('class', 'cover-title').text('Song title');
-        var coverArtist = aside.append('p').attr('class', 'cover-artist').text('Cover artist');
+        var aside = radialItem.append('div')
+            .attr('class', 'radial-aside content');
 
         var youtubeContainer = aside.append('div').attr('class', 'video').style('height', function() {
             return $(this).width() - ($(this).width() / 3) + 'px';
         });
-
+        var coverTitle = aside.append('p').attr('class', 'cover-title').text('Song title');
+        var coverArtist = aside.append('p').attr('class', 'cover-artist').text('Cover artist');
 
         var tweetbutton_container = aside.append('div').attr('class', 'tweet_button');
 
@@ -804,6 +800,13 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
             window.open("https://twitter.com/share?url="+escape(url)+"&text="+text, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
             return false;
         });
+
+        var backLink = aside.append('a').attr('href', '#covers-treemap').text('Back to albums').on('click', function() {
+            $('.video').empty();
+            navigateSooth();
+        });
+
+
 
 
 //        tweetbutton_container.append("a")
@@ -818,11 +821,6 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
 //        tweetbutton_container.html('<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hello%20world" data-size="large">Tweet</a>');
 
         // OSCAR
-
-        var backLink = aside.append('a').attr('href', '#covers-treemap').text('Back to albums').on('click', function() {
-            $('.video').empty();
-            navigateSooth();
-        });
 
         var
             widthFactor = 10,
@@ -951,7 +949,6 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
 
         textJoin.append('text')
             .attr('fill', function(d) {
-
                 if (d.cover) {
                     return d.color;
                 } else {
@@ -1064,8 +1061,7 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
             .attr('oallowfullscreen', 'oallowfullscreen')
             .attr('webkitallowfullscreen', 'webkitallowfullscreen');
 
-        var youtubeContainerSubText = aside.append('div').attr('class', 'video_subtext').html(DEFAULT_VIDEO_TEXT);
-
+        // var youtubeContainerSubText = aside.append('div').attr('class', 'video_subtext').html(DEFAULT_VIDEO_TEXT);
 
     }
 

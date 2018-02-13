@@ -2423,11 +2423,30 @@ body {
   .radial-container .radial-item {
     margin: 5vh 0px;
     padding: 5vh 0px;
-    overflow: hidden; }
-  .radial-container .radial-album,
-  .radial-container .radial-aside {
-    display: inline-block; }
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0px 0px 0px 2px #0CC; }
+    .radial-container .radial-item .radial-album-title,
+    .radial-container .radial-item .radial-album,
+    .radial-container .radial-item .radial-aside {
+      display: inline-block; }
+  .radial-container .radial-album-title {
+    box-shadow: inset 0px 0px 0px 2px #C00; }
+    .radial-container .radial-album-title .album-title {
+      font-size: 3.375em;
+      font-family: 'nowaylight'; }
+      .radial-container .radial-album-title .album-title span, .radial-container .radial-album-title .album-title strong {
+        display: block; }
+      .radial-container .radial-album-title .album-title span {
+        font-size: .5rem;
+        font-weight: 500;
+        text-transform: uppercase; }
+      .radial-container .radial-album-title .album-title strong {
+        font-family: 'nowaymedium';
+        font-size: 1rem;
+        font-weight: 400; }
   .radial-container .radial-album {
+    box-shadow: inset 0px 0px 0px 2px #00C;
     position: relative;
     width: 100vw;
     height: calc(100vw - (15px * 2));
@@ -2489,11 +2508,9 @@ body {
         -moz-border-radius: 50%;
         border-radius: 50%;
         border: 2px solid rgba(0, 0, 0, 0.5); }
-  .radial-container .radial-album-title .counter-units {
-    text-transform: uppercase; }
   .radial-container .radial-aside {
-    width: 100vw;
-    padding: 40px; }
+    box-shadow: inset 0px 0px 0px 2px #0C0;
+    width: 100vw; }
     .radial-container .radial-aside .level {
       margin: 0px; }
     .radial-container .radial-aside .cover-title,
@@ -2505,8 +2522,6 @@ body {
       margin: 0px;
       font-family: 'noway_regularitalic'; }
     .radial-container .radial-aside .video {
-      margin-top: 30px;
-      margin-bottom: 30px;
       background-color: #F2F2F2;
       position: relative; }
 
@@ -2514,7 +2529,7 @@ body {
 =            TREEMAP            =
 ===============================*/
 .section-treemap {
-  height: 61.8vh;
+  height: 80vh;
   width: 100%;
   position: relative;
   background-color: #FFF; }
@@ -2719,6 +2734,9 @@ html {
 
 .grid-item--height2 {
   height: 200px; }
+
+.counter {
+  border-left: 1px dotted #070707; }
 
 .level-item {
   background-color: #FFF;
@@ -5567,17 +5585,26 @@ form {
   fill: black;
   stroke: #2b2b2b; }
 
+.youtube-row {
+  padding-top: 24px; }
+
+.figure span, .figure em {
+  display: block;
+  font-size: 0.75em; }
+
 @media (min-width: 999px) {
+  .radial-container .radial-album-title {
+    width: 12%; }
   .radial-container .radial-album {
-    width: 60vh;
-    height: 60vh;
+    width: 80vh;
+    height: 80vh;
     font-size: 1.25vh; }
     .radial-container .radial-album .record {
-      height: 34.28571vh;
-      width: 34.28571vh;
-      margin-top: -17.14286vh;
-      margin-left: -17.14286vh; }
+      height: 45.71429vh;
+      width: 45.71429vh;
+      margin-top: -22.85714vh;
+      margin-left: -22.85714vh; }
   .radial-container .radial-aside {
-    width: calc(100% - 60vh); } }
+    width: calc(100% - 80vh - 12%); } }
 
 /*# sourceMappingURL=main.css.map */

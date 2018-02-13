@@ -256,4 +256,15 @@ form {
     stroke: #2b2b2b;
 }
 
+.youtube-row {
+    padding-top: 24px;
+}
+
+.figure {
+    span, em {
+        display: block;
+        font-size: 0.75em;
+    }
+}
+
 @import "responsive";
