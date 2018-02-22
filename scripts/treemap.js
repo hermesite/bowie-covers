@@ -7,14 +7,257 @@ var MIN_COVERS_ALBUM = 4;
 var DEFAULT_VIDEO_TEXT = "DEFAULT VIDEO TEXT";
 var BASE_URL = "http://127.0.0.1/bowie-covers/";
 
+
+var LIST_OUTSIDER = [
+    {
+        "covers": 52,
+        "name": "Love You Till Tuesday",
+        "link": "#96c14aa4-c378-33d5-99f9-3cade6f1ecb3",
+        "youtube": "https://www.youtube.com/embed/YWjTbB4ONeM",
+        "text": "La versión del coro de niños",
+        "artist": "The Langley Schools Music Project",
+        "song": "Space Oddity",
+        "description": "Por ejemplo el caso de las grabaciones de <span class='artist-name'>The Langley Schools Music Project</span> que consisten en coros de niños que en la década de los 70 versionearon los hits de la música pop, entre ellos <em>Space Oddity</em>."
+    },
+    {
+        "covers": 14,
+        "name": "Station To Station",
+        "link": "#686cdbd1-b400-32d8-8cb8-9317a2e41a58",
+        "youtube": "https://www.youtube.com/embed/BXssFNHkq-A",
+        "text": "La versión del coro de abuelos",
+        "artist": "Young@Heart",
+        "song": "Golden Years",
+        "description": "O el proyecto <span class='artist-name'>young@heart</span> un grupo de entretenimiento y creación musical que tiene como requisito ser mayor de 70 años de edad para poder entrar y que versionean temas de Bowie."
+    },
+    {
+        "covers": 54,
+        "name": "Let's Dance",
+        "link": "#75c2bddf-1799-3eda-b6b3-a0cf5189d8ed",
+        "youtube": "https://www.youtube.com/embed/XaIx_FBk4-Q",
+        "text": "La historia del riff de Let's Dance",
+        "artist": "Nile Rodgers",
+        "song": "Let's Dance",
+        "description": "No es exactamente una versión, el guitarrista de <span class='artist-name'>Chic</span>, <span class='artist-name'>Nile Rodgers</span> cuenta la historia del riff de <em>Let's Dance</em>."
+    },
+    {
+        "covers": 50,
+        "name": "Heroes",
+        "link": "#1f5ef8d3-10ca-30eb-b41e-85b16987d412",
+        "youtube": "https://www.youtube.com/embed/2JywkrIiXW8",
+        "text": "El riff de Heroes",
+        "artist": "King Crimson",
+        "song": "Heroes",
+        "description": "<span class='artist-name'>Robert Fripp</span> versionenanado <em>Heroes</em> con <span class='artist-name'>King Crimson</span> rememorando él riff que el mismo creó."
+    },
+    {
+        "covers": 61,
+        "name": "David Bowie",
+        "link": "#2e12918c-4973-3537-b9ab-e4723ae1ae1d",
+        "youtube": "https://www.youtube.com/embed/RtjOEmIxtQw",
+        "text": "Comandante Tom",
+        "artist": "William Shatner",
+        "song": "Space Oddity",
+        "description": "El capitán Kirk de Star Trek manteniendo un tú a tú con el comandante Tom en una versión hablada de <em>Space Oddity</em>."
+    }
+]
+var LIST_MARKET = [
+    {
+        "covers": 123,
+        "name": "The Rise and Fall of Ziggy Stardust and the Spiders From Mars",
+        "link": "#6c9ae3dd-32ad-472c-96be-69d0a3536261",
+        "youtube": "https://www.youtube.com/embed/4AGK3AkGbLo",
+        "text": "La versión del Guitar Hero",
+        "artist": "Wavegroup Sound",
+        "song": "Ziggy Stardust",
+        "description": "Wavegroup Sound es una empresa de Sillicon Valley que hace la mezcla de <em>Ziggy Stardust</em> para Guitar Hero."
+    },
+    {
+        "covers": 35,
+        "name": "On Air",
+        "link": "#e61c281f-c170-422d-a380-4e83e2bafe21",
+        "youtube": "https://www.youtube.com/embed/SI97GtP11ns",
+        "text": "La versión nana",
+        "artist": "Rockabye Baby!",
+        "song": "Rebel Rebel",
+        "description": "Rockabye baby! está especializada en versiones para bebés y comercializa nanas de Bowie."
+    },
+    {
+        "covers": 33,
+        "name": "The Man Who Sold The World",
+        "link": "#2536a41d-fde9-35d5-a6c6-cd4d94ffd916",
+        "youtube": "https://www.youtube.com/embed/TlA3GNksUGs",
+        "text": "La versión Easy Listening",
+        "artist": "Vitamin String Quartet",
+        "song": "The Man Who Sold The World",
+        "description": "La misma <a href='http://www.cmhlabelgroup.com/'>empresa</a> comercializa VSQ es un producto Easy Listening con cuartetos de cuerda."
+    },
+    {
+        "covers": 50,
+        "name": "Heroes",
+        "link": "#1f5ef8d3-10ca-30eb-b41e-85b16987d412",
+        "youtube": "https://www.youtube.com/embed/wKKJb06Elo4",
+        "text": "La versión del Reality Show",
+        "artist": "The X Factor Finalists 2010",
+        "song": "Heroes",
+        "description": "Y por supuesto los shows televisivos de búsqueda de talentos también han versioneado a Bowie como en la final de Factor X de 2010 en UK."
+    }
+]
+var LIST_INTERNATIONAL = [
+    {
+        "covers": 61,
+        "name": "David Bowie",
+        "link": "#2e12918c-4973-3537-b9ab-e4723ae1ae1d",
+        "youtube": "https://www.youtube.com/embed/pc0E1bhpDSQ",
+        "text": "La dudosa versión en español que raya el mal gusto",
+        "artist": "Hermanos Calatrava",
+        "song": "Space Oddity"
+    },
+    {
+        "covers": 35,
+        "name": "On Air",
+        "link": "#e61c281f-c170-422d-a380-4e83e2bafe21",
+        "youtube": "https://www.youtube.com/embed/GzkXuHu-xYc",
+        "text": "La versión en brasileño",
+        "artist": "Seu Jorge",
+        "song": "Rebel Rebel"
+    },
+    {
+        "covers": 13,
+        "name": "1.Outside: The Nathan Adler Diaries: A Hyper Cycle",
+        "link": "#2e12918c-4973-3537-b9ab-e4723ae1ae1d",
+        "youtube": "https://www.youtube.com/embed/PQUJFj4n5Ts",
+        "text": "La versión en turco",
+        "artist": "Müslüm Gürses",
+        "song": "I'm Deranged"
+    }
+]
+var LIST_ARTISTS = [
+    {
+        "covers": 38,
+        "name": "Diamond Dogs",
+        "link": "#80dc4835d-b21a-3612-bac6-ab1e782a1396",
+        "youtube": "https://www.youtube.com/embed/jZnOKBysN78",
+        "text": "La versión de Tina Turner",
+        "artist": "Tina Turner",
+        "song": "1984"
+    },
+    {
+        "covers": 35,
+        "name": "On Air",
+        "link": "#e61c281f-c170-422d-a380-4e83e2bafe21",
+        "youtube": "https://www.youtube.com/embed/i3mdUf4j5h8",
+        "text": "La versión del Boss",
+        "artist": "Bruce Springsteen",
+        "song": "Rebel Rebel"
+    },
+    {
+        "covers": 33,
+        "name": "The Man Who Sold The World",
+        "link": "#2536a41d-fde9-35d5-a6c6-cd4d94ffd916",
+        "youtube": "https://www.youtube.com/embed/fregObNcHC8",
+        "text": "La versión de Nirvana",
+        "artist": "Nirvana",
+        "song": "The Man Who Sold The World"
+    }
+]
+var LIST_GENRES = [
+    {
+        "covers": 23,
+        "name": "Young Americans",
+        "link": "#8c2a0eae-1359-3577-9127-e3d862acc2a2",
+        "youtube": "https://www.youtube.com/embed/v-ec1in-JzU",
+        "text": "La versión Rockabilly",
+        "artist": "The Polecats",
+        "song": "John I'm Only Dancing"
+    },
+    {
+        "covers": 42,
+        "name": "Scary Monsters… and Super Creeps",
+        "link": "#bb13cb45-254c-3a61-89a5-15d22a97e6d6",
+        "youtube": "https://www.youtube.com/embed/XTDWjZpVg9E",
+        "text": "La versión Jazz",
+        "artist": "Bojan Z",
+        "song": "Ashes to Ashes"
+    },
+    {
+        "covers": 34,
+        "name": "Aladdin Sane",
+        "link": "#50f8710f-3ae6-319b-85a7-afe783f13449",
+        "youtube": "https://www.youtube.com/embed/zgayzxXqlD0",
+        "text": "La versión Zapatillera",
+        "artist": "Praga Khan",
+        "song": "Jean Genie"
+    },
+    {
+        "covers": 123,
+        "name": "The Rise and Fall of Ziggy Stardust and the Spiders From Mars",
+        "link": "#6c9ae3dd-32ad-472c-96be-69d0a3536261",
+        "youtube": "https://www.youtube.com/embed/hebF0fBIst8",
+        "text": "La versión Ruidosa",
+        "artist": "Place to Bury Strangers",
+        "song": "Suffragette City"
+    },
+    {
+        "covers": 54,
+        "name": "Let's Dance",
+        "link": "#75c2bddf-1799-3eda-b6b3-a0cf5189d8ed",
+        "youtube": "https://www.youtube.com/embed/ZdpG7vSrOfY",
+        "text": "La versión Goth Rock",
+        "artist": "Last Days of Jesus",
+        "song": "China Girl"
+    },
+    {
+        "covers": 0,
+        "name": "",
+        "link": "",
+        "youtube": "https://www.youtube.com/embed/wkfPueWrRvo",
+        "text": "La versión Cabaret",
+        "artist": "Starlit",
+        "song": "Modern Love"
+    }
+]
+
+function generateVideoList(element, array) {
+
+    for (var i = 0; i < array.length; i++) {
+        var container = d3.select(element);
+
+        var left = container.append("div").attr("class", "col-3 counter d-none d-sm-block");
+        if (array[i].covers > 0) {
+            left.append("p").attr("class", "counter-number").text(function(){return array[i].covers});
+            left.append("h5").attr("class", "counter-units").text("Covers in the album");
+            left.append("p").attr("class", "counter-entity").text(function(){return array[i].name});
+            left.append("a").attr("class", "counter-link").attr("href", function(){return array[i].link}).text("See album");
+        };
+
+        var middle = container.append("div").attr("class", "col-9 col-sm-6 mb-3");
+            middle.append("div").attr("class", "video-container").html(function(){
+                return '<iframe src="' + array[i].youtube + '" frameborder="0"></iframe>'
+            })
+            if (array[i].description) {
+                middle.append("p").html(function(){return array[i].description})
+            };
+        var right = container.append("div").attr("class", "col-3 counter figure");
+            right.append("figcaption").attr("class", "figure-caption").text(function(){return array[i].text})
+            right.append("span").attr("class", "artist-name").text(function(){return array[i].artist})
+            right.append("em").attr("class", "song-name").text(function(){return array[i].song})
+    };
+}
+
+generateVideoList("#list-genres", LIST_GENRES);
+generateVideoList("#list-artists", LIST_ARTISTS);
+generateVideoList("#list-international", LIST_INTERNATIONAL);
+generateVideoList("#list-market", LIST_MARKET);
+generateVideoList("#list-outsider", LIST_OUTSIDER);
+
 var FORBIDDEN_VIDEOS = [
-    "aCHg5r6rFoI", 
-    "CMThz7eQ6K0", 
-    "aySEzuNSN1k", 
-    "v--IqqusnNQ", 
-    "aCHg5r6rFoI", 
-    "SkkOu1BYNo0", 
-    "eF551z9KlA8", 
+    "aCHg5r6rFoI",
+    "CMThz7eQ6K0",
+    "aySEzuNSN1k",
+    "v--IqqusnNQ",
+    "aCHg5r6rFoI",
+    "SkkOu1BYNo0",
+    "eF551z9KlA8",
     "4AyuiThAzaI",
     "N4d7Wp9kKjA",
     "jBuwC4VJi50",
@@ -84,7 +327,7 @@ var FORBIDDEN_VIDEOS = [
     "5yC-6Mel2Ow", // Ziggy Stardust Def Leppard
     "HkrGyRupneM",
     "7pJ3EFwY1Pw",
-    "jv1h733ssac", 
+    "jv1h733ssac",
     "teW6dNG968U",
     "B_VKs1V53yE",
     "-i7u5tNhbJw",
@@ -135,10 +378,10 @@ var FORBIDDEN_VIDEOS = [
 
 var bannedAlbums = ['bc02d917-a52e-3d77-ae5f-75aa3fb754ef'];
 var bannedTracks = [
-    "3c8dffa2-9b30-4c07-93df-d05712d74582", 
+    "3c8dffa2-9b30-4c07-93df-d05712d74582",
     "a1fc298b-6604-45aa-a9f6-c331e580822a",
     "a97a2742-b719-4fe3-8f3a-5c7d39573b02"
-    ];
+];
 
 // Club Bowie: Rare and Unreleased 12″ Mixes
 
@@ -199,20 +442,20 @@ var diagonal = d3.svg.diagonal.radial()
 var container = document.getElementById('timeline');
 
 // Create a DataSet (allows two way data-binding)
-var items = new vis.DataSet();
+// var items = new vis.DataSet();
 
-var bowiePeriods = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
+// var bowiePeriods = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
 
-items.add({ id: 'A', content: 'Early career to debut album', start: '1962-01-1', end: '1967-12-31', type: 'background', size: 3 })
-items.add({ id: 'B', content: 'Space Oddity to Hunky Dory', start: '1968-01-1', end: '1972-04-1', type: 'background', className: 'negative', size: 187 })
-items.add({ id: 'C', content: 'Ziggy Stardust', start: '1972-04-2', end: '1973-12-31', type: 'background', size: 157 })
-items.add({ id: 'D', content: '"Plastic soul" and the Thin White Duke', start: '1974-01-1', end: '1976-10-1', type: 'background', className: 'negative', size: 75 })
-items.add({ id: 'E', content: 'Berlin era', start: '1976-10-2', end: '1979-12-31', type: 'background', size: 118 })
-items.add({ id: 'F', content: 'New Romantic and pop era', start: '1980-01-1', end: '1988-12-31', type: 'background', className: 'negative', size: 187 })
-items.add({ id: 'G', content: 'Tin Machine', start: '1989-01-1', end: '1991-12-31', type: 'background', size: 0 })
-items.add({ id: 'H', content: 'Electronic period', start: '1992-01-1', end: '1998-12-31', type: 'background', className: 'negative', size: 19 })
-items.add({ id: 'I', content: 'Neoclassicist Bowie', start: '1999-01-1', end: '2012-06-31', type: 'background', size: 110 })
-items.add({ id: 'J', content: 'Final years', start: '2012-07-1', end: '2016-12-31', type: 'background', className: 'negative', size: 2 })
+// items.add({ id: 'A', content: 'Early career to debut album', start: '1962-01-1', end: '1967-12-31', type: 'background', size: 3 })
+// items.add({ id: 'B', content: 'Space Oddity to Hunky Dory', start: '1968-01-1', end: '1972-04-1', type: 'background', className: 'negative', size: 187 })
+// items.add({ id: 'C', content: 'Ziggy Stardust', start: '1972-04-2', end: '1973-12-31', type: 'background', size: 157 })
+// items.add({ id: 'D', content: '"Plastic soul" and the Thin White Duke', start: '1974-01-1', end: '1976-10-1', type: 'background', className: 'negative', size: 75 })
+// items.add({ id: 'E', content: 'Berlin era', start: '1976-10-2', end: '1979-12-31', type: 'background', size: 118 })
+// items.add({ id: 'F', content: 'New Romantic and pop era', start: '1980-01-1', end: '1988-12-31', type: 'background', className: 'negative', size: 187 })
+// items.add({ id: 'G', content: 'Tin Machine', start: '1989-01-1', end: '1991-12-31', type: 'background', size: 0 })
+// items.add({ id: 'H', content: 'Electronic period', start: '1992-01-1', end: '1998-12-31', type: 'background', className: 'negative', size: 19 })
+// items.add({ id: 'I', content: 'Neoclassicist Bowie', start: '1999-01-1', end: '2012-06-31', type: 'background', size: 110 })
+// items.add({ id: 'J', content: 'Final years', start: '2012-07-1', end: '2016-12-31', type: 'background', className: 'negative', size: 2 })
 
 function customOrder(a, b) {
     return a.size - b.size;
@@ -266,7 +509,6 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
         if (bannedAlbums.indexOf(i) === -1) {
             $.each(album.tracks, function(j, track) {
                 if (bannedTracks.indexOf(track.recording_id) === -1) {
-                    console.log(track);
                     $.each(track.covers, function(k, cover) {
                         if (cover.credits === 'David Bowie') {
                             countCovers.push(track.title);
@@ -482,28 +724,6 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
 
                 createRadial(myAlbumRadial, radialContainer, myAlbum.image, myAlbum.size);
 
-                /*----------  Add items to the timeline  ----------*/
-
-                if (myAlbum.size >= MIN_COVERS_ALBUM && scope != 'pinups') {
-
-                    items.add({
-                        'id': i,
-                        'size': 0,
-                        'content': '<img class="album-thumbnail" src="images/' + album.title.replace(/[^a-z0-9\s]/gi, '').replace(/[_\s]/g, '-').toLowerCase() + '.jpg">',
-                        'start': album.first_date,
-                        'type': 'box'
-                    });
-
-                    items.update({
-                        id: i,
-                        size: myAlbum.size,
-                        style: 'background-color:' + colorScale(myAlbum.size) + ';',
-                        className: myAlbum.size,
-                        title: '<p class="timeline-tooltip-date">' + album.first_date + '</p><p class="timeline-tooltip-number">' + myAlbum.size + '</p><p class="timeline-tooltip-album">' + myAlbum.name + '</p>'
-                    });
-
-                }
-
                 /*----------  Push data  ----------*/
 
                 if (myAlbum.size >= MIN_COVERS_ALBUM) {
@@ -516,19 +736,6 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
             }
         });
 
-        /*----------  Create isotope filter  ----------*/
-
-        var $grid = $('.grid').isotope({
-            // options
-            itemSelector: '.grid-item',
-            layoutMode: 'fitRows'
-        });
-
-        // filter items on button click
-        $('.filter-button-group').on('click', 'button', function() {
-            var filterValue = $(this).attr('data-filter');
-            $grid.isotope({ filter: filterValue });
-        });
 
         function scrollTo(hash) {
             location.hash = "#" + hash;
@@ -569,10 +776,10 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
             // Discography
             var bowieDiscography = d3.select('#bowie-discography');
             bowieDiscography.append("p").attr("class", "counter-number").text(function() {
-                return bowieSongsTree.children.length;
+                return coversByArtist.length;
             })
             bowieDiscography.append("h5").attr("class", "counter-units").text(function() {
-                return 'Albums analyzed with more than ' + MIN_COVERS_ALBUM + ' covers resulting ' + coversByArtist.length + ' artist covering';
+                return 'Artists singing Bowie songs along ' + bowieSongsTree.children.length + ' albums';
             })
             bowieDiscography.append("h5").attr("class", "counter-link")
                 .append('a')
@@ -628,49 +835,6 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
     }
 
     createData('bowie', '#covers-treemap', '#coversRadial');
-    createData('pinups', '#covers-pinups', '#coversRadialPinups');
-
-    // $(window).resize(function() {
-    //     createData('bowie', '#covers-treemap', '#coversRadial');
-    //     createData('pinups', '#covers-pinups', '#coversRadialPinups');
-    // });
-
-    // Create a Timeline
-    var timeline = new vis.Timeline(container, items, options);
-
-    timeline.on('click', function(properties) {
-        var anchorLink = '#' + properties.item
-        $(document).scrollTop($(anchorLink).offset().top);
-
-    });
-
-    d3.select('.buttons').append('span').attr('class', 'button is-small is-danger').text('All').on('click', function() {
-        timeline.setOptions({ start: '1960', end: '2020' });
-        $('.buttons .button').removeClass('is-danger');
-        $(this).addClass('is-danger');
-    })
-
-    for (var i = 0; i < bowiePeriods.length; i++) {
-
-        d3.select('.buttons').append('span')
-            .attr('class', 'button is-small')
-            .attr('data-start', function() {
-                return items._data[bowiePeriods[i]].start;
-            })
-            .attr('data-end', function() {
-                return items._data[bowiePeriods[i]].end;
-            })
-            .html(function() {
-                return items._data[bowiePeriods[i]].content + ' - ' + items._data[bowiePeriods[i]].size;
-            }).on('click', function() {
-                $('.buttons .button').removeClass('is-danger');
-                $(this).addClass('is-danger');
-                timeline.setOptions({ start: $(this).attr('data-start'), end: $(this).attr('data-end') });
-            })
-    };
-
-
-    function countPeriodCovers(period) {}
 
     function createTreemap(treeData, container) {
 
@@ -713,14 +877,14 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
         treemapJoin.append('div')
             .attr('class', function(d) {
                 var textSize = Math.round(d.area / 1000);
-                return 'col-xs row middle-xs node-content area-' + textSize;
+                return 'row justify-content-center node-content area-' + textSize;
                 // return 'col-xs row middle-xs node-content tooltip';
             })
             .attr('title', function(d) {
                 return d.name;
             })
             .html(function(d) {
-                return d.children ? null : '<p class="col-xs text-center"><strong>' + d.size + '</strong><em>COVERS</em><span>' + d.name + '</span></p>';
+                return d.children ? null : '<p class="col align-self-center"><strong>' + d.size + '</strong><em>COVERS</em><span>' + d.name + '</span></p>';
             });
 
         treemapJoin.exit().remove();
@@ -745,7 +909,6 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
 
 
     function createRadial(data, container, image, size) {
-
 
         var tree = d3.layout.tree()
             .size([360, diameter / 2 - radialOffset])
@@ -787,17 +950,19 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
         var youtubeContainer = aside.append('div').attr('class', 'video').style('height', function() {
             return $(this).width() - ($(this).width() / 3) + 'px';
         });
+        var coverTitleBadge = aside.append('span').attr('class', 'badge badge-primary').text('SONG');
         var coverTitle = aside.append('p').attr('class', 'cover-title').text('Song title');
+        var coverArtistBadge = aside.append('span').attr('class', 'badge badge-primary').text('ARTIST');
         var coverArtist = aside.append('p').attr('class', 'cover-artist').text('Cover artist');
 
         var tweetbutton_container = aside.append('div').attr('class', 'tweet_button');
 
-        tweetbutton_container.append("img").attr("src","images/twitter.svg");
+        tweetbutton_container.append("img").attr("src", "images/twitter.svg");
 
-        tweetbutton_container.on("click", function () {
+        tweetbutton_container.on("click", function() {
             var text = "I saw this amazing version of Bowie's " + candidate.coverName + " by " + candidate.name + " here: ";
             var url = BASE_URL + "?id=" + candidate.id;
-            window.open("https://twitter.com/share?url="+escape(url)+"&text="+text, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
+            window.open("https://twitter.com/share?url=" + escape(url) + "&text=" + text, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
             return false;
         });
 
@@ -809,16 +974,16 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
 
 
 
-//        tweetbutton_container.append("a")
-//            .attr("href", "https://twitter.com/share")
-//            .classed("twitter-share-button", true)
-//            .attr("data-url", BASE_URL + "?id=" + candidate.id)
-//            .attr("data-text", "I saw this amazing version of Bowie's " + candidate.coverName + " by " + candidate.name + " here: ")
-//            .attr("data-size", "normal")
-//            .attr("data-show-count", false).html("TROLLEO");
+        //        tweetbutton_container.append("a")
+        //            .attr("href", "https://twitter.com/share")
+        //            .classed("twitter-share-button", true)
+        //            .attr("data-url", BASE_URL + "?id=" + candidate.id)
+        //            .attr("data-text", "I saw this amazing version of Bowie's " + candidate.coverName + " by " + candidate.name + " here: ")
+        //            .attr("data-size", "normal")
+        //            .attr("data-show-count", false).html("TROLLEO");
 
-//        tweetbutton_container.html('<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-url="http://outliers.es" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>');
-//        tweetbutton_container.html('<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hello%20world" data-size="large">Tweet</a>');
+        //        tweetbutton_container.html('<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-url="http://outliers.es" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>');
+        //        tweetbutton_container.html('<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hello%20world" data-size="large">Tweet</a>');
 
         // OSCAR
 
@@ -900,7 +1065,7 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
 
                 if (d.youtube) {
 
-                    if ((parseInt(d.youtube.views, 10) > MIN_VIDEO_VIEWS) && (FORBIDDEN_VIDEOS.indexOf(d.youtube.id)==-1)) {
+                    if ((parseInt(d.youtube.views, 10) > MIN_VIDEO_VIEWS) && (FORBIDDEN_VIDEOS.indexOf(d.youtube.id) == -1)) {
                         return 'node'
                     } else {
                         return 'node inactive'
@@ -913,7 +1078,6 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
             .on('click', function(d) {
                 d3.selectAll('.node').classed('active', false)
                 d3.select(this).classed('active', true);
-                // console.log("DATOS DE COVER:", d);
 
                 coverTitle.text(function() {
                     return d.parent.name;
@@ -937,10 +1101,10 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
 
                     // Remake the tweet button
 
-                    tweetbutton_container.on("click", function () {
+                    tweetbutton_container.on("click", function() {
                         var text = "I saw this amazing version of Bowie's " + d.parent.name + " by " + d.name + " here: ";
                         var url = BASE_URL + "#" + d.parent.parent.id + "?id=" + d.youtube.id;
-                        window.open("https://twitter.com/share?url="+escape(url)+"&text="+text, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
+                        window.open("https://twitter.com/share?url=" + escape(url) + "&text=" + text, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
                         return false;
                     });
 
@@ -1014,14 +1178,13 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
         nodeJoin.exit().remove();
         textJoin.exit().remove();
 
-                // OSCAR
-
+        // OSCAR
 
         // console.log("LOOKING FOR THE MOST VIEWED VIDEO");
 
-        //        console.log(data);
+        // console.log(data);
 
-        var candidate = { 'coverName': undefined , 'name': undefined, 'id': undefined, 'count': 0 };
+        var candidate = { 'coverName': undefined, 'name': undefined, 'id': undefined, 'count': 0 };
 
         data.children.forEach(function(d, i) {
             // console.log("SONG", d.name, i);
@@ -1094,41 +1257,7 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
 
 });
 
-$('a[href*="#"]')
-    // Remove links that don't actually link to anything
-    .not('[href="#"]')
-    .not('[href="#0"]')
-    .click(function(event) {
 
-        // On-page links
-        if (
-            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
-            location.hostname == this.hostname
-        ) {
-            // Figure out element to scroll to
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            // Does a scroll target exist?
-            if (target.length) {
-                // Only prevent default if animation is actually gonna happen
-                event.preventDefault();
-                $('html, body').animate({
-                    scrollTop: target.offset().top
-                }, 1000, function() {
-                    // Callback after animation
-                    // Must change focus!
-                    var $target = $(target);
-                    $target.focus();
-                    if ($target.is(":focus")) { // Checking if the target was focused
-                        return false;
-                    } else {
-                        $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-                        $target.focus(); // Set focus again
-                    };
-                });
-            }
-        }
-    });
 
 function navigateSooth() {
     $('a[href*="#"]')
@@ -1172,34 +1301,51 @@ $('document').ready(function() {
 
     // Select all links with hashes
 
+    $('a[href*="#"]')
+        // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function(event) {
+
+            // On-page links
+            if (
+                location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+                location.hostname == this.hostname
+            ) {
+                // Figure out element to scroll to
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                // Does a scroll target exist?
+                if (target.length) {
+                    // Only prevent default if animation is actually gonna happen
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000, function() {
+                        // Callback after animation
+                        // Must change focus!
+                        var $target = $(target);
+                        $target.focus();
+                        if ($target.is(":focus")) { // Checking if the target was focused
+                            return false;
+                        } else {
+                            $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                            $target.focus(); // Set focus again
+                        };
+                    });
+                }
+            }
+        });
+
     // id in params?
+
+    var yOffset = $("#covers-treemap").offset().top;
+    $("body").scrollTop(yOffset);
+
 
 
 });
 
-
-
-
-
-
-function sortUnorderedList(ul, sortDescending) {
-    if (typeof ul == "string")
-        ul = document.getElementById(ul);
-
-    var lis = ul.getElementsByTagName("LI");
-    var vals = [];
-
-    for (var i = 0, l = lis.length; i < l; i++)
-        vals.push(lis[i].innerHTML);
-
-    vals.sort();
-
-    if (sortDescending)
-        vals.reverse();
-
-    for (var i = 0, l = lis.length; i < l; i++)
-        lis[i].innerHTML = vals[i];
-}
 
 
 (function($) {
@@ -1298,33 +1444,6 @@ function sortUnorderedList(ul, sortDescending) {
         return obj;
     };
 })(jQuery);
-
-// to top right away
-// if ( window.location.hash ) scroll(0,0);
-// // void some browsers issue
-// setTimeout( function() { scroll(0,0); }, 1);
-
-// $(function() {
-
-//     // your current click function
-//     $('.scroll').on('click', function(e) {
-//         e.preventDefault();
-//         $('html, body').animate({
-//             scrollTop: $($(this).attr('href')).offset().top + 'px'
-//         }, 1000, 'swing');
-//     });
-
-//     // *only* if we have anchor on the url
-//     if(window.location.hash) {
-
-//         // smooth scroll to the anchor id
-//         $('html, body').animate({
-//             scrollTop: $(window.location.hash).offset().top + 'px'
-//         }, 1000, 'swing');
-//     }
-
-// });
-
 
 
 

@@ -10,8 +10,8 @@
 
 html {font-size: 0.625em;}
 
-$h1Size: 5.063em;
-$h2Size: 3.375em;;
+$h1Size: 5.063rem;
+$h2Size: 3.375rem;;
 
 body {
   background-color: white;
@@ -21,12 +21,12 @@ body {
   color: #333;
   .content {
     a {
-      color: $bsides;
+      color: $primary;
     }
-    p {margin-bottom: 1.3em;}
+    p {margin-bottom: 1.3rem;}
 
     h1, h2, h3, h4 {
-      margin: 1.414em 0 0.5em;
+      // margin: 1.414em 0 0.5rem;
       font-weight: inherit;
       line-height: 1.2;
     }
@@ -38,21 +38,21 @@ body {
 
     h2 {font-size: $h2Size;}
 
-    h3 {font-size: 2.25em;}
+    h3 {font-size: 2.25rem;}
 
-    h4 {font-size: 1.5em;}
+    h4 {font-size: 1.5rem;}
     
     h5 {
-      font-size: 0.5em;
+      font-size: 0.5rem;
     }
     h6 {
-      font-size: 0.8em;
+      font-size: 0.8rem;
     }
     h5, h6 {
       text-transform: uppercase;
     }
 
-    small, .font_small {font-size: 0.667em;}
+    small, .font_small {font-size: 0.667rem;}
   }
 }
 

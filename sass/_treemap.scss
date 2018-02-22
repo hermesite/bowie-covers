@@ -6,6 +6,7 @@
 
 .section-treemap {
     height: 80vh;
+    padding-top: 100px;
     // height: 80vh;
     width: 100%;
     position: relative;
@@ -18,10 +19,12 @@
         cursor: pointer;
         .node-content {
             height: 100%;
+            width: 100%;
             padding: 0px;
             p {
                 // font-size: 10px;
                 display: inline-block;
+                min-width: 100%;
                 position: relative;
                 margin: 0px auto;
                 padding: 18px 20px;

@@ -13,13 +13,16 @@
     .content {
 
         .counter {
-            .counter-units {}
+            .counter-units {
+                margin-bottom: 0px;
+            }
             .counter-number {
                 font-family: 'nowaylight';
                 font-size: $h2Size;
                 margin: 0px;
             }
             .counter-entity {
+                margin-bottom: 10px;
                 font-family: 'nowaymedium';
                 // font-family: 'noway_regularitalic';
             }

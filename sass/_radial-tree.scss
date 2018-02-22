@@ -1,11 +1,10 @@
 .radial-container {
     position: relative; // width: 61.8vw;
     .radial-item {
-        margin: 5vh 0px;
-        padding: 5vh 0px;
+        padding: 10vh 0px;
         overflow: hidden;
         position: relative;
-        box-shadow: inset 0px 0px 0px 2px #0CC;
+        // box-shadow: inset 0px 0px 0px 2px #0CC;
         
             .radial-album-title,
             .radial-album,
@@ -17,8 +16,9 @@
     }
 
     .radial-album-title {
+        position: absolute;
         // background-color: $black;
-        box-shadow: inset 0px 0px 0px 2px #C00;
+        // box-shadow: inset 0px 0px 0px 2px #C00;
         .album-title {
             font-size: 3.375em;
             font-family: 'nowaylight';
@@ -40,7 +40,7 @@
     }
     
     .radial-album {
-        box-shadow: inset 0px 0px 0px 2px #00C;
+        // box-shadow: inset 0px 0px 0px 2px #00C;
         position: relative; 
         width: $base-layout;
         height: calc(#{$base-layout} - (#{$responsive-gap} * 2)); 
@@ -130,9 +130,10 @@
     }
 
     .radial-aside {
-        box-shadow: inset 0px 0px 0px 2px #0C0;
+        // box-shadow: inset 0px 0px 0px 2px #0C0;
         width: 100vw;
-        // background-color: #333;
+        background-color: #000;
+        color: #FFF;
         .level {
             margin: 0px
         }

@@ -1,5 +1,5 @@
 @media (min-width:999px) {
-    $base-layout: 80vh;
+    $base-layout: 70vh;
     $title-width: 12%;
     $label-size: 1.25vh;
     .radial-container {
@@ -18,7 +18,7 @@
           }
       }
       .radial-aside {
-          width: calc(100% - #{$base-layout} - #{$title-width});
+          width: calc(100% - #{$base-layout});
       }
     }
 }

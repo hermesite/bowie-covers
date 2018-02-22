@@ -1,48 +1,6 @@
+
+// @import "../bower_components/bootstrap/scss/variables";
 @import "mixins";
-
-$brand-primary:         dark($hermesite-palette);
-$brand-success:         darker($hermesite-palette);
-$brand-info:            base($hermesite-palette);
-$brand-warning:         darkest($hermesite-palette);
-$brand-danger:          lightest($hermesite-palette);
-
-$state-primary-text:             desaturate(dark($hermesite-palette), 20%);
-$state-primary-bg:               lighten(dark($hermesite-palette), 20%);
-
-$state-success-text:             desaturate(darker($hermesite-palette), 20%);
-$state-success-bg:               lighten(darker($hermesite-palette), 20%);
-
-$state-info-text:                desaturate(base($hermesite-palette), 20%);
-$state-info-bg:                  lighten(base($hermesite-palette), 20%);
-
-$state-warning-text:                desaturate(darkest($hermesite-palette), 20%);
-$state-warning-bg:                  lighten(darkest($hermesite-palette), 20%);
-
-$state-danger-text:                desaturate(lightest($hermesite-palette), 20%);
-$state-danger-bg:                  lighten(lightest($hermesite-palette), 20%);
-
-// /* Labels */
-
-// //== Labels
-// //
-// //##
-// //** Default label text color
-// $label-color:                 #fff;
-// //** Default text color of a linked label
-// $label-link-hover-color:      #fff;
-
-// //** Default label background color
-// $label-default-bg:            rgba(0,0,0,.5);
-// //** Primary label background color
-// $label-primary-bg:            $brand-primary;
-// //** Success label background color
-// $label-success-bg:            $brand-success;
-// //** Info label background color
-// $label-info-bg:               $brand-info;
-// //** Warning label background color
-// $label-warning-bg:            $brand-warning;
-// //** Danger label background color
-// $label-danger-bg:             $brand-danger;
 
 
 /*==============================
@@ -54,6 +12,7 @@ $black: #070707;
 /*----------  Custom by project  ----------*/
 
 $bsides: #600;
+$primary: #600;
 
 /*=====  End of Colors  ======*/
 

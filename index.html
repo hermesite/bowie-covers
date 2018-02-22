@@ -13,10 +13,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Fonts -->
-    <!-- <link rel="stylesheet" href="bower_components/bulma/css/bulma.css"> -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="bower_components/tooltipster/dist/css/tooltipster.bundle.css">
-    <link rel="stylesheet" href="bower_components/vis/dist/vis.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -25,275 +22,133 @@
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <!-- MOSCA -->
-    <a class="mosca" href="#">
+    <!--     <a class="mosca" href="#">
       <img src="svg/bsides.svg" alt="">
-    </a>
+    </a> -->
+    <nav class="navbar fixed-top navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img width="150" src="svg/bsides.svg" alt=""></a>
+    </nav>
     <!-- ARTICLE COVER -->
-    <div class="article-cover" style="background-image:url(images/article-cover-lazarus.png)">
-    </div>
+    <!-- <div class="article-cover" style="background-image:url(images/article-cover-lazarus.png)"></div> -->
     <!-- TIMELINE -->
-    <div id="timeline" class="viz timeline-chart"></div>
+    <!-- <div id="timeline" class="viz timeline-chart"></div> -->
     <!-- ARTICLE TITLE -->
     <div class="section">
         <div class="container">
             <div class="content">
-                <h1 class="">Listen the many covers of Bowie</h1>
                 <div class="row">
-                    <div class="col-sm-6">
-                        <p class="">A nuestra manera, a casi todo el mundo, nos gusta David Bowie.
-                        </p>
-                        <p>Sus diferentes épocas y sus pintas, las apariciones en la tele y en el cine, los diferentes personajes, hasta su muerte.</p>
-                    </div>
-                    <div class="col-sm-6">
-                    </div>
-                    <div class="col-sm-6">
-                        <p>A <span class="bsides-inline">B SIDES</span> nos gustan sus discos y canciones, así que decidimos dibujar la discografía de Bowie en forma de listas de reproducción con los artistas que han versioneado sus canciones y así poder escuchar su influencia en la voz y los instrumentos de otros.</p>
-                    </div>
-                    <div class="col-sm-3 counter">
+                    <div class="col-3 counter d-none d-sm-block">
                         <div id="bowie-discography">
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <h4>Bowie es mainstream y está por todas partes</h4>
-                        <h5>A lo largo de géneros</h5>
-                    </div>
-                    <div class="col-sm-6">
-                        <p>Los géneros musicales están repletos de versiones de canciones de Bowie.</p>
-                        <p>El Rockabilly con <span class="artist-name">The Polecats</span> versioneando <em>John I'm Only Dancing</em>, el Goth Rock de <span class="artist-name">Last Days of Jesus</span> con <em>China Girl</em>, los conciertos de música de cámara de la <span class="artist-name">London Symphonic Orchestra</span> versioneando <em>Space Oddity</em> o la virtuosa actuación de <span class="artist-name">Bojan Z</span> tocando <em>Ashes to Ashes</em> con su piano. El repertorio de Bowie se pasea desde el Indie hasta la Música de Cámara.</p>
-                        <!--
-                        <p>Aunque el género que se lleva la palma es el Indie o Rock Alternativo con mayoría de bandas y compilaciones especiales al cancionero de Bowie.</p>
-                        -->
-                    </div>
-                    <div class="col-sm-3 counter">
-                        <div id="bowie-album">
-                        </div>
-                    </div>
-                </div>
-                <div class="row youtube-row">
-                    <div class="col-sm-4">
-                        <figure class="figure">
-                            <iframe src="https://www.youtube.com/embed/ZdpG7vSrOfY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                            <figcaption class="figure-caption">La versión Goth Rock</figcaption>
-                            <span class="artist-name">Last Days of Jesus</span>
-                            <em>China Girl</em>
-                        </figure>
-                    </div>
-                    <div class="col-sm-4">
-                        <figure class="figure">
-                            <iframe src="https://www.youtube.com/embed/v-ec1in-JzU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                            <figcaption class="figure-caption">La versión Rockabilly</figcaption>
-                            <span class="artist-name">The Polecats</span>
-                            <em>John I'm Only Dancing</em>
-                        </figure>
-                    </div>
-                    <div class="col-sm-4">
-                        <figure class="figure">
-                            <iframe src="https://www.youtube.com/embed/XTDWjZpVg9E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                            <figcaption class="figure-caption">La versión Jazz</figcaption>
-                            <span class="artist-name">Bojan Z</span>
-                            <em>Ashes to Ashes</em>
-                        </figure>
-                    </div>
-                    <div class="col-sm-4">
-                        <figure class="figure">
-                            <iframe src="https://www.youtube.com/embed/zgayzxXqlD0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                            <figcaption class="figure-caption">La versión Zapatillera</figcaption>
-                            <span class="artist-name">Praga Khan</span>
-                            <em>Jean Genie</em>
-                        </figure>
-                    </div>
-                    <div class="col-sm-4">
-                        <figure class="figure">
-                            <iframe src="https://www.youtube.com/embed/hebF0fBIst8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                            <figcaption class="figure-caption">La versión Ruidosa</figcaption>
-                            <span class="artist-name">Place to Bury Strangers</span>
-                            <em>Suffragette City</em>
-                        </figure>
-                    </div>
-                    <div class="col-sm-4">
-                        <figure class="figure">
-                            <iframe src="https://www.youtube.com/embed/wkfPueWrRvo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                            <figcaption class="figure-caption">La versión Cabaret</figcaption>
-                            <span class="artist-name">The Starlitt</span>
-                            <em>Modern Love</em>
-                        </figure>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <h5>Grandes artistas</h5>
-                        <p>También han versioneado a Bowie grandes artistas de la industria musical, "de los que han llenan estadios" como <span class="artist-name">Tina Turner</span> con <em>1984</em>, <span class="artist-name">U2</span> con la omnipresente <em>Space Oditty</em> o la exitosa versión de <em>The Man Who Sold The World</em> por Nirvana.</p>
-                    </div>
-                    <div class="col-sm-3 counter">
-                        <div id="bowie-track">
-                        </div>
-                    </div>
-                </div>
-                <div class="row youtube-row">
-                    <div class="col-sm-4">
-                        <figure class="figure">
-                            <iframe src="https://www.youtube.com/embed/jZnOKBysN78" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                            <span class="artist-name">Tina Turner</span>
-                            <em>1984</em>
-                        </figure>
-                    </div>
-                    <div class="col-sm-4">
-                        <figure class="figure">
-                            <iframe src="https://www.youtube.com/embed/Y-jc3msaeRU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                            <span class="artist-name">U2</span>
-                            <em>Space Oddity</em>
-                        </figure>
-                    </div>
-                    <div class="col-sm-4">
-                        <figure class="figure">
-                            <iframe src="https://www.youtube.com/embed/fregObNcHC8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                            <span class="artist-name">Nirvana</span>
-                            <em>The Man Who Sold the World</em>
-                        </figure>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <h5>Y a lo largo del mundo</h5>
-                        <p>Encontramos versiones en diferentes idiomas, como el disco para le película Life Aquatic The Life Aquatic Studio Sessions de <span class="artist-name">Seu Jorge</span> donde interpreta al menos 13 temas de Bowie o la impresionante versión en turco de <span class="artist-name">Müslüm Gürses</span> interpretando <em>I'm deranged</em>.</p>
-                    </div>
-                </div>
-                <div class="row youtube-row">
-                    <div class="col-sm-4">
-                        <figure class="figure">
-                            <iframe src="https://www.youtube.com/embed/xC0x308Dlhw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                            <figcaption class="figure-caption">La versión en alemán</figcaption>
-                            <span class="artist-name">Amanda Palmer & Jherek Bischoff</span>
-                            <em>Heroes</em>
-                        </figure>
-                    </div>
-                    <div class="col-sm-4">
-                        <figure class="figure">
-                            <iframe src="https://www.youtube.com/embed/GzkXuHu-xYc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                            <figcaption class="figure-caption">La versión en brasileño</figcaption>
-                            <span class="artist-name">Seu Jorge</span>
-                            <em>Rebel Rebel</em>
-                        </figure>
-                    </div>
-                    <div class="col-sm-4">
-                        <figure class="figure">
-                            <iframe src="https://www.youtube.com/embed/PQUJFj4n5Ts" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                            <figcaption class="figure-caption">La versión en turco</figcaption>
-                            <span class="artist-name">Müslüm Gürses</span>
-                            <em>I'm deranged</em>
-                        </figure>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6">                    
-                        <h5>Bowie es un producto del mercado</h5>
-                        <p>Wavegroup Sound es la empresa la que hace la mezcla de <em>Ziggy Stardust</em> para guitar hero. Rockabye comercializa nanas de Bowie</p>
-                        <p>O el easy listening de VSQ</p>
-                        <p> y como no los factor X </p>
-                    </div>
-                </div>
-                </div>
-                <div class="row youtube-row">
-                    <div class="col-sm-4">
-                        <figure class="figure">
-                            <iframe src="https://www.youtube.com/embed/4AGK3AkGbLo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                            <figcaption class="figure-caption">La versión del Guitar hero</figcaption>
-                            <span class="artist-name">Wavegroup Sound</span>
-                            <em>Ziggy Stardust</em>
-                        </figure>
-                    </div>
-                    <div class="col-sm-4">
-                        <figure class="figure">
-                            <iframe src="https://www.youtube.com/embed/SI97GtP11ns" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                            <figcaption class="figure-caption">La versión Nana</figcaption>
-                            <span class="artist-name">Rockabye Baby!</span>
-                            <em>Rebel Rebel</em>
-                        </figure>
-                    </div>
-                    <div class="col-sm-4">
-                        <figure class="figure">
-                            <iframe src="https://www.youtube.com/embed/wKKJb06Elo4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                            <figcaption class="figure-caption">La versión Televisiva</figcaption>
-                            <span class="artist-name">The Factor X</span>
-                            <em>Heroes</em>
-                        </figure>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <h4>Pero Bowie también es marginal e íntimo</h4>
-                    </div>
-                    <div class="col-sm-6">
-                        <p>En la cara B de las versiones encontramos que Bowie también pertenece a los que tienen tanta voz Versiones de culto como: la de los niños outsiders abueletes comprometidos</p>
-                        <h5>Historias personales</h5>
-                        <p>También encontramos algunas historias personales detrás de los artistas que han versioneado a Bowie como Jean As a Police o la debacle del reality show</p>En un aspecto más musical encontramos master class del guitarrista de Chic cuando creo el riff para lets dance o el riff de heroes versioneado por su mismo crador Robert Fripp con su banda King Crimson Los contagios con el cine: Capitan Kirk Guitarra de los soprano Peli de Carpenter Leningrad Cowboys (creada por aki kaurismaki) Las más bizarre Hermanos Calatrava
+                    <div class="col-sm-9">
+                        <!-- <span class="badge badge-primary">WHAT</span> -->
+                        <h1 class="">Listen the many covers of Bowie</h1>
+                        <p class="">A nuestra manera nos encanta David Bowie.
+                        </p>
+                        <p>Sus diferentes épocas y sus pintas, las apariciones en la tele y en el cine, sus diferentes personajes, hasta su muerte.</p>
+                        <p>Pero sobre todo nos gustan sus discos y canciones, así que hemos decidido dibujar la discografía de Bowie en forma de listas de reproducción con los artistas que han versioneado sus canciones.</p>
+                        <p>De esta manera escuchar su influencia en la voz y los instrumentos de otros.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- TREEMAP COVERS -->
-    <div id="covers-treemap" class="container-fluid viz section-treemap"></div>
-    <!-- COUNTERS -->
+    <div id="covers-treemap" class="container-fluid viz section-treemap mt-5"></div>
+    <div class="container-fluid soft-bg">
+        <div class="container">
+            <div class="content">
+                <figcaption class="figure-caption">Discos de Bowie ordenados por número de versiones</figcaption>
+            </div>
+        </div>
+    </div>
     <div class="section">
         <div class="container">
             <div class="content">
-                <div class="row">
-                    <!-- 
-                    <div class="col-sm-3 counter">
-                        <div id="bowie-discography">
-                        </div>
-                    </div>
-                    <div class="col-sm-3 counter">
-                        <div id="bowie-album">
-                        </div>
-                    </div>
-                    <div class="col-sm-3 counter">
-                        <div id="bowie-track">
-                        </div>
-                    </div>
-                     -->
-                    <div class="col-sm-3 counter">
-                        <div id="bowie-covers">
-                            <p class="counter-number">0</p>
-                            <h5 class="counter-units">Covers in the Bowie's covers album</h5>
-                            <p class="counter-entity">Pin Ups</p>
-                            <h5 class="counter-link"><a href="#8b7bd1c2-be07-3083-989a-714f219f1ff8">Go to album</a></h5>
-                        </div>
+                <!-- GENRES -->
+                <div class="row mt-5">
+                    <div class="col-3 d-none d-sm-block"></div>
+                    <div class="col-sm-9">
+                        <h4>Las canciones de Bowie están por todas partes</h4>
+                        <h5>Géneros musicales</h5>
+                        <p>El repertorio de Bowie está presente en casi todos los géneros musicales. Sirva esta pequeña selección para ver el abanico de artistas que han versioneado a Bowie. Desde géneros tan dispares como el Electro-Trance o el Rockabilly.</p>
                     </div>
                 </div>
+                <div id="list-genres" class="row"></div>
+                <div class="row mt-5">
+                    <div class="col-3 d-none d-sm-block"></div>
+                    <div class="col-sm-9">
+                        <h5>Mainstream</h5>
+                        <p>También han versioneado a Bowie grandes artistas de la industria musical, "de los que han llenan estadios" como <span class="artist-name">Tina Turner</span> con <em>1984</em>, <span class="artist-name">U2</span> con la omnipresente <em>Space Oditty</em>, <span class="artist-name">Bruce Springsteen</span> y Silvio Danti de los Soprano's interpretando <em>Rebel Rebel</em> o la mucha veces atribuida versión de <em>The Man Who Sold The World</em> por <span class="artist-name">Nirvana</span>.</p>
+                    </div>
+                </div>
+                <!-- ARTISTS -->
+                <div id="list-artists" class="row"></div>
+                <div class="row mt-5">
+                    <div class="col-3 d-none d-sm-block"></div>
+                    <div class="col-sm-9">
+                        <h5>Internacional</h5>
+                        <p>Encontramos versiones en diferentes idiomas, como el disco para la película Life Aquatic The Life Aquatic Studio Sessions de <span class="artist-name">Seu Jorge</span> donde interpreta al menos 13 temas de Bowie o la impresionante versión en turco de <span class="artist-name">Müslüm Gürses</span> interpretando <em>I'm deranged</em>. Y en el otro extremo del gusto la versión en español de los <span class="artist-name">Hermanos Calatrava</span> de <em>Space Oddity</em>.</p>
+                    </div>
+                </div>
+                <div id="list-international" class="row"></div>
+                <!-- MARKET -->
+                <div class="row mt-5">
+                    <div class="col-3 d-none d-sm-block"></div>
+                    <div class="col-sm-9">
+                        <h5>Bowie es un producto del mercado</h5>
+                    </div>
+                </div>
+                <div id="list-market" class="row"></div>
+                <div class="row mt-5">
+                    <div class="col-3 d-none d-sm-block"></div>
+                    <div class="col-sm-9">
+                        <h4>Bowie es marginal e íntimo</h4>
+                        <h5>Outsider</h5>
+                        <p>Por otro lado la música de Bowie también está en proyectos residuales de la cultura como la música outsider.</p>
+                    </div>
+                </div>
+                <div id="list-outsider" class="row"></div>
             </div>
         </div>
     </div>
     <!-- RADIAL CHARTS CONTAINER -->
     <div class="section is-white">
-        <div class="container-fluid">
+        <div class="container">
+            <div class="content">
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <h4>Discografía de Bowie</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
             <div id="coversRadial" class="viz radial-container">
                 <div class="radial-album" style="display:none;"></div>
             </div>
         </div>
     </div>
     <!-- TREEMAP PINUPS -->
-    <div id="covers-pinups" class="viz section-treemap"></div>
+    <!-- <div id="covers-pinups" class="viz section-treemap"></div> -->
     <!-- RADIAL CHARTS CONTAINER PINUPS -->
-    <div class="section is-white">
+    <!--     <div class="section is-white">
         <div class="container">
             <div id="coversRadialPinups" class="viz radial-container">
                 <div class="radial-album" style="display:none;"></div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- TIMELINE WITH PERIOD FILTERING -->
-    <div class="section is-white">
+    <!--     <div class="section is-white">
         <div class="container">
             <div class="content">
                 <h2>Distribution of albums by years and periods</h2>
                 <div class="buttons"></div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- RAW LIST -->
     <!-- 
         <div id="buttonsCovers" class="button-group filter-button-group">
@@ -331,9 +186,6 @@
     <!--<script src="https://platform.twitter.com/widgets.js"></script>-->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/d3/d3.min.js"></script>
-    <script src="bower_components/d3-tip/index.js"></script>
-    <script src="bower_components/vis/dist/vis.js"></script>
-    <script src="bower_components/isotope/dist/isotope.pkgd.js"></script>
     <script src="bower_components/colorbrewer/colorbrewer.js"></script>
     <script src="scripts/treemap.js"></script>
 </body>
