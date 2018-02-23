@@ -455,9 +455,11 @@ body {
 /*===============================
 =            TREEMAP            =
 ===============================*/
+.covers-treemap-container {
+  padding-top: 100px; }
+
 .section-treemap {
   height: 80vh;
-  padding-top: 100px;
   width: 100%;
   position: relative;
   background-color: #FFF; }

@@ -5,11 +5,12 @@
 var MIN_VIDEO_VIEWS = 500;
 var MIN_COVERS_ALBUM = 4;
 var DEFAULT_VIDEO_TEXT = "DEFAULT VIDEO TEXT";
-var BASE_URL = "http://127.0.0.1/bowie-covers/";
+// var BASE_URL = "http://127.0.0.1/bowie-covers/";
+// Hermes base URL
+var BASE_URL = "http://localhost:3000/";
 
 
-var LIST_OUTSIDER = [
-    {
+var LIST_OUTSIDER = [{
         "covers": 52,
         "name": "Love You Till Tuesday",
         "link": "#96c14aa4-c378-33d5-99f9-3cade6f1ecb3",
@@ -60,8 +61,7 @@ var LIST_OUTSIDER = [
         "description": "El capitán Kirk de Star Trek manteniendo un tú a tú con el comandante Tom en una versión hablada de <em>Space Oddity</em>."
     }
 ]
-var LIST_MARKET = [
-    {
+var LIST_MARKET = [{
         "covers": 123,
         "name": "The Rise and Fall of Ziggy Stardust and the Spiders From Mars",
         "link": "#6c9ae3dd-32ad-472c-96be-69d0a3536261",
@@ -102,8 +102,7 @@ var LIST_MARKET = [
         "description": "Y por supuesto los shows televisivos de búsqueda de talentos también han versioneado a Bowie como en la final de Factor X de 2010 en UK."
     }
 ]
-var LIST_INTERNATIONAL = [
-    {
+var LIST_INTERNATIONAL = [{
         "covers": 61,
         "name": "David Bowie",
         "link": "#2e12918c-4973-3537-b9ab-e4723ae1ae1d",
@@ -131,8 +130,7 @@ var LIST_INTERNATIONAL = [
         "song": "I'm Deranged"
     }
 ]
-var LIST_ARTISTS = [
-    {
+var LIST_ARTISTS = [{
         "covers": 38,
         "name": "Diamond Dogs",
         "link": "#80dc4835d-b21a-3612-bac6-ab1e782a1396",
@@ -160,8 +158,7 @@ var LIST_ARTISTS = [
         "song": "The Man Who Sold The World"
     }
 ]
-var LIST_GENRES = [
-    {
+var LIST_GENRES = [{
         "covers": 23,
         "name": "Young Americans",
         "link": "#8c2a0eae-1359-3577-9127-e3d862acc2a2",
@@ -224,23 +221,23 @@ function generateVideoList(element, array) {
 
         var left = container.append("div").attr("class", "col-3 counter d-none d-sm-block");
         if (array[i].covers > 0) {
-            left.append("p").attr("class", "counter-number").text(function(){return array[i].covers});
+            left.append("p").attr("class", "counter-number").text(function() { return array[i].covers });
             left.append("h5").attr("class", "counter-units").text("Covers in the album");
-            left.append("p").attr("class", "counter-entity").text(function(){return array[i].name});
-            left.append("a").attr("class", "counter-link").attr("href", function(){return array[i].link}).text("See album");
+            left.append("p").attr("class", "counter-entity").text(function() { return array[i].name });
+            left.append("a").attr("class", "counter-link").attr("href", function() { return array[i].link }).text("See album");
         };
 
         var middle = container.append("div").attr("class", "col-9 col-sm-6 mb-3");
-            middle.append("div").attr("class", "video-container").html(function(){
-                return '<iframe src="' + array[i].youtube + '" frameborder="0"></iframe>'
-            })
-            if (array[i].description) {
-                middle.append("p").html(function(){return array[i].description})
-            };
+        middle.append("div").attr("class", "video-container").html(function() {
+            return '<iframe src="' + array[i].youtube + '" frameborder="0"></iframe>'
+        })
+        if (array[i].description) {
+            middle.append("p").html(function() { return array[i].description })
+        };
         var right = container.append("div").attr("class", "col-3 counter figure");
-            right.append("figcaption").attr("class", "figure-caption").text(function(){return array[i].text})
-            right.append("span").attr("class", "artist-name").text(function(){return array[i].artist})
-            right.append("em").attr("class", "song-name").text(function(){return array[i].song})
+        right.append("figcaption").attr("class", "figure-caption").text(function() { return array[i].text })
+        right.append("span").attr("class", "artist-name").text(function() { return array[i].artist })
+        right.append("em").attr("class", "song-name").text(function() { return array[i].song })
     };
 }
 
@@ -737,13 +734,18 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
         });
 
 
-        function scrollTo(hash) {
-            location.hash = "#" + hash;
+        // ATERRIZAJE CON HASH
+
+        var url = window.location.href,
+            idx = url.indexOf("#")
+        var landingHash = idx != -1 ? url.substring(idx + 1) : "";
+
+        if (landingHash) {
+            var hashAnchor = "#" + landingHash;
+            $(document).scrollTop($(hashAnchor).offset().top);
+        } else {
+            $(document).scrollTop($("#bsides-start").offset().top);
         }
-        // myAlbum.forEach(function(d) {
-        //     d.date = parseDate(d.year);
-        //     d.value = +d.value;
-        // });
 
         trackCovers.sort(function(b, a) {
             if (a.size > b.size) {
@@ -961,13 +963,13 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
 
         tweetbutton_container.on("click", function() {
             var text = "I saw this amazing version of Bowie's " + candidate.coverName + " by " + candidate.name + " here: ";
-            var url = BASE_URL + "?id=" + candidate.id;
+            var url = BASE_URL + "?id=" + candidate.id + "#" + data.id;
             window.open("https://twitter.com/share?url=" + escape(url) + "&text=" + text, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
             return false;
         });
 
-        var backLink = aside.append('a').attr('href', '#covers-treemap').text('Back to albums').on('click', function() {
-            $('.video').empty();
+        var backLink = aside.append('a').attr('href', '#covers-treemap-container').text('Back to albums').on('click', function() {
+            // $('.video').empty();
             navigateSooth();
         });
 
@@ -1338,9 +1340,6 @@ $('document').ready(function() {
         });
 
     // id in params?
-
-    var yOffset = $("#covers-treemap").offset().top;
-    $("body").scrollTop(yOffset);
 
 
 
