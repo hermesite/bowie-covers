@@ -307,7 +307,7 @@ body {
   line-height: 1.45;
   color: #333; }
   body .content a {
-    color: #600; }
+    color: #007bff; }
   body .content p {
     margin-bottom: 1.3rem; }
   body .content h1, body .content h2, body .content h3, body .content h4 {
@@ -342,7 +342,7 @@ body {
   opacity: .8;
   font-style: italic; }
   .bar-chart-label.link {
-    fill: #600; }
+    fill: #007bff; }
     .bar-chart-label.link:hover {
       opacity: 1; }
 
@@ -350,7 +350,8 @@ body {
 .radial-container {
   position: relative; }
   .radial-container .radial-item {
-    padding: 10vh 0px;
+    padding: 0px;
+    padding-top: 100px;
     overflow: hidden;
     position: relative; }
     .radial-container .radial-item .radial-album-title,
@@ -358,7 +359,7 @@ body {
     .radial-container .radial-item .radial-aside {
       display: inline-block; }
   .radial-container .radial-album-title {
-    position: absolute; }
+    padding-left: 15px; }
     .radial-container .radial-album-title .album-title {
       font-size: 3.375em;
       font-family: 'nowaylight'; }
@@ -373,6 +374,7 @@ body {
         font-size: 1rem;
         font-weight: 400; }
   .radial-container .radial-album {
+    border: 1px dotted #000;
     position: relative;
     width: 100vw;
     height: calc(100vw - (15px * 2));
@@ -397,7 +399,7 @@ body {
         font-family: 'noway_regularitalic';
         cursor: pointer;
         opacity: .75;
-        fill: #600; }
+        fill: #007bff; }
         .radial-container .radial-album svg .node text.artist:hover {
           font-family: 'nowaymedium_italic';
           opacity: 1; }
@@ -411,7 +413,7 @@ body {
       width: 57.14286vw;
       margin-top: -28.57143vw;
       margin-left: -28.57143vw;
-      border: 1px dotted #600;
+      border: 1px dotted #007bff;
       position: absolute;
       z-index: 0;
       top: 50%;
@@ -440,6 +442,8 @@ body {
     color: #FFF; }
     .radial-container .radial-aside .level {
       margin: 0px; }
+    .radial-container .radial-aside .album-buttons a {
+      display: block; }
     .radial-container .radial-aside .cover-title,
     .radial-container .radial-aside .cover-artist {
       font-size: 0.8em; }
@@ -449,8 +453,10 @@ body {
       margin: 0px;
       font-family: 'noway_regularitalic'; }
     .radial-container .radial-aside .video {
-      background-color: #F2F2F2;
+      background-color: #000;
       position: relative; }
+      .radial-container .radial-aside .video iframe {
+        border: none; }
 
 /*===============================
 =            TREEMAP            =
@@ -613,7 +619,7 @@ div.vis-tooltip {
   left: 0px;
   bottom: 0px;
   right: 0px;
-  background-color: #600;
+  background-color: #007bff;
   background-size: cover;
   opacity: .5;
   z-index: 0; }
@@ -3516,15 +3522,16 @@ form {
   .radial-container .radial-album-title {
     width: 12%; }
   .radial-container .radial-album {
-    width: 70vh;
-    height: 70vh;
+    width: 80vh;
+    height: 80vh;
     font-size: 1.25vh; }
     .radial-container .radial-album .record {
-      height: 40vh;
-      width: 40vh;
-      margin-top: -20vh;
-      margin-left: -20vh; }
+      height: 45.71429vh;
+      width: 45.71429vh;
+      margin-top: -22.85714vh;
+      margin-left: -22.85714vh; }
   .radial-container .radial-aside {
-    width: calc(100% - 70vh); } }
+    width: calc(100% - 80vh);
+    max-width: 80vh; } }
 
 /*# sourceMappingURL=main.css.map */

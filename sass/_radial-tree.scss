@@ -1,7 +1,8 @@
 .radial-container {
     position: relative; // width: 61.8vw;
     .radial-item {
-        padding: 10vh 0px;
+        padding: 0px;
+        padding-top: 100px;
         overflow: hidden;
         position: relative;
         // box-shadow: inset 0px 0px 0px 2px #0CC;
@@ -16,7 +17,7 @@
     }
 
     .radial-album-title {
-        position: absolute;
+        padding-left: 15px;
         // background-color: $black;
         // box-shadow: inset 0px 0px 0px 2px #C00;
         .album-title {
@@ -41,6 +42,7 @@
     
     .radial-album {
         // box-shadow: inset 0px 0px 0px 2px #00C;
+        border: 1px dotted #000;
         position: relative; 
         width: $base-layout;
         height: calc(#{$base-layout} - (#{$responsive-gap} * 2)); 
@@ -137,7 +139,11 @@
         .level {
             margin: 0px
         }
-
+        .album-buttons {
+            a {
+                display: block;
+            }
+        }
         .record-info {
             // text-align: left; // width: 100%; // line-height: 50px;
             // padding: 16px;
@@ -185,7 +191,7 @@
             font-family: 'noway_regularitalic';
         }
         .video {
-            background-color: #F2F2F2; // height: 40vh;
+            background-color: #000; // height: 40vh;
             position: relative; // &:before {
             //     content: "Click on artists to load de video cover";
             //     position: absolute;
@@ -197,6 +203,9 @@
             //     text-align: center;
             //     font-size: 10px;
             // }
+            iframe {
+                border: none;
+            }
         }
     }
 }

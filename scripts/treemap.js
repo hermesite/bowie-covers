@@ -781,12 +781,12 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
                 return coversByArtist.length;
             })
             bowieDiscography.append("h5").attr("class", "counter-units").text(function() {
-                return 'Artists singing Bowie songs along ' + bowieSongsTree.children.length + ' albums';
+                return 'Artists singing Bowie songs across ' + bowieSongsTree.children.length + ' albums';
             })
             bowieDiscography.append("h5").attr("class", "counter-link")
                 .append('a')
                 .attr('href', function() {
-                    return treemapContainer;
+                    return "#covers-treemap-container";
                 })
                 .text(function() {
                     return 'Go to albums';
@@ -925,19 +925,13 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
 
         var radialItem = d3.select(container).append('div')
             .attr('id', data.id)
-            .attr('class', 'radial-item row')
+            .attr('class', 'radial-item row justify-content-md-center')
 
         // radialItem.remove();
 
         // var counterSide = radialItem.append('div')
         //     .attr('class', 'radial-counter content');
 
-        var albumTitle = radialItem.append('div').attr('class', 'radial-album-title');
-
-        albumTitle.append('div').attr('class', 'album-title')
-            .html(function() {
-                return size + '<span class="counter-units">Covers</span>' + '<strong>' + data.name + '</strong>';
-            });
 
         var box = radialItem.append('div')
             .attr('id', data.id + '-album')
@@ -949,17 +943,30 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
         var aside = radialItem.append('div')
             .attr('class', 'radial-aside content');
 
+
         var youtubeContainer = aside.append('div').attr('class', 'video').style('height', function() {
             return $(this).width() - ($(this).width() / 3) + 'px';
         });
-        var coverTitleBadge = aside.append('span').attr('class', 'badge badge-primary').text('SONG');
-        var coverTitle = aside.append('p').attr('class', 'cover-title').text('Song title');
-        var coverArtistBadge = aside.append('span').attr('class', 'badge badge-primary').text('ARTIST');
-        var coverArtist = aside.append('p').attr('class', 'cover-artist').text('Cover artist');
+        var coverInfoContainer = aside.append('div').attr('class', 'cover-info-container row');
+        var albumTitle = coverInfoContainer.append('div').attr('class', 'radial-album-title col-4');
 
-        var tweetbutton_container = aside.append('div').attr('class', 'tweet_button');
+        albumTitle.append('div').attr('class', 'album-title')
+            .html(function() {
+                return size + '<span class="counter-units">Covers</span>' + '<strong>' + data.name + '</strong>';
+            });
 
-        tweetbutton_container.append("img").attr("src", "images/twitter.svg");
+        var albumDescription = coverInfoContainer.append('div').attr('class', 'col-8');
+
+        var coverTitleBadge = albumDescription.append('span').attr('class', 'mt-3 badge badge-primary').text('SONG');
+        var coverTitle = albumDescription.append('p').attr('class', 'cover-title').text('Song title');
+        var coverArtistBadge = albumDescription.append('span').attr('class', 'badge badge-primary').text('ARTIST');
+        var coverArtist = albumDescription.append('p').attr('class', 'cover-artist').text('Cover artist');
+
+        var albumLinks = albumDescription.append('p').attr('class', "album-buttons")
+
+        var tweetbutton_container = albumLinks.append('a').attr('class', '').attr('href', '#').text("Share on Twitter");
+
+        // tweetbutton_container.append("img").attr("src", "images/twitter.svg");
 
         tweetbutton_container.on("click", function() {
             var text = "I saw this amazing version of Bowie's " + candidate.coverName + " by " + candidate.name + " here: ";
@@ -968,7 +975,7 @@ d3.json('data/david_bowie_data.videos.sincometas.json', function(error, artist) 
             return false;
         });
 
-        var backLink = aside.append('a').attr('href', '#covers-treemap-container').text('Back to albums').on('click', function() {
+        var backLink = albumLinks.append('a').attr('class', '').attr('href', '#covers-treemap-container').text('Back to albums').on('click', function() {
             // $('.video').empty();
             navigateSooth();
         });
